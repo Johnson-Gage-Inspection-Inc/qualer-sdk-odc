@@ -25,7 +25,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
     AssetId = Excel.CurrentWorkbook(){[Name="AssetId"]}[Content]{0}[Column1],
     MaintenancePlanId = Excel.CurrentWorkbook(){[Name="MaintenancePlanId"]}[Content]{0}[Column1],
     baseUrl = "https://jgiquality.qualer.com",
-    relativeUrl = "api/assets/{assetId}/plans/{maintenancePlanId}",
+    relativeUrl = "api/assets/" & Text.From(AssetId) & "/plans/" & Text.From(MaintenancePlanId) & "",
     response = Web.Contents(
         baseUrl,
         [

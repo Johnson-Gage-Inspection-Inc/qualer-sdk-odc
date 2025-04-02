@@ -17,7 +17,8 @@ def generate_odc_file(group, name, url, parameters):
         mashup_lines.append(f'{param} = Excel.CurrentWorkbook(){{[Name="{param}"]}}[Content]{{0}}[Column1],')
 
     for param in parameters:
-        url = url.replace(f"{{{param.lower()}}}", f'" & Text.From({param}) & "')
+        pattern = re.compile(rf"\{{{param}\}}", re.IGNORECASE)
+        url = pattern.sub(f'" & Text.From({param}) & "', url)
 
     base_url = "https://jgiquality.qualer.com"
     relative_url = url.replace(base_url, "").lstrip("/")

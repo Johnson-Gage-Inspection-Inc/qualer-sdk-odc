@@ -25,7 +25,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
     WorkItemId = Excel.CurrentWorkbook(){[Name="WorkItemId"]}[Content]{0}[Column1],
     ImageName = Excel.CurrentWorkbook(){[Name="ImageName"]}[Content]{0}[Column1],
     baseUrl = "https://jgiquality.qualer.com",
-    relativeUrl = "api/service/workitems/{workItemId}/images/{imageName}",
+    relativeUrl = "api/service/workitems/" & Text.From(WorkItemId) & "/images/" & Text.From(ImageName) & "",
     response = Web.Contents(
         baseUrl,
         [

@@ -25,7 +25,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
     WorkItemId = Excel.CurrentWorkbook(){[Name="WorkItemId"]}[Content]{0}[Column1],
     TaskId = Excel.CurrentWorkbook(){[Name="TaskId"]}[Content]{0}[Column1],
     baseUrl = "https://jgiquality.qualer.com",
-    relativeUrl = "api/service/workitems/{workItemId}/tasks/{taskId}",
+    relativeUrl = "api/service/workitems/" & Text.From(WorkItemId) & "/tasks/" & Text.From(TaskId) & "",
     response = Web.Contents(
         baseUrl,
         [
