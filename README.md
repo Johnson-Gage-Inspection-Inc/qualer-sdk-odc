@@ -76,7 +76,7 @@ To get a list of our customers:
 
 1. Download and open the connection file: [`Clients_GetAll.odc`](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Clients/Clients_GetAll.odc)
 2. Define no parameters — this endpoint doesn’t require any input.
-3. Expand the columns as described [above](#shaping-the-data).
+3. Expand the columns as described [above](#-shaping-the-data).
 4. Click **Refresh** to fetch all client records from Qualer.
 
 ## 🧪 Tested With
