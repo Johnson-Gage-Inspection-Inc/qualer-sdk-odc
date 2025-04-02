@@ -17,7 +17,6 @@ qualer-sdk-odc/
 ├── Excel-Qualer-SDK/    # Generated .odc files grouped by API tag
 ├── docs/                # One Markdown doc per GET endpoint
 ├── generate.py          # Generator script for ODC + docs
-├── document.py          # Documentation-only generator
 ├── spec.json            # Swagger/OpenAPI v2 spec from Qualer
 ├── .env                 # Environment variables (e.g., QUALER_API_TOKEN)
 └── README.md            # You're here
@@ -43,9 +42,17 @@ All endpoint-specific documentation is in the [`docs/`](./docs/README.md) folder
 
 1. Open Excel
 2. Use **Data → Existing Connections → Browse for More...**
-3. Select any `.odc` file from the `Excel-Qualer-SDK/` folder
-4. Provide the required named range(s) in your workbook
-5. Refresh the query to pull live data
+3. Paste this into the address bar to find and select an `.odc` file:
+   ```
+   \\jgiquality.sharepoint.com@SSL\sites\JGI\Shared Documents\General\Excel-Qualer-SDK\
+   ```
+![image](https://github.com/user-attachments/assets/e536b959-8e1d-4fa3-a34e-058a9baf2f8f)
+
+4. Ensure the required **named ranges** are present in your workbook.
+  - In the `Formula` Tab, find "Define Name" or "Name Manager" in the _Defined Names_ section
+    ![image](https://github.com/user-attachments/assets/b0ae65a3-eac9-4e63-a6f3-3eff3e0f3813)
+5. Refresh the query to pull live data from the API.
+  ![image](https://github.com/user-attachments/assets/ee83bb7a-b0de-4a65-8b80-7188930fac71)
 
 > ℹ️ Excel must be set to **Anonymous** for web credentials. The API token is handled inside the Power Query headers.
 
