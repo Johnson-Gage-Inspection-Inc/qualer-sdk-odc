@@ -69,6 +69,8 @@ All endpoint-specific documentation is in the [`docs/`](./docs/README.md) folder
 4. Click the expand button ![image](https://github.com/user-attachments/assets/265f49b9-9679-425d-a1c8-02d387a67871) next to the column header (if available).
 5. ❗ If it's missing, delete the last step, ![❌ ConvertToTable](https://github.com/user-attachments/assets/14282043-48e2-4ded-96bc-56c30c189180) and try again.
 6. From here, you should be able to shape and filter the data according to your particular use-case. For transformation tips, check out [Power Query in Excel (Microsoft Docs)](https://learn.microsoft.com/en-us/power-query/) or explore [M code reference](https://learn.microsoft.com/powerquery-m/) for advanced customization.
+7. Finally, click `Close & Load` ![image](https://github.com/user-attachments/assets/0c06bad1-b6ac-424b-ac10-0a49125898e6)
+
 
 ### ➡️ Quick Example
 
