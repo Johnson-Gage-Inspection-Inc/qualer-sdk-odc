@@ -48,7 +48,7 @@ All endpoint-specific documentation is in the [`docs/`](./docs/README.md) folder
    ```
 ![image](https://github.com/user-attachments/assets/e536b959-8e1d-4fa3-a34e-058a9baf2f8f)
 
-4. Ensure the required **named ranges** are defined in your workbook.
+4. Ensure the required **named ranges** are present in your workbook.
   - Go to **Formulas → Name Manager** to verify or create ranges (e.g., `ClientID`, `CompanyId`)
     ![image](https://github.com/user-attachments/assets/b0ae65a3-eac9-4e63-a6f3-3eff3e0f3813)
 5. Refresh the query to pull live data from the API.
