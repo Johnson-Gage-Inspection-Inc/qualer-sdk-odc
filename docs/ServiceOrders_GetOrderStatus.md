@@ -34,7 +34,7 @@ To Use in Excel:
 
 ![image](https://github.com/user-attachments/assets/1e1a8d87-0377-446d-aaf5-d78562991db3)
 
-6. Select ServiceOrders_GetOrderStatus.odc and click `Open`.
+6. Select `ServiceOrders_GetOrderStatus.odc` and click `Open`.
 
 > ⚠️ If parameters are needed, you'll see an error now. It's ok, but you'll need to set them.
 
