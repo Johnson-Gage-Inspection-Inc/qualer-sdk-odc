@@ -34,7 +34,8 @@ To Use in Excel:
 4. Click ![`Browse for More...`](https://github.com/user-attachments/assets/8e698494-6865-41e7-b6fa-043aea81809a)
 5. Paste the following into the URL bar
 ```
-\jgiquality.sharepoint.com@SSL\sites\JGI\Shared Documents\General\Excel-Qualer-SDK\ServiceOrderTasks```
+\\jgiquality.sharepoint.com@SSL\sites\JGI\Shared Documents\General\Excel-Qualer-SDK\ServiceOrderTasks\
+```
 
 ![image](https://github.com/user-attachments/assets/1e1a8d87-0377-446d-aaf5-d78562991db3)
 
