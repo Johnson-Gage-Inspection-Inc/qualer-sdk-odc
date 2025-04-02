@@ -27,13 +27,13 @@ qualer-sdk-odc/
 
 - `generate.py` reads the Swagger spec and creates:
   - A `.odc` file per **GET** endpoint for use in Excel
-  - A `.md` documentation file per endpoint (in `/docs`)
+  - A `.md` documentation file per endpoint (in [`docs/`](./docs/README.md))
 - Parameters in API paths like `{id}` become **Excel Named Ranges** (e.g., `ClientID`)
 - Power Query within the `.odc` handles authentication and data parsing
 
 ## 📑 API Endpoint Docs
 
-All endpoint-specific documentation is in the [`docs/`](./docs) folder. Each file includes:
+All endpoint-specific documentation is in the [`docs/`](./docs/README.md) folder. Each file includes:
 - Path and operation summary
 - Parameters required
 - Excel-specific details
