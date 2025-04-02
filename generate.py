@@ -2,6 +2,7 @@ import json
 import os
 import re
 from pathlib import Path
+from collections import defaultdict
 
 # === Config ===
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
@@ -32,10 +33,7 @@ def generate_odc_file(group, name, url, parameters):
         '    ]',
         '),',
         'json = Json.Document(response),',
-        'ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error),',
-        'firstRow = try ConvertToTable{0}[Column1] otherwise null,',
-        'fields = if (firstRow <> null and Record.Type(firstRow) <> null) then Record.FieldNames(firstRow) else {},',
-        'ExpandRecords = Table.ExpandRecordColumn(ConvertToTable, "Column1", fields)',
+        'ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)',
         'in ConvertToTable'
     ]
 
@@ -86,7 +84,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
     return path
 
 
-def generate_markdown_files(spec: dict, docs_dir="Excel-Qualer-SDK/docs"):
+def generate_markdown_files(spec: dict, docs_dir):
     docs_path = Path(docs_dir)
     docs_path.mkdir(parents=True, exist_ok=True)
 
@@ -150,12 +148,37 @@ def generate_all_odc_files(spec: dict):
 
     print("ODC files generated in:", OUTPUT_DIR)
 
+def generate_docs_index(docs_dir="docs"):
+    docs_path = Path(docs_dir)
+    index_file = docs_path / "README.md"
 
+    # Group docs by prefix (tag)
+    groups = defaultdict(list)
+    for doc in sorted(p for p in docs_path.glob("*.md") if p.name != "README.md"):
+        parts = doc.stem.split("_", 1)
+        if len(parts) == 2:
+            tag, rest = parts
+        else:
+            tag, rest = "General", parts[0]
+        groups[tag].append((doc.name, rest.replace("_", " ")))
+
+    with open(index_file, "w", encoding="utf-8") as f:
+        f.write("# 📖 Qualer API Documentation Index\n\n")
+        f.write("This index lists all documented `GET` endpoints, grouped by tag.\n\n")
+
+        for tag in sorted(groups):
+            f.write(f"## {tag}\n\n")
+            for filename, label in sorted(groups[tag]):
+                f.write(f"- [{label}](./{filename})\n")
+            f.write("\n")
 
 if __name__ == "__main__":
     with open("spec.json", encoding="utf-8") as f:
         spec = json.load(f)
     generate_all_odc_files(spec)
     print("ODC files generated in:", OUTPUT_DIR)
-    generate_markdown_files(spec)
-    print("Markdown files generated in:", OUTPUT_DIR / "docs")
+    docs_dir = "docs"
+    generate_markdown_files(spec, docs_dir)
+    print("Markdown files generated in:", docs_dir)
+    generate_docs_index(docs_dir)
+    print("Markdown index generated in:", docs_dir)
