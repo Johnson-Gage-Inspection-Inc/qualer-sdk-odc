@@ -1,8 +1,7 @@
-import requests
+import json
 import os
 import re
 from pathlib import Path
-from xml.sax.saxutils import escape
 
 # === Config ===
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
@@ -88,9 +87,9 @@ xmlns="http://www.w3.org/TR/REC-html40">
 
 # === Main Process ===
 def generate_all_odc_files():
-    print("Fetching Swagger spec...")
-    res = requests.get(SWAGGER_URL)
-    spec = res.json()
+    with open("spec.json", "r", encoding="utf-8") as f:
+        spec_raw = f.read()
+    spec = json.loads(spec_raw)
 
     for path, methods in spec["paths"].items():
         for method, details in methods.items():
