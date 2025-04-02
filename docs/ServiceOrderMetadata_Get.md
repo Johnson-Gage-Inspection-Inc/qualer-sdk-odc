@@ -16,4 +16,4 @@ No description provided.
 ServiceOrderMetadata
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ServiceOrderMetadata/ServiceOrderMetadata_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderMetadata/ServiceOrderMetadata_Get.odc)`
+[Excel-Qualer-SDK/ServiceOrderMetadata/ServiceOrderMetadata_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderMetadata/ServiceOrderMetadata_Get.odc)

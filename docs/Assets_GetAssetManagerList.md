@@ -20,4 +20,4 @@ filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchas
 Assets
 
 **ODC File:**  
-`[Excel-Qualer-SDK/Assets/Assets_GetAssetManagerList.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Assets/Assets_GetAssetManagerList.odc)`
+[Excel-Qualer-SDK/Assets/Assets_GetAssetManagerList.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Assets/Assets_GetAssetManagerList.odc)

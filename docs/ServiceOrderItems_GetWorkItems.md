@@ -22,4 +22,4 @@ GET /api/service/workitems?&amp;status=pending,delayed&amp;companyId=10&amp;from
 ServiceOrderItems
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ServiceOrderItems/ServiceOrderItems_GetWorkItems.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderItems/ServiceOrderItems_GetWorkItems.odc)`
+[Excel-Qualer-SDK/ServiceOrderItems/ServiceOrderItems_GetWorkItems.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderItems/ServiceOrderItems_GetWorkItems.odc)

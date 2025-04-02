@@ -16,4 +16,4 @@ No description provided.
 AssetServiceRecords
 
 **ODC File:**  
-`[Excel-Qualer-SDK/AssetServiceRecords/AssetServiceRecords_GetAssetServiceRecordsByAsset.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetServiceRecords/AssetServiceRecords_GetAssetServiceRecordsByAsset.odc)`
+[Excel-Qualer-SDK/AssetServiceRecords/AssetServiceRecords_GetAssetServiceRecordsByAsset.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetServiceRecords/AssetServiceRecords_GetAssetServiceRecordsByAsset.odc)

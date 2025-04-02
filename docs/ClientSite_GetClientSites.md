@@ -16,4 +16,4 @@ No description provided.
 ClientSite
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ClientSite/ClientSite_GetClientSites.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientSite/ClientSite_GetClientSites.odc)`
+[Excel-Qualer-SDK/ClientSite/ClientSite_GetClientSites.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientSite/ClientSite_GetClientSites.odc)

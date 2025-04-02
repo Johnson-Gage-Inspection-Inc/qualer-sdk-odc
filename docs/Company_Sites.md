@@ -16,4 +16,4 @@ No description provided.
 Company
 
 **ODC File:**  
-`[Excel-Qualer-SDK/Company/Company_Sites.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Company/Company_Sites.odc)`
+[Excel-Qualer-SDK/Company/Company_Sites.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Company/Company_Sites.odc)

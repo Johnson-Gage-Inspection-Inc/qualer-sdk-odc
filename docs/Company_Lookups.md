@@ -31,4 +31,4 @@ OrderItemLockedWorkStatus = 15
 Company
 
 **ODC File:**  
-`[Excel-Qualer-SDK/Company/Company_Lookups.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Company/Company_Lookups.odc)`
+[Excel-Qualer-SDK/Company/Company_Lookups.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Company/Company_Lookups.odc)

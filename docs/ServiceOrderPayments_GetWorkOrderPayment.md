@@ -16,4 +16,4 @@ No description provided.
 ServiceOrderPayments
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ServiceOrderPayments/ServiceOrderPayments_GetWorkOrderPayment.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderPayments/ServiceOrderPayments_GetWorkOrderPayment.odc)`
+[Excel-Qualer-SDK/ServiceOrderPayments/ServiceOrderPayments_GetWorkOrderPayment.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderPayments/ServiceOrderPayments_GetWorkOrderPayment.odc)

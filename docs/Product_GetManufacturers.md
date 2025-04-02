@@ -16,4 +16,4 @@ No description provided.
 Product
 
 **ODC File:**  
-`[Excel-Qualer-SDK/Product/Product_GetManufacturers.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Product/Product_GetManufacturers.odc)`
+[Excel-Qualer-SDK/Product/Product_GetManufacturers.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Product/Product_GetManufacturers.odc)

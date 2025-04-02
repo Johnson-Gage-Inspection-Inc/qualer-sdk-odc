@@ -16,4 +16,4 @@ No description provided.
 ClientEmployees
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ClientEmployees/ClientEmployees_GetEmployees.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientEmployees/ClientEmployees_GetEmployees.odc)`
+[Excel-Qualer-SDK/ClientEmployees/ClientEmployees_GetEmployees.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientEmployees/ClientEmployees_GetEmployees.odc)

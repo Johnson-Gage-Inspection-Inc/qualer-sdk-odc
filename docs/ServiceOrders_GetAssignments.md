@@ -16,4 +16,4 @@ No description provided.
 ServiceOrders
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetAssignments.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetAssignments.odc)`
+[Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetAssignments.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetAssignments.odc)

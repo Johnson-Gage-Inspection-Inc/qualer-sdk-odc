@@ -20,4 +20,4 @@ GET api/wd/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9
 ServiceOrderDocuments
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocument.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocument.odc)`
+[Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocument.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocument.odc)

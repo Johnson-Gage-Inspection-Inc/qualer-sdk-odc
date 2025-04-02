@@ -35,4 +35,4 @@ OrderCertificate / ServiceOrderCertificate = 5<br />
 ServiceOrderDocuments
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocumentList.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocumentList.odc)`
+[Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocumentList.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocumentList.odc)

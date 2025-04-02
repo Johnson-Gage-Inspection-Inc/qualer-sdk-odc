@@ -18,4 +18,4 @@ No description provided.
 ServiceOrderItemTasks
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ServiceOrderItemTasks/ServiceOrderItemTasks_GetWorkItemTask.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderItemTasks/ServiceOrderItemTasks_GetWorkItemTask.odc)`
+[Excel-Qualer-SDK/ServiceOrderItemTasks/ServiceOrderItemTasks_GetWorkItemTask.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderItemTasks/ServiceOrderItemTasks_GetWorkItemTask.odc)

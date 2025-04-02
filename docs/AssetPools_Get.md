@@ -16,4 +16,4 @@ No description provided.
 AssetPools
 
 **ODC File:**  
-`[Excel-Qualer-SDK/AssetPools/AssetPools_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetPools/AssetPools_Get.odc)`
+[Excel-Qualer-SDK/AssetPools/AssetPools_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetPools/AssetPools_Get.odc)

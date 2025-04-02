@@ -21,4 +21,4 @@ For example:
 ServiceOrderTasks
 
 **ODC File:**  
-`[Excel-Qualer-SDK/ServiceOrderTasks/ServiceOrderTasks_GetWorkOrderTasks.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderTasks/ServiceOrderTasks_GetWorkOrderTasks.odc)`
+[Excel-Qualer-SDK/ServiceOrderTasks/ServiceOrderTasks_GetWorkOrderTasks.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderTasks/ServiceOrderTasks_GetWorkOrderTasks.odc)

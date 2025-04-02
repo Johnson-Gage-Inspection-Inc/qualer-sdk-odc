@@ -16,4 +16,4 @@ No description provided.
 AssetMeasurements
 
 **ODC File:**  
-`[Excel-Qualer-SDK/AssetMeasurements/AssetMeasurements_GetMeasurementsByAsset.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetMeasurements/AssetMeasurements_GetMeasurementsByAsset.odc)`
+[Excel-Qualer-SDK/AssetMeasurements/AssetMeasurements_GetMeasurementsByAsset.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetMeasurements/AssetMeasurements_GetMeasurementsByAsset.odc)
