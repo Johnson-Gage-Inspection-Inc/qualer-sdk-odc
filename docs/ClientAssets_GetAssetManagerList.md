@@ -19,4 +19,4 @@ POST api/user/filters
 ClientAssets
 
 **ODC File:**  
-`Excel-Qualer-SDK/ClientAssets/ClientAssets_GetAssetManagerList.odc`
+`[Excel-Qualer-SDK/ClientAssets/ClientAssets_GetAssetManagerList.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientAssets/ClientAssets_GetAssetManagerList.odc)`

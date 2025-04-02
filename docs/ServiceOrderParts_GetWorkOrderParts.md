@@ -16,4 +16,4 @@
 ServiceOrderParts
 
 **ODC File:**  
-`Excel-Qualer-SDK/ServiceOrderParts/ServiceOrderParts_GetWorkOrderParts.odc`
+`[Excel-Qualer-SDK/ServiceOrderParts/ServiceOrderParts_GetWorkOrderParts.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderParts/ServiceOrderParts_GetWorkOrderParts.odc)`

@@ -16,4 +16,4 @@ No description provided.
 ServiceOrders
 
 **ODC File:**  
-`Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetOrderStatus.odc`
+`[Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetOrderStatus.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetOrderStatus.odc)`

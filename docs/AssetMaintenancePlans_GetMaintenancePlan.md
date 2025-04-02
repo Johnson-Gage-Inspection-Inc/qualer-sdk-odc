@@ -18,4 +18,4 @@ No description provided.
 AssetMaintenancePlans
 
 **ODC File:**  
-`Excel-Qualer-SDK/AssetMaintenancePlans/AssetMaintenancePlans_GetMaintenancePlan.odc`
+`[Excel-Qualer-SDK/AssetMaintenancePlans/AssetMaintenancePlans_GetMaintenancePlan.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetMaintenancePlans/AssetMaintenancePlans_GetMaintenancePlan.odc)`

@@ -16,4 +16,4 @@ No description provided.
 Assets
 
 **ODC File:**  
-`Excel-Qualer-SDK/Assets/Assets_GetAssetBySerialNumber.odc`
+`[Excel-Qualer-SDK/Assets/Assets_GetAssetBySerialNumber.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Assets/Assets_GetAssetBySerialNumber.odc)`

@@ -16,4 +16,4 @@ No description provided.
 AssetReservation
 
 **ODC File:**  
-`Excel-Qualer-SDK/AssetReservation/AssetReservation_Get.odc`
+`[Excel-Qualer-SDK/AssetReservation/AssetReservation_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetReservation/AssetReservation_Get.odc)`

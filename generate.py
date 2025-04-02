@@ -121,7 +121,7 @@ def generate_markdown_files(spec: dict, docs_dir):
 {tag}
 
 **ODC File:**  
-`Excel-Qualer-SDK/{tag}/{clean_name}.odc`
+`[Excel-Qualer-SDK/{tag}/{clean_name}.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/{tag}/{clean_name}.odc)`
 """
 
             file_path = docs_path / f"{clean_name}.md"

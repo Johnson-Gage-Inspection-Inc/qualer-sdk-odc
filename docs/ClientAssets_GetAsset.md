@@ -16,4 +16,4 @@ No description provided.
 ClientAssets
 
 **ODC File:**  
-`Excel-Qualer-SDK/ClientAssets/ClientAssets_GetAsset.odc`
+`[Excel-Qualer-SDK/ClientAssets/ClientAssets_GetAsset.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientAssets/ClientAssets_GetAsset.odc)`

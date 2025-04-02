@@ -16,4 +16,4 @@ No description provided.
 Common
 
 **ODC File:**  
-`Excel-Qualer-SDK/Common/Common_GetCompanySettings.odc`
+`[Excel-Qualer-SDK/Common/Common_GetCompanySettings.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Common/Common_GetCompanySettings.odc)`

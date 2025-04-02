@@ -16,4 +16,4 @@ No description provided.
 ServiceOrderItemParts
 
 **ODC File:**  
-`Excel-Qualer-SDK/ServiceOrderItemParts/ServiceOrderItemParts_GetWorkItemParts.odc`
+`[Excel-Qualer-SDK/ServiceOrderItemParts/ServiceOrderItemParts_GetWorkItemParts.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderItemParts/ServiceOrderItemParts_GetWorkItemParts.odc)`

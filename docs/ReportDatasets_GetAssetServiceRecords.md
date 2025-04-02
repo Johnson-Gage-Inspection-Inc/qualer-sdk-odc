@@ -16,4 +16,4 @@ No description provided.
 ReportDatasets
 
 **ODC File:**  
-`Excel-Qualer-SDK/ReportDatasets/ReportDatasets_GetAssetServiceRecords.odc`
+`[Excel-Qualer-SDK/ReportDatasets/ReportDatasets_GetAssetServiceRecords.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ReportDatasets/ReportDatasets_GetAssetServiceRecords.odc)`
