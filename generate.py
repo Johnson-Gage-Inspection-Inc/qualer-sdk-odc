@@ -19,10 +19,26 @@ def generate_odc_file(group, name, url, parameters):
     for param in parameters:
         url = url.replace(f"{{{param.lower()}}}", f'" & Text.From({param}) & "')
 
-    mashup_lines.append(f'url = "{url}",')
-    mashup_lines.append(f'response = Web.Contents(url, [Headers = [Authorization = "{API_TOKEN}"]]),')
-    mashup_lines.append('json = Json.Document(response)')
-    mashup_lines.append('in json')
+    base_url = "https://jgiquality.qualer.com"
+    relative_url = url.replace(base_url, "").lstrip("/")
+
+    mashup_lines += [
+        f'baseUrl = "{base_url}",',
+        f'relativeUrl = "{relative_url}",',
+        'response = Web.Contents(',
+        '    baseUrl,',
+        '    [',
+        '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
+        '        Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]',
+        '    ]',
+        '),',
+        'json = Json.Document(response),',
+        'ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error),',
+        'firstRow = try ConvertToTable{0}[Column1] otherwise null,',
+        'fields = if (firstRow <> null and Record.Type(firstRow) <> null) then Record.FieldNames(firstRow) else {},',
+        'ExpandRecords = Table.ExpandRecordColumn(ConvertToTable, "Column1", fields)',
+        'in ConvertToTable'
+    ]
 
     mashup_formula = "let\n    " + "\n    ".join(mashup_lines)
 
@@ -78,7 +94,7 @@ def generate_all_odc_files():
 
     for path, methods in spec["paths"].items():
         for method, details in methods.items():
-            if method.lower() not in ["get", "post"]:  # limit to get for now
+            if method.lower() != "get":  # limit to get for now
                 continue
 
             tag = details.get("tags", ["General"])[0]
