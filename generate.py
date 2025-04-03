@@ -126,16 +126,12 @@ def yield_get_endpoints(spec: dict):
             }
 
 
-def generate_markdown_files(spec: dict, docs_dir):
-    docs_path = Path(docs_dir)
-    docs_path.mkdir(parents=True, exist_ok=True)
+def generate_markdown_file(docs_path, ep):
+    pram_doc = "\n".join([f"- `{p}` (path)" for p in ep["params"]]) or "None"
+    range_doc = "\n".join([f"- `{r}`" for r in ep["param_names"]]) or "None"
+    desc = ep["details"].get("description", "No description provided.").strip()
 
-    for ep in yield_get_endpoints(spec):
-        pram_doc = "\n".join([f"- `{p}` (path)" for p in ep["params"]]) or "None"
-        range_doc = "\n".join([f"- `{r}`" for r in ep["param_names"]]) or "None"
-        desc = ep["details"].get("description", "No description provided.").strip()
-
-        markdown = f"""# `{ep['clean_name']}`
+    markdown = f"""# `{ep['clean_name']}`
 
 **URL Template:**
 `GET {ep['path']}`
@@ -180,14 +176,18 @@ If there are any parameters listed near the top of this file, create a named ran
 > They're just named ranges, with particular names.
 """
 
-        file_path = docs_path / f"{ep['clean_name']}.md"
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write(markdown)
+    file_path = docs_path / f"{ep['clean_name']}.md"
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(markdown)
 
 
 # === Main Process ===
 def generate_all_odc_files(spec: dict):
+    docs_path = Path(docs_dir)
+    docs_path.mkdir(parents=True, exist_ok=True)
+
     for ep in yield_get_endpoints(spec):
+        generate_markdown_file(docs_path, ep)
         generate_odc_file(ep["tag"], ep["clean_name"], ep["url"], ep["param_names"])
     print("ODC files generated in:", OUTPUT_DIR)
 
@@ -219,12 +219,11 @@ def generate_docs_index(docs_dir="docs"):
 
 
 if __name__ == "__main__":
+    docs_dir = "docs"
     with open("spec.json", encoding="utf-8") as f:
         spec = json.load(f)
     generate_all_odc_files(spec)
     print("ODC files generated in:", OUTPUT_DIR)
-    docs_dir = "docs"
-    generate_markdown_files(spec, docs_dir)
     print("Markdown files generated in:", docs_dir)
     generate_docs_index(docs_dir)
     print("Markdown index generated in:", docs_dir)
