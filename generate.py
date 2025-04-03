@@ -9,12 +9,15 @@ SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
 API_TOKEN = os.getenv("QUALER_API_TOKEN")
 OUTPUT_DIR = Path("Excel-Qualer-SDK")
 
+
 # === Template Generator ===
 def generate_odc_file(group, name, url, parameters):
     mashup_lines = []
 
     for param in parameters:
-        mashup_lines.append(f'{param} = Excel.CurrentWorkbook(){{[Name="{param}"]}}[Content]{{0}}[Column1],')
+        mashup_lines.append(
+            f'{param} = Excel.CurrentWorkbook(){{[Name="{param}"]}}[Content]{{0}}[Column1],'
+        )
 
     for param in parameters:
         pattern = re.compile(rf"\{{{param}\}}", re.IGNORECASE)
@@ -26,21 +29,22 @@ def generate_odc_file(group, name, url, parameters):
     mashup_lines += [
         f'baseUrl = "{base_url}",',
         f'relativeUrl = "{relative_url}",',
-        'response = Web.Contents(',
-        '    baseUrl,',
-        '    [',
+        "response = Web.Contents(",
+        "    baseUrl,",
+        "    [",
         '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
         '        Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]',
-        '    ]',
-        '),',
-        'json = Json.Document(response),',
-        'ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)',
-        'in ConvertToTable'
+        "    ]",
+        "),",
+        "json = Json.Document(response),",
+        "ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)",
+        "in ConvertToTable",
     ]
 
     mashup_formula = "let\n    " + "\n    ".join(mashup_lines)
 
-    odc_xml = f"""<html xmlns:o="urn:schemas-microsoft-com:office:office"
+    odc_xml = (
+        f"""<html xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns="http://www.w3.org/TR/REC-html40">
 
 <head>
@@ -67,7 +71,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
  </odc:PowerQueryMashupData>
  </odc:OfficeDataConnection>
 </xml>
-""" + """
+"""
+        + """
 <style>
 <!--
     .ODCDataSource
@@ -76,6 +81,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
     }
 -->
 </style>"""
+    )
 
     folder = OUTPUT_DIR / group
     folder.mkdir(parents=True, exist_ok=True)
@@ -96,10 +102,21 @@ def generate_markdown_files(spec: dict, docs_dir):
 
             tag = details.get("tags", ["General"])[0]
             op_id = details.get("operationId", f"{method}_{path.replace('/', '_')}")
-            clean_name = re.sub(r'\W+', '_', op_id)
+            clean_name = re.sub(r"\W+", "_", op_id)
 
-            parameters = [p["name"] for p in details.get("parameters", []) if p.get("in") == "path"]
-            param_ranges = [p[0].upper() + p[1:] + "ID" if p.lower() == "id" else p[0].upper() + p[1:] for p in parameters]
+            parameters = [
+                p["name"]
+                for p in details.get("parameters", [])
+                if p.get("in") == "path"
+            ]
+            param_ranges = [
+                (
+                    p[0].upper() + p[1:] + "ID"
+                    if p.lower() == "id"
+                    else p[0].upper() + p[1:]
+                )
+                for p in parameters
+            ]
             param_doc = "\n".join([f"- `{p}` (path)" for p in parameters]) or "None"
             range_doc = "\n".join([f"- `{r}`" for r in param_ranges]) or "None"
             desc = details.get("description", "No description provided.")
@@ -153,6 +170,7 @@ If there are any parameters listed near the top of this file, create a named ran
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write(markdown)
 
+
 # === Main Process ===
 def generate_all_odc_files(spec: dict):
 
@@ -163,15 +181,27 @@ def generate_all_odc_files(spec: dict):
 
             tag = details.get("tags", ["General"])[0]
             op_id = details.get("operationId", f"{method}_{path.replace('/', '_')}")
-            clean_name = re.sub(r'\W+', '_', op_id)
+            clean_name = re.sub(r"\W+", "_", op_id)
 
-            params = [p["name"] for p in details.get("parameters", []) if p.get("in") == "path"]
-            param_names = [p[0].upper() + p[1:] + "ID" if p.lower() == "id" else p[0].upper() + p[1:] for p in params]
+            params = [
+                p["name"]
+                for p in details.get("parameters", [])
+                if p.get("in") == "path"
+            ]
+            param_names = [
+                (
+                    p[0].upper() + p[1:] + "ID"
+                    if p.lower() == "id"
+                    else p[0].upper() + p[1:]
+                )
+                for p in params
+            ]
 
             url = "https://jgiquality.qualer.com" + path
             generate_odc_file(tag, clean_name, url, param_names)
 
     print("ODC files generated in:", OUTPUT_DIR)
+
 
 def generate_docs_index(docs_dir="docs"):
     docs_path = Path(docs_dir)
@@ -196,6 +226,7 @@ def generate_docs_index(docs_dir="docs"):
             for filename, label in sorted(groups[tag]):
                 f.write(f"- [{label}](./{filename})\n")
             f.write("\n")
+
 
 if __name__ == "__main__":
     with open("spec.json", encoding="utf-8") as f:
