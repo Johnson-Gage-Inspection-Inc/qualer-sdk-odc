@@ -93,7 +93,9 @@ xmlns="http://www.w3.org/TR/REC-html40">
         f.write(odc_xml)
     return path
 
-def yield_get_endpoints(spec: dict):
+def yield_get_endpoints():
+    with open("spec.json", encoding="utf-8") as f:
+        spec = json.load(f)
     for path, methods in spec["paths"].items():
         for method, details in methods.items():
             if method.lower() != "get":
@@ -182,11 +184,11 @@ If there are any parameters listed near the top of this file, create a named ran
 
 
 # === Main Process ===
-def generate_all_odc_files(spec: dict):
+def generate_all_odc_files():
     docs_path = Path(docs_dir)
     docs_path.mkdir(parents=True, exist_ok=True)
 
-    for ep in yield_get_endpoints(spec):
+    for ep in yield_get_endpoints():
         generate_markdown_file(docs_path, ep)
         generate_odc_file(ep["tag"], ep["clean_name"], ep["url"], ep["param_names"])
     print("ODC files generated in:", OUTPUT_DIR)
@@ -220,9 +222,7 @@ def generate_docs_index(docs_dir="docs"):
 
 if __name__ == "__main__":
     docs_dir = "docs"
-    with open("spec.json", encoding="utf-8") as f:
-        spec = json.load(f)
-    generate_all_odc_files(spec)
+    generate_all_odc_files()
     print("ODC files generated in:", OUTPUT_DIR)
     print("Markdown files generated in:", docs_dir)
     generate_docs_index(docs_dir)
