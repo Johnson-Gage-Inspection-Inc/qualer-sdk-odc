@@ -93,42 +93,52 @@ xmlns="http://www.w3.org/TR/REC-html40">
         f.write(odc_xml)
     return path
 
-
-def generate_markdown_files(spec: dict, docs_dir):
-    docs_path = Path(docs_dir)
-    docs_path.mkdir(parents=True, exist_ok=True)
-
+def yield_get_endpoints(spec: dict):
     for path, methods in spec["paths"].items():
         for method, details in methods.items():
             if method.lower() != "get":
                 continue
 
             tag = details.get("tags", ["General"])[0]
-            http_method_path_var = f"{method}_{path.replace('/', '_')}"
-            op_id = details.get("operationId", http_method_path_var)
+            op_id = details.get("operationId", f"{method}_{path.replace('/', '_')}")
             clean_name = re.sub(r"\W+", "_", op_id)
-
             params = [
                 p["name"]
                 for p in details.get("parameters", [])
                 if p.get("in") == "path"
             ]
-            param_ranges = [
-                (
-                    p[0].upper() + p[1:] + "ID"
-                    if p.lower() == "id"
-                    else p[0].upper() + p[1:]
-                )
+            param_names = [
+                p[0].upper() + p[1:] + "ID" if p.lower() == "id" else p[0].upper() + p[1:]
                 for p in params
             ]
-            pram_doc = "\n".join([f"- `{p}` (path)" for p in params]) or "None"
-            range_doc = "\n".join([f"- `{r}`" for r in param_ranges]) or "None"
-            desc = details.get("description", "No description provided.")
+            url = "https://jgiquality.qualer.com" + path
 
-            markdown = f"""# `{clean_name}`
+            yield {
+                "tag": tag,
+                "path": path,
+                "method": method,
+                "details": details,
+                "clean_name": clean_name,
+                "op_id": op_id,
+                "url": url,
+                "params": params,
+                "param_names": param_names,
+            }
+
+
+def generate_markdown_files(spec: dict, docs_dir):
+    docs_path = Path(docs_dir)
+    docs_path.mkdir(parents=True, exist_ok=True)
+
+    for ep in yield_get_endpoints(spec):
+        pram_doc = "\n".join([f"- `{p}` (path)" for p in ep["params"]]) or "None"
+        range_doc = "\n".join([f"- `{r}`" for r in ep["param_names"]]) or "None"
+        desc = ep["details"].get("description", "No description provided.").strip()
+
+        markdown = f"""# `{ep['clean_name']}`
 
 **URL Template:**
-`GET {path}`
+`GET {ep['path']}`
 
 **Parameters:**
 {pram_doc}
@@ -137,13 +147,13 @@ def generate_markdown_files(spec: dict, docs_dir):
 {range_doc}
 
 **Description:**
-{desc.strip()}
+{desc}
 
 **Group (Tag):**
-{tag}
+{ep['tag']}
 
 **ODC File:**
-[Excel-Qualer-SDK/{tag}/{clean_name}.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/{tag}/{clean_name}.odc)
+[Excel-Qualer-SDK/{ep['tag']}/{ep['clean_name']}.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/{ep['tag']}/{ep['clean_name']}.odc)
 
 ---
 
@@ -156,12 +166,12 @@ To Use in Excel:
 4. Click ![`Browse for More...`](https://github.com/user-attachments/assets/8e698494-6865-41e7-b6fa-043aea81809a)
 5. Paste the following into the URL bar
 ```
-\\\\jgiquality.sharepoint.com@SSL\\sites\\JGI\\Shared Documents\\General\\Excel-Qualer-SDK\\{tag}\\
+\\\\jgiquality.sharepoint.com@SSL\\sites\\JGI\\Shared Documents\\General\\Excel-Qualer-SDK\\{ep['tag']}\\
 ```
 
 ![image](https://github.com/user-attachments/assets/1e1a8d87-0377-446d-aaf5-d78562991db3)
 
-6. Select `{clean_name}.odc` and click `Open`.
+6. Select `{ep['clean_name']}.odc` and click `Open`.
 
 > ⚠️ If parameters are needed, you'll see an error now. It's ok, but you'll need to set them.
 
@@ -170,41 +180,15 @@ If there are any parameters listed near the top of this file, create a named ran
 > They're just named ranges, with particular names.
 """
 
-            file_path = docs_path / f"{clean_name}.md"
-            with open(file_path, "w", encoding="utf-8") as f:
-                f.write(markdown)
+        file_path = docs_path / f"{ep['clean_name']}.md"
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(markdown)
 
 
 # === Main Process ===
 def generate_all_odc_files(spec: dict):
-
-    for path, methods in spec["paths"].items():
-        for method, details in methods.items():
-            if method.lower() != "get":  # limit to get for now
-                continue
-
-            tag = details.get("tags", ["General"])[0]
-            http_method_path_var = f"{method}_{path.replace('/', '_')}"
-            op_id = details.get("operationId", http_method_path_var)
-            clean_name = re.sub(r"\W+", "_", op_id)
-
-            params = [
-                p["name"]
-                for p in details.get("parameters", [])
-                if p.get("in") == "path"
-            ]
-            param_names = [
-                (
-                    p[0].upper() + p[1:] + "ID"
-                    if p.lower() == "id"
-                    else p[0].upper() + p[1:]
-                )
-                for p in params
-            ]
-
-            url = "https://jgiquality.qualer.com" + path
-            generate_odc_file(tag, clean_name, url, param_names)
-
+    for ep in yield_get_endpoints(spec):
+        generate_odc_file(ep["tag"], ep["clean_name"], ep["url"], ep["param_names"])
     print("ODC files generated in:", OUTPUT_DIR)
 
 
