@@ -1,6 +1,6 @@
 # 📖 Qualer API Documentation Index
 
-This index lists all documented `GET` endpoints, grouped by tag.
+This index lists all `GET` endpoints, grouped by tag.
 
 ## Account
 

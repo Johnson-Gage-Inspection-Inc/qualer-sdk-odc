@@ -1,21 +1,21 @@
 # `AssetAttributes_GetAssetAttributes`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/assets/{assetId}/attributes`
 
-**Parameters:**  
+**Parameters:**
 - `assetId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `AssetId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 AssetAttributes
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/AssetAttributes/AssetAttributes_GetAssetAttributes.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetAttributes/AssetAttributes_GetAssetAttributes.odc)
 
 ---

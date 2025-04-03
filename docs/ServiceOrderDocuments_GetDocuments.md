@@ -1,23 +1,23 @@
 # `ServiceOrderDocuments_GetDocuments`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/documents`
 
-**Parameters:**  
+**Parameters:**
 - `serviceOrderId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ServiceOrderId`
 
-**Description:**  
+**Description:**
 Sample request:
             
 GET api/service/workorders/1000/documents
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrderDocuments
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocuments.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocuments.odc)
 
 ---

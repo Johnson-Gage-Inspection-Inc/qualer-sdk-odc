@@ -1,21 +1,21 @@
 # `ClientAssets_GetAllAssets`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/clients/assets`
 
-**Parameters:**  
+**Parameters:**
 None
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 None
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 ClientAssets
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ClientAssets/ClientAssets_GetAllAssets.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientAssets/ClientAssets_GetAllAssets.odc)
 
 ---

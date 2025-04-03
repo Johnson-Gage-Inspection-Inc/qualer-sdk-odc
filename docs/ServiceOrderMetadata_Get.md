@@ -1,21 +1,21 @@
 # `ServiceOrderMetadata_Get`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/metadata`
 
-**Parameters:**  
+**Parameters:**
 - `serviceOrderId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ServiceOrderId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrderMetadata
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrderMetadata/ServiceOrderMetadata_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderMetadata/ServiceOrderMetadata_Get.odc)
 
 ---

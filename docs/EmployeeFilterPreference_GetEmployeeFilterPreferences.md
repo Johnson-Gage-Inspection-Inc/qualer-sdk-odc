@@ -1,21 +1,21 @@
 # `EmployeeFilterPreference_GetEmployeeFilterPreferences`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/user/filters`
 
-**Parameters:**  
+**Parameters:**
 None
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 None
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 EmployeeFilterPreference
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/EmployeeFilterPreference/EmployeeFilterPreference_GetEmployeeFilterPreferences.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/EmployeeFilterPreference/EmployeeFilterPreference_GetEmployeeFilterPreferences.odc)
 
 ---

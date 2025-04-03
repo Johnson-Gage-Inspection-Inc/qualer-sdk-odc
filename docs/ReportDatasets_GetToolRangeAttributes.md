@@ -1,21 +1,21 @@
 # `ReportDatasets_GetToolRangeAttributes`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/data/ToolRangeAttributes/{serviceOrderItemId}`
 
-**Parameters:**  
+**Parameters:**
 - `serviceOrderItemId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ServiceOrderItemId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 ReportDatasets
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ReportDatasets/ReportDatasets_GetToolRangeAttributes.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ReportDatasets/ReportDatasets_GetToolRangeAttributes.odc)
 
 ---

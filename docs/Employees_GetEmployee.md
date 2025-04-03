@@ -1,21 +1,21 @@
 # `Employees_GetEmployee`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/employees/{employeeId}`
 
-**Parameters:**  
+**Parameters:**
 - `employeeId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `EmployeeId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 Employees
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Employees/Employees_GetEmployee.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Employees/Employees_GetEmployee.odc)
 
 ---

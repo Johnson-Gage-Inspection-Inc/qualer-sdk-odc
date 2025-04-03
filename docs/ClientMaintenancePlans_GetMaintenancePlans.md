@@ -1,21 +1,21 @@
 # `ClientMaintenancePlans_GetMaintenancePlans`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/clients/{clientCompanyId}/plans`
 
-**Parameters:**  
+**Parameters:**
 - `clientCompanyId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ClientCompanyId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 ClientMaintenancePlans
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ClientMaintenancePlans/ClientMaintenancePlans_GetMaintenancePlans.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientMaintenancePlans/ClientMaintenancePlans_GetMaintenancePlans.odc)
 
 ---

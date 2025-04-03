@@ -1,21 +1,21 @@
 # `Assets_GetAssetImages`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/assets/{id}/images`
 
-**Parameters:**  
+**Parameters:**
 - `id` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `IdID`
 
-**Description:**  
+**Description:**
 returns list of asset image urls
 
-**Group (Tag):**  
+**Group (Tag):**
 Assets
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Assets/Assets_GetAssetImages.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Assets/Assets_GetAssetImages.odc)
 
 ---

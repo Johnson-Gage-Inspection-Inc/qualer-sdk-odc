@@ -1,21 +1,21 @@
 # `AssetReservation_Get`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/assetsreservations`
 
-**Parameters:**  
+**Parameters:**
 None
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 None
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 AssetReservation
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/AssetReservation/AssetReservation_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetReservation/AssetReservation_Get.odc)
 
 ---

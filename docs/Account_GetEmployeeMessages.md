@@ -1,21 +1,21 @@
 # `Account_GetEmployeeMessages`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/user/messages`
 
-**Parameters:**  
+**Parameters:**
 None
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 None
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 Account
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Account/Account_GetEmployeeMessages.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Account/Account_GetEmployeeMessages.odc)
 
 ---

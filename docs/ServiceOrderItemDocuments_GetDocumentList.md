@@ -1,15 +1,15 @@
 # `ServiceOrderItemDocuments_GetDocumentList`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/workitems/documents/list`
 
-**Parameters:**  
+**Parameters:**
 None
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 None
 
-**Description:**  
+**Description:**
 Sample request:
             
 GET /api/service/workitems/documents/list
@@ -31,10 +31,10 @@ Dashboard = 4,<br />
 OrderDetail / ServiceOrderDetail = 5,<br />
 OrderCertificate / ServiceOrderCertificate = 5<br />
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrderItemDocuments
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrderItemDocuments/ServiceOrderItemDocuments_GetDocumentList.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderItemDocuments/ServiceOrderItemDocuments_GetDocumentList.odc)
 
 ---

@@ -1,21 +1,21 @@
 # `Environments_Get`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/Environments/{id}`
 
-**Parameters:**  
+**Parameters:**
 - `id` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `IdID`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 Environments
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Environments/Environments_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Environments/Environments_Get.odc)
 
 ---

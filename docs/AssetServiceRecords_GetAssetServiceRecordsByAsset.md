@@ -1,21 +1,21 @@
 # `AssetServiceRecords_GetAssetServiceRecordsByAsset`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/assets/{assetId}/assetservicerecords`
 
-**Parameters:**  
+**Parameters:**
 - `assetId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `AssetId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 AssetServiceRecords
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/AssetServiceRecords/AssetServiceRecords_GetAssetServiceRecordsByAsset.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/AssetServiceRecords/AssetServiceRecords_GetAssetServiceRecordsByAsset.odc)
 
 ---

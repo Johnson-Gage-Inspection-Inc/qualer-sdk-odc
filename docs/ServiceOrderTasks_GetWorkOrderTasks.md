@@ -1,15 +1,15 @@
 # `ServiceOrderTasks_GetWorkOrderTasks`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/tasks`
 
-**Parameters:**  
+**Parameters:**
 - `serviceOrderId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ServiceOrderId`
 
-**Description:**  
+**Description:**
 TimeSpent
 Integer part (before dot) is hours
 Fractional part (after dot) is minutes
@@ -17,10 +17,10 @@ For example:
     if time spent is 10 minutes -&gt; 10 / 60 = 0.1666666666666667
     if time spent is 65 minutes -&gt; (65 - 60) + (5 / 60) = 1.0833333333333333
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrderTasks
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrderTasks/ServiceOrderTasks_GetWorkOrderTasks.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderTasks/ServiceOrderTasks_GetWorkOrderTasks.odc)
 
 ---

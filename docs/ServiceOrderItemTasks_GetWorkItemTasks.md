@@ -1,21 +1,21 @@
 # `ServiceOrderItemTasks_GetWorkItemTasks`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/workitems/{workItemId}/tasks`
 
-**Parameters:**  
+**Parameters:**
 - `workItemId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `WorkItemId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrderItemTasks
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrderItemTasks/ServiceOrderItemTasks_GetWorkItemTasks.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderItemTasks/ServiceOrderItemTasks_GetWorkItemTasks.odc)
 
 ---

@@ -1,21 +1,21 @@
 # `ServiceOrders_GetCharges`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/charges`
 
-**Parameters:**  
+**Parameters:**
 - `serviceOrderId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ServiceOrderId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrders
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetCharges.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrders/ServiceOrders_GetCharges.odc)
 
 ---

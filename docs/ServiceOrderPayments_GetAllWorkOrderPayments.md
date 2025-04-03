@@ -1,21 +1,21 @@
 # `ServiceOrderPayments_GetAllWorkOrderPayments`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/payments`
 
-**Parameters:**  
+**Parameters:**
 - `serviceOrderId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ServiceOrderId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrderPayments
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrderPayments/ServiceOrderPayments_GetAllWorkOrderPayments.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderPayments/ServiceOrderPayments_GetAllWorkOrderPayments.odc)
 
 ---

@@ -1,21 +1,21 @@
 # `Vendors_Get`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/vendors/{vendorCompanyId}`
 
-**Parameters:**  
+**Parameters:**
 - `vendorCompanyId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `VendorCompanyId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 Vendors
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Vendors/Vendors_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Vendors/Vendors_Get.odc)
 
 ---

@@ -1,12 +1,12 @@
+# flake8: noqa: E501
 import json
-import os
 import re
 from pathlib import Path
 from collections import defaultdict
 
 # === Config ===
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
-API_TOKEN = os.getenv("QUALER_API_TOKEN")
+API_TOKEN = 'bf407589-f463-4046-ba2c-30642bd5d637'
 OUTPUT_DIR = Path("Excel-Qualer-SDK")
 
 
@@ -15,9 +15,12 @@ def generate_odc_file(group, name, url, parameters):
     mashup_lines = []
 
     for param in parameters:
-        mashup_lines.append(
-            f'{param} = Excel.CurrentWorkbook(){{[Name="{param}"]}}[Content]{{0}}[Column1],'
-        )
+        mashup_lines += [
+            param,
+            ' = Excel.CurrentWorkbook(){{[Name="',
+            param,
+            '"]}}[Content]{{0}}[Column1],'
+        ]
 
     for param in parameters:
         pattern = re.compile(rf"\{{{param}\}}", re.IGNORECASE)
@@ -33,7 +36,7 @@ def generate_odc_file(group, name, url, parameters):
         "    baseUrl,",
         "    [",
         '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
-        '        Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]',
+        f'        Headers = [ Authorization = "Api-Token {API_TOKEN}" ]',
         "    ]",
         "),",
         "json = Json.Document(response),",
@@ -101,10 +104,11 @@ def generate_markdown_files(spec: dict, docs_dir):
                 continue
 
             tag = details.get("tags", ["General"])[0]
-            op_id = details.get("operationId", f"{method}_{path.replace('/', '_')}")
+            http_method_path_var = f"{method}_{path.replace('/', '_')}"
+            op_id = details.get("operationId", http_method_path_var)
             clean_name = re.sub(r"\W+", "_", op_id)
 
-            parameters = [
+            params = [
                 p["name"]
                 for p in details.get("parameters", [])
                 if p.get("in") == "path"
@@ -115,30 +119,30 @@ def generate_markdown_files(spec: dict, docs_dir):
                     if p.lower() == "id"
                     else p[0].upper() + p[1:]
                 )
-                for p in parameters
+                for p in params
             ]
-            param_doc = "\n".join([f"- `{p}` (path)" for p in parameters]) or "None"
+            pram_doc = "\n".join([f"- `{p}` (path)" for p in params]) or "None"
             range_doc = "\n".join([f"- `{r}`" for r in param_ranges]) or "None"
             desc = details.get("description", "No description provided.")
 
             markdown = f"""# `{clean_name}`
 
-**URL Template:**  
+**URL Template:**
 `GET {path}`
 
-**Parameters:**  
-{param_doc}
+**Parameters:**
+{pram_doc}
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 {range_doc}
 
-**Description:**  
+**Description:**
 {desc.strip()}
 
-**Group (Tag):**  
+**Group (Tag):**
 {tag}
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/{tag}/{clean_name}.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/{tag}/{clean_name}.odc)
 
 ---
@@ -152,7 +156,7 @@ To Use in Excel:
 4. Click ![`Browse for More...`](https://github.com/user-attachments/assets/8e698494-6865-41e7-b6fa-043aea81809a)
 5. Paste the following into the URL bar
 ```
-\\\\jgiquality.sharepoint.com@SSL\sites\JGI\Shared Documents\General\Excel-Qualer-SDK\{tag}\\
+\\\\jgiquality.sharepoint.com@SSL\\sites\\JGI\\Shared Documents\\General\\Excel-Qualer-SDK\\{tag}\\
 ```
 
 ![image](https://github.com/user-attachments/assets/1e1a8d87-0377-446d-aaf5-d78562991db3)
@@ -180,7 +184,8 @@ def generate_all_odc_files(spec: dict):
                 continue
 
             tag = details.get("tags", ["General"])[0]
-            op_id = details.get("operationId", f"{method}_{path.replace('/', '_')}")
+            http_method_path_var = f"{method}_{path.replace('/', '_')}"
+            op_id = details.get("operationId", http_method_path_var)
             clean_name = re.sub(r"\W+", "_", op_id)
 
             params = [
@@ -209,7 +214,8 @@ def generate_docs_index(docs_dir="docs"):
 
     # Group docs by prefix (tag)
     groups = defaultdict(list)
-    for doc in sorted(p for p in docs_path.glob("*.md") if p.name != "README.md"):
+    markdown_files = docs_path.glob("*.md")
+    for doc in sorted(p for p in markdown_files if p.name != "README.md"):
         parts = doc.stem.split("_", 1)
         if len(parts) == 2:
             tag, rest = parts
@@ -219,7 +225,7 @@ def generate_docs_index(docs_dir="docs"):
 
     with open(index_file, "w", encoding="utf-8") as f:
         f.write("# 📖 Qualer API Documentation Index\n\n")
-        f.write("This index lists all documented `GET` endpoints, grouped by tag.\n\n")
+        f.write("This index lists all `GET` endpoints, grouped by tag.\n\n")
 
         for tag in sorted(groups):
             f.write(f"## {tag}\n\n")

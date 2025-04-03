@@ -1,21 +1,21 @@
 # `ServiceOrderParts_GetWorkOrderParts`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/parts`
 
-**Parameters:**  
+**Parameters:**
 - `serviceOrderId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ServiceOrderId`
 
-**Description:**  
+**Description:**
 
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrderParts
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrderParts/ServiceOrderParts_GetWorkOrderParts.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderParts/ServiceOrderParts_GetWorkOrderParts.odc)
 
 ---

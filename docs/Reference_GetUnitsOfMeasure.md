@@ -1,21 +1,21 @@
 # `Reference_GetUnitsOfMeasure`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/reference/UnitsOfMeasure`
 
-**Parameters:**  
+**Parameters:**
 None
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 None
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 Reference
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Reference/Reference_GetUnitsOfMeasure.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Reference/Reference_GetUnitsOfMeasure.odc)
 
 ---

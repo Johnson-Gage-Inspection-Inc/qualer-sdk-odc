@@ -1,21 +1,21 @@
 # `Assets_GetAssetByAssetTag`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/assets/byassettag/{assetTag}`
 
-**Parameters:**  
+**Parameters:**
 - `assetTag` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `AssetTag`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 Assets
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Assets/Assets_GetAssetByAssetTag.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Assets/Assets_GetAssetByAssetTag.odc)
 
 ---

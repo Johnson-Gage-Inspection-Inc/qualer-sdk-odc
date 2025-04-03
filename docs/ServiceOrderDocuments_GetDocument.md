@@ -1,25 +1,25 @@
 # `ServiceOrderDocuments_GetDocument`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/wd/{guid}`
 
-**Parameters:**  
+**Parameters:**
 - `guid` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `Guid`
 
-**Description:**  
+**Description:**
 Sample request:
             
 GET api/service/workorders/documents/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9
             
 GET api/wd/FE6B21DC-8061-46FF-AAB8-12C2030FE4B9
 
-**Group (Tag):**  
+**Group (Tag):**
 ServiceOrderDocuments
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocument.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ServiceOrderDocuments/ServiceOrderDocuments_GetDocument.odc)
 
 ---

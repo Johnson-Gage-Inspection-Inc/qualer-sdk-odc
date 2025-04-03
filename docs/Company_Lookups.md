@@ -1,15 +1,15 @@
 # `Company_Lookups`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/company/lookups`
 
-**Parameters:**  
+**Parameters:**
 None
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 None
 
-**Description:**  
+**Description:**
 lookupName:
 AssetClass = 1
 AssetCriticality = 2
@@ -27,10 +27,10 @@ ClientCategory = 13
 CancelOrderReasons = 14
 OrderItemLockedWorkStatus = 15
 
-**Group (Tag):**  
+**Group (Tag):**
 Company
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Company/Company_Lookups.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Company/Company_Lookups.odc)
 
 ---

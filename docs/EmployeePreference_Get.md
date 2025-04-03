@@ -1,15 +1,15 @@
 # `EmployeePreference_Get`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/user/preferences/{elementPage}`
 
-**Parameters:**  
+**Parameters:**
 - `elementPage` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ElementPage`
 
-**Description:**  
+**Description:**
 elementPage:
 AssetManager = 1,
 WorkOrders = 2,
@@ -27,10 +27,10 @@ ProductManager = 13,
 ProductSpecifications = 14,
 DocumentManager = 15
 
-**Group (Tag):**  
+**Group (Tag):**
 EmployeePreference
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/EmployeePreference/EmployeePreference_Get.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/EmployeePreference/EmployeePreference_Get.odc)
 
 ---

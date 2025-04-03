@@ -1,21 +1,21 @@
 # `ClientSite_GetClientSites`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/service/clients/{clientCompanyId}/sites`
 
-**Parameters:**  
+**Parameters:**
 - `clientCompanyId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `ClientCompanyId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 ClientSite
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/ClientSite/ClientSite_GetClientSites.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/ClientSite/ClientSite_GetClientSites.odc)
 
 ---

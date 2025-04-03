@@ -1,21 +1,21 @@
 # `Assets_GetAssetsByEquipmentId`
 
-**URL Template:**  
+**URL Template:**
 `GET /api/assets/byequipmentid/{equipmentId}`
 
-**Parameters:**  
+**Parameters:**
 - `equipmentId` (path)
 
-**Excel Named Range(s):**  
+**Excel Named Range(s):**
 - `EquipmentId`
 
-**Description:**  
+**Description:**
 No description provided.
 
-**Group (Tag):**  
+**Group (Tag):**
 Assets
 
-**ODC File:**  
+**ODC File:**
 [Excel-Qualer-SDK/Assets/Assets_GetAssetsByEquipmentId.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/Assets/Assets_GetAssetsByEquipmentId.odc)
 
 ---
