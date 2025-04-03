@@ -8,29 +8,30 @@ from collections import defaultdict
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
 API_TOKEN = 'bf407589-f463-4046-ba2c-30642bd5d637'
 OUTPUT_DIR = Path("Excel-Qualer-SDK")
+BASE_URL = "https://jgiquality.qualer.com"
 
 
 # === Template Generator ===
-def generate_odc_file(group, name, url, parameters):
+def generate_odc_file(ep):
+    name = ep["clean_name"]
+    (url,) = ep["url"],
+
     mashup_lines = []
 
-    for param in parameters:
+    for parameter in ep["param_names"]:
         mashup_lines += [
-            param,
+            parameter,
             ' = Excel.CurrentWorkbook(){{[Name="',
-            param,
+            parameter,
             '"]}}[Content]{{0}}[Column1],'
         ]
+        pattern = re.compile(rf"\{{{parameter}\}}", re.IGNORECASE)
+        url = pattern.sub(f'" & Text.From({parameter}) & "', url)
 
-    for param in parameters:
-        pattern = re.compile(rf"\{{{param}\}}", re.IGNORECASE)
-        url = pattern.sub(f'" & Text.From({param}) & "', url)
-
-    base_url = "https://jgiquality.qualer.com"
-    relative_url = url.replace(base_url, "").lstrip("/")
+    relative_url = url.replace(BASE_URL, "").lstrip("/")
 
     mashup_lines += [
-        f'baseUrl = "{base_url}",',
+        f'baseUrl = "{BASE_URL}",',
         f'relativeUrl = "{relative_url}",',
         "response = Web.Contents(",
         "    baseUrl,",
@@ -86,7 +87,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
 </style>"""
     )
 
-    folder = OUTPUT_DIR / group
+    folder = OUTPUT_DIR / ep["tag"]
     folder.mkdir(parents=True, exist_ok=True)
     path = folder / f"{name}.odc"
     with open(path, "w", encoding="utf-8") as f:
@@ -190,7 +191,7 @@ def generate_all_odc_files():
 
     for ep in yield_get_endpoints():
         generate_markdown_file(docs_path, ep)
-        generate_odc_file(ep["tag"], ep["clean_name"], ep["url"], ep["param_names"])
+        generate_odc_file(ep)
     print("ODC files generated in:", OUTPUT_DIR)
 
 
