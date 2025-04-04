@@ -1,7 +1,7 @@
 let
-    EmployeeId = try Excel.CurrentWorkbook(){[Name="EmployeeId"]}[Content]{0} otherwise "",
-    IsInternal = try Excel.CurrentWorkbook(){[Name="IsInternal"]}[Content]{0} otherwise "",
-    q1 = if Text.Length(IsInternal) > 0 then [ "isInternal" = IsInternal ] else [],
+    EmployeeId = Excel.CurrentWorkbook(){[Name="EmployeeId"]}[Content]{0}[Column1],
+    IsInternal = try Excel.CurrentWorkbook(){[Name="IsInternal"]}[Content]{0}[Column1] otherwise "",
+    q1 = if Text.Length(IsInternal) > 0 then [ isInternal = IsInternal ] else [],
     QueryOptions = Record.Combine({q1}),
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/employee/" & Text.From(EmployeeId) & "/workorders",
@@ -15,4 +15,5 @@ let
     ),
     json = Json.Document(response),
     ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
-in ConvertToTable
+in
+    ConvertToTable
