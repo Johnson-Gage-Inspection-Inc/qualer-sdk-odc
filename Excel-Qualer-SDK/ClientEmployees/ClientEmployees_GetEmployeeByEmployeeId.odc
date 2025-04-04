@@ -22,8 +22,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ClientEmployees_GetEmployeeByEmployeeId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    employeeId = Excel.CurrentWorkbook(){[Name="employeeId"]}[Content]{0},
-    model.employeeId = Excel.CurrentWorkbook(){[Name="model.employeeId"]}[Content]{0},
+    employeeId = try Excel.CurrentWorkbook(){[Name="employeeId"]}[Content]{0} otherwise "",
+    model.employeeId = try Excel.CurrentWorkbook(){[Name="model.employeeId"]}[Content]{0} otherwise "",
     q1 = if Text.Length(employeeId) > 0 then [ employeeId = employeeId ] else [],
     q2 = if Text.Length(model.employeeId) > 0 then [ model.employeeId = model.employeeId ] else [],
     QueryOptions = Record.Combine({q1, q2}),

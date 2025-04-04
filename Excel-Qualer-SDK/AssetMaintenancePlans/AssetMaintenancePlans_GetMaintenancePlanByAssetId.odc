@@ -22,8 +22,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;AssetMaintenancePlans_GetMaintenancePlanByAssetId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    assetId = Excel.CurrentWorkbook(){[Name="assetId"]}[Content]{0},
-    maintenancePlanId = Excel.CurrentWorkbook(){[Name="maintenancePlanId"]}[Content]{0},
+    assetId = try Excel.CurrentWorkbook(){[Name="assetId"]}[Content]{0} otherwise "",
+    maintenancePlanId = try Excel.CurrentWorkbook(){[Name="maintenancePlanId"]}[Content]{0} otherwise "",
     QueryOptions = [],
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/assets/{assetId}/plans/{maintenancePlanId}",

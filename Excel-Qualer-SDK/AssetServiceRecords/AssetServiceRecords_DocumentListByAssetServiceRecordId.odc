@@ -22,8 +22,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;AssetServiceRecords_DocumentListByAssetServiceRecordId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    assetServiceRecordId = Excel.CurrentWorkbook(){[Name="assetServiceRecordId"]}[Content]{0},
-    model.assetServiceRecordId = Excel.CurrentWorkbook(){[Name="model.assetServiceRecordId"]}[Content]{0},
+    assetServiceRecordId = try Excel.CurrentWorkbook(){[Name="assetServiceRecordId"]}[Content]{0} otherwise "",
+    model.assetServiceRecordId = try Excel.CurrentWorkbook(){[Name="model.assetServiceRecordId"]}[Content]{0} otherwise "",
     q1 = if Text.Length(assetServiceRecordId) > 0 then [ assetServiceRecordId = assetServiceRecordId ] else [],
     q2 = if Text.Length(model.assetServiceRecordId) > 0 then [ model.assetServiceRecordId = model.assetServiceRecordId ] else [],
     QueryOptions = Record.Combine({q1, q2}),

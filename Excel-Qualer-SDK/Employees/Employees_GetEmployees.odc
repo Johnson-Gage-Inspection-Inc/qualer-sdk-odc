@@ -22,7 +22,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;Employees_GetEmployees&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    model.searchString = Excel.CurrentWorkbook(){[Name="model.searchString"]}[Content]{0},
+    model.searchString = try Excel.CurrentWorkbook(){[Name="model.searchString"]}[Content]{0} otherwise "",
     q1 = if Text.Length(model.searchString) > 0 then [ model.searchString = model.searchString ] else [],
     QueryOptions = Record.Combine({q1}),
     baseUrl = "https://jgiquality.qualer.com",

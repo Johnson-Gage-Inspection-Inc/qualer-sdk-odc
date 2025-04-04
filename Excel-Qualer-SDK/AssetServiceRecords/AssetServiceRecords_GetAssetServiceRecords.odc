@@ -22,10 +22,10 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;AssetServiceRecords_GetAssetServiceRecords&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    model.assetId = Excel.CurrentWorkbook(){[Name="model.assetId"]}[Content]{0},
-    model.serialNumber = Excel.CurrentWorkbook(){[Name="model.serialNumber"]}[Content]{0},
-    model.from = Excel.CurrentWorkbook(){[Name="model.from"]}[Content]{0},
-    model.to = Excel.CurrentWorkbook(){[Name="model.to"]}[Content]{0},
+    model.assetId = try Excel.CurrentWorkbook(){[Name="model.assetId"]}[Content]{0} otherwise "",
+    model.serialNumber = try Excel.CurrentWorkbook(){[Name="model.serialNumber"]}[Content]{0} otherwise "",
+    model.from = try Excel.CurrentWorkbook(){[Name="model.from"]}[Content]{0} otherwise "",
+    model.to = try Excel.CurrentWorkbook(){[Name="model.to"]}[Content]{0} otherwise "",
     q1 = if Text.Length(model.assetId) > 0 then [ model.assetId = model.assetId ] else [],
     q2 = if Text.Length(model.serialNumber) > 0 then [ model.serialNumber = model.serialNumber ] else [],
     q3 = if Text.Length(model.from) > 0 then [ model.from = model.from ] else [],
