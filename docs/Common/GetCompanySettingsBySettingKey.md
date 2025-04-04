@@ -4,10 +4,10 @@
 `GET /api/common/settings`
 
 **Parameters:**
-- *****`settingKey`: `string`
+- *`settingKey`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `SettingKey`

@@ -4,10 +4,10 @@
 `GET /api/assets/bybarcode/{barcode}`
 
 **Parameters:**
-- *****`barcode`: `string`
+- *`barcode`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `Barcode`

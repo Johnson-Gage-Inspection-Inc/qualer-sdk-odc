@@ -4,10 +4,10 @@
 `GET /api/company/lookups`
 
 **Parameters:**
-- *****`lookupType`: `string`
+- *`lookupType`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `LookupType`

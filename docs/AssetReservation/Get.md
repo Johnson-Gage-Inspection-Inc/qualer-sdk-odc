@@ -14,7 +14,7 @@
 - `model.reservationId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `Model.from`

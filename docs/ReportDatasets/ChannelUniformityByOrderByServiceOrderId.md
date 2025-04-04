@@ -4,10 +4,10 @@
 `GET /api/data/orders/{serviceOrderId}/ChannelUniformity`
 
 **Parameters:**
-- *****`serviceOrderId`: `integer`
+- *`serviceOrderId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ServiceOrderId`

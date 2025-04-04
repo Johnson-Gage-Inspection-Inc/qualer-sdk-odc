@@ -4,10 +4,10 @@
 `GET /api/products/{productId}`
 
 **Parameters:**
-- *****`productId`: `integer`
+- *`productId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ProductId`

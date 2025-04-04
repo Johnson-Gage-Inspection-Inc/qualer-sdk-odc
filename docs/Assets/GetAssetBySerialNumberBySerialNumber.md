@@ -4,10 +4,10 @@
 `GET /api/assets/byserialnumber/{serialNumber}`
 
 **Parameters:**
-- *****`serialNumber`: `string`
+- *`serialNumber`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `SerialNumber`

@@ -4,13 +4,13 @@
 `GET /api/assetservicerecords/{AssetServiceRecordId}/documents/{FileName}`
 
 **Parameters:**
-- *****`assetServiceRecordId`: `string`
-- *****`fileName`: `string`
+- *`assetServiceRecordId`: `string`
+- *`fileName`: `string`
 - `model.assetServiceRecordId`: `integer`
 - `model.fileName`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `AssetServiceRecordId`

@@ -4,11 +4,11 @@
 `GET /api/employee/{employeeId}/workorders`
 
 **Parameters:**
-- *****`employeeId`: `integer`
+- *`employeeId`: `integer`
 - `isInternal`: `boolean`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `EmployeeId`

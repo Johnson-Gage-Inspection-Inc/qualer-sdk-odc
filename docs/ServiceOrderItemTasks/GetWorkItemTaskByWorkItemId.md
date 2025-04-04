@@ -4,11 +4,11 @@
 `GET /api/service/workitems/{workItemId}/tasks/{taskId}`
 
 **Parameters:**
-- *****`workItemId`: `integer`
-- *****`taskId`: `integer`
+- *`workItemId`: `integer`
+- *`taskId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `WorkItemId`

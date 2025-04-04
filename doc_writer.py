@@ -8,13 +8,13 @@ def generate_markdown_file(docs_path, ep, spec):
         param_name = param["name"]
         param_type = param["type"]
         param_format = param.get("format", "string")
-        pram_doc += '- *****' if param['required'] else '- '
+        pram_doc += '- *' if param['required'] else '- '
         pram_doc += f"`{param_name}`: `{param_type}`\n"
 
     # Format parameters list
     param_doc = ""
     for param in ep['params']:
-        prefix = "- *****" if param.get('required') else "- "
+        prefix = "- *" if param.get('required') else "- "
         param_doc += f"{prefix}`{param['name']}`: `{param['type']}`\n"
 
     # Named ranges
@@ -40,7 +40,7 @@ def generate_markdown_file(docs_path, ep, spec):
 **Parameters:**
 {pram_doc}
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 {range_doc}

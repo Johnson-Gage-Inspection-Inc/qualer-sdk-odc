@@ -4,10 +4,10 @@
 `GET /api/user/messages/{messageId}`
 
 **Parameters:**
-- *****`messageId`: `integer`
+- *`messageId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `MessageId`

@@ -4,10 +4,10 @@
 `GET /api/wd/{guid}`
 
 **Parameters:**
-- *****`guid`: `string`
+- *`guid`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `Guid`

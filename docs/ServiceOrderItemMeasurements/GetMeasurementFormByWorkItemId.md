@@ -4,10 +4,10 @@
 `GET /api/service/workitems/{workItemId}/form`
 
 **Parameters:**
-- *****`workItemId`: `integer`
+- *`workItemId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `WorkItemId`

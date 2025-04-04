@@ -4,11 +4,11 @@
 `GET /api/assets/{assetId}/plans/{maintenancePlanId}`
 
 **Parameters:**
-- *****`assetId`: `integer`
-- *****`maintenancePlanId`: `integer`
+- *`assetId`: `integer`
+- *`maintenancePlanId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `AssetId`

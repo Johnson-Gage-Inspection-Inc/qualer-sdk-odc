@@ -4,7 +4,7 @@
 `GET /api/service/clients/{clientCompanyId}/assets`
 
 **Parameters:**
-- *****`clientCompanyId`: `integer`
+- *`clientCompanyId`: `integer`
 - `query.equipmentId`: `string`
 - `query.serialNumber`: `string`
 - `query.assetTag`: `string`
@@ -12,7 +12,7 @@
 - `query.legacyId`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ClientCompanyId`

@@ -4,10 +4,10 @@
 `GET /api/assets/byassettag/{assetTag}`
 
 **Parameters:**
-- *****`assetTag`: `string`
+- *`assetTag`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `AssetTag`

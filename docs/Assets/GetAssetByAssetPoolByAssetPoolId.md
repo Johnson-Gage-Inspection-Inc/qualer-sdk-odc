@@ -4,10 +4,10 @@
 `GET /api/assets/byassetpool/{assetPoolId}`
 
 **Parameters:**
-- *****`assetPoolId`: `integer`
+- *`assetPoolId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `AssetPoolId`

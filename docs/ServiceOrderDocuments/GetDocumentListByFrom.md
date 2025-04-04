@@ -4,13 +4,13 @@
 `GET /api/service/workorders/documents/list`
 
 **Parameters:**
-- *****`from`: `string`
-- *****`to`: `string`
+- *`from`: `string`
+- *`to`: `string`
 - `reportType`: `string`
 - `serviceOrderId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `From`

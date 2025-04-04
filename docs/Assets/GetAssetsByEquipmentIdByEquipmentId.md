@@ -4,10 +4,10 @@
 `GET /api/assets/byequipmentid/{equipmentId}`
 
 **Parameters:**
-- *****`equipmentId`: `string`
+- *`equipmentId`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `EquipmentId`

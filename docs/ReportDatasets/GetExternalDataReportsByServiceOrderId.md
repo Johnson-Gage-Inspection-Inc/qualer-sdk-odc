@@ -4,11 +4,11 @@
 `GET /api/data/{serviceOrderId}/ExternalDataReports`
 
 **Parameters:**
-- *****`serviceOrderId`: `integer`
-- *****`serviceOrderItemIds`: `array`
+- *`serviceOrderId`: `integer`
+- *`serviceOrderItemIds`: `array`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ServiceOrderId`

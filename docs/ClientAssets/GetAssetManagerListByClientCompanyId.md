@@ -4,14 +4,14 @@
 `GET /api/service/clients/{clientCompanyId}/assets/byfilter`
 
 **Parameters:**
-- *****`clientCompanyId`: `integer`
+- *`clientCompanyId`: `integer`
 - `query.filterType`: `string`
 - `query.searchString`: `string`
 - `query.page`: `integer`
 - `query.pageSize`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ClientCompanyId`

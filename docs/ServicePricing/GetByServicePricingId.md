@@ -4,11 +4,11 @@
 `GET /api/service/pricing`
 
 **Parameters:**
-- *****`servicePricingId`: `integer`
+- *`servicePricingId`: `integer`
 - `serviceGroupId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ServicePricingId`

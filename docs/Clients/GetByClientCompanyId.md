@@ -4,10 +4,10 @@
 `GET /api/service/clients/{clientCompanyId}`
 
 **Parameters:**
-- *****`clientCompanyId`: `integer`
+- *`clientCompanyId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ClientCompanyId`

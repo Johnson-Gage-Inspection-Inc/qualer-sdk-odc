@@ -4,11 +4,11 @@
 `GET /api/service/workitems/{workItemId}/images/{imageName}`
 
 **Parameters:**
-- *****`workItemId`: `integer`
-- *****`imageName`: `string`
+- *`workItemId`: `integer`
+- *`imageName`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `WorkItemId`

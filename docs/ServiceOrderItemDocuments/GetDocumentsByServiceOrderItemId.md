@@ -4,11 +4,11 @@
 `GET /api/service/workitems/{serviceOrderItemId}/documents`
 
 **Parameters:**
-- *****`serviceOrderItemId`: `integer`
+- *`serviceOrderItemId`: `integer`
 - `model.fileName`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ServiceOrderItemId`

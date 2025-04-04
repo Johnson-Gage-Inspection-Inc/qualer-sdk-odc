@@ -4,10 +4,10 @@
 `GET /api/user/preferences/{elementPage}`
 
 **Parameters:**
-- *****`elementPage`: `string`
+- *`elementPage`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ElementPage`

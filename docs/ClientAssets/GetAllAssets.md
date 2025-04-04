@@ -11,7 +11,7 @@
 - `query.legacyId`: `string`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `Query.equipmentId`

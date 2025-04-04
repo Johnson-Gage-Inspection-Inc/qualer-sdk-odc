@@ -4,10 +4,10 @@
 `GET /api/data/AssetAttributes/{serviceOrderItemId}`
 
 **Parameters:**
-- *****`serviceOrderItemId`: `integer`
+- *`serviceOrderItemId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `ServiceOrderItemId`

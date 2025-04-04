@@ -4,11 +4,11 @@
 `GET /api/service/clients/employees/{EmployeeId}`
 
 **Parameters:**
-- *****`employeeId`: `string`
+- *`employeeId`: `string`
 - `model.employeeId`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `EmployeeId`

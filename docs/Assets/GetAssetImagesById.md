@@ -4,10 +4,10 @@
 `GET /api/assets/{id}/images`
 
 **Parameters:**
-- *****`id`: `integer`
+- *`id`: `integer`
 
 
-> *****Required parameters are marked with an asterisk (*****).
+> *Required parameters are marked with an asterisk (*).
 
 **Excel Named Range(s):**
 - `IdID`
