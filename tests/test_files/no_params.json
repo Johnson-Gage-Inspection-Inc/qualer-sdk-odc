@@ -1,0 +1,39 @@
+{
+    "tag": "ReportDatasets",
+    "path": "/api/data/CompanyCertifications",
+    "method": "get",
+    "details": {
+        "tags": [
+            "ReportDatasets"
+        ],
+        "operationId": "ReportDatasets_GetCompanyCertifications",
+        "consumes": [],
+        "produces": [
+            "application/json",
+            "text/json",
+            "application/xml",
+            "text/xml"
+        ],
+        "responses": {
+            "200": {
+                "description": "OK",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Qualer.Api.Models.ReportDatasets.To.CompanyCertificationResponse"
+                    }
+                }
+            }
+        }
+    },
+    "clean_name": "ReportDatasets_GetCompanyCertifications",
+    "op_id": "ReportDatasets_GetCompanyCertifications",
+    "params": [],
+    "param_names": [],
+    "path_params": [],
+    "query_params": [],
+    "excel_path_params": [],
+    "excel_query_params": [],
+    "url": "https://jgiquality.qualer.com/api/data/CompanyCertifications",
+    "relative_url": "api/data/CompanyCertifications"
+}

@@ -1,15 +1,17 @@
 # flake8: noqa: E501
-from doc_writer import generate_markdown_file, generate_docs_index
 from pathlib import Path
+from src.doc_writer import generate_markdown_file, generate_docs_index
+from src.odc_writer import render_odc_xml
 import json
 import re
-from odc_writer import render_odc_xml
 
 # === Config ===
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
 API_TOKEN = 'bf407589-f463-4046-ba2c-30642bd5d637'
 OUTPUT_DIR = Path("Excel-Qualer-SDK")
 BASE_URL = "https://jgiquality.qualer.com"
+
+def normalize_name(n): return n.replace(".", "_")
 
 
 # === Template Generator ===
@@ -31,6 +33,7 @@ def generate_odc_file(ep):
     query_option_lines = []
     combine_names = []
 
+
     if ep['query_params']:
         names = [p["name"] for p in ep["params"] if p["in"] == "query"]
         for i, p in enumerate(names):
@@ -47,7 +50,7 @@ def generate_odc_file(ep):
 
     mashup_lines += query_option_lines + [
         f'baseUrl = "{BASE_URL}",',
-        f'relativeUrl = "{ep['relative_url']}",',
+        f'relativeUrl = "{ep["relative_url"]}",',
         "response = Web.Contents(",
         "    baseUrl,",
         "    [",
@@ -114,6 +117,64 @@ def yield_get_endpoints(spec):
                 "url": url,
                 "relative_url": relative_url,
             }
+
+def generate_mashup_formula(ep):
+    def normalize_name(n): return n.replace(".", "_")
+
+    path_param_pairs = zip(ep["path_params"], ep["excel_path_params"])
+    query_param_pairs = zip(ep["query_params"], ep["excel_query_params"])
+
+    lines = []
+
+    # Declare all Excel-named params
+    for _, excel in list(path_param_pairs) + list(query_param_pairs):
+        safe_excel = normalize_name(excel)
+        lines.append(
+            f'{safe_excel} = try Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}} otherwise "",'
+        )
+
+    # Restore zip since it’s been consumed
+    path_param_pairs = zip(ep["path_params"], ep["excel_path_params"])
+
+    # Replace placeholders in URL
+    url = ep["relative_url"]
+    for orig, excel in zip(ep["path_params"], ep["excel_path_params"]):
+        safe_excel = normalize_name(excel)
+        pattern = re.compile(rf"\{{{orig}\}}", re.IGNORECASE)
+        url = pattern.sub(f'" & Text.From({safe_excel}) & "', url)
+
+    # Build query param handling
+    combine_names = []
+    for i, (orig, excel) in enumerate(zip(ep["query_params"], ep["excel_query_params"])):
+        safe_excel = normalize_name(excel)
+        varname = f"q{i+1}"
+        lines.append(
+            f'{varname} = if Text.Length({safe_excel}) > 0 then [ "{orig}" = {safe_excel} ] else [],'
+        )
+        combine_names.append(varname)
+
+    if combine_names:
+        lines.append(f'QueryOptions = Record.Combine({{{", ".join(combine_names)}}}),')
+    else:
+        lines.append('QueryOptions = [],')
+
+    # Core request logic
+    lines += [
+        f'baseUrl = "{BASE_URL}",',
+        f'relativeUrl = "{url}",',
+        "response = Web.Contents(",
+        "    baseUrl,",
+        "    [",
+        '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
+        '        Query = QueryOptions,',
+        f'        Headers = [ Authorization = "Api-Token {API_TOKEN}" ]',
+        "    ]",
+        "),",
+        "json = Json.Document(response),",
+        "ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)",
+    ]
+
+    return "let\n    " + "\n    ".join(lines) + "\nin " + lines[-1].split(" = ")[0]
 
 
 if __name__ == "__main__":
