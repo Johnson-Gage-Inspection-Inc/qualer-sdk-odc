@@ -1,0 +1,66 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/x-ms-odc; charset=utf-8">
+<meta name=ProgId content=ODC.Database>
+<meta name=SourceType content=OLEDB>
+<title>AssetServiceRecords_DownloadDocumentByAssetServiceRecordId</title>
+<xml id=docprops><o:DocumentProperties
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns="http://www.w3.org/TR/REC-html40">
+  <o:Description>Connection to the 'AssetServiceRecords_DownloadDocumentByAssetServiceRecordId' query in the workbook.</o:Description>
+  <o:Name>AssetServiceRecords_DownloadDocumentByAssetServiceRecordId</o:Name>
+ </o:DocumentProperties>
+</xml><xml id=msodc><odc:OfficeDataConnection
+  xmlns:odc="urn:schemas-microsoft-com:office:odc"
+  xmlns="http://www.w3.org/TR/REC-html40">
+  <odc:PowerQueryConnection odc:Type="OLEDB">
+   <odc:ConnectionString>Provider=Microsoft.Mashup.OleDb.1;Data Source=$Workbook$;Location=AssetServiceRecords_DownloadDocumentByAssetServiceRecordId;Extended Properties=&quot;&quot;</odc:ConnectionString>
+   <odc:CommandType>SQL</odc:CommandType>
+   <odc:CommandText>SELECT * FROM [AssetServiceRecords_DownloadDocumentByAssetServiceRecordId]</odc:CommandText>
+  </odc:PowerQueryConnection>
+  <odc:PowerQueryMashupData>
+    &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;AssetServiceRecords_DownloadDocumentByAssetServiceRecordId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
+    assetServiceRecordId
+     = Excel.CurrentWorkbook(){{[Name="
+    assetServiceRecordId
+    "]}}[Content]{{0}}[Column1],
+    fileName
+     = Excel.CurrentWorkbook(){{[Name="
+    fileName
+    "]}}[Content]{{0}}[Column1],
+    model.assetServiceRecordId
+     = Excel.CurrentWorkbook(){{[Name="
+    model.assetServiceRecordId
+    "]}}[Content]{{0}}[Column1],
+    model.fileName
+     = Excel.CurrentWorkbook(){{[Name="
+    model.fileName
+    "]}}[Content]{{0}}[Column1],
+    QueryOptions = if Text.Length(assetServiceRecordId) > 0 then [ assetServiceRecordId = assetServiceRecordId ] else [] & if Text.Length(fileName) > 0 then [ fileName = fileName ] else [] & if Text.Length(model.assetServiceRecordId) > 0 then [ model.assetServiceRecordId = model.assetServiceRecordId ] else [] & if Text.Length(model.fileName) > 0 then [ model.fileName = model.fileName ] else [],
+    baseUrl = "https://jgiquality.qualer.com",
+    relativeUrl = "api/assetservicerecords/{AssetServiceRecordId}/documents/{FileName}",
+    response = Web.Contents(
+        baseUrl,
+        [
+            RelativePath = Text.TrimStart(relativeUrl, "/"),
+            Query = QueryOptions,
+            Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]
+        ]
+    ),
+    json = Json.Document(response),
+    ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
+    in ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
+ </odc:PowerQueryMashupData>
+ </odc:OfficeDataConnection>
+</xml>
+
+<style>
+<!--
+    .ODCDataSource
+    {
+    behavior: url(dataconn.htc);
+    }
+-->
+</style>

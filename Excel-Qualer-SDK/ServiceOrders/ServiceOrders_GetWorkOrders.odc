@@ -22,16 +22,42 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ServiceOrders_GetWorkOrders&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    EmployeeId
+    status
      = Excel.CurrentWorkbook(){{[Name="
-    EmployeeId
+    status
     "]}}[Content]{{0}}[Column1],
+    companyId
+     = Excel.CurrentWorkbook(){{[Name="
+    companyId
+    "]}}[Content]{{0}}[Column1],
+    from
+     = Excel.CurrentWorkbook(){{[Name="
+    from
+    "]}}[Content]{{0}}[Column1],
+    to
+     = Excel.CurrentWorkbook(){{[Name="
+    to
+    "]}}[Content]{{0}}[Column1],
+    modifiedAfter
+     = Excel.CurrentWorkbook(){{[Name="
+    modifiedAfter
+    "]}}[Content]{{0}}[Column1],
+    workOrderNumber
+     = Excel.CurrentWorkbook(){{[Name="
+    workOrderNumber
+    "]}}[Content]{{0}}[Column1],
+    assignedEmployees
+     = Excel.CurrentWorkbook(){{[Name="
+    assignedEmployees
+    "]}}[Content]{{0}}[Column1],
+    QueryOptions = if Text.Length(status) > 0 then [ status = status ] else [] & if Text.Length(companyId) > 0 then [ companyId = companyId ] else [] & if Text.Length(from) > 0 then [ from = from ] else [] & if Text.Length(to) > 0 then [ to = to ] else [] & if Text.Length(modifiedAfter) > 0 then [ modifiedAfter = modifiedAfter ] else [] & if Text.Length(workOrderNumber) > 0 then [ workOrderNumber = workOrderNumber ] else [] & if Text.Length(assignedEmployees) > 0 then [ assignedEmployees = assignedEmployees ] else [],
     baseUrl = "https://jgiquality.qualer.com",
-    relativeUrl = "api/employee/" & Text.From(EmployeeId) & "/workorders",
+    relativeUrl = "api/service/workorders",
     response = Web.Contents(
         baseUrl,
         [
             RelativePath = Text.TrimStart(relativeUrl, "/"),
+            Query = QueryOptions,
             Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]
         ]
     ),

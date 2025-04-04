@@ -115,7 +115,8 @@ def yield_get_endpoints(spec):
             clean_name = re.sub(r'\\W+', '_', op_id)
             params = details.get("parameters", [])
             if required_params:= [p for p in params if p.get("required")]:
-                clean_name += f"By{required_params[0]['name']}"
+                p = required_params[0]["name"]
+                clean_name += f"By{p[0].upper() + p[1:]}"
             param_names = [p["name"] for p in params]
             param_names = [
                 p[0].upper() + p[1:] + "ID" if p.lower() == "id" else p[0].upper() + p[1:]

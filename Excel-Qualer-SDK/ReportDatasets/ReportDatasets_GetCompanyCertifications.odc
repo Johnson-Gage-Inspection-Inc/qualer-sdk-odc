@@ -22,12 +22,14 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ReportDatasets_GetCompanyCertifications&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
+    QueryOptions = [],
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/data/CompanyCertifications",
     response = Web.Contents(
         baseUrl,
         [
             RelativePath = Text.TrimStart(relativeUrl, "/"),
+            Query = QueryOptions,
             Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]
         ]
     ),

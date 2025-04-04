@@ -22,12 +22,46 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;AssetReservation_Get&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
+    model.from
+     = Excel.CurrentWorkbook(){{[Name="
+    model.from
+    "]}}[Content]{{0}}[Column1],
+    model.to
+     = Excel.CurrentWorkbook(){{[Name="
+    model.to
+    "]}}[Content]{{0}}[Column1],
+    model.assetId
+     = Excel.CurrentWorkbook(){{[Name="
+    model.assetId
+    "]}}[Content]{{0}}[Column1],
+    model.areaId
+     = Excel.CurrentWorkbook(){{[Name="
+    model.areaId
+    "]}}[Content]{{0}}[Column1],
+    model.productId
+     = Excel.CurrentWorkbook(){{[Name="
+    model.productId
+    "]}}[Content]{{0}}[Column1],
+    model.serialNumber
+     = Excel.CurrentWorkbook(){{[Name="
+    model.serialNumber
+    "]}}[Content]{{0}}[Column1],
+    model.assetTag
+     = Excel.CurrentWorkbook(){{[Name="
+    model.assetTag
+    "]}}[Content]{{0}}[Column1],
+    model.reservationId
+     = Excel.CurrentWorkbook(){{[Name="
+    model.reservationId
+    "]}}[Content]{{0}}[Column1],
+    QueryOptions = if Text.Length(model.from) > 0 then [ model.from = model.from ] else [] & if Text.Length(model.to) > 0 then [ model.to = model.to ] else [] & if Text.Length(model.assetId) > 0 then [ model.assetId = model.assetId ] else [] & if Text.Length(model.areaId) > 0 then [ model.areaId = model.areaId ] else [] & if Text.Length(model.productId) > 0 then [ model.productId = model.productId ] else [] & if Text.Length(model.serialNumber) > 0 then [ model.serialNumber = model.serialNumber ] else [] & if Text.Length(model.assetTag) > 0 then [ model.assetTag = model.assetTag ] else [] & if Text.Length(model.reservationId) > 0 then [ model.reservationId = model.reservationId ] else [],
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/assetsreservations",
     response = Web.Contents(
         baseUrl,
         [
             RelativePath = Text.TrimStart(relativeUrl, "/"),
+            Query = QueryOptions,
             Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]
         ]
     ),
