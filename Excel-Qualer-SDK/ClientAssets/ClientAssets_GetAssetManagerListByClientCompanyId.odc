@@ -21,31 +21,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
    <odc:CommandText>SELECT * FROM [ClientAssets_GetAssetManagerListByClientCompanyId]</odc:CommandText>
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
-    &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ClientAssets_GetAssetManagerListByClientCompanyId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    ClientCompanyId = Excel.CurrentWorkbook(){[Name="ClientCompanyId"]}[Content]{0}[Column1],
-    Query_filterType = try Excel.CurrentWorkbook(){[Name="Query.filterType"]}[Content]{0}[Column1] otherwise "",
-    Query_searchString = try Excel.CurrentWorkbook(){[Name="Query.searchString"]}[Content]{0}[Column1] otherwise "",
-    Query_page = try Excel.CurrentWorkbook(){[Name="Query.page"]}[Content]{0}[Column1] otherwise "",
-    Query_pageSize = try Excel.CurrentWorkbook(){[Name="Query.pageSize"]}[Content]{0}[Column1] otherwise "",
-    q1 = if Text.Length(Query_filterType) > 0 then [ query.filterType = Query_filterType ] else [],
-    q2 = if Text.Length(Query_searchString) > 0 then [ query.searchString = Query_searchString ] else [],
-    q3 = if Text.Length(Query_page) > 0 then [ query.page = Query_page ] else [],
-    q4 = if Text.Length(Query_pageSize) > 0 then [ query.pageSize = Query_pageSize ] else [],
-    QueryOptions = Record.Combine({q1, q2, q3, q4}),
-    baseUrl = "https://jgiquality.qualer.com",
-    relativeUrl = "api/service/clients/" & Text.From(ClientCompanyId) & "/assets/byfilter",
-    response = Web.Contents(
-        baseUrl,
-        [
-            RelativePath = Text.TrimStart(relativeUrl, "/"),
-            Query = QueryOptions,
-            Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]
-        ]
-    ),
-    json = Json.Document(response),
-    ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
-in
-    ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
+    &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ClientAssets_GetAssetManagerListByClientCompanyId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let&#13;&#10;    ClientCompanyId = Excel.CurrentWorkbook(){[Name="ClientCompanyId"]}[Content]{0}[Column1],&#13;&#10;    Query_filterType = try Excel.CurrentWorkbook(){[Name="Query.filterType"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    Query_searchString = try Excel.CurrentWorkbook(){[Name="Query.searchString"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    Query_page = try Excel.CurrentWorkbook(){[Name="Query.page"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    Query_pageSize = try Excel.CurrentWorkbook(){[Name="Query.pageSize"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    q1 = if Text.Length(Query_filterType) > 0 then [ query.filterType = Query_filterType ] else [],&#13;&#10;    q2 = if Text.Length(Query_searchString) > 0 then [ query.searchString = Query_searchString ] else [],&#13;&#10;    q3 = if Text.Length(Query_page) > 0 then [ query.page = Query_page ] else [],&#13;&#10;    q4 = if Text.Length(Query_pageSize) > 0 then [ query.pageSize = Query_pageSize ] else [],&#13;&#10;    QueryOptions = Record.Combine({q1, q2, q3, q4}),&#13;&#10;    baseUrl = "https://jgiquality.qualer.com",&#13;&#10;    relativeUrl = "api/service/clients/" & Text.From(ClientCompanyId) & "/assets/byfilter",&#13;&#10;    response = Web.Contents(&#13;&#10;        baseUrl,&#13;&#10;        [&#13;&#10;            RelativePath = Text.TrimStart(relativeUrl, "/"),&#13;&#10;            Query = QueryOptions,&#13;&#10;            Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]&#13;&#10;        ]&#13;&#10;    ),&#13;&#10;    json = Json.Document(response),&#13;&#10;    ConvertToTable = Table.FromRecords(json)&#13;&#10;in&#13;&#10;    ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
  </odc:PowerQueryMashupData>
  </odc:OfficeDataConnection>
 </xml>

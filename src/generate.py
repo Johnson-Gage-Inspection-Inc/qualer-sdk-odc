@@ -81,32 +81,32 @@ def generate_mashup_formula(ep):
 
     lines = []
 
-    # === Declare Excel-named path parameters (REQUIRED)
+    # === Required path parameters (no try/otherwise)
     for _, excel in path_param_pairs:
         safe_excel = normalize_name(excel)
         lines.append(
             f'{safe_excel} = Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1],'
         )
 
-    # === Declare Excel-named query parameters (OPTIONAL)
+    # === Optional query parameters (with try/otherwise)
     for _, excel in query_param_pairs:
         safe_excel = normalize_name(excel)
         lines.append(
             f'{safe_excel} = try Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1] otherwise "",'
         )
 
-    # === Rebuild zips (used up in loops)
+    # Reset zips
     path_param_pairs = zip(ep["path_params"], ep["excel_path_params"])
     query_param_pairs = zip(ep["query_params"], ep["excel_query_params"])
 
-    # === Replace placeholders in relative URL
+    # === Replace path placeholders in URL
     url = ep["relative_url"]
     for orig, excel in path_param_pairs:
         safe_excel = normalize_name(excel)
         pattern = re.compile(rf"\{{{orig}\}}", re.IGNORECASE)
         url = pattern.sub(f'" & Text.From({safe_excel}) & "', url)
 
-    # === Build query param logic
+    # === Query param blocks
     combine_names = []
     for i, (orig, excel) in enumerate(query_param_pairs):
         safe_excel = normalize_name(excel)
@@ -119,9 +119,9 @@ def generate_mashup_formula(ep):
     if combine_names:
         lines.append(f'QueryOptions = Record.Combine({{{", ".join(combine_names)}}}),')
     else:
-        lines.append('QueryOptions = [],')
+        lines.append("QueryOptions = [],")
 
-    # === Final request logic
+    # === Mashup logic
     lines += [
         f'baseUrl = "{BASE_URL}",',
         f'relativeUrl = "{url}",',
@@ -129,15 +129,22 @@ def generate_mashup_formula(ep):
         "    baseUrl,",
         "    [",
         '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
-        '        Query = QueryOptions,',
+        "        Query = QueryOptions,",
         f'        Headers = [ Authorization = "Api-Token {API_TOKEN}" ]',
         "    ]",
         "),",
         "json = Json.Document(response),",
-        "ConvertToTable = Table.FromRecords(json)"
+        "ConvertToTable = Table.FromRecords(json)",
     ]
 
-    return ("let\n    " + "\n    ".join(lines) + "\nin\n    " + lines[-1].split(" = ")[0]).rstrip()
+    # === Final string with XML-safe line breaks
+    return (
+        "let&#13;&#10;    "
+        + "&#13;&#10;    ".join(lines)
+        + "&#13;&#10;in&#13;&#10;    "
+        + lines[-1].split(" = ")[0]
+    ).rstrip()
+
 
 if __name__ == "__main__":
     docs_dir = "docs"

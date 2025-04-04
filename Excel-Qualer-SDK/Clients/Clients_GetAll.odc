@@ -21,32 +21,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
    <odc:CommandText>SELECT * FROM [Clients_GetAll]</odc:CommandText>
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
-    &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;Clients_GetAll&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    Model_legacyId = try Excel.CurrentWorkbook(){[Name="Model.legacyId"]}[Content]{0}[Column1] otherwise "",
-    Model_accountNumberText = try Excel.CurrentWorkbook(){[Name="Model.accountNumberText"]}[Content]{0}[Column1] otherwise "",
-    Model_companyName = try Excel.CurrentWorkbook(){[Name="Model.companyName"]}[Content]{0}[Column1] otherwise "",
-    Model_take = try Excel.CurrentWorkbook(){[Name="Model.take"]}[Content]{0}[Column1] otherwise "",
-    Model_modifiedAfter = try Excel.CurrentWorkbook(){[Name="Model.modifiedAfter"]}[Content]{0}[Column1] otherwise "",
-    q1 = if Text.Length(Model_legacyId) > 0 then [ model.legacyId = Model_legacyId ] else [],
-    q2 = if Text.Length(Model_accountNumberText) > 0 then [ model.accountNumberText = Model_accountNumberText ] else [],
-    q3 = if Text.Length(Model_companyName) > 0 then [ model.companyName = Model_companyName ] else [],
-    q4 = if Text.Length(Model_take) > 0 then [ model.take = Model_take ] else [],
-    q5 = if Text.Length(Model_modifiedAfter) > 0 then [ model.modifiedAfter = Model_modifiedAfter ] else [],
-    QueryOptions = Record.Combine({q1, q2, q3, q4, q5}),
-    baseUrl = "https://jgiquality.qualer.com",
-    relativeUrl = "api/service/clients",
-    response = Web.Contents(
-        baseUrl,
-        [
-            RelativePath = Text.TrimStart(relativeUrl, "/"),
-            Query = QueryOptions,
-            Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]
-        ]
-    ),
-    json = Json.Document(response),
-    ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
-in
-    ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
+    &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;Clients_GetAll&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let&#13;&#10;    Model_legacyId = try Excel.CurrentWorkbook(){[Name="Model.legacyId"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    Model_accountNumberText = try Excel.CurrentWorkbook(){[Name="Model.accountNumberText"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    Model_companyName = try Excel.CurrentWorkbook(){[Name="Model.companyName"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    Model_take = try Excel.CurrentWorkbook(){[Name="Model.take"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    Model_modifiedAfter = try Excel.CurrentWorkbook(){[Name="Model.modifiedAfter"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    q1 = if Text.Length(Model_legacyId) > 0 then [ model.legacyId = Model_legacyId ] else [],&#13;&#10;    q2 = if Text.Length(Model_accountNumberText) > 0 then [ model.accountNumberText = Model_accountNumberText ] else [],&#13;&#10;    q3 = if Text.Length(Model_companyName) > 0 then [ model.companyName = Model_companyName ] else [],&#13;&#10;    q4 = if Text.Length(Model_take) > 0 then [ model.take = Model_take ] else [],&#13;&#10;    q5 = if Text.Length(Model_modifiedAfter) > 0 then [ model.modifiedAfter = Model_modifiedAfter ] else [],&#13;&#10;    QueryOptions = Record.Combine({q1, q2, q3, q4, q5}),&#13;&#10;    baseUrl = "https://jgiquality.qualer.com",&#13;&#10;    relativeUrl = "api/service/clients",&#13;&#10;    response = Web.Contents(&#13;&#10;        baseUrl,&#13;&#10;        [&#13;&#10;            RelativePath = Text.TrimStart(relativeUrl, "/"),&#13;&#10;            Query = QueryOptions,&#13;&#10;            Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]&#13;&#10;        ]&#13;&#10;    ),&#13;&#10;    json = Json.Document(response),&#13;&#10;    ConvertToTable = Table.FromRecords(json)&#13;&#10;in&#13;&#10;    ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
  </odc:PowerQueryMashupData>
  </odc:OfficeDataConnection>
 </xml>
