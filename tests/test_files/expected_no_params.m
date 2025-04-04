@@ -12,4 +12,5 @@ let
     ),
     json = Json.Document(response),
     ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
-in ConvertToTable
+in
+    ConvertToTable
