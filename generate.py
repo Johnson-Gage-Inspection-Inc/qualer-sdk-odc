@@ -1,8 +1,8 @@
 # flake8: noqa: E501
+from doc_writer import generate_markdown_file, generate_docs_index
+from pathlib import Path
 import json
 import re
-from pathlib import Path
-from collections import defaultdict
 
 # === Config ===
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
@@ -16,27 +16,36 @@ def generate_odc_file(ep):
     name = ep["clean_name"]
     (url,) = ep["url"],
 
-    mashup_lines = []
-
-    for parameter in ep["param_names"]:
+    mashup_lines = ["let"]
+    for param in ep['path_params'] + ep['query_params']:
         mashup_lines += [
-            parameter,
+            param,
             ' = Excel.CurrentWorkbook(){{[Name="',
-            parameter,
+            param,
             '"]}}[Content]{{0}}[Column1],'
-        ]
-        pattern = re.compile(rf"\{{{parameter}\}}", re.IGNORECASE)
-        url = pattern.sub(f'" & Text.From({parameter}) & "', url)
+            ]
 
-    relative_url = url.replace(BASE_URL, "").lstrip("/")
+    for param in ep['path_params']:
+        pattern = re.compile(rf"\{{{param}\}}", re.IGNORECASE)
+        url = pattern.sub(f'" & Text.From({param}) & "', url)
+
+    query_options = 'QueryOptions = '
+    if ep['query_params']:
+        names = [p["name"] for p in ep["params"] if p["in"] == "query"]
+        conds = [f'if Text.Length({p}) > 0 then [ {p} = {p} ] else []' for p in names]
+        query_options += f'{" & ".join(conds)},'
+    else:
+        query_options += '[],'
 
     mashup_lines += [
+        query_options,
         f'baseUrl = "{BASE_URL}",',
-        f'relativeUrl = "{relative_url}",',
+        f'relativeUrl = "{ep['relative_url']}",',
         "response = Web.Contents(",
         "    baseUrl,",
         "    [",
         '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
+        '        Query = QueryOptions,',
         f'        Headers = [ Authorization = "Api-Token {API_TOKEN}" ]',
         "    ]",
         "),",
@@ -45,7 +54,7 @@ def generate_odc_file(ep):
         "in ConvertToTable",
     ]
 
-    mashup_formula = "let\n    " + "\n    ".join(mashup_lines)
+    mashup_formula = "\n    ".join(mashup_lines)
 
     odc_xml = (
         f"""<html xmlns:o="urn:schemas-microsoft-com:office:office"
@@ -94,9 +103,7 @@ xmlns="http://www.w3.org/TR/REC-html40">
         f.write(odc_xml)
     return path
 
-def yield_get_endpoints():
-    with open("spec.json", encoding="utf-8") as f:
-        spec = json.load(f)
+def yield_get_endpoints(spec):
     for path, methods in spec["paths"].items():
         for method, details in methods.items():
             if method.lower() != "get":
@@ -104,17 +111,22 @@ def yield_get_endpoints():
 
             tag = details.get("tags", ["General"])[0]
             op_id = details.get("operationId", f"{method}_{path.replace('/', '_')}")
-            clean_name = re.sub(r"\W+", "_", op_id)
-            params = [
-                p["name"]
-                for p in details.get("parameters", [])
-                if p.get("in") == "path"
-            ]
+
+            clean_name = re.sub(r'\\W+', '_', op_id)
+            params = details.get("parameters", [])
+            if required_params:= [p for p in params if p.get("required")]:
+                clean_name += f"By{required_params[0]['name']}"
+            param_names = [p["name"] for p in params]
             param_names = [
                 p[0].upper() + p[1:] + "ID" if p.lower() == "id" else p[0].upper() + p[1:]
-                for p in params
+                for p in param_names
             ]
+            path_params = [p["name"] for p in params if p["in"] == "path"]
+            query_params = [p["name"] for p in params if p["in"] == "query"]
+            excel_path_params = [p[0].upper() + p[1:] for p in path_params]
+            excel_query_params = [p[0].upper() + p[1:] for p in query_params]
             url = "https://jgiquality.qualer.com" + path
+            relative_url = url.replace(BASE_URL, "").lstrip("/")
 
             yield {
                 "tag": tag,
@@ -123,107 +135,28 @@ def yield_get_endpoints():
                 "details": details,
                 "clean_name": clean_name,
                 "op_id": op_id,
-                "url": url,
                 "params": params,
                 "param_names": param_names,
+                "path_params": path_params,
+                "query_params": query_params,
+                "excel_path_params": excel_path_params,
+                "excel_query_params": excel_query_params,
+                "url": url,
+                "relative_url": relative_url,
             }
-
-
-def generate_markdown_file(docs_path, ep):
-    pram_doc = "\n".join([f"- `{p}` (path)" for p in ep["params"]]) or "None"
-    range_doc = "\n".join([f"- `{r}`" for r in ep["param_names"]]) or "None"
-    desc = ep["details"].get("description", "No description provided.").strip()
-
-    markdown = f"""# `{ep['clean_name']}`
-
-**URL Template:**
-`GET {ep['path']}`
-
-**Parameters:**
-{pram_doc}
-
-**Excel Named Range(s):**
-{range_doc}
-
-**Description:**
-{desc}
-
-**Group (Tag):**
-{ep['tag']}
-
-**ODC File:**
-[Excel-Qualer-SDK/{ep['tag']}/{ep['clean_name']}.odc](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/blob/main/Excel-Qualer-SDK/{ep['tag']}/{ep['clean_name']}.odc)
-
----
-
-To Use in Excel:
----
-
-1. Go to the ![`Data`](https://github.com/user-attachments/assets/da437a70-57b3-4c5b-bb01-4910ece19ed1)
- tab.
-3. Click ![Existing Connections](https://github.com/user-attachments/assets/a2f1ed67-b2e0-4c23-ac90-68c870e60289)
-4. Click ![`Browse for More...`](https://github.com/user-attachments/assets/8e698494-6865-41e7-b6fa-043aea81809a)
-5. Paste the following into the URL bar
-```
-\\\\jgiquality.sharepoint.com@SSL\\sites\\JGI\\Shared Documents\\General\\Excel-Qualer-SDK\\{ep['tag']}\\
-```
-
-![image](https://github.com/user-attachments/assets/1e1a8d87-0377-446d-aaf5-d78562991db3)
-
-6. Select `{ep['clean_name']}.odc` and click `Open`.
-
-> ⚠️ If parameters are needed, you'll see an error now. It's ok, but you'll need to set them.
-
-### Setting parameters
-If there are any parameters listed near the top of this file, create a named range with each name listed under **Excel Named Range(s):**
-> They're just named ranges, with particular names.
-"""
-
-    file_path = docs_path / f"{ep['clean_name']}.md"
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(markdown)
-
-
-# === Main Process ===
-def generate_all_odc_files():
-    docs_path = Path(docs_dir)
-    docs_path.mkdir(parents=True, exist_ok=True)
-
-    for ep in yield_get_endpoints():
-        generate_markdown_file(docs_path, ep)
-        generate_odc_file(ep)
-    print("ODC files generated in:", OUTPUT_DIR)
-
-
-def generate_docs_index(docs_dir="docs"):
-    docs_path = Path(docs_dir)
-    index_file = docs_path / "README.md"
-
-    # Group docs by prefix (tag)
-    groups = defaultdict(list)
-    markdown_files = docs_path.glob("*.md")
-    for doc in sorted(p for p in markdown_files if p.name != "README.md"):
-        parts = doc.stem.split("_", 1)
-        if len(parts) == 2:
-            tag, rest = parts
-        else:
-            tag, rest = "General", parts[0]
-        groups[tag].append((doc.name, rest.replace("_", " ")))
-
-    with open(index_file, "w", encoding="utf-8") as f:
-        f.write("# 📖 Qualer API Documentation Index\n\n")
-        f.write("This index lists all `GET` endpoints, grouped by tag.\n\n")
-
-        for tag in sorted(groups):
-            f.write(f"## {tag}\n\n")
-            for filename, label in sorted(groups[tag]):
-                f.write(f"- [{label}](./{filename})\n")
-            f.write("\n")
 
 
 if __name__ == "__main__":
     docs_dir = "docs"
-    generate_all_odc_files()
+    docs_path = Path(docs_dir)
+    docs_path.mkdir(parents=True, exist_ok=True)
+
+    with open("spec.json", encoding="utf-8") as f:
+        spec = json.load(f)
+    for ep in yield_get_endpoints(spec):
+        generate_markdown_file(docs_path, ep, spec)
+        generate_odc_file(ep)
+    print("ODC files generated in:", OUTPUT_DIR)
     print("ODC files generated in:", OUTPUT_DIR)
     print("Markdown files generated in:", docs_dir)
     generate_docs_index(docs_dir)
