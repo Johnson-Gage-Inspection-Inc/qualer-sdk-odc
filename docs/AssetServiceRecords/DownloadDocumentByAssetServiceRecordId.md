@@ -10,10 +10,10 @@
 
 | Name                       | Type    | Format   |
 |:---------------------------|:--------|:---------|
-| **AssetServiceRecordId**   | string  | nan      |
-| **FileName**               | string  | nan      |
+| **AssetServiceRecordId**   | string  | string   |
+| **FileName**               | string  | string   |
 | Model.assetServiceRecordId | integer | int32    |
-| Model.fileName             | string  | nan      |
+| Model.fileName             | string  | string   |
 
 **Description:**
 No description provided.

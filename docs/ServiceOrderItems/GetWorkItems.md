@@ -10,12 +10,12 @@
 
 | Name           | Description                                                                                                                                    | Type    | Format    |
 |:---------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:--------|:----------|
-| Status         | Comma separated list of work item statuses: Pending, Completed, Delayed, InProgress, Withdrawn                                                 | string  | nan       |
+| Status         | Comma separated list of work item statuses: Pending, Completed, Delayed, InProgress, Withdrawn                                                 | string  | string    |
 | CompanyId      | Filter by Client Company ID                                                                                                                    | integer | int32     |
 | From           | Retrieve Work Items where CreatedOnUtc greater than From parameter                                                                             | string  | date-time |
 | To             | Retrieve Work Items where CreatedOnUtc less than To parameter                                                                                  | string  | date-time |
-| WorkItemNumber | Filter by CustomOrderNumber or CertificateNumber                                                                                               | string  | nan       |
-| AssetSearch    | Filter by asset Search keywords: SerialNumber, EquipmentId, AssetTag, AssetUser, LegacyId, AssetName, AssetDescription, ManufacturerPartNumber | string  | nan       |
+| WorkItemNumber | Filter by CustomOrderNumber or CertificateNumber                                                                                               | string  | string    |
+| AssetSearch    | Filter by asset Search keywords: SerialNumber, EquipmentId, AssetTag, AssetUser, LegacyId, AssetName, AssetDescription, ManufacturerPartNumber | string  | string    |
 
 **Description:**
 Sample request:

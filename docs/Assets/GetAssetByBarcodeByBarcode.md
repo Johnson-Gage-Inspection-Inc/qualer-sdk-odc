@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name        | Type   |
-|:------------|:-------|
-| **Barcode** | string |
+| Name        | Type   | Format   |
+|:------------|:-------|:---------|
+| **Barcode** | string | string   |
 
 **Description:**
 No description provided.

@@ -8,13 +8,13 @@
 
 > *Required parameters are bolded.*
 
-| Name               | Type   |
-|:-------------------|:-------|
-| Query.equipmentId  | string |
-| Query.serialNumber | string |
-| Query.assetTag     | string |
-| Query.barcode      | string |
-| Query.legacyId     | string |
+| Name               | Type   | Format   |
+|:-------------------|:-------|:---------|
+| Query.equipmentId  | string | string   |
+| Query.serialNumber | string | string   |
+| Query.assetTag     | string | string   |
+| Query.barcode      | string | string   |
+| Query.legacyId     | string | string   |
 
 **Description:**
 No description provided.

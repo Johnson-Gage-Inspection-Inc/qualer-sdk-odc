@@ -11,7 +11,7 @@
 | Name               | Description   | Type    | Format   |
 |:-------------------|:--------------|:--------|:---------|
 | **ServiceOrderId** |               | integer | int32    |
-| Model.fileName     | nan           | string  | nan      |
+| Model.fileName     | nan           | string  | string   |
 
 **Description:**
 Sample request:

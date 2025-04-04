@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name           | Type   |
-|:---------------|:-------|
-| **SettingKey** | string |
+| Name           | Type   | Format   |
+|:---------------|:-------|:---------|
+| **SettingKey** | string | string   |
 
 **Description:**
 No description provided.

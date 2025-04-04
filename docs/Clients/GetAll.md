@@ -10,9 +10,9 @@
 
 | Name                    | Type    | Format    |
 |:------------------------|:--------|:----------|
-| Model.legacyId          | string  | nan       |
-| Model.accountNumberText | string  | nan       |
-| Model.companyName       | string  | nan       |
+| Model.legacyId          | string  | string    |
+| Model.accountNumberText | string  | string    |
+| Model.companyName       | string  | string    |
 | Model.take              | integer | int32     |
 | Model.modifiedAfter     | string  | date-time |
 

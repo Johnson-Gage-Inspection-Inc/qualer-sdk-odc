@@ -10,7 +10,7 @@
 
 | Name                       | Type    | Format   |
 |:---------------------------|:--------|:---------|
-| **AssetServiceRecordId**   | string  | nan      |
+| **AssetServiceRecordId**   | string  | string   |
 | Model.assetServiceRecordId | integer | int32    |
 
 **Description:**

@@ -10,7 +10,7 @@
 
 | Name          | Type    | Format   |
 |:--------------|:--------|:---------|
-| **AssetId**   | string  | nan      |
+| **AssetId**   | string  | string   |
 | Model.assetId | integer | int32    |
 
 **Description:**

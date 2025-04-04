@@ -11,7 +11,7 @@
 | Name               | Type    | Format    |
 |:-------------------|:--------|:----------|
 | Model.assetId      | integer | int32     |
-| Model.serialNumber | string  | nan       |
+| Model.serialNumber | string  | string    |
 | Model.from         | string  | date-time |
 | Model.to           | string  | date-time |
 

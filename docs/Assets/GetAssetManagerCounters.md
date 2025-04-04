@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name               | Type   |
-|:-------------------|:-------|
-| Model.searchString | string |
+| Name               | Type   | Format   |
+|:-------------------|:-------|:---------|
+| Model.searchString | string | string   |
 
 **Description:**
 No description provided.

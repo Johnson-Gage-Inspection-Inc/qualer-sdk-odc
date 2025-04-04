@@ -11,7 +11,7 @@
 | Name                    | Type    | Format   | Items                                  | Collectionformat   |
 |:------------------------|:--------|:---------|:---------------------------------------|:-------------------|
 | **ServiceOrderId**      | integer | int32    | nan                                    | nan                |
-| **ServiceOrderItemIds** | array   | nan      | {'type': 'integer', 'format': 'int32'} | multi              |
+| **ServiceOrderItemIds** | array   | string   | {'type': 'integer', 'format': 'int32'} | multi              |
 
 **Description:**
 No description provided.

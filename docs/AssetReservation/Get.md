@@ -15,8 +15,8 @@
 | Model.assetId       | integer | int32     |
 | Model.areaId        | integer | int32     |
 | Model.productId     | integer | int32     |
-| Model.serialNumber  | string  | nan       |
-| Model.assetTag      | string  | nan       |
+| Model.serialNumber  | string  | string    |
+| Model.assetTag      | string  | string    |
 | Model.reservationId | integer | int32     |
 
 **Description:**

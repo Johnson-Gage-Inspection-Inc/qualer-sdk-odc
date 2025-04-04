@@ -10,7 +10,7 @@
 
 | Name              | Description                                                                                                                                                                                                           | Type    | Format    |
 |:------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------|:----------|
-| Status            | Comma separated list of statuses.                                                                                                                                                                                     | string  | nan       |
+| Status            | Comma separated list of statuses.                                                                                                                                                                                     | string  | string    |
 |                   |              Order statuses: WaitingForApproval, Submitted, Processing, QualityControl, Cancelled, WaitingForClientSignOff, Completed, Denied, Delayed, Scheduling, Closed, WaitingForVendorSignOff, DelayedApproval. |         |           |
 |                   |              Payment statuses: NotInvoiced, Invoiced, PartiallyPaid, PaidInFull, NoCharge, Overpaid.                                                                                                                  |         |           |
 |                   |              Shipment statuses: Delivered, Shipped, PartialShipment, NotShipped, PickUp, OnSite.                                                                                                                      |         |           |
@@ -18,8 +18,8 @@
 | From              | Retrieve Work Orders where LastUpdatedOn greater than From parameter                                                                                                                                                  | string  | date-time |
 | To                | Retrieve Work Orders where LastUpdatedOn less than To parameter                                                                                                                                                       | string  | date-time |
 | ModifiedAfter     | Retrieve Work Orders where LastUpdatedOn greater than ModifiedAfter parameter                                                                                                                                         | string  | date-time |
-| WorkOrderNumber   | Filter by WorkOrderNumber                                                                                                                                                                                             | string  | nan       |
-| AssignedEmployees | Comma separated list of assigned employees (using full name, alias or login email of the employee)                                                                                                                    | string  | nan       |
+| WorkOrderNumber   | Filter by WorkOrderNumber                                                                                                                                                                                             | string  | string    |
+| AssignedEmployees | Comma separated list of assigned employees (using full name, alias or login email of the employee)                                                                                                                    | string  | string    |
 
 **Description:**
 Sample request:

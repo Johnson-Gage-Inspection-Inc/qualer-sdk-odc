@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Name        | Type   |
-|:------------|:-------|
-| Model.name  | string |
-| Model.value | string |
+| Name        | Type   | Format   |
+|:------------|:-------|:---------|
+| Model.name  | string | string   |
+| Model.value | string | string   |
 
 **Description:**
 No description provided.

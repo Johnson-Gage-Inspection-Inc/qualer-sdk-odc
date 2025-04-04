@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name            | Type   |
-|:----------------|:-------|
-| **EquipmentId** | string |
+| Name            | Type   | Format   |
+|:----------------|:-------|:---------|
+| **EquipmentId** | string | string   |
 
 **Description:**
 No description provided.

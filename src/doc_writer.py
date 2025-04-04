@@ -11,6 +11,7 @@ def generate_markdown_file(docs_path, ep, spec):
         excel_name = ep["excel_path_params"][ep["path_params"].index(param["name"])] \
             if location == "path" else ep["excel_query_params"][ep["query_params"].index(param["name"])]
         param['name'] = f"**{excel_name}**" if param.pop("required") else excel_name
+        param['format'] = param.get("format", "string")
         param_rows.append({k.capitalize(): v for k, v in param.items()})
 
     param_df = pd.DataFrame(param_rows)

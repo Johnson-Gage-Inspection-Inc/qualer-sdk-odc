@@ -10,7 +10,7 @@
 
 | Name             | Type    | Format   |
 |:-----------------|:--------|:---------|
-| **EmployeeId**   | string  | nan      |
+| **EmployeeId**   | string  | string   |
 | Model.employeeId | integer | int32    |
 
 **Description:**

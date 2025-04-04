@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name            | Description   | Type   | Enum                                                                                                                                                                                                                                                                                                                                  |
-|:----------------|:--------------|:-------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **ElementPage** |               | string | ['AssetManager', 'WorkOrders', 'ServiceOrderItems', 'ServiceSchedules', 'ServiceRequests', 'Vendors', 'VendorAgreements', 'ClientAgreements', 'WorkCalendar', 'Clients', 'GlobalAssetManager', 'InvoicesManager', 'ProductManager', 'ProductSpecifications', 'DocumentManager', 'Taxonomy', 'ClientAssetManager', 'InventoryManager'] |
+| Name            | Description   | Type   | Enum                                                                                                                                                                                                                                                                                                                                  | Format   |
+|:----------------|:--------------|:-------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------|
+| **ElementPage** |               | string | ['AssetManager', 'WorkOrders', 'ServiceOrderItems', 'ServiceSchedules', 'ServiceRequests', 'Vendors', 'VendorAgreements', 'ClientAgreements', 'WorkCalendar', 'Clients', 'GlobalAssetManager', 'InvoicesManager', 'ProductManager', 'ProductSpecifications', 'DocumentManager', 'Taxonomy', 'ClientAssetManager', 'InventoryManager'] | string   |
 
 **Description:**
 elementPage:

@@ -10,8 +10,8 @@
 
 | Name               | Type    | Format   |
 |:-------------------|:--------|:---------|
-| Model.filterType   | string  | nan      |
-| Model.searchString | string  | nan      |
+| Model.filterType   | string  | string   |
+| Model.searchString | string  | string   |
 | Model.page         | integer | int32    |
 | Model.pageSize     | integer | int32    |
 

@@ -11,11 +11,11 @@
 | Name                | Type    | Format   |
 |:--------------------|:--------|:---------|
 | **ClientCompanyId** | integer | int32    |
-| Query.equipmentId   | string  | nan      |
-| Query.serialNumber  | string  | nan      |
-| Query.assetTag      | string  | nan      |
-| Query.barcode       | string  | nan      |
-| Query.legacyId      | string  | nan      |
+| Query.equipmentId   | string  | string   |
+| Query.serialNumber  | string  | string   |
+| Query.assetTag      | string  | string   |
+| Query.barcode       | string  | string   |
+| Query.legacyId      | string  | string   |
 
 **Description:**
 No description provided.

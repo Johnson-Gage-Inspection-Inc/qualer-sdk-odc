@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name             | Type   |
-|:-----------------|:-------|
-| **SerialNumber** | string |
+| Name             | Type   | Format   |
+|:-----------------|:-------|:---------|
+| **SerialNumber** | string | string   |
 
 **Description:**
 No description provided.

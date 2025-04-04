@@ -11,7 +11,7 @@
 | Name           | Type    | Format   |
 |:---------------|:--------|:---------|
 | **WorkItemId** | integer | int32    |
-| **ImageName**  | string  | nan      |
+| **ImageName**  | string  | string   |
 
 **Description:**
 No description provided.

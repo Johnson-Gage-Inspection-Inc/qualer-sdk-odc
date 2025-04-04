@@ -11,8 +11,8 @@
 | Name                | Description   | Type    | Format   |
 |:--------------------|:--------------|:--------|:---------|
 | **ClientCompanyId** |               | integer | int32    |
-| Query.filterType    | nan           | string  | nan      |
-| Query.searchString  | nan           | string  | nan      |
+| Query.filterType    | nan           | string  | string   |
+| Query.searchString  | nan           | string  | string   |
 | Query.page          | nan           | integer | int32    |
 | Query.pageSize      | nan           | integer | int32    |
 

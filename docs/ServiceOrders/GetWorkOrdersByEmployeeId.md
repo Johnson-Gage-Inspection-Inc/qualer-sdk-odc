@@ -11,7 +11,7 @@
 | Name           | Type    | Format   |
 |:---------------|:--------|:---------|
 | **EmployeeId** | integer | int32    |
-| IsInternal     | boolean | nan      |
+| IsInternal     | boolean | string   |
 
 **Description:**
 No description provided.

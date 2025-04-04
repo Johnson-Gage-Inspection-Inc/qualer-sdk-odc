@@ -11,7 +11,7 @@
 | Name               | Type    | Format   |
 |:-------------------|:--------|:---------|
 | **ServiceOrderId** | integer | int32    |
-| Model.reportType   | string  | nan      |
+| Model.reportType   | string  | string   |
 
 **Description:**
 No description provided.

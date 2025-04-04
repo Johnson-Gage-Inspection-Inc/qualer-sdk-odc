@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name         | Type   |
-|:-------------|:-------|
-| **AssetTag** | string |
+| Name         | Type   | Format   |
+|:-------------|:-------|:---------|
+| **AssetTag** | string | string   |
 
 **Description:**
 No description provided.

@@ -12,7 +12,7 @@
 |:---------------|:------------------------------------------------------------------|:--------|:----------|
 | **From**       | Retrieve documents where CreatedOnUtc greater than From parameter | string  | date-time |
 | **To**         | Retrieve documents where CreatedOnUtc less than To parameter      | string  | date-time |
-| ReportType     | Retrieve documents given types (Optional)                         | string  | nan       |
+| ReportType     | Retrieve documents given types (Optional)                         | string  | string    |
 | ServiceOrderId | Retrieve documents by given service order id (Optional)           | integer | int32     |
 
 **Description:**

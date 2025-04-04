@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name           | Type   | Enum                                                                                                                                                                                                                                                                                                                                                                                 |
-|:---------------|:-------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **LookupType** | string | ['AssetClass', 'AssetCriticality', 'AssetCondition', 'InventoryCategory', 'InventoryUnit', 'OrderItemInProgressWorkStatus', 'OrderItemDelayWorkStatus', 'OrderItemWithdrawnWorkStatus', 'OrderItemCompletedWorkStatus', 'OrderDelayedStatus', 'ClientInvoicing', 'ClientStanding', 'ClientCategory', 'CancelOrderReasons', 'OrderItemLockedWorkStatus', 'OrderItemClosedWorkStatus'] |
+| Name           | Type   | Enum                                                                                                                                                                                                                                                                                                                                                                                 | Format   |
+|:---------------|:-------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------|
+| **LookupType** | string | ['AssetClass', 'AssetCriticality', 'AssetCondition', 'InventoryCategory', 'InventoryUnit', 'OrderItemInProgressWorkStatus', 'OrderItemDelayWorkStatus', 'OrderItemWithdrawnWorkStatus', 'OrderItemCompletedWorkStatus', 'OrderDelayedStatus', 'ClientInvoicing', 'ClientStanding', 'ClientCategory', 'CancelOrderReasons', 'OrderItemLockedWorkStatus', 'OrderItemClosedWorkStatus'] | string   |
 
 **Description:**
 lookupName:
