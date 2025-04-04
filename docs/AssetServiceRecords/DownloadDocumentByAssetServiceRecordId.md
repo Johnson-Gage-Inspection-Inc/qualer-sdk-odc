@@ -8,12 +8,12 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name                 | Type    | In    |
-|:---------------------------|:--------|:------|
-| **AssetServiceRecordId**   | string  | query |
-| **FileName**               | string  | query |
-| Model.assetServiceRecordId | integer | query |
-| Model.fileName             | string  | query |
+| Name                       | Type    | Format   |
+|:---------------------------|:--------|:---------|
+| **AssetServiceRecordId**   | string  | nan      |
+| **FileName**               | string  | nan      |
+| Model.assetServiceRecordId | integer | int32    |
+| Model.fileName             | string  | nan      |
 
 **Description:**
 No description provided.

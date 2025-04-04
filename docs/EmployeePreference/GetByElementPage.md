@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name      | Type   | In   |
-|:----------------|:-------|:-----|
-| **ElementPage** | string | path |
+| Name            | Description   | Type   | Enum                                                                                                                                                                                                                                                                                                                                  |
+|:----------------|:--------------|:-------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **ElementPage** |               | string | ['AssetManager', 'WorkOrders', 'ServiceOrderItems', 'ServiceSchedules', 'ServiceRequests', 'Vendors', 'VendorAgreements', 'ClientAgreements', 'WorkCalendar', 'Clients', 'GlobalAssetManager', 'InvoicesManager', 'ProductManager', 'ProductSpecifications', 'DocumentManager', 'Taxonomy', 'ClientAssetManager', 'InventoryManager'] |
 
 **Description:**
 elementPage:

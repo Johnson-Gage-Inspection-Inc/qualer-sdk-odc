@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name           | Type    | In    |
-|:---------------------|:--------|:------|
-| **ServicePricingId** | integer | query |
-| ServiceGroupId       | integer | query |
+| Name                 | Description   | Type    | Format   |
+|:---------------------|:--------------|:--------|:---------|
+| **ServicePricingId** |               | integer | int32    |
+| ServiceGroupId       | optional      | integer | int32    |
 
 **Description:**
 No description provided.

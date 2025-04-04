@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name   | Type    | In    |
-|:-------------|:--------|:------|
-| Model.period | integer | query |
-| Model.siteId | integer | query |
+| Name         | Type    | Format   |
+|:-------------|:--------|:---------|
+| Model.period | integer | int32    |
+| Model.siteId | integer | int32    |
 
 **Description:**
 No description provided.

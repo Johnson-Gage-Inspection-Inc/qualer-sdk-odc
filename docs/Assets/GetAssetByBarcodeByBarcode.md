@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name   | Type   | In   |
-|:-------------|:-------|:-----|
-| **Barcode**  | string | path |
+| Name        | Type   |
+|:------------|:-------|
+| **Barcode** | string |
 
 **Description:**
 No description provided.

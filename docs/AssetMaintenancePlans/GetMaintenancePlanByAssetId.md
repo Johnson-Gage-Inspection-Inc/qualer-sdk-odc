@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name            | Type    | In   |
-|:----------------------|:--------|:-----|
-| **AssetId**           | integer | path |
-| **MaintenancePlanId** | integer | path |
+| Name                  | Type    | Format   |
+|:----------------------|:--------|:---------|
+| **AssetId**           | integer | int32    |
+| **MaintenancePlanId** | integer | int32    |
 
 **Description:**
 No description provided.

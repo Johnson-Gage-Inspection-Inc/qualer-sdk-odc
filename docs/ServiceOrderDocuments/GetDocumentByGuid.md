@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name   | Type   | In   |
-|:-------------|:-------|:-----|
-| **Guid**     | string | path |
+| Name     | Description        | Type   | Format   |
+|:---------|:-------------------|:-------|:---------|
+| **Guid** | Document unique id | string | uuid     |
 
 **Description:**
 Sample request:

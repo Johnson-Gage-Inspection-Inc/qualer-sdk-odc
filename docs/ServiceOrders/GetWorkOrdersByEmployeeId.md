@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name     | Type    | In    |
-|:---------------|:--------|:------|
-| **EmployeeId** | integer | path  |
-| IsInternal     | boolean | query |
+| Name           | Type    | Format   |
+|:---------------|:--------|:---------|
+| **EmployeeId** | integer | int32    |
+| IsInternal     | boolean | nan      |
 
 **Description:**
 No description provided.

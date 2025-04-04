@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name            | Type    | In   |
-|:----------------------|:--------|:-----|
-| **MaintenancePlanId** | integer | path |
+| Name                  | Type    | Format   |
+|:----------------------|:--------|:---------|
+| **MaintenancePlanId** | integer | int32    |
 
 **Description:**
 No description provided.

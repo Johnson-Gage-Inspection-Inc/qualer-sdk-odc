@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name     | Type   | In    |
-|:---------------|:-------|:------|
-| **SettingKey** | string | query |
+| Name           | Type   |
+|:---------------|:-------|
+| **SettingKey** | string |
 
 **Description:**
 No description provided.

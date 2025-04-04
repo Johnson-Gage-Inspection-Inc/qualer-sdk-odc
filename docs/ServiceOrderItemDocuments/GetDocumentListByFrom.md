@@ -8,12 +8,12 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name         | Type    | In    |
-|:-------------------|:--------|:------|
-| **From**           | string  | query |
-| **To**             | string  | query |
-| ReportType         | string  | query |
-| ServiceOrderItemId | integer | query |
+| Name               | Description                                                       | Type    | Format    |
+|:-------------------|:------------------------------------------------------------------|:--------|:----------|
+| **From**           | Retrieve documents where CreatedOnUtc greater than From parameter | string  | date-time |
+| **To**             | Retrieve documents where CreatedOnUtc less than To parameter      | string  | date-time |
+| ReportType         | Retrieve documents given types (Optional)                         | string  | nan       |
+| ServiceOrderItemId | Retrieve documents by given service order item id (Optional)      | integer | int32     |
 
 **Description:**
 Sample request:

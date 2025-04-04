@@ -8,12 +8,12 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name         | Type    | In    |
-|:-------------------|:--------|:------|
-| Model.filterType   | string  | query |
-| Model.searchString | string  | query |
-| Model.page         | integer | query |
-| Model.pageSize     | integer | query |
+| Name               | Type    | Format   |
+|:-------------------|:--------|:---------|
+| Model.filterType   | string  | nan      |
+| Model.searchString | string  | nan      |
+| Model.page         | integer | int32    |
+| Model.pageSize     | integer | int32    |
 
 **Description:**
 filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchased,

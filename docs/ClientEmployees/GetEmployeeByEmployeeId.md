@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name       | Type    | In    |
-|:-----------------|:--------|:------|
-| **EmployeeId**   | string  | query |
-| Model.employeeId | integer | query |
+| Name             | Type    | Format   |
+|:-----------------|:--------|:---------|
+| **EmployeeId**   | string  | nan      |
+| Model.employeeId | integer | int32    |
 
 **Description:**
 No description provided.

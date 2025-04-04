@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name         | Type    | In    |
-|:-------------------|:--------|:------|
-| **ServiceOrderId** | integer | path  |
-| Model.fileName     | string  | query |
+| Name               | Description   | Type    | Format   |
+|:-------------------|:--------------|:--------|:---------|
+| **ServiceOrderId** |               | integer | int32    |
+| Model.fileName     | nan           | string  | nan      |
 
 **Description:**
 Sample request:

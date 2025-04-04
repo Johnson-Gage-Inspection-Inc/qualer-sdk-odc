@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name             | Type    | In    |
-|:-----------------------|:--------|:------|
-| **ServiceOrderItemId** | integer | path  |
-| Model.fileName         | string  | query |
+| Name                   | Description                                                       | Type    | Format   |
+|:-----------------------|:------------------------------------------------------------------|:--------|:---------|
+| **ServiceOrderItemId** | Retrieve documents where CreatedOnUtc greater than From parameter | integer | int32    |
+| Model.fileName         | nan                                                               | string  | nan      |
 
 **Description:**
 Sample request:

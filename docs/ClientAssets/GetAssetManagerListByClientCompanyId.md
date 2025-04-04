@@ -8,13 +8,13 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name          | Type    | In    |
-|:--------------------|:--------|:------|
-| **ClientCompanyId** | integer | path  |
-| Query.filterType    | string  | query |
-| Query.searchString  | string  | query |
-| Query.page          | integer | query |
-| Query.pageSize      | integer | query |
+| Name                | Description   | Type    | Format   |
+|:--------------------|:--------------|:--------|:---------|
+| **ClientCompanyId** |               | integer | int32    |
+| Query.filterType    | nan           | string  | nan      |
+| Query.searchString  | nan           | string  | nan      |
+| Query.page          | nan           | integer | int32    |
+| Query.pageSize      | nan           | integer | int32    |
 
 **Description:**
 assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService, ClientOutOfService, ClientWithoutSchedule

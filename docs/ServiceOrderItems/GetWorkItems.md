@@ -8,14 +8,14 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name     | Type    | In    |
-|:---------------|:--------|:------|
-| Status         | string  | query |
-| CompanyId      | integer | query |
-| From           | string  | query |
-| To             | string  | query |
-| WorkItemNumber | string  | query |
-| AssetSearch    | string  | query |
+| Name           | Description                                                                                                                                    | Type    | Format    |
+|:---------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:--------|:----------|
+| Status         | Comma separated list of work item statuses: Pending, Completed, Delayed, InProgress, Withdrawn                                                 | string  | nan       |
+| CompanyId      | Filter by Client Company ID                                                                                                                    | integer | int32     |
+| From           | Retrieve Work Items where CreatedOnUtc greater than From parameter                                                                             | string  | date-time |
+| To             | Retrieve Work Items where CreatedOnUtc less than To parameter                                                                                  | string  | date-time |
+| WorkItemNumber | Filter by CustomOrderNumber or CertificateNumber                                                                                               | string  | nan       |
+| AssetSearch    | Filter by asset Search keywords: SerialNumber, EquipmentId, AssetTag, AssetUser, LegacyId, AssetName, AssetDescription, ManufacturerPartNumber | string  | nan       |
 
 **Description:**
 Sample request:

@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name         | Type   | In    |
-|:-------------------|:-------|:------|
-| Model.searchString | string | query |
+| Name               | Type   |
+|:-------------------|:-------|
+| Model.searchString | string |
 
 **Description:**
 No description provided.

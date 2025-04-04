@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name     | Type    | In   |
-|:---------------|:--------|:-----|
-| **WorkItemId** | integer | path |
+| Name           | Description                      | Type    | Format   |
+|:---------------|:---------------------------------|:--------|:---------|
+| **WorkItemId** | Work Item ID of Measurement Form | integer | int32    |
 
 **Description:**
 No description provided.

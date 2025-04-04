@@ -8,15 +8,18 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name        | Type    | In    |
-|:------------------|:--------|:------|
-| Status            | string  | query |
-| CompanyId         | integer | query |
-| From              | string  | query |
-| To                | string  | query |
-| ModifiedAfter     | string  | query |
-| WorkOrderNumber   | string  | query |
-| AssignedEmployees | string  | query |
+| Name              | Description                                                                                                                                                                                                           | Type    | Format    |
+|:------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------|:----------|
+| Status            | Comma separated list of statuses.                                                                                                                                                                                     | string  | nan       |
+|                   |              Order statuses: WaitingForApproval, Submitted, Processing, QualityControl, Cancelled, WaitingForClientSignOff, Completed, Denied, Delayed, Scheduling, Closed, WaitingForVendorSignOff, DelayedApproval. |         |           |
+|                   |              Payment statuses: NotInvoiced, Invoiced, PartiallyPaid, PaidInFull, NoCharge, Overpaid.                                                                                                                  |         |           |
+|                   |              Shipment statuses: Delivered, Shipped, PartialShipment, NotShipped, PickUp, OnSite.                                                                                                                      |         |           |
+| CompanyId         | Filter by Client Company ID                                                                                                                                                                                           | integer | int32     |
+| From              | Retrieve Work Orders where LastUpdatedOn greater than From parameter                                                                                                                                                  | string  | date-time |
+| To                | Retrieve Work Orders where LastUpdatedOn less than To parameter                                                                                                                                                       | string  | date-time |
+| ModifiedAfter     | Retrieve Work Orders where LastUpdatedOn greater than ModifiedAfter parameter                                                                                                                                         | string  | date-time |
+| WorkOrderNumber   | Filter by WorkOrderNumber                                                                                                                                                                                             | string  | nan       |
+| AssignedEmployees | Comma separated list of assigned employees (using full name, alias or login email of the employee)                                                                                                                    | string  | nan       |
 
 **Description:**
 Sample request:

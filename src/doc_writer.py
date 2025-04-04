@@ -5,17 +5,17 @@ import pandas as pd
 def generate_markdown_file(docs_path, ep, spec):
     # Combined parameter table with Excel names
     param_rows = []
-    for param in ep["params"]:
-        ptype = param.get("type", "string")
-        location = param.get("in", "")
+    for p in ep["params"]:
+        param = p.copy()
+        location = param.pop("in")
         excel_name = ep["excel_path_params"][ep["path_params"].index(param["name"])] \
-            if param["in"] == "path" else ep["excel_query_params"][ep["query_params"].index(param["name"])]
-        excel_name = f"**{excel_name}**" if param.get("required") else excel_name
-        param_rows.append({"Excel Name": excel_name, "Type": ptype, "In": location})
+            if location == "path" else ep["excel_query_params"][ep["query_params"].index(param["name"])]
+        param['name'] = f"**{excel_name}**" if param.pop("required") else excel_name
+        param_rows.append({k.capitalize(): v for k, v in param.items()})
 
     param_df = pd.DataFrame(param_rows)
     param_table_md = param_df.to_markdown(index=False, tablefmt="pipe")
-
+    print(param_table_md)
     # Description
     desc = ep["details"].get("description", "No description provided.").strip()
 
@@ -27,7 +27,7 @@ def generate_markdown_file(docs_path, ep, spec):
         for k, v in flat_fields.items()
     ])
     response_schema_md = df.to_markdown(index=False, tablefmt="pipe")
-
+    
     markdown = f"""# `{ep['clean_name']}`
 > {ep['details'].get('summary', '')}
     

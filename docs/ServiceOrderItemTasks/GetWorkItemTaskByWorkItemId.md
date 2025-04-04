@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name     | Type    | In   |
-|:---------------|:--------|:-----|
-| **WorkItemId** | integer | path |
-| **TaskId**     | integer | path |
+| Name           | Type    | Format   |
+|:---------------|:--------|:---------|
+| **WorkItemId** | integer | int32    |
+| **TaskId**     | integer | int32    |
 
 **Description:**
 No description provided.

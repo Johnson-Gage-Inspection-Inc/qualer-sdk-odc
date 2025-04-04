@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name                 | Type    | In    |
-|:---------------------------|:--------|:------|
-| **AssetServiceRecordId**   | string  | path  |
-| Model.assetServiceRecordId | integer | query |
+| Name                       | Type    | Format   |
+|:---------------------------|:--------|:---------|
+| **AssetServiceRecordId**   | string  | nan      |
+| Model.assetServiceRecordId | integer | int32    |
 
 **Description:**
 No description provided.

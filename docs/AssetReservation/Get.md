@@ -8,16 +8,16 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name          | Type    | In    |
-|:--------------------|:--------|:------|
-| Model.from          | string  | query |
-| Model.to            | string  | query |
-| Model.assetId       | integer | query |
-| Model.areaId        | integer | query |
-| Model.productId     | integer | query |
-| Model.serialNumber  | string  | query |
-| Model.assetTag      | string  | query |
-| Model.reservationId | integer | query |
+| Name                | Type    | Format    |
+|:--------------------|:--------|:----------|
+| Model.from          | string  | date-time |
+| Model.to            | string  | date-time |
+| Model.assetId       | integer | int32     |
+| Model.areaId        | integer | int32     |
+| Model.productId     | integer | int32     |
+| Model.serialNumber  | string  | nan       |
+| Model.assetTag      | string  | nan       |
+| Model.reservationId | integer | int32     |
 
 **Description:**
 No description provided.

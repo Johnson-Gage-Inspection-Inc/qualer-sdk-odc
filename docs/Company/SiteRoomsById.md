@@ -8,9 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name   | Type    | In   |
-|:-------------|:--------|:-----|
-| **Id**       | integer | path |
+| Name   | Description            | Type    | Format   |
+|:-------|:-----------------------|:--------|:---------|
+| **Id** | Site id                | integer | int32    |
+|        | GET /api/company/sites |         |          |
 
 **Description:**
 No description provided.

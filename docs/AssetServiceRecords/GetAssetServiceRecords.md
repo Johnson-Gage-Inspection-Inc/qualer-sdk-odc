@@ -8,12 +8,12 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name         | Type    | In    |
-|:-------------------|:--------|:------|
-| Model.assetId      | integer | query |
-| Model.serialNumber | string  | query |
-| Model.from         | string  | query |
-| Model.to           | string  | query |
+| Name               | Type    | Format    |
+|:-------------------|:--------|:----------|
+| Model.assetId      | integer | int32     |
+| Model.serialNumber | string  | nan       |
+| Model.from         | string  | date-time |
+| Model.to           | string  | date-time |
 
 **Description:**
 No description provided.

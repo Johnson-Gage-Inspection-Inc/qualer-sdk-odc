@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name     | Type    | In   |
-|:---------------|:--------|:-----|
-| **WorkItemId** | integer | path |
-| **ImageName**  | string  | path |
+| Name           | Type    | Format   |
+|:---------------|:--------|:---------|
+| **WorkItemId** | integer | int32    |
+| **ImageName**  | string  | nan      |
 
 **Description:**
 No description provided.

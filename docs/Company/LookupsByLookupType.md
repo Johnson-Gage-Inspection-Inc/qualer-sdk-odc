@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name     | Type   | In    |
-|:---------------|:-------|:------|
-| **LookupType** | string | query |
+| Name           | Type   | Enum                                                                                                                                                                                                                                                                                                                                                                                 |
+|:---------------|:-------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **LookupType** | string | ['AssetClass', 'AssetCriticality', 'AssetCondition', 'InventoryCategory', 'InventoryUnit', 'OrderItemInProgressWorkStatus', 'OrderItemDelayWorkStatus', 'OrderItemWithdrawnWorkStatus', 'OrderItemCompletedWorkStatus', 'OrderDelayedStatus', 'ClientInvoicing', 'ClientStanding', 'ClientCategory', 'CancelOrderReasons', 'OrderItemLockedWorkStatus', 'OrderItemClosedWorkStatus'] |
 
 **Description:**
 lookupName:

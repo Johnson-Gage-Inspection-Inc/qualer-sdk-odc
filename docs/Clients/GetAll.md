@@ -8,13 +8,13 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name              | Type    | In    |
-|:------------------------|:--------|:------|
-| Model.legacyId          | string  | query |
-| Model.accountNumberText | string  | query |
-| Model.companyName       | string  | query |
-| Model.take              | integer | query |
-| Model.modifiedAfter     | string  | query |
+| Name                    | Type    | Format    |
+|:------------------------|:--------|:----------|
+| Model.legacyId          | string  | nan       |
+| Model.accountNumberText | string  | nan       |
+| Model.companyName       | string  | nan       |
+| Model.take              | integer | int32     |
+| Model.modifiedAfter     | string  | date-time |
 
 **Description:**
 No description provided.

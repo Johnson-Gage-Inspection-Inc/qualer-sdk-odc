@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name              | Type    | In    |
-|:------------------------|:--------|:------|
-| **ServiceOrderId**      | integer | path  |
-| **ServiceOrderItemIds** | array   | query |
+| Name                    | Type    | Format   | Items                                  | Collectionformat   |
+|:------------------------|:--------|:---------|:---------------------------------------|:-------------------|
+| **ServiceOrderId**      | integer | int32    | nan                                    | nan                |
+| **ServiceOrderItemIds** | array   | nan      | {'type': 'integer', 'format': 'int32'} | multi              |
 
 **Description:**
 No description provided.

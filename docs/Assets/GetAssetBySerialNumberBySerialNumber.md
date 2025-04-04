@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name       | Type   | In   |
-|:-----------------|:-------|:-----|
-| **SerialNumber** | string | path |
+| Name             | Type   |
+|:-----------------|:-------|
+| **SerialNumber** | string |
 
 **Description:**
 No description provided.

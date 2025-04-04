@@ -8,11 +8,11 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name   | Type    | In    |
-|:-------------|:--------|:------|
-| **AssetId**  | integer | path  |
-| From         | string  | query |
-| To           | string  | query |
+| Name        | Type    | Format    |
+|:------------|:--------|:----------|
+| **AssetId** | integer | int32     |
+| From        | string  | date-time |
+| To          | string  | date-time |
 
 **Description:**
 No description provided.

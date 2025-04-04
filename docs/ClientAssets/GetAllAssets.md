@@ -8,13 +8,13 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name         | Type   | In    |
-|:-------------------|:-------|:------|
-| Query.equipmentId  | string | query |
-| Query.serialNumber | string | query |
-| Query.assetTag     | string | query |
-| Query.barcode      | string | query |
-| Query.legacyId     | string | query |
+| Name               | Type   |
+|:-------------------|:-------|
+| Query.equipmentId  | string |
+| Query.serialNumber | string |
+| Query.assetTag     | string |
+| Query.barcode      | string |
+| Query.legacyId     | string |
 
 **Description:**
 No description provided.

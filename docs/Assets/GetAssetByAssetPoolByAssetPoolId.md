@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name      | Type    | In   |
-|:----------------|:--------|:-----|
-| **AssetPoolId** | integer | path |
+| Name            | Type    | Format   |
+|:----------------|:--------|:---------|
+| **AssetPoolId** | integer | int32    |
 
 **Description:**
 No description provided.

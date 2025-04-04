@@ -8,9 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name          | Type    | In   |
-|:--------------------|:--------|:-----|
-| **VendorCompanyId** | integer | path |
+| Name                | Type    | Format   |
+|:--------------------|:--------|:---------|
+| **VendorCompanyId** | integer | int32    |
 
 **Description:**
 No description provided.

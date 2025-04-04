@@ -8,14 +8,14 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name          | Type    | In    |
-|:--------------------|:--------|:------|
-| **ClientCompanyId** | integer | path  |
-| Query.equipmentId   | string  | query |
-| Query.serialNumber  | string  | query |
-| Query.assetTag      | string  | query |
-| Query.barcode       | string  | query |
-| Query.legacyId      | string  | query |
+| Name                | Type    | Format   |
+|:--------------------|:--------|:---------|
+| **ClientCompanyId** | integer | int32    |
+| Query.equipmentId   | string  | nan      |
+| Query.serialNumber  | string  | nan      |
+| Query.assetTag      | string  | nan      |
+| Query.barcode       | string  | nan      |
+| Query.legacyId      | string  | nan      |
 
 **Description:**
 No description provided.

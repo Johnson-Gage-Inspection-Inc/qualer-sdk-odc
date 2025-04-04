@@ -8,10 +8,10 @@
 
 > *Required parameters are bolded.*
 
-| Excel Name   | Type   | In    |
-|:-------------|:-------|:------|
-| Model.name   | string | query |
-| Model.value  | string | query |
+| Name        | Type   |
+|:------------|:-------|
+| Model.name  | string |
+| Model.value | string |
 
 **Description:**
 No description provided.
