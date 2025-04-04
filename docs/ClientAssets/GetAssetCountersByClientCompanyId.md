@@ -18,23 +18,16 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-----------------------+---------+
 | Field                 | Type    |
-+=======================+=========+
+|:----------------------|:--------|
 | ClientAssetsCollected | integer |
-+-----------------------+---------+
 | ClientUnset           | integer |
-+-----------------------+---------+
 | ClientDueForService   | integer |
-+-----------------------+---------+
 | ClientPastDue         | integer |
-+-----------------------+---------+
 | ClientOutOfService    | integer |
-+-----------------------+---------+
 | ClientWithoutSchedule | integer |
-+-----------------------+---------+
 
 **Group (Tag):**
 ClientAssets

@@ -18,19 +18,14 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+----------------+---------+
 | Field          | Type    |
-+================+=========+
+|:---------------|:--------|
 | AssetId        | integer |
-+----------------+---------+
 | AttributeName  | string  |
-+----------------+---------+
 | AttributeValue | string  |
-+----------------+---------+
 | IsService      | boolean |
-+----------------+---------+
 
 **Group (Tag):**
 ReportDatasets

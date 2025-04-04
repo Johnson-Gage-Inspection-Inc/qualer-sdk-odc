@@ -17,13 +17,11 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-------------+-----------------+
 | Field       | Type            |
-+=============+=================+
+|:------------|:----------------|
 | CultureList | array of string |
-+-------------+-----------------+
 
 **Group (Tag):**
 Common

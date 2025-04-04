@@ -17,71 +17,40 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------------------------------------------+---------+
 | Field                                       | Type    |
-+=============================================+=========+
+|:--------------------------------------------|:--------|
 | MaintenancePlanId                           | integer |
-+---------------------------------------------+---------+
 | MaintenancePlanName                         | string  |
-+---------------------------------------------+---------+
 | IsTemplate                                  | boolean |
-+---------------------------------------------+---------+
 | CompanyName                                 | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.SegmentName                | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.ServiceLevelId             | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.DisplayOrder               | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.ServiceNotes               | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.IntervalCycle              | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.IntervalLength             | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.OnDay                      | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.OnMonth                    | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.OnWeekDays                 | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.WeekdayOfMonth             | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.ColorCode                  | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.ServiceInterval            | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.OnSegmentId                | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.DocumentNumber             | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.DocumentSection            | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.AsFoundStandardGroupId     | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.AsLeftStandardGroupId      | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.TaskNotes                  | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.AdvanceRecallPeriod        | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.DaysBeforeDue              | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.PastDueGracePeriod         | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.DaysAfterDue               | integer |
-+---------------------------------------------+---------+
 | MaintenanceTasks.UsePeriodInReports         | string  |
-+---------------------------------------------+---------+
 | MaintenanceTasks.GenerateOrderAutomatically | boolean |
-+---------------------------------------------+---------+
 | MaintenanceTasks.ApproveUponGeneration      | boolean |
-+---------------------------------------------+---------+
 | MaintenanceTasks.GenerateSeparate           | boolean |
-+---------------------------------------------+---------+
 
 **Group (Tag):**
 MaintenancePlans

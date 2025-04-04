@@ -18,15 +18,12 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------+---------+
 | Field   | Type    |
-+=========+=========+
+|:--------|:--------|
 | Id      | integer |
-+---------+---------+
 | Name    | string  |
-+---------+---------+
 
 **Group (Tag):**
 Company

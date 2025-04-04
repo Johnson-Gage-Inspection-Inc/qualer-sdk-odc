@@ -23,31 +23,20 @@ For example:
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------+---------+
 | Field              | Type    |
-+====================+=========+
+|:-------------------|:--------|
 | ServiceOrderTaskId | integer |
-+--------------------+---------+
 | TaskName           | string  |
-+--------------------+---------+
 | TaskOrder          | integer |
-+--------------------+---------+
 | TaskDetails        | string  |
-+--------------------+---------+
 | TimeSpent          | number  |
-+--------------------+---------+
 | TimeSpentInMinutes | integer |
-+--------------------+---------+
 | StartTime          | string  |
-+--------------------+---------+
 | FinishTime         | string  |
-+--------------------+---------+
 | Price              | number  |
-+--------------------+---------+
 | IsHourly           | boolean |
-+--------------------+---------+
 
 **Group (Tag):**
 ServiceOrderTasks

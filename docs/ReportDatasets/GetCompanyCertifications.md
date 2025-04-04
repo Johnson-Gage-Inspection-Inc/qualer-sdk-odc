@@ -17,27 +17,18 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+------------------------+--------+
 | Field                  | Type   |
-+========================+========+
+|:-----------------------|:-------|
 | Logo                   | string |
-+------------------------+--------+
 | InitialDate            | string |
-+------------------------+--------+
 | CertificationDate      | string |
-+------------------------+--------+
 | ExpirationDate         | string |
-+------------------------+--------+
 | CertificationName      | string |
-+------------------------+--------+
 | CertificateNumber      | string |
-+------------------------+--------+
 | CertificationAuthority | string |
-+------------------------+--------+
 | CertificationStandard  | string |
-+------------------------+--------+
 
 **Group (Tag):**
 ReportDatasets

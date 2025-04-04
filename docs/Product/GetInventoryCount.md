@@ -17,21 +17,15 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+----------------+---------+
 | Field          | Type    |
-+================+=========+
+|:---------------|:--------|
 | ProductId      | integer |
-+----------------+---------+
 | Manufacturer   | string  |
-+----------------+---------+
 | PartNumber     | string  |
-+----------------+---------+
 | IsStockItem    | boolean |
-+----------------+---------+
 | QuantityOnHand | integer |
-+----------------+---------+
 
 **Group (Tag):**
 Product

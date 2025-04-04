@@ -33,21 +33,15 @@ DocumentManager = 15
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-------------+-----------------+
 | Field       | Type            |
-+=============+=================+
+|:------------|:----------------|
 | ElementType | string          |
-+-------------+-----------------+
 | ElementPage | string          |
-+-------------+-----------------+
 | ElementId   | string          |
-+-------------+-----------------+
 | Preference  | array of string |
-+-------------+-----------------+
 | IsPinned    | boolean         |
-+-------------+-----------------+
 
 **Group (Tag):**
 EmployeePreference

@@ -18,27 +18,18 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------+---------+
 | Field              | Type    |
-+====================+=========+
+|:-------------------|:--------|
 | ServiceOrderItemId | integer |
-+--------------------+---------+
 | MeasurementSetId   | integer |
-+--------------------+---------+
 | ChartType          | integer |
-+--------------------+---------+
 | ChartImage         | string  |
-+--------------------+---------+
 | Nominal            | string  |
-+--------------------+---------+
 | Title              | string  |
-+--------------------+---------+
 | UnitOfMeasure      | string  |
-+--------------------+---------+
 | AbbreviatedUOM     | string  |
-+--------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

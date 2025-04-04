@@ -18,15 +18,12 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------------+---------+
 | Field         | Type    |
-+===============+=========+
+|:--------------|:--------|
 | AssetPoolId   | integer |
-+---------------+---------+
 | AssetPoolName | string  |
-+---------------+---------+
 
 **Group (Tag):**
 AssetPools

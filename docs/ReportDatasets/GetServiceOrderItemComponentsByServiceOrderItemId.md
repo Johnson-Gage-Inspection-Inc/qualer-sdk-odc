@@ -18,37 +18,23 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------------------------------+---------+
 | Field                           | Type    |
-+=================================+=========+
+|:--------------------------------|:--------|
 | OrderItemId                     | integer |
-+---------------------------------+---------+
 | ComponentAssetId                | integer |
-+---------------------------------+---------+
 | ComponentSerialNumber           | string  |
-+---------------------------------+---------+
 | ComponentAssetTag               | string  |
-+---------------------------------+---------+
 | ComponentAssetUser              | string  |
-+---------------------------------+---------+
 | ComponentEquipmentId            | string  |
-+---------------------------------+---------+
 | ComponentManufacturerPartNumber | string  |
-+---------------------------------+---------+
 | ComponentManufacturer           | string  |
-+---------------------------------+---------+
 | ComponentRootCategory           | string  |
-+---------------------------------+---------+
 | ComponentSubCategory            | string  |
-+---------------------------------+---------+
 | ComponentLocation               | string  |
-+---------------------------------+---------+
 | ComponentDisplayName            | string  |
-+---------------------------------+---------+
 | ComponentDisplayPartNumber      | string  |
-+---------------------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

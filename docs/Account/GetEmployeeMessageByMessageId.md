@@ -18,13 +18,11 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------+--------+
 | Field   | Type   |
-+=========+========+
+|:--------|:-------|
 | Message | string |
-+---------+--------+
 
 **Group (Tag):**
 Account

@@ -20,21 +20,15 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+----------------+---------+
 | Field          | Type    |
-+================+=========+
+|:---------------|:--------|
 | Id             | integer |
-+----------------+---------+
 | Subject        | string  |
-+----------------+---------+
 | CreatedOnUtc   | string  |
-+----------------+---------+
 | EventTypeId    | integer |
-+----------------+---------+
 | EventTypeGroup | string  |
-+----------------+---------+
 
 **Group (Tag):**
 Account

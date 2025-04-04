@@ -18,33 +18,21 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------------------+---------+
 | Field               | Type    |
-+=====================+=========+
+|:--------------------|:--------|
 | ServiceOrderItemId  | integer |
-+---------------------+---------+
 | PreviousStatusName  | string  |
-+---------------------+---------+
 | SelectedStatusName  | string  |
-+---------------------+---------+
 | Explanation         | string  |
-+---------------------+---------+
 | IsPasswordReentered | boolean |
-+---------------------+---------+
 | CreatedOn           | string  |
-+---------------------+---------+
 | CreatedOnUtc        | string  |
-+---------------------+---------+
 | EmployeeId          | integer |
-+---------------------+---------+
 | FirstName           | string  |
-+---------------------+---------+
 | LastName            | string  |
-+---------------------+---------+
 | Alias               | string  |
-+---------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

@@ -18,27 +18,18 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-----------------------+---------+
 | Field                 | Type    |
-+=======================+=========+
+|:----------------------|:--------|
 | ServiceOrderId        | integer |
-+-----------------------+---------+
 | CreatedById           | integer |
-+-----------------------+---------+
 | TransactionId         | string  |
-+-----------------------+---------+
 | TransactionStatus     | string  |
-+-----------------------+---------+
 | PaymentType           | string  |
-+-----------------------+---------+
 | ServiceOrderPaymentId | integer |
-+-----------------------+---------+
 | PaymentAmount         | number  |
-+-----------------------+---------+
 | Details               | string  |
-+-----------------------+---------+
 
 **Group (Tag):**
 ServiceOrderPayments

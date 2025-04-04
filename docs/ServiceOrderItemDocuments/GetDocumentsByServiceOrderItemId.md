@@ -22,7 +22,7 @@ GET api/service/workitems/1000/documents
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
 
 

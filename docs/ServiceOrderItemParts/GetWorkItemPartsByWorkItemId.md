@@ -18,39 +18,24 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+------------------------+---------+
 | Field                  | Type    |
-+========================+=========+
+|:-----------------------|:--------|
 | ServiceOrderItemPartId | integer |
-+------------------------+---------+
 | ServiceOrderItemId     | integer |
-+------------------------+---------+
 | Name                   | string  |
-+------------------------+---------+
 | Description            | string  |
-+------------------------+---------+
 | Discount               | number  |
-+------------------------+---------+
 | IsTaxable              | boolean |
-+------------------------+---------+
 | IsHourlyPricing        | boolean |
-+------------------------+---------+
 | Price                  | number  |
-+------------------------+---------+
 | UnitName               | string  |
-+------------------------+---------+
 | Quantity               | number  |
-+------------------------+---------+
 | DeliveryCharge         | number  |
-+------------------------+---------+
 | TimeSpentInMinutes     | number  |
-+------------------------+---------+
 | FreeQuantity           | integer |
-+------------------------+---------+
 | ServiceOrderChargeType | string  |
-+------------------------+---------+
 
 **Group (Tag):**
 ServiceOrderItemParts

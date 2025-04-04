@@ -18,13 +18,11 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------+--------+
 | Field   | Type   |
-+=========+========+
+|:--------|:-------|
 | Value   | string |
-+---------+--------+
 
 **Group (Tag):**
 Common

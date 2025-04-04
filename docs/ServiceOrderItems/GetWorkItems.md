@@ -34,187 +34,98 @@ GET /api/service/workitems?&amp;status=pending,delayed&amp;companyId=10&amp;from
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------------------+---------+
 | Field                          | Type    |
-+================================+=========+
+|:-------------------------------|:--------|
 | WorkItemId                     | integer |
-+--------------------------------+---------+
 | ClientNotes                    | string  |
-+--------------------------------+---------+
 | ServiceComments                | string  |
-+--------------------------------+---------+
 | PrivateComments                | string  |
-+--------------------------------+---------+
 | OrderItemNumber                | integer |
-+--------------------------------+---------+
 | ServiceOrderId                 | integer |
-+--------------------------------+---------+
 | ChannelCount                   | integer |
-+--------------------------------+---------+
 | ServiceTotal                   | number  |
-+--------------------------------+---------+
 | RepairsTotal                   | number  |
-+--------------------------------+---------+
 | PartsTotal                     | number  |
-+--------------------------------+---------+
 | PartsTotalBeforeDiscount       | number  |
-+--------------------------------+---------+
 | OverrideServiceTotal           | boolean |
-+--------------------------------+---------+
 | OverrideRepairsTotal           | boolean |
-+--------------------------------+---------+
 | OverridePartsTotal             | boolean |
-+--------------------------------+---------+
 | ServiceType                    | string  |
-+--------------------------------+---------+
 | DocumentNumber                 | string  |
-+--------------------------------+---------+
 | DocumentSection                | string  |
-+--------------------------------+---------+
 | WorkStatus                     | string  |
-+--------------------------------+---------+
 | CustomWorkStatus               | string  |
-+--------------------------------+---------+
 | IsLimited                      | boolean |
-+--------------------------------+---------+
 | CheckedOn                      | string  |
-+--------------------------------+---------+
 | CheckedByName                  | string  |
-+--------------------------------+---------+
 | CheckedById                    | integer |
-+--------------------------------+---------+
 | CompletedOn                    | string  |
-+--------------------------------+---------+
 | CompletedByName                | string  |
-+--------------------------------+---------+
 | CompletedById                  | integer |
-+--------------------------------+---------+
 | UpdatedById                    | integer |
-+--------------------------------+---------+
 | UpdatedBy                      | string  |
-+--------------------------------+---------+
 | AsFoundCheck                   | string  |
-+--------------------------------+---------+
 | AsLeftCheck                    | string  |
-+--------------------------------+---------+
 | ItemResultStatus               | string  |
-+--------------------------------+---------+
 | ItemAsFoundResult              | string  |
-+--------------------------------+---------+
 | ItemAsLeftResult               | string  |
-+--------------------------------+---------+
 | AsFoundSpecification           | integer |
-+--------------------------------+---------+
 | AsLeftSpecification            | integer |
-+--------------------------------+---------+
 | CreatedOnUtc                   | string  |
-+--------------------------------+---------+
 | UpdatedOnUtc                   | string  |
-+--------------------------------+---------+
 | EquipmentId                    | string  |
-+--------------------------------+---------+
 | ServiceLevel                   | string  |
-+--------------------------------+---------+
 | ServiceLevelCode               | string  |
-+--------------------------------+---------+
 | ServiceLevelDocumentNumber     | string  |
-+--------------------------------+---------+
 | ServiceLevelDocumentSection    | string  |
-+--------------------------------+---------+
 | NextServiceLevel               | string  |
-+--------------------------------+---------+
 | NextServiceLevelCode           | string  |
-+--------------------------------+---------+
 | ResultStatus                   | string  |
-+--------------------------------+---------+
 | AsFoundResult                  | string  |
-+--------------------------------+---------+
 | AsLeftResult                   | string  |
-+--------------------------------+---------+
 | SerialNumber                   | string  |
-+--------------------------------+---------+
 | SerialNumberChange             | string  |
-+--------------------------------+---------+
 | AssetTag                       | string  |
-+--------------------------------+---------+
 | AssetUser                      | string  |
-+--------------------------------+---------+
 | AssetTagChange                 | string  |
-+--------------------------------+---------+
 | AssetUserChange                | string  |
-+--------------------------------+---------+
 | AssetId                        | integer |
-+--------------------------------+---------+
 | AssetName                      | string  |
-+--------------------------------+---------+
 | AssetDescription               | string  |
-+--------------------------------+---------+
 | AssetSiteName                  | string  |
-+--------------------------------+---------+
 | AssetSiteId                    | integer |
-+--------------------------------+---------+
 | AssetCompanyName               | string  |
-+--------------------------------+---------+
 | AssetCompanyId                 | integer |
-+--------------------------------+---------+
 | ClientCompanyId                | integer |
-+--------------------------------+---------+
 | VendorCompanyId                | integer |
-+--------------------------------+---------+
 | ServiceNotes                   | string  |
-+--------------------------------+---------+
 | ProviderTechnician             | string  |
-+--------------------------------+---------+
 | ProviderPhone                  | string  |
-+--------------------------------+---------+
 | ProviderCompany                | string  |
-+--------------------------------+---------+
 | ServiceCharge                  | number  |
-+--------------------------------+---------+
 | RepairsCharge                  | number  |
-+--------------------------------+---------+
 | PartsCharge                    | number  |
-+--------------------------------+---------+
 | PartsChargeBeforeDiscount      | number  |
-+--------------------------------+---------+
 | CustomOrderNumber              | string  |
-+--------------------------------+---------+
 | CertificateNumber              | string  |
-+--------------------------------+---------+
 | ServiceDate                    | string  |
-+--------------------------------+---------+
 | DueDate                        | string  |
-+--------------------------------+---------+
 | NextServiceDate                | string  |
-+--------------------------------+---------+
 | MaintenanceTask                | string  |
-+--------------------------------+---------+
 | MaintenancePlan                | string  |
-+--------------------------------+---------+
 | ServiceOptions.Name            | string  |
-+--------------------------------+---------+
 | ServiceOptions.Price           | number  |
-+--------------------------------+---------+
 | ServiceOptions.ServiceCharge   | number  |
-+--------------------------------+---------+
 | ServiceOptions.TimeSpent       | number  |
-+--------------------------------+---------+
 | ServiceOptions.IsHourly        | boolean |
-+--------------------------------+---------+
 | ServiceOptions.DocumentNumber  | string  |
-+--------------------------------+---------+
 | ServiceOptions.DocumentSection | string  |
-+--------------------------------+---------+
 | ServiceOptions.ServiceCode     | string  |
-+--------------------------------+---------+
 | VendorTag                      | string  |
-+--------------------------------+---------+
 | LegacyId                       | string  |
-+--------------------------------+---------+
 | AssetOwnership                 | string  |
-+--------------------------------+---------+
 
 **Group (Tag):**
 ServiceOrderItems

@@ -18,35 +18,22 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------+---------+
 | Field              | Type    |
-+====================+=========+
+|:-------------------|:--------|
 | FieldId            | string  |
-+--------------------+---------+
 | Name               | string  |
-+--------------------+---------+
 | Value              | string  |
-+--------------------+---------+
 | MeasurementName    | string  |
-+--------------------+---------+
 | MeasurementSetId   | integer |
-+--------------------+---------+
 | SpecificationName  | string  |
-+--------------------+---------+
 | MeasurementPointId | integer |
-+--------------------+---------+
 | BatchType          | string  |
-+--------------------+---------+
 | ServiceOrderItemId | integer |
-+--------------------+---------+
 | ServiceOrderId     | integer |
-+--------------------+---------+
 | BatchFieldId       | string  |
-+--------------------+---------+
 | PointFieldId       | string  |
-+--------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

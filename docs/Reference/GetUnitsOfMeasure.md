@@ -17,19 +17,14 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-----------------------+---------+
 | Field                 | Type    |
-+=======================+=========+
+|:----------------------|:--------|
 | MeasurementQuantityId | integer |
-+-----------------------+---------+
 | MeasurementQuantity   | string  |
-+-----------------------+---------+
 | UnitOfMeasureId       | integer |
-+-----------------------+---------+
 | UnitOfMeasure         | string  |
-+-----------------------+---------+
 
 **Group (Tag):**
 Reference

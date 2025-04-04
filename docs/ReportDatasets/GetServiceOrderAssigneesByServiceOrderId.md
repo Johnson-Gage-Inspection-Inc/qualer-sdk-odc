@@ -18,21 +18,15 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-----------+--------+
 | Field     | Type   |
-+===========+========+
+|:----------|:-------|
 | FirstName | string |
-+-----------+--------+
 | LastName  | string |
-+-----------+--------+
 | Alias     | string |
-+-----------+--------+
 | Email     | string |
-+-----------+--------+
 | Title     | string |
-+-----------+--------+
 
 **Group (Tag):**
 ReportDatasets

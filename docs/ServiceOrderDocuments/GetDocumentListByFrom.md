@@ -43,27 +43,18 @@ OrderCertificate / ServiceOrderCertificate = 5<br />
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+----------------+---------+
 | Field          | Type    |
-+================+=========+
+|:---------------|:--------|
 | ServiceOrderId | integer |
-+----------------+---------+
 | Guid           | string  |
-+----------------+---------+
 | DocumentName   | string  |
-+----------------+---------+
 | FileName       | string  |
-+----------------+---------+
 | DocumentType   | string  |
-+----------------+---------+
 | RevisionNumber | integer |
-+----------------+---------+
 | ReportType     | string  |
-+----------------+---------+
 | DownloadUrl    | string  |
-+----------------+---------+
 
 **Group (Tag):**
 ServiceOrderDocuments

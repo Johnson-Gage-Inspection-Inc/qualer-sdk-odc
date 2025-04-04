@@ -18,27 +18,18 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+------------------+---------+
 | Field            | Type    |
-+==================+=========+
+|:-----------------|:--------|
 | TaskName         | string  |
-+------------------+---------+
 | TaskOrder        | integer |
-+------------------+---------+
 | TaskDetails      | string  |
-+------------------+---------+
 | TimeSpent        | number  |
-+------------------+---------+
 | TimeSpentHours   | number  |
-+------------------+---------+
 | TimeSpentMinutes | number  |
-+------------------+---------+
 | Price            | number  |
-+------------------+---------+
 | IsHourly         | boolean |
-+------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

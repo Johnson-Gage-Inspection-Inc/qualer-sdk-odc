@@ -18,41 +18,25 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------+---------+
 | Field              | Type    |
-+====================+=========+
+|:-------------------|:--------|
 | ServiceOrderItemId | integer |
-+--------------------+---------+
 | MeasurementPointId | integer |
-+--------------------+---------+
 | ColumnIndex        | integer |
-+--------------------+---------+
 | BatchType          | string  |
-+--------------------+---------+
 | Result             | string  |
-+--------------------+---------+
 | MeanResult         | boolean |
-+--------------------+---------+
 | RangeResult        | boolean |
-+--------------------+---------+
 | DeltaResult        | boolean |
-+--------------------+---------+
 | MinResult          | boolean |
-+--------------------+---------+
 | MaxResult          | boolean |
-+--------------------+---------+
 | TarResult          | boolean |
-+--------------------+---------+
 | TurResult          | boolean |
-+--------------------+---------+
 | ErrorResult        | boolean |
-+--------------------+---------+
 | SdResult           | boolean |
-+--------------------+---------+
 | CvResult           | boolean |
-+--------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

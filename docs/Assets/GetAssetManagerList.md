@@ -28,181 +28,95 @@ filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchas
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------------+---------+
 | Field                    | Type    |
-+==========================+=========+
+|:-------------------------|:--------|
 | AssetId                  | integer |
-+--------------------------+---------+
 | AssetName                | string  |
-+--------------------------+---------+
 | AssetDescription         | string  |
-+--------------------------+---------+
 | AssetMaker               | string  |
-+--------------------------+---------+
 | RecordType               | string  |
-+--------------------------+---------+
 | ParentAssetId            | integer |
-+--------------------------+---------+
 | ChildrenCount            | integer |
-+--------------------------+---------+
 | SiteId                   | integer |
-+--------------------------+---------+
 | SerialNumber             | string  |
-+--------------------------+---------+
 | AssetTag                 | string  |
-+--------------------------+---------+
 | AssetUser                | string  |
-+--------------------------+---------+
 | EquipmentId              | string  |
-+--------------------------+---------+
 | LegacyIdentifier         | string  |
-+--------------------------+---------+
 | Criticality              | string  |
-+--------------------------+---------+
 | Condition                | string  |
-+--------------------------+---------+
 | AssetClass               | string  |
-+--------------------------+---------+
 | ActivationDate           | string  |
-+--------------------------+---------+
 | RetirmentDate            | string  |
-+--------------------------+---------+
 | ClientVendorId           | integer |
-+--------------------------+---------+
 | CompanyName              | string  |
-+--------------------------+---------+
 | SiteName                 | string  |
-+--------------------------+---------+
 | AssetHasImage            | boolean |
-+--------------------------+---------+
 | HasImage                 | boolean |
-+--------------------------+---------+
 | ParentHasImage           | boolean |
-+--------------------------+---------+
 | PoolId                   | integer |
-+--------------------------+---------+
 | Pool                     | string  |
-+--------------------------+---------+
 | ProductId                | integer |
-+--------------------------+---------+
 | ParentProductId          | integer |
-+--------------------------+---------+
 | ProductName              | string  |
-+--------------------------+---------+
 | ParentProductName        | string  |
-+--------------------------+---------+
 | CategoryId               | integer |
-+--------------------------+---------+
 | RootCategoryId           | integer |
-+--------------------------+---------+
 | CategoryName             | string  |
-+--------------------------+---------+
 | RootCategoryName         | string  |
-+--------------------------+---------+
 | ManufacturerId           | integer |
-+--------------------------+---------+
 | Manufacturer             | string  |
-+--------------------------+---------+
 | DisplayPartNumber        | string  |
-+--------------------------+---------+
 | DisplayName              | string  |
-+--------------------------+---------+
 | ManufacturerPartNumber   | string  |
-+--------------------------+---------+
 | AssetRoom                | string  |
-+--------------------------+---------+
 | Location                 | string  |
-+--------------------------+---------+
 | Station                  | string  |
-+--------------------------+---------+
 | ToolRole                 | string  |
-+--------------------------+---------+
 | ToolId                   | integer |
-+--------------------------+---------+
 | DepartmentId             | integer |
-+--------------------------+---------+
 | DepartmentName           | string  |
-+--------------------------+---------+
 | CustodianName            | string  |
-+--------------------------+---------+
 | Warranty                 | string  |
-+--------------------------+---------+
 | WarrantyEnd              | string  |
-+--------------------------+---------+
 | IsWarrantyExpired        | boolean |
-+--------------------------+---------+
 | DepreciationMethod       | integer |
-+--------------------------+---------+
 | DepreciationBasis        | number  |
-+--------------------------+---------+
 | SalvageValue             | number  |
-+--------------------------+---------+
 | TotalServiceCost         | number  |
-+--------------------------+---------+
 | LifeSpanMonths           | integer |
-+--------------------------+---------+
 | DueForReplacementDate    | string  |
-+--------------------------+---------+
 | DepreciationProc         | number  |
-+--------------------------+---------+
 | PurchaseDate             | string  |
-+--------------------------+---------+
 | PurchaseCost             | number  |
-+--------------------------+---------+
 | TimeInService            | integer |
-+--------------------------+---------+
 | RetirementReason         | string  |
-+--------------------------+---------+
 | ResidualCost             | number  |
-+--------------------------+---------+
 | EmployeeId               | integer |
-+--------------------------+---------+
 | AssetServiceRecordId     | integer |
-+--------------------------+---------+
 | ResultStatus             | string  |
-+--------------------------+---------+
 | AsFoundResult            | string  |
-+--------------------------+---------+
 | AsLeftResult             | string  |
-+--------------------------+---------+
 | LastServiceDate          | string  |
-+--------------------------+---------+
 | LastService              | string  |
-+--------------------------+---------+
 | NextServiceDate          | string  |
-+--------------------------+---------+
 | NextService              | string  |
-+--------------------------+---------+
 | ServiceScheduleSegmentId | integer |
-+--------------------------+---------+
 | ServiceScheduleId        | integer |
-+--------------------------+---------+
 | ServiceSchedule          | string  |
-+--------------------------+---------+
 | ServiceOrderId           | integer |
-+--------------------------+---------+
 | ServiceOrderStatus       | string  |
-+--------------------------+---------+
 | CustomOrderNumber        | string  |
-+--------------------------+---------+
 | ServiceOrderItemId       | integer |
-+--------------------------+---------+
 | Vendor                   | string  |
-+--------------------------+---------+
 | Technician               | string  |
-+--------------------------+---------+
 | CertificateNumber        | string  |
-+--------------------------+---------+
 | DueTriggerDate           | string  |
-+--------------------------+---------+
 | PastDueTriggerDate       | string  |
-+--------------------------+---------+
 | DueStatus                | string  |
-+--------------------------+---------+
 | WorkStatus               | string  |
-+--------------------------+---------+
 
 **Group (Tag):**
 Assets

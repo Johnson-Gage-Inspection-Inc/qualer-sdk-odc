@@ -18,47 +18,28 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+------------------------+---------+
 | Field                  | Type    |
-+========================+=========+
+|:-----------------------|:--------|
 | ProductId              | integer |
-+------------------------+---------+
 | ParentProductId        | integer |
-+------------------------+---------+
 | CategoryId             | integer |
-+------------------------+---------+
 | ManufacturerId         | integer |
-+------------------------+---------+
 | ManufacturerName       | string  |
-+------------------------+---------+
 | ProductName            | string  |
-+------------------------+---------+
 | ParentProductName      | string  |
-+------------------------+---------+
 | ManufacturerPartNumber | string  |
-+------------------------+---------+
 | ProductDescription     | string  |
-+------------------------+---------+
 | IsFamily               | boolean |
-+------------------------+---------+
 | IsDiscontinued         | boolean |
-+------------------------+---------+
 | IsStockItem            | boolean |
-+------------------------+---------+
 | UnitSalePrice          | number  |
-+------------------------+---------+
 | SupplierInformation    | string  |
-+------------------------+---------+
 | QuantityOnHand         | integer |
-+------------------------+---------+
 | ProductCode            | string  |
-+------------------------+---------+
 | CategoryName           | string  |
-+------------------------+---------+
 | ParentCategoryName     | string  |
-+------------------------+---------+
 
 **Group (Tag):**
 Product

@@ -17,73 +17,41 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+----------------------------+---------+
 | Field                      | Type    |
-+============================+=========+
+|:---------------------------|:--------|
 | CompanyId                  | integer |
-+----------------------------+---------+
 | AssetId                    | integer |
-+----------------------------+---------+
 | SiteId                     | integer |
-+----------------------------+---------+
 | AssetServiceRecordId       | integer |
-+----------------------------+---------+
 | SerialNumber               | string  |
-+----------------------------+---------+
 | AssetUser                  | string  |
-+----------------------------+---------+
 | AssetTag                   | string  |
-+----------------------------+---------+
 | EquipmentId                | string  |
-+----------------------------+---------+
 | AssetName                  | string  |
-+----------------------------+---------+
 | CategoryName               | string  |
-+----------------------------+---------+
 | ManufacturerName           | string  |
-+----------------------------+---------+
 | SiteName                   | string  |
-+----------------------------+---------+
 | MaintenancePlanId          | integer |
-+----------------------------+---------+
 | MaintenancePlanName        | string  |
-+----------------------------+---------+
 | MaintenanceTaskId          | integer |
-+----------------------------+---------+
 | MaintenanceTaskName        | string  |
-+----------------------------+---------+
 | NextServiceDate            | string  |
-+----------------------------+---------+
 | AdvanceRecallDate          | string  |
-+----------------------------+---------+
 | GracePeriodDate            | string  |
-+----------------------------+---------+
 | CertificateNextServiceDate | string  |
-+----------------------------+---------+
 | ServiceInterval            | string  |
-+----------------------------+---------+
 | IntervalCycle              | string  |
-+----------------------------+---------+
 | IntervalLength             | integer |
-+----------------------------+---------+
 | OnDay                      | string  |
-+----------------------------+---------+
 | OnMonth                    | string  |
-+----------------------------+---------+
 | OnWeekDays                 | string  |
-+----------------------------+---------+
 | WeekdayOfMonth             | string  |
-+----------------------------+---------+
 | AdvanceRecallPeriod        | string  |
-+----------------------------+---------+
 | DaysBeforeDue              | integer |
-+----------------------------+---------+
 | PastDueGracePeriod         | string  |
-+----------------------------+---------+
 | DaysAfterDue               | integer |
-+----------------------------+---------+
 
 **Group (Tag):**
 AssetServiceForecast

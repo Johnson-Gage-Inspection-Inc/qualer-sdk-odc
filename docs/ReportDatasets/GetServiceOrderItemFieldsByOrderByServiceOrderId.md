@@ -18,21 +18,15 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+------------------------+---------+
 | Field                  | Type    |
-+========================+=========+
+|:-----------------------|:--------|
 | FieldId                | string  |
-+------------------------+---------+
 | Type                   | string  |
-+------------------------+---------+
 | Value                  | string  |
-+------------------------+---------+
 | ServiceOrderItemId     | integer |
-+------------------------+---------+
 | ServiceOrderItemTaskId | integer |
-+------------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

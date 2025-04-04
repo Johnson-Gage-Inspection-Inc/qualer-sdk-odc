@@ -18,35 +18,22 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-------------------+---------+
 | Field             | Type    |
-+===================+=========+
+|:------------------|:--------|
 | WorkItemId        | integer |
-+-------------------+---------+
 | EmployeeId        | integer |
-+-------------------+---------+
 | CompanyId         | integer |
-+-------------------+---------+
 | SubscriptionEmail | string  |
-+-------------------+---------+
 | SubscriptionPhone | string  |
-+-------------------+---------+
 | OfficePhone       | string  |
-+-------------------+---------+
 | IsLocked          | boolean |
-+-------------------+---------+
 | ImageUrl          | string  |
-+-------------------+---------+
 | Alias             | string  |
-+-------------------+---------+
 | Title             | string  |
-+-------------------+---------+
 | IsDeleted         | boolean |
-+-------------------+---------+
 | LastSeenDateUtc   | string  |
-+-------------------+---------+
 
 **Group (Tag):**
 ServiceOrders

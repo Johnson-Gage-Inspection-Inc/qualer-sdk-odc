@@ -18,289 +18,149 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------------------------------+---------+
 | Field                           | Type    |
-+=================================+=========+
+|:--------------------------------|:--------|
 | CertificateNumber               | string  |
-+---------------------------------+---------+
 | DocumentNumber                  | string  |
-+---------------------------------+---------+
 | Revision                        | string  |
-+---------------------------------+---------+
 | EffectiveDate                   | string  |
-+---------------------------------+---------+
 | DocumentSection                 | string  |
-+---------------------------------+---------+
 | ServiceLevel                    | string  |
-+---------------------------------+---------+
 | ServiceLevelCode                | string  |
-+---------------------------------+---------+
 | ServiceType                     | string  |
-+---------------------------------+---------+
 | OrderItemNumber                 | integer |
-+---------------------------------+---------+
 | ServiceCharge                   | number  |
-+---------------------------------+---------+
 | UpdatedBy                       | string  |
-+---------------------------------+---------+
 | UpdatedOn                       | string  |
-+---------------------------------+---------+
 | WorkStatus                      | integer |
-+---------------------------------+---------+
 | CustomWorkStatus                | string  |
-+---------------------------------+---------+
 | ServiceComments                 | string  |
-+---------------------------------+---------+
 | ClientNotes                     | string  |
-+---------------------------------+---------+
 | VendorServiceNotes              | string  |
-+---------------------------------+---------+
 | DisplayName                     | string  |
-+---------------------------------+---------+
 | DisplayPartNumber               | string  |
-+---------------------------------+---------+
 | PartNumber                      | string  |
-+---------------------------------+---------+
 | ScheduleName                    | string  |
-+---------------------------------+---------+
 | SegmentName                     | string  |
-+---------------------------------+---------+
 | NextSegmentName                 | string  |
-+---------------------------------+---------+
 | IntervalLength                  | integer |
-+---------------------------------+---------+
 | IntervalCycle                   | string  |
-+---------------------------------+---------+
 | ServiceOptions                  | string  |
-+---------------------------------+---------+
 | ServiceOptionsPrice             | string  |
-+---------------------------------+---------+
 | ServiceOptionsDocumentNumbers   | string  |
-+---------------------------------+---------+
 | Location                        | string  |
-+---------------------------------+---------+
 | Station                         | string  |
-+---------------------------------+---------+
 | Room                            | string  |
-+---------------------------------+---------+
 | Site                            | string  |
-+---------------------------------+---------+
 | VendorId                        | integer |
-+---------------------------------+---------+
 | ServiceOrderNumber              | integer |
-+---------------------------------+---------+
 | CustomOrderNumber               | string  |
-+---------------------------------+---------+
 | LinkedOrderNumber               | string  |
-+---------------------------------+---------+
 | AssetId                         | integer |
-+---------------------------------+---------+
 | AssetClass                      | string  |
-+---------------------------------+---------+
 | AssetCondition                  | string  |
-+---------------------------------+---------+
 | AssetCriticality                | string  |
-+---------------------------------+---------+
 | AssetPool                       | string  |
-+---------------------------------+---------+
 | AssetName                       | string  |
-+---------------------------------+---------+
 | AssetDescription                | string  |
-+---------------------------------+---------+
 | AssetDocumentNumber             | string  |
-+---------------------------------+---------+
 | AssetDocumentSection            | string  |
-+---------------------------------+---------+
 | DocumentNumberValues            | string  |
-+---------------------------------+---------+
 | ProductName                     | string  |
-+---------------------------------+---------+
 | ProductDescription              | string  |
-+---------------------------------+---------+
 | AssetMaker                      | string  |
-+---------------------------------+---------+
 | CategoryName                    | string  |
-+---------------------------------+---------+
 | RootCategoryName                | string  |
-+---------------------------------+---------+
 | VendorTag                       | string  |
-+---------------------------------+---------+
 | ResultStatus                    | integer |
-+---------------------------------+---------+
 | ServiceDate                     | string  |
-+---------------------------------+---------+
 | NextServiceDate                 | string  |
-+---------------------------------+---------+
 | OriginalDueDate                 | string  |
-+---------------------------------+---------+
 | AssetTag                        | string  |
-+---------------------------------+---------+
 | Department                      | string  |
-+---------------------------------+---------+
 | AssetUser                       | string  |
-+---------------------------------+---------+
 | EquipmentId                     | string  |
-+---------------------------------+---------+
 | LegacyIdentifier                | string  |
-+---------------------------------+---------+
 | ActivationDate                  | string  |
-+---------------------------------+---------+
 | PurchaseDate                    | string  |
-+---------------------------------+---------+
 | PartName                        | string  |
-+---------------------------------+---------+
 | PartDescription                 | string  |
-+---------------------------------+---------+
 | IsTaxable                       | boolean |
-+---------------------------------+---------+
 | IsLimited                       | boolean |
-+---------------------------------+---------+
 | Quantity                        | number  |
-+---------------------------------+---------+
 | Discount                        | number  |
-+---------------------------------+---------+
 | Price                           | number  |
-+---------------------------------+---------+
 | TimeSpentInMinutes              | number  |
-+---------------------------------+---------+
 | IsHourlyPricing                 | boolean |
-+---------------------------------+---------+
 | DeliveryCharge                  | number  |
-+---------------------------------+---------+
 | SerialNumber                    | string  |
-+---------------------------------+---------+
 | PartRepairCharges               | number  |
-+---------------------------------+---------+
 | PartRepairPrice                 | number  |
-+---------------------------------+---------+
 | OverridePartsTotal              | boolean |
-+---------------------------------+---------+
 | OverrideRepairsTotal            | boolean |
-+---------------------------------+---------+
 | AssetCustodianName              | string  |
-+---------------------------------+---------+
 | AsFoundSpecificationGroupName   | string  |
-+---------------------------------+---------+
 | AsFoundSpecificationCompanyName | string  |
-+---------------------------------+---------+
 | AsLeftSpecificationGroupName    | string  |
-+---------------------------------+---------+
 | AsLeftSpecificationCompanyName  | string  |
-+---------------------------------+---------+
 | OrderId                         | integer |
-+---------------------------------+---------+
 | ParentOrderId                   | integer |
-+---------------------------------+---------+
 | OrderItemId                     | integer |
-+---------------------------------+---------+
 | OrderItemPartId                 | integer |
-+---------------------------------+---------+
 | AsFoundSpecificationGroupId     | integer |
-+---------------------------------+---------+
 | AsLeftSpecificationGroupId      | integer |
-+---------------------------------+---------+
 | AsFoundStatus                   | integer |
-+---------------------------------+---------+
 | AsLeftStatus                    | integer |
-+---------------------------------+---------+
 | AsFoundResult                   | integer |
-+---------------------------------+---------+
 | AsLeftResult                    | integer |
-+---------------------------------+---------+
 | CompletedOn                     | string  |
-+---------------------------------+---------+
 | ReceivedOn                      | string  |
-+---------------------------------+---------+
 | CompletedByName                 | string  |
-+---------------------------------+---------+
 | ServiceChargeBase               | number  |
-+---------------------------------+---------+
 | ServiceTotal                    | number  |
-+---------------------------------+---------+
 | RepairsTotal                    | number  |
-+---------------------------------+---------+
 | PartsTotal                      | number  |
-+---------------------------------+---------+
 | PartsTotalBeforeDiscount        | number  |
-+---------------------------------+---------+
 | ParentManufacturer              | string  |
-+---------------------------------+---------+
 | ParentLocation                  | string  |
-+---------------------------------+---------+
 | ParentManufacturerPartNumber    | string  |
-+---------------------------------+---------+
 | ParentDisplayPartNumber         | string  |
-+---------------------------------+---------+
 | ParentAssetId                   | integer |
-+---------------------------------+---------+
 | ParentCategoryName              | string  |
-+---------------------------------+---------+
 | ParentRootCategoryName          | string  |
-+---------------------------------+---------+
 | ParentSerialNumber              | string  |
-+---------------------------------+---------+
 | ParentAssetTag                  | string  |
-+---------------------------------+---------+
 | ParentAssetUser                 | string  |
-+---------------------------------+---------+
 | ParentDisplayName               | string  |
-+---------------------------------+---------+
 | ParentEquipmentId               | string  |
-+---------------------------------+---------+
 | AssetShippingAddress1           | string  |
-+---------------------------------+---------+
 | AssetShippingAddress2           | string  |
-+---------------------------------+---------+
 | AssetShippingFirstName          | string  |
-+---------------------------------+---------+
 | AssetShippingLastName           | string  |
-+---------------------------------+---------+
 | AssetShippingEmail              | string  |
-+---------------------------------+---------+
 | AssetShippingCompany            | string  |
-+---------------------------------+---------+
 | AssetShippingCity               | string  |
-+---------------------------------+---------+
 | AssetShippingZip                | string  |
-+---------------------------------+---------+
 | AssetShippingPhoneNumber        | string  |
-+---------------------------------+---------+
 | AssetShippingFaxNumber          | string  |
-+---------------------------------+---------+
 | AssetShippingCountry            | string  |
-+---------------------------------+---------+
 | AssetShippingState              | string  |
-+---------------------------------+---------+
 | ShippingAddress1                | string  |
-+---------------------------------+---------+
 | ShippingAddress2                | string  |
-+---------------------------------+---------+
 | ShippingFirstName               | string  |
-+---------------------------------+---------+
 | ShippingLastName                | string  |
-+---------------------------------+---------+
 | ShippingEmail                   | string  |
-+---------------------------------+---------+
 | ShippingCompany                 | string  |
-+---------------------------------+---------+
 | ShippingCity                    | string  |
-+---------------------------------+---------+
 | ShippingZip                     | string  |
-+---------------------------------+---------+
 | ShippingPhoneNumber             | string  |
-+---------------------------------+---------+
 | ShippingFaxNumber               | string  |
-+---------------------------------+---------+
 | ShippingCountry                 | string  |
-+---------------------------------+---------+
 | ShippingState                   | string  |
-+---------------------------------+---------+
 | AssetServiceNotes               | string  |
-+---------------------------------+---------+
 | ServiceOptionServiceCode        | string  |
-+---------------------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

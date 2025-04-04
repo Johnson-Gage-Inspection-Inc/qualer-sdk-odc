@@ -24,87 +24,48 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------------------------+---------+
 | Field                     | Type    |
-+===========================+=========+
+|:--------------------------|:--------|
 | AssetId                   | integer |
-+---------------------------+---------+
 | AssetServiceRecordId      | integer |
-+---------------------------+---------+
 | ServiceScheduleSegmentId  | integer |
-+---------------------------+---------+
 | ForwardSegmentId          | integer |
-+---------------------------+---------+
 | ForwardNextService        | boolean |
-+---------------------------+---------+
 | ServiceOrderNumber        | integer |
-+---------------------------+---------+
 | CustomOrderNumber         | string  |
-+---------------------------+---------+
 | OrderItemNumber           | integer |
-+---------------------------+---------+
 | CertificateNumber         | string  |
-+---------------------------+---------+
 | ResultStatus              | string  |
-+---------------------------+---------+
 | AsFoundResult             | string  |
-+---------------------------+---------+
 | AsLeftResult              | string  |
-+---------------------------+---------+
 | ServiceDate               | string  |
-+---------------------------+---------+
 | SerialNumber              | string  |
-+---------------------------+---------+
 | AssetTag                  | string  |
-+---------------------------+---------+
 | AssetUser                 | string  |
-+---------------------------+---------+
 | AssetTagChange            | string  |
-+---------------------------+---------+
 | AssetUserChange           | string  |
-+---------------------------+---------+
 | ServiceNotes              | string  |
-+---------------------------+---------+
 | SerialNumberChange        | string  |
-+---------------------------+---------+
 | DueDate                   | string  |
-+---------------------------+---------+
 | NextServiceDate           | string  |
-+---------------------------+---------+
 | ProviderTechnician        | string  |
-+---------------------------+---------+
 | ProviderPhone             | string  |
-+---------------------------+---------+
 | ProviderCompany           | string  |
-+---------------------------+---------+
 | ServiceLevel              | string  |
-+---------------------------+---------+
 | ServiceLevelCode          | string  |
-+---------------------------+---------+
 | NextServiceLevel          | string  |
-+---------------------------+---------+
 | NextServiceLevelCode      | string  |
-+---------------------------+---------+
 | AssetName                 | string  |
-+---------------------------+---------+
 | AssetDescription          | string  |
-+---------------------------+---------+
 | PartsCharge               | number  |
-+---------------------------+---------+
 | PartsChargeBeforeDiscount | number  |
-+---------------------------+---------+
 | ServiceCharge             | number  |
-+---------------------------+---------+
 | RepairsCharge             | number  |
-+---------------------------+---------+
 | Guid                      | string  |
-+---------------------------+---------+
 | SegmentName               | string  |
-+---------------------------+---------+
 | ScheduleName              | string  |
-+---------------------------+---------+
 
 **Group (Tag):**
 AssetServiceRecords

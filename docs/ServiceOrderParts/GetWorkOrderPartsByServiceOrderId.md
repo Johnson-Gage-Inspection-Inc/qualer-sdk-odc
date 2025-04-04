@@ -18,57 +18,33 @@
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-------------------------+---------+
 | Field                   | Type    |
-+=========================+=========+
+|:------------------------|:--------|
 | ServiceOrderItemPartId  | integer |
-+-------------------------+---------+
 | Price                   | number  |
-+-------------------------+---------+
 | Description             | string  |
-+-------------------------+---------+
 | Name                    | string  |
-+-------------------------+---------+
 | UnitName                | string  |
-+-------------------------+---------+
 | Quantity                | number  |
-+-------------------------+---------+
 | Discount                | number  |
-+-------------------------+---------+
 | DeliveryCharge          | number  |
-+-------------------------+---------+
 | IsTaxable               | boolean |
-+-------------------------+---------+
 | TimeSpentInMinutes      | number  |
-+-------------------------+---------+
 | IsHourlyPricing         | boolean |
-+-------------------------+---------+
 | FreeQuantity            | integer |
-+-------------------------+---------+
 | CurrencyIsoSymbol       | string  |
-+-------------------------+---------+
 | CreatedById             | integer |
-+-------------------------+---------+
 | CreatedBy               | string  |
-+-------------------------+---------+
 | CreatedOnUtc            | string  |
-+-------------------------+---------+
 | ChargeDate              | string  |
-+-------------------------+---------+
 | ContractRepairsDiscount | number  |
-+-------------------------+---------+
 | ContractPartsDiscount   | number  |
-+-------------------------+---------+
 | ServiceOrderChargeType  | string  |
-+-------------------------+---------+
 | TotalDiscount           | number  |
-+-------------------------+---------+
 | TotalPrice              | number  |
-+-------------------------+---------+
 | DiscountPrice           | number  |
-+-------------------------+---------+
 
 **Group (Tag):**
 ServiceOrderParts

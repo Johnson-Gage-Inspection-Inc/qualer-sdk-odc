@@ -18,55 +18,32 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+------------------------+---------+
 | Field                  | Type    |
-+========================+=========+
+|:-----------------------|:--------|
 | IsAuxiliary            | boolean |
-+------------------------+---------+
 | LastServiceDate        | string  |
-+------------------------+---------+
 | NextServiceDate        | string  |
-+------------------------+---------+
 | CertificateNumber      | string  |
-+------------------------+---------+
 | CalibratedBy           | string  |
-+------------------------+---------+
 | ToolName               | string  |
-+------------------------+---------+
 | ToolSite               | string  |
-+------------------------+---------+
 | ToolRoom               | string  |
-+------------------------+---------+
 | ToolStation            | string  |
-+------------------------+---------+
 | ToolLocation           | string  |
-+------------------------+---------+
 | AssetTag               | string  |
-+------------------------+---------+
 | LotNumber              | string  |
-+------------------------+---------+
 | AssetUser              | string  |
-+------------------------+---------+
 | ToolTypeName           | string  |
-+------------------------+---------+
 | ToolDescription        | string  |
-+------------------------+---------+
 | ToolId                 | integer |
-+------------------------+---------+
 | Manufacturer           | string  |
-+------------------------+---------+
 | SerialNumber           | string  |
-+------------------------+---------+
 | Area                   | string  |
-+------------------------+---------+
 | ServiceOrderItemId     | integer |
-+------------------------+---------+
 | ManufacturerPartNumber | string  |
-+------------------------+---------+
 | EquipmentId            | string  |
-+------------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

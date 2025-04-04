@@ -17,21 +17,15 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------+---------+
 | Field        | Type    |
-+==============+=========+
+|:-------------|:--------|
 | FilterType   | string  |
-+--------------+---------+
 | WithinDays   | integer |
-+--------------+---------+
 | UseDateRange | boolean |
-+--------------+---------+
 | StartDate    | string  |
-+--------------+---------+
 | EndDate      | string  |
-+--------------+---------+
 
 **Group (Tag):**
 EmployeeFilterPreference

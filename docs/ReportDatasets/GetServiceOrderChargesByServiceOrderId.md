@@ -18,39 +18,24 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------+---------+
 | Field              | Type    |
-+====================+=========+
+|:-------------------|:--------|
 | ServiceOrderId     | integer |
-+--------------------+---------+
 | Description        | string  |
-+--------------------+---------+
 | Name               | string  |
-+--------------------+---------+
 | UnitName           | string  |
-+--------------------+---------+
 | Quantity           | number  |
-+--------------------+---------+
 | Discount           | number  |
-+--------------------+---------+
 | FixedCharge        | number  |
-+--------------------+---------+
 | Price              | number  |
-+--------------------+---------+
 | Subtotal           | number  |
-+--------------------+---------+
 | IsTaxable          | boolean |
-+--------------------+---------+
 | TimeSpentInMinutes | number  |
-+--------------------+---------+
 | IsHourlyPricing    | boolean |
-+--------------------+---------+
 | CreatedBy          | string  |
-+--------------------+---------+
 | ChargeDate         | string  |
-+--------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

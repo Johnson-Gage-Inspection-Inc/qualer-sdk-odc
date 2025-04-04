@@ -18,27 +18,18 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------------+---------+
 | Field         | Type    |
-+===============+=========+
+|:--------------|:--------|
 | RoomName      | string  |
-+---------------+---------+
 | FactorId      | string  |
-+---------------+---------+
 | StationId     | integer |
-+---------------+---------+
 | FactorName    | string  |
-+---------------+---------+
 | FactorValue   | number  |
-+---------------+---------+
 | ValidRangeMin | number  |
-+---------------+---------+
 | ValidRangeMax | number  |
-+---------------+---------+
 | UnitOfMeasure | string  |
-+---------------+---------+
 
 **Group (Tag):**
 Environments

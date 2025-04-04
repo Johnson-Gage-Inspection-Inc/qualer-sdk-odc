@@ -33,13 +33,11 @@ OrderItemLockedWorkStatus = 15
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------+-----------------+
 | Field   | Type            |
-+=========+=================+
+|:--------|:----------------|
 |         | array of string |
-+---------+-----------------+
 
 **Group (Tag):**
 Company

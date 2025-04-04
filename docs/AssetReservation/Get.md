@@ -32,35 +32,22 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-------------------+---------+
 | Field             | Type    |
-+===================+=========+
+|:------------------|:--------|
 | OriginalBeginDate | string  |
-+-------------------+---------+
 | OriginalEndDate   | string  |
-+-------------------+---------+
 | BeginDate         | string  |
-+-------------------+---------+
 | EndDate           | string  |
-+-------------------+---------+
 | ReservedOn        | string  |
-+-------------------+---------+
 | ReservedOnUtc     | string  |
-+-------------------+---------+
 | Comments          | string  |
-+-------------------+---------+
 | ProductId         | integer |
-+-------------------+---------+
 | AssetId           | integer |
-+-------------------+---------+
 | ServiceOrderId    | integer |
-+-------------------+---------+
 | ReservedById      | integer |
-+-------------------+---------+
 | ReservedByName    | string  |
-+-------------------+---------+
 
 **Group (Tag):**
 AssetReservation

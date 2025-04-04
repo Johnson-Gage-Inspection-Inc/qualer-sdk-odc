@@ -18,15 +18,12 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------+--------+
 | Field   | Type   |
-+=========+========+
+|:--------|:-------|
 | Name    | string |
-+---------+--------+
 | Value   | string |
-+---------+--------+
 
 **Group (Tag):**
 AssetAttributes

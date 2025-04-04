@@ -20,7 +20,7 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
 
 

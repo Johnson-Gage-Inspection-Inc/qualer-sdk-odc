@@ -18,115 +18,62 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+------------------------+---------+
 | Field                  | Type    |
-+========================+=========+
+|:-----------------------|:--------|
 | LastDueDate            | string  |
-+------------------------+---------+
 | LastServiceDate        | string  |
-+------------------------+---------+
 | NextServiceDate        | string  |
-+------------------------+---------+
 | NextServiceTask        | string  |
-+------------------------+---------+
 | CompanyId              | integer |
-+------------------------+---------+
 | AssetId                | integer |
-+------------------------+---------+
 | SerialNumber           | string  |
-+------------------------+---------+
 | AssetUser              | string  |
-+------------------------+---------+
 | AssetTag               | string  |
-+------------------------+---------+
 | EquipmentId            | string  |
-+------------------------+---------+
 | AssetStatus            | string  |
-+------------------------+---------+
 | AssetName              | string  |
-+------------------------+---------+
 | AssetDescription       | string  |
-+------------------------+---------+
 | AssetMaker             | string  |
-+------------------------+---------+
 | Location               | string  |
-+------------------------+---------+
 | RoomNumber             | string  |
-+------------------------+---------+
 | Barcode                | string  |
-+------------------------+---------+
 | LegacyIdentifier       | string  |
-+------------------------+---------+
 | RootCategoryName       | string  |
-+------------------------+---------+
 | CategoryName           | string  |
-+------------------------+---------+
 | Class                  | string  |
-+------------------------+---------+
 | CustodianEmail         | string  |
-+------------------------+---------+
 | CustodianFirstName     | string  |
-+------------------------+---------+
 | CustodianLastName      | string  |
-+------------------------+---------+
 | CustodianName          | string  |
-+------------------------+---------+
 | Department             | string  |
-+------------------------+---------+
 | Station                | string  |
-+------------------------+---------+
 | Notes                  | string  |
-+------------------------+---------+
 | DocumentNumber         | string  |
-+------------------------+---------+
 | DocumentSection        | string  |
-+------------------------+---------+
 | CumulativeServiceCost  | number  |
-+------------------------+---------+
 | ProductId              | integer |
-+------------------------+---------+
 | ManufacturerPartNumber | string  |
-+------------------------+---------+
 | ProductName            | string  |
-+------------------------+---------+
 | ProductDescription     | string  |
-+------------------------+---------+
 | ProductManufacturer    | string  |
-+------------------------+---------+
 | SiteName               | string  |
-+------------------------+---------+
 | SiteId                 | integer |
-+------------------------+---------+
 | Condition              | string  |
-+------------------------+---------+
 | Criticality            | string  |
-+------------------------+---------+
 | Pool                   | string  |
-+------------------------+---------+
 | PurchaseDate           | string  |
-+------------------------+---------+
 | PurchaseCost           | number  |
-+------------------------+---------+
 | LifeSpanMonths         | integer |
-+------------------------+---------+
 | ActivationDate         | string  |
-+------------------------+---------+
 | DepreciationBasis      | number  |
-+------------------------+---------+
 | DepreciationMethod     | integer |
-+------------------------+---------+
 | RetirementDate         | string  |
-+------------------------+---------+
 | SalvageValue           | number  |
-+------------------------+---------+
 | RetirmentReason        | string  |
-+------------------------+---------+
 | CompositeParentId      | integer |
-+------------------------+---------+
 | CompositeChildCount    | integer |
-+------------------------+---------+
 
 **Group (Tag):**
 MaintenancePlans

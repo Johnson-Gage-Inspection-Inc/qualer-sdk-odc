@@ -18,123 +18,66 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+---------------------------+---------+
 | Field                     | Type    |
-+===========================+=========+
+|:--------------------------|:--------|
 | ServiceOrderNumber        | integer |
-+---------------------------+---------+
 | ServiceOrderId            | integer |
-+---------------------------+---------+
 | ServiceOrderItemId        | integer |
-+---------------------------+---------+
 | CustomOrderNumber         | string  |
-+---------------------------+---------+
 | OrderItemNumber           | integer |
-+---------------------------+---------+
 | IsLimited                 | boolean |
-+---------------------------+---------+
 | CertificateNumber         | string  |
-+---------------------------+---------+
 | SerialNumber              | string  |
-+---------------------------+---------+
 | NextServiceDate           | string  |
-+---------------------------+---------+
 | ServiceDate               | string  |
-+---------------------------+---------+
 | PartNumber                | string  |
-+---------------------------+---------+
 | DisplayPartNumber         | string  |
-+---------------------------+---------+
 | AssetTag                  | string  |
-+---------------------------+---------+
 | AssetUser                 | string  |
-+---------------------------+---------+
 | AssetName                 | string  |
-+---------------------------+---------+
 | EquipmentId               | string  |
-+---------------------------+---------+
 | LegacyIdentifier          | string  |
-+---------------------------+---------+
 | AssetDescription          | string  |
-+---------------------------+---------+
 | Class                     | string  |
-+---------------------------+---------+
 | Condition                 | string  |
-+---------------------------+---------+
 | Criticality               | string  |
-+---------------------------+---------+
 | AssetPool                 | string  |
-+---------------------------+---------+
 | Room                      | string  |
-+---------------------------+---------+
 | Station                   | string  |
-+---------------------------+---------+
 | ServiceNotes              | string  |
-+---------------------------+---------+
 | ServiceLevel              | string  |
-+---------------------------+---------+
 | ServiceLevelCode          | string  |
-+---------------------------+---------+
 | NextServiceLevel          | string  |
-+---------------------------+---------+
 | NextServiceLevelCode      | string  |
-+---------------------------+---------+
 | AssetId                   | integer |
-+---------------------------+---------+
 | ResultStatus              | integer |
-+---------------------------+---------+
 | SerialNumberChange        | string  |
-+---------------------------+---------+
 | ProviderTechnician        | string  |
-+---------------------------+---------+
 | ProviderTechnicianAlias   | string  |
-+---------------------------+---------+
 | ProviderPhone             | string  |
-+---------------------------+---------+
 | ProviderCompany           | string  |
-+---------------------------+---------+
 | QrCode                    | string  |
-+---------------------------+---------+
 | BarCode                   | string  |
-+---------------------------+---------+
 | BarCodeString             | string  |
-+---------------------------+---------+
 | OwnerCompanyId            | integer |
-+---------------------------+---------+
 | OwnerCompanyName          | string  |
-+---------------------------+---------+
 | AsFoundResult             | integer |
-+---------------------------+---------+
 | AsLeftResult              | integer |
-+---------------------------+---------+
 | AssetTagChange            | string  |
-+---------------------------+---------+
 | AssetUserChange           | string  |
-+---------------------------+---------+
 | DueDate                   | string  |
-+---------------------------+---------+
 | PartsCharge               | number  |
-+---------------------------+---------+
 | PartsChargeBeforeDiscount | number  |
-+---------------------------+---------+
 | ServiceCharge             | number  |
-+---------------------------+---------+
 | RepairsCharge             | number  |
-+---------------------------+---------+
 | SegmentName               | string  |
-+---------------------------+---------+
 | ScheduleName              | string  |
-+---------------------------+---------+
 | NextSegmentName           | string  |
-+---------------------------+---------+
 | ClientId                  | integer |
-+---------------------------+---------+
 | IntervalLength            | integer |
-+---------------------------+---------+
 | IntervalCycle             | string  |
-+---------------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

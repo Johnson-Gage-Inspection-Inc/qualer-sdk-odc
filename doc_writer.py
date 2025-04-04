@@ -30,7 +30,7 @@ def generate_markdown_file(docs_path, ep, spec):
         {"Field": k, "Type": v}
         for k, v in flat_fields.items()
     ])
-    response_schema_md = df.to_markdown(index=False, tablefmt="grid")
+    response_schema_md = df.to_markdown(index=False, tablefmt="pipe")
 
     markdown = f"""# `{ep['clean_name']}`
 
@@ -51,7 +51,7 @@ def generate_markdown_file(docs_path, ep, spec):
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
 {response_schema_md}
 

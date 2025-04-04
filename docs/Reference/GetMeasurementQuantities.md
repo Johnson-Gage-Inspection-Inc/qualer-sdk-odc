@@ -17,15 +17,12 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-----------------------+---------+
 | Field                 | Type    |
-+=======================+=========+
+|:----------------------|:--------|
 | MeasurementQuantityId | integer |
-+-----------------------+---------+
 | MeasurementQuantity   | string  |
-+-----------------------+---------+
 
 **Group (Tag):**
 Reference

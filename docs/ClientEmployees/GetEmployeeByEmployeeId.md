@@ -20,49 +20,29 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+----------------------+---------+
 | Field                | Type    |
-+======================+=========+
+|:---------------------|:--------|
 | EmployeeId           | integer |
-+----------------------+---------+
 | FirstName            | string  |
-+----------------------+---------+
 | LastName             | string  |
-+----------------------+---------+
 | CompanyId            | integer |
-+----------------------+---------+
 | LoginEmail           | string  |
-+----------------------+---------+
 | Departments.Id       | integer |
-+----------------------+---------+
 | Departments.Name     | string  |
-+----------------------+---------+
 | Departments.Position | string  |
-+----------------------+---------+
 | SubscriptionEmail    | string  |
-+----------------------+---------+
 | SubscriptionPhone    | string  |
-+----------------------+---------+
 | OfficePhone          | string  |
-+----------------------+---------+
 | IsLocked             | boolean |
-+----------------------+---------+
 | ImageUrl             | string  |
-+----------------------+---------+
 | Alias                | string  |
-+----------------------+---------+
 | Title                | string  |
-+----------------------+---------+
 | IsDeleted            | boolean |
-+----------------------+---------+
 | LastSeenDateUtc      | string  |
-+----------------------+---------+
 | CultureName          | string  |
-+----------------------+---------+
 | CultureUiName        | string  |
-+----------------------+---------+
 
 **Group (Tag):**
 ClientEmployees

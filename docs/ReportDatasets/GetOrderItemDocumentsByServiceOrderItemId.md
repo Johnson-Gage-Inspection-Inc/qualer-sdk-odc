@@ -18,17 +18,13 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------+---------+
 | Field              | Type    |
-+====================+=========+
+|:-------------------|:--------|
 | ServiceOrderItemId | integer |
-+--------------------+---------+
 | Image              | string  |
-+--------------------+---------+
 | ImageUrl           | string  |
-+--------------------+---------+
 
 **Group (Tag):**
 ReportDatasets

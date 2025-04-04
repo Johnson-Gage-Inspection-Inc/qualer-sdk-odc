@@ -18,51 +18,30 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-----------------------------+---------+
 | Field                       | Type    |
-+=============================+=========+
+|:----------------------------|:--------|
 | AssetsAll                   | integer |
-+-----------------------------+---------+
 | AssetsCollected             | integer |
-+-----------------------------+---------+
 | AssetsRecentlyServiced      | integer |
-+-----------------------------+---------+
 | AssetsDue                   | integer |
-+-----------------------------+---------+
 | AssetsPastDue               | integer |
-+-----------------------------+---------+
 | AssetsServicePending        | integer |
-+-----------------------------+---------+
 | AssetsRecentlyPurchased     | integer |
-+-----------------------------+---------+
 | AssetsWarrantyExpires       | integer |
-+-----------------------------+---------+
 | AssetsDueForReplacement     | integer |
-+-----------------------------+---------+
 | AssetsOutOfService          | integer |
-+-----------------------------+---------+
 | AssetsNotServiced           | integer |
-+-----------------------------+---------+
 | AssetsWithoutSchedule       | integer |
-+-----------------------------+---------+
 | AssetsWithoutVendor         | integer |
-+-----------------------------+---------+
 | AssetsWithoutProduct        | integer |
-+-----------------------------+---------+
 | AssetsAdded                 | integer |
-+-----------------------------+---------+
 | AssetsUpdated               | integer |
-+-----------------------------+---------+
 | AssetsDeleted               | integer |
-+-----------------------------+---------+
 | AssetsNoAgreement           | integer |
-+-----------------------------+---------+
 | AssetsExpiredAgreement      | integer |
-+-----------------------------+---------+
 | AssetsExpiringSoonAgreement | integer |
-+-----------------------------+---------+
 
 **Group (Tag):**
 Assets

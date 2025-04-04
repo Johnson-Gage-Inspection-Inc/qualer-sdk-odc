@@ -20,59 +20,34 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+------------------------+---------+
 | Field                  | Type    |
-+========================+=========+
+|:-----------------------|:--------|
 | ServiceOrderId         | integer |
-+------------------------+---------+
 | Guid                   | string  |
-+------------------------+---------+
 | ServiceOrderNumber     | integer |
-+------------------------+---------+
 | CustomOrderNumber      | string  |
-+------------------------+---------+
 | DueDate                | string  |
-+------------------------+---------+
 | Assets                 | integer |
-+------------------------+---------+
 | CompletedAssets        | integer |
-+------------------------+---------+
 | OrderStatus            | string  |
-+------------------------+---------+
 | IsQualityControlFail   | boolean |
-+------------------------+---------+
 | ServicePrivateComments | string  |
-+------------------------+---------+
 | ClientCompanyId        | integer |
-+------------------------+---------+
 | ClientCompanyName      | string  |
-+------------------------+---------+
 | ClientSiteName         | string  |
-+------------------------+---------+
 | ClientLegacyId         | string  |
-+------------------------+---------+
 | BusinessFromTime       | string  |
-+------------------------+---------+
 | BusinessToTime         | string  |
-+------------------------+---------+
 | Timeframe              | string  |
-+------------------------+---------+
 | SiteAccessNotes        | string  |
-+------------------------+---------+
 | DesiredDate            | string  |
-+------------------------+---------+
 | DeadlineDate           | string  |
-+------------------------+---------+
 | RequestFromDate        | string  |
-+------------------------+---------+
 | RequestFromTime        | string  |
-+------------------------+---------+
 | RequestToDate          | string  |
-+------------------------+---------+
 | RequestToTime          | string  |
-+------------------------+---------+
 
 **Group (Tag):**
 ServiceOrders

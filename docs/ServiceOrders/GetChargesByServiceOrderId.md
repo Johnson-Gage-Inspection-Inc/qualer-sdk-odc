@@ -18,105 +18,57 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------------------------+---------+
 | Field                                | Type    |
-+======================================+=========+
+|:-------------------------------------|:--------|
 | Charges.Name                         | string  |
-+--------------------------------------+---------+
 | Charges.Price                        | number  |
-+--------------------------------------+---------+
 | Tasks.ContractDiscount               | number  |
-+--------------------------------------+---------+
 | Tasks.TimeSpent                      | number  |
-+--------------------------------------+---------+
 | Tasks.IsHourly                       | boolean |
-+--------------------------------------+---------+
 | Tasks.Details                        | string  |
-+--------------------------------------+---------+
 | Tasks.Name                           | string  |
-+--------------------------------------+---------+
 | Tasks.Price                          | number  |
-+--------------------------------------+---------+
 | Parts.DeliveryCharge                 | number  |
-+--------------------------------------+---------+
 | Parts.Quantity                       | number  |
-+--------------------------------------+---------+
 | Parts.TimeSpentInMinutes             | number  |
-+--------------------------------------+---------+
 | Parts.IsHourlyPricing                | boolean |
-+--------------------------------------+---------+
 | Parts.Description                    | string  |
-+--------------------------------------+---------+
 | Parts.Name                           | string  |
-+--------------------------------------+---------+
 | Parts.Price                          | number  |
-+--------------------------------------+---------+
 | Parts.IsTaxable                      | boolean |
-+--------------------------------------+---------+
 | Repairs.DeliveryCharge               | number  |
-+--------------------------------------+---------+
 | Repairs.Quantity                     | number  |
-+--------------------------------------+---------+
 | Repairs.TimeSpentInMinutes           | number  |
-+--------------------------------------+---------+
 | Repairs.IsHourlyPricing              | boolean |
-+--------------------------------------+---------+
 | Repairs.Description                  | string  |
-+--------------------------------------+---------+
 | Repairs.Name                         | string  |
-+--------------------------------------+---------+
 | Repairs.Price                        | number  |
-+--------------------------------------+---------+
 | Repairs.IsTaxable                    | boolean |
-+--------------------------------------+---------+
 | WorkItems.Tasks.ContractDiscount     | number  |
-+--------------------------------------+---------+
 | WorkItems.Tasks.Name                 | string  |
-+--------------------------------------+---------+
 | WorkItems.Tasks.Price                | number  |
-+--------------------------------------+---------+
 | WorkItems.Parts.DeliveryCharge       | number  |
-+--------------------------------------+---------+
 | WorkItems.Parts.Quantity             | number  |
-+--------------------------------------+---------+
 | WorkItems.Parts.TimeSpentInMinutes   | number  |
-+--------------------------------------+---------+
 | WorkItems.Parts.IsHourlyPricing      | boolean |
-+--------------------------------------+---------+
 | WorkItems.Parts.Description          | string  |
-+--------------------------------------+---------+
 | WorkItems.Parts.Name                 | string  |
-+--------------------------------------+---------+
 | WorkItems.Parts.Price                | number  |
-+--------------------------------------+---------+
 | WorkItems.Parts.UnitName             | string  |
-+--------------------------------------+---------+
 | WorkItems.Parts.IsTaxable            | boolean |
-+--------------------------------------+---------+
 | WorkItems.Repairs.DeliveryCharge     | number  |
-+--------------------------------------+---------+
 | WorkItems.Repairs.Quantity           | number  |
-+--------------------------------------+---------+
 | WorkItems.Repairs.TimeSpentInMinutes | number  |
-+--------------------------------------+---------+
 | WorkItems.Repairs.IsHourlyPricing    | boolean |
-+--------------------------------------+---------+
 | WorkItems.Repairs.Description        | string  |
-+--------------------------------------+---------+
 | WorkItems.Repairs.Name               | string  |
-+--------------------------------------+---------+
 | WorkItems.Repairs.Price              | number  |
-+--------------------------------------+---------+
 | WorkItems.Repairs.UnitName           | string  |
-+--------------------------------------+---------+
 | WorkItems.Repairs.IsTaxable          | boolean |
-+--------------------------------------+---------+
 | WorkItems.WorkItemId                 | integer |
-+--------------------------------------+---------+
 | WorkItems.VendorTag                  | string  |
-+--------------------------------------+---------+
 
 **Group (Tag):**
 ServiceOrders

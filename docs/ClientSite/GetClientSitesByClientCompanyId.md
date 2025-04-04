@@ -18,107 +18,58 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+-------------------------------------------+---------+
 | Field                                     | Type    |
-+===========================================+=========+
+|:------------------------------------------|:--------|
 | SiteId                                    | integer |
-+-------------------------------------------+---------+
 | SiteName                                  | string  |
-+-------------------------------------------+---------+
 | SiteCode                                  | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.FirstName                 | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.LastName                  | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.Email                     | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.Company                   | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.City                      | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.Address1                  | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.Address2                  | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.ZipPostalCode             | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.PhoneNumber               | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.FaxNumber                 | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.Attention1                | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.Attention2                | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.Country                   | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.StateProvince             | string  |
-+-------------------------------------------+---------+
 | ShippingAddress.StateProvinceAbbreviation | string  |
-+-------------------------------------------+---------+
 | ShippingInherited                         | boolean |
-+-------------------------------------------+---------+
 | BillingAddress.FirstName                  | string  |
-+-------------------------------------------+---------+
 | BillingAddress.LastName                   | string  |
-+-------------------------------------------+---------+
 | BillingAddress.Email                      | string  |
-+-------------------------------------------+---------+
 | BillingAddress.Company                    | string  |
-+-------------------------------------------+---------+
 | BillingAddress.City                       | string  |
-+-------------------------------------------+---------+
 | BillingAddress.Address1                   | string  |
-+-------------------------------------------+---------+
 | BillingAddress.Address2                   | string  |
-+-------------------------------------------+---------+
 | BillingAddress.ZipPostalCode              | string  |
-+-------------------------------------------+---------+
 | BillingAddress.PhoneNumber                | string  |
-+-------------------------------------------+---------+
 | BillingAddress.FaxNumber                  | string  |
-+-------------------------------------------+---------+
 | BillingAddress.Attention1                 | string  |
-+-------------------------------------------+---------+
 | BillingAddress.Attention2                 | string  |
-+-------------------------------------------+---------+
 | BillingAddress.Country                    | string  |
-+-------------------------------------------+---------+
 | BillingAddress.StateProvince              | string  |
-+-------------------------------------------+---------+
 | BillingAddress.StateProvinceAbbreviation  | string  |
-+-------------------------------------------+---------+
 | DefaultAccountRepresentativeEmployeeId    | integer |
-+-------------------------------------------+---------+
 | BillingInherited                          | boolean |
-+-------------------------------------------+---------+
 | FederalNumber                             | string  |
-+-------------------------------------------+---------+
 | StateNumber                               | string  |
-+-------------------------------------------+---------+
 | CultureName                               | string  |
-+-------------------------------------------+---------+
 | IsScienceFacility                         | boolean |
-+-------------------------------------------+---------+
 | IsServiceCenter                           | boolean |
-+-------------------------------------------+---------+
 | IsInventoryStorage                        | boolean |
-+-------------------------------------------+---------+
 | IsProduction                              | boolean |
-+-------------------------------------------+---------+
 | TimeZoneId                                | string  |
-+-------------------------------------------+---------+
 | TimeZoneOffsetMinutes                     | integer |
-+-------------------------------------------+---------+
 | UpdatedOnUtc                              | string  |
-+-------------------------------------------+---------+
 | Attributes.Name                           | string  |
-+-------------------------------------------+---------+
 | Attributes.Value                          | string  |
-+-------------------------------------------+---------+
 
 **Group (Tag):**
 ClientSite

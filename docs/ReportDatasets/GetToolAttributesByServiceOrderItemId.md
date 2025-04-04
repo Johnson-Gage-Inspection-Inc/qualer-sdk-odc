@@ -18,17 +18,13 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+----------------+---------+
 | Field          | Type    |
-+================+=========+
+|:---------------|:--------|
 | ToolId         | integer |
-+----------------+---------+
 | AttributeName  | string  |
-+----------------+---------+
 | AttributeValue | string  |
-+----------------+---------+
 
 **Group (Tag):**
 ReportDatasets

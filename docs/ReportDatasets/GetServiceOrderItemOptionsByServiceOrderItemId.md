@@ -18,23 +18,16 @@ No description provided.
 
 ### Response Schema
 
-#### OK
+#### OK [200]
 
-+--------------------+---------+
 | Field              | Type    |
-+====================+=========+
+|:-------------------|:--------|
 | ServiceOrderItemId | integer |
-+--------------------+---------+
 | ServiceCharge      | number  |
-+--------------------+---------+
 | TimeSpent          | number  |
-+--------------------+---------+
 | IsHourly           | boolean |
-+--------------------+---------+
 | Price              | number  |
-+--------------------+---------+
 | TaskName           | string  |
-+--------------------+---------+
 
 **Group (Tag):**
 ReportDatasets
