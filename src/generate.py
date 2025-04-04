@@ -76,45 +76,55 @@ def yield_get_endpoints(spec):
 def generate_mashup_formula(ep):
     def normalize_name(n): return n.replace(".", "_")
 
-    path_param_pairs = zip(ep["path_params"], ep["excel_path_params"])
-    query_param_pairs = zip(ep["query_params"], ep["excel_query_params"])
+    # === Gather parameters with metadata
+    required_path_params = []
+    optional_query_params = []
+    required_query_params = []
+
+    for param in ep["params"]:
+        pname = param["name"]
+        excel = ep["excel_path_params"][ep["path_params"].index(pname)] if param["in"] == "path" else ep["excel_query_params"][ep["query_params"].index(pname)]
+        safe_excel = normalize_name(excel)
+
+        if param["in"] == "path":
+            required_path_params.append((pname, excel, safe_excel))
+        elif param["in"] == "query":
+            if param.get("required", False):
+                required_query_params.append((pname, excel, safe_excel))
+            else:
+                optional_query_params.append((pname, excel, safe_excel))
+
 
     lines = []
 
-    # === Required path parameters (no try/otherwise)
-    for _, excel in path_param_pairs:
-        safe_excel = normalize_name(excel)
+    # Path parameters: no try/otherwise
+    for _, excel, safe_excel in required_path_params:
         lines.append(
             f'{safe_excel} = Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1],'
         )
 
-    # === Optional query parameters (with try/otherwise)
-    for _, excel in query_param_pairs:
-        safe_excel = normalize_name(excel)
+    # Query parameters: always wrapped in try
+    for _, excel, safe_excel in required_query_params + optional_query_params:
         lines.append(
             f'{safe_excel} = try Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1] otherwise "",'
         )
 
-    # Reset zips
-    path_param_pairs = zip(ep["path_params"], ep["excel_path_params"])
-    query_param_pairs = zip(ep["query_params"], ep["excel_query_params"])
 
-    # === Replace path placeholders in URL
-    url = ep["relative_url"]
-    for orig, excel in path_param_pairs:
-        safe_excel = normalize_name(excel)
-        pattern = re.compile(rf"\{{{orig}\}}", re.IGNORECASE)
-        url = pattern.sub(f'" & Text.From({safe_excel}) & "', url)
-
-    # === Query param blocks
     combine_names = []
-    for i, (orig, excel) in enumerate(query_param_pairs):
-        safe_excel = normalize_name(excel)
-        varname = f"q{i+1}"
+    for orig, excel, safe_excel in required_query_params + optional_query_params:
+        varname = orig  # use actual parameter name
         lines.append(
             f'{varname} = if Text.Length({safe_excel}) > 0 then [ {orig} = {safe_excel} ] else [],'
         )
         combine_names.append(varname)
+
+
+    # === Replace path placeholders in URL
+    url = ep["relative_url"]
+    for orig, excel, safe_excel in required_path_params:
+        pattern = re.compile(rf"\{{{orig}\}}", re.IGNORECASE)
+        url = pattern.sub(f'" & Text.From({safe_excel}) & "', url)
+
 
     if combine_names:
         lines.append(f'QueryOptions = Record.Combine({{{", ".join(combine_names)}}}),')
