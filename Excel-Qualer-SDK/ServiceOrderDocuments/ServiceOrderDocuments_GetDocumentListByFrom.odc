@@ -22,23 +22,15 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ServiceOrderDocuments_GetDocumentListByFrom&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    from
-     = Excel.CurrentWorkbook(){{[Name="
-    from
-    "]}}[Content]{{0}}[Column1],
-    to
-     = Excel.CurrentWorkbook(){{[Name="
-    to
-    "]}}[Content]{{0}}[Column1],
-    reportType
-     = Excel.CurrentWorkbook(){{[Name="
-    reportType
-    "]}}[Content]{{0}}[Column1],
-    serviceOrderId
-     = Excel.CurrentWorkbook(){{[Name="
-    serviceOrderId
-    "]}}[Content]{{0}}[Column1],
-    QueryOptions = if Text.Length(from) > 0 then [ from = from ] else [] & if Text.Length(to) > 0 then [ to = to ] else [] & if Text.Length(reportType) > 0 then [ reportType = reportType ] else [] & if Text.Length(serviceOrderId) > 0 then [ serviceOrderId = serviceOrderId ] else [],
+    from = Excel.CurrentWorkbook(){{[Name="from"]}}[Content]{{0}}[Column1],
+    to = Excel.CurrentWorkbook(){{[Name="to"]}}[Content]{{0}}[Column1],
+    reportType = Excel.CurrentWorkbook(){{[Name="reportType"]}}[Content]{{0}}[Column1],
+    serviceOrderId = Excel.CurrentWorkbook(){{[Name="serviceOrderId"]}}[Content]{{0}}[Column1],
+    q1 = if Text.Length(from) > 0 then [ from = from ] else [],
+    q2 = if Text.Length(to) > 0 then [ to = to ] else [],
+    q3 = if Text.Length(reportType) > 0 then [ reportType = reportType ] else [],
+    q4 = if Text.Length(serviceOrderId) > 0 then [ serviceOrderId = serviceOrderId ] else [],
+    QueryOptions = Record.Combine({q1, q2, q3, q4}),
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/service/workorders/documents/list",
     response = Web.Contents(

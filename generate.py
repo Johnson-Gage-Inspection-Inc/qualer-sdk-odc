@@ -16,29 +16,37 @@ def generate_odc_file(ep):
     name = ep["clean_name"]
     url = ep["url"]
 
-    mashup_lines = ["let"]
+    mashup_lines = []
     for param in ep['path_params'] + ep['query_params']:
-        mashup_lines += [
-            param,
-            ' = Excel.CurrentWorkbook(){{[Name="',
-            param,
+        mashup_lines.append(
+            param +
+            ' = Excel.CurrentWorkbook(){{[Name="' +
+            param +
             '"]}}[Content]{{0}}[Column1],'
-            ]
+            )
 
     for param in ep['path_params']:
         pattern = re.compile(rf"\{{{param}\}}", re.IGNORECASE)
         url = pattern.sub(f'" & Text.From({param}) & "', url)
 
-    query_options = 'QueryOptions = '
+    query_option_lines = []
+    combine_names = []
+
     if ep['query_params']:
         names = [p["name"] for p in ep["params"] if p["in"] == "query"]
-        conds = [f'if Text.Length({p}) > 0 then [ {p} = {p} ] else []' for p in names]
-        query_options += f'{" & ".join(conds)},'
-    else:
-        query_options += '[],'
+        for i, p in enumerate(names):
+            varname = f"q{i+1}"
+            query_option_lines.append(
+                f'{varname} = if Text.Length({p}) > 0 then [ {p} = {p} ] else [],'
+            )
+            combine_names.append(varname)
 
-    mashup_lines += [
-        query_options,
+        query_option_lines.append(f'QueryOptions = Record.Combine({{{", ".join(combine_names)}}}),')
+    else:
+        query_option_lines.append('QueryOptions = [],')
+
+
+    mashup_lines += query_option_lines + [
         f'baseUrl = "{BASE_URL}",',
         f'relativeUrl = "{ep['relative_url']}",',
         "response = Web.Contents(",
@@ -54,7 +62,7 @@ def generate_odc_file(ep):
         "in ConvertToTable",
     ]
 
-    mashup_formula = "\n    ".join(mashup_lines)
+    mashup_formula = "let\n    " + "\n    ".join(mashup_lines)
 
     odc_xml = (
         f"""<html xmlns:o="urn:schemas-microsoft-com:office:office"

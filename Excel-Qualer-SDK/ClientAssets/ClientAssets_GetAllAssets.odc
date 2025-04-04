@@ -22,27 +22,17 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ClientAssets_GetAllAssets&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    query.equipmentId
-     = Excel.CurrentWorkbook(){{[Name="
-    query.equipmentId
-    "]}}[Content]{{0}}[Column1],
-    query.serialNumber
-     = Excel.CurrentWorkbook(){{[Name="
-    query.serialNumber
-    "]}}[Content]{{0}}[Column1],
-    query.assetTag
-     = Excel.CurrentWorkbook(){{[Name="
-    query.assetTag
-    "]}}[Content]{{0}}[Column1],
-    query.barcode
-     = Excel.CurrentWorkbook(){{[Name="
-    query.barcode
-    "]}}[Content]{{0}}[Column1],
-    query.legacyId
-     = Excel.CurrentWorkbook(){{[Name="
-    query.legacyId
-    "]}}[Content]{{0}}[Column1],
-    QueryOptions = if Text.Length(query.equipmentId) > 0 then [ query.equipmentId = query.equipmentId ] else [] & if Text.Length(query.serialNumber) > 0 then [ query.serialNumber = query.serialNumber ] else [] & if Text.Length(query.assetTag) > 0 then [ query.assetTag = query.assetTag ] else [] & if Text.Length(query.barcode) > 0 then [ query.barcode = query.barcode ] else [] & if Text.Length(query.legacyId) > 0 then [ query.legacyId = query.legacyId ] else [],
+    query.equipmentId = Excel.CurrentWorkbook(){{[Name="query.equipmentId"]}}[Content]{{0}}[Column1],
+    query.serialNumber = Excel.CurrentWorkbook(){{[Name="query.serialNumber"]}}[Content]{{0}}[Column1],
+    query.assetTag = Excel.CurrentWorkbook(){{[Name="query.assetTag"]}}[Content]{{0}}[Column1],
+    query.barcode = Excel.CurrentWorkbook(){{[Name="query.barcode"]}}[Content]{{0}}[Column1],
+    query.legacyId = Excel.CurrentWorkbook(){{[Name="query.legacyId"]}}[Content]{{0}}[Column1],
+    q1 = if Text.Length(query.equipmentId) > 0 then [ query.equipmentId = query.equipmentId ] else [],
+    q2 = if Text.Length(query.serialNumber) > 0 then [ query.serialNumber = query.serialNumber ] else [],
+    q3 = if Text.Length(query.assetTag) > 0 then [ query.assetTag = query.assetTag ] else [],
+    q4 = if Text.Length(query.barcode) > 0 then [ query.barcode = query.barcode ] else [],
+    q5 = if Text.Length(query.legacyId) > 0 then [ query.legacyId = query.legacyId ] else [],
+    QueryOptions = Record.Combine({q1, q2, q3, q4, q5}),
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/service/clients/assets",
     response = Web.Contents(

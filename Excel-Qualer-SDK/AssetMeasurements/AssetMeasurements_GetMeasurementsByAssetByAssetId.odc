@@ -22,19 +22,12 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;AssetMeasurements_GetMeasurementsByAssetByAssetId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    assetId
-     = Excel.CurrentWorkbook(){{[Name="
-    assetId
-    "]}}[Content]{{0}}[Column1],
-    from
-     = Excel.CurrentWorkbook(){{[Name="
-    from
-    "]}}[Content]{{0}}[Column1],
-    to
-     = Excel.CurrentWorkbook(){{[Name="
-    to
-    "]}}[Content]{{0}}[Column1],
-    QueryOptions = if Text.Length(from) > 0 then [ from = from ] else [] & if Text.Length(to) > 0 then [ to = to ] else [],
+    assetId = Excel.CurrentWorkbook(){{[Name="assetId"]}}[Content]{{0}}[Column1],
+    from = Excel.CurrentWorkbook(){{[Name="from"]}}[Content]{{0}}[Column1],
+    to = Excel.CurrentWorkbook(){{[Name="to"]}}[Content]{{0}}[Column1],
+    q1 = if Text.Length(from) > 0 then [ from = from ] else [],
+    q2 = if Text.Length(to) > 0 then [ to = to ] else [],
+    QueryOptions = Record.Combine({q1, q2}),
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/assets/{assetId}/measurements",
     response = Web.Contents(

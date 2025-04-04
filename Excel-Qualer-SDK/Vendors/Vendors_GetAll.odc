@@ -22,23 +22,15 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;Vendors_GetAll&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    model.accountNumberText
-     = Excel.CurrentWorkbook(){{[Name="
-    model.accountNumberText
-    "]}}[Content]{{0}}[Column1],
-    model.companyName
-     = Excel.CurrentWorkbook(){{[Name="
-    model.companyName
-    "]}}[Content]{{0}}[Column1],
-    model.take
-     = Excel.CurrentWorkbook(){{[Name="
-    model.take
-    "]}}[Content]{{0}}[Column1],
-    model.modifiedAfter
-     = Excel.CurrentWorkbook(){{[Name="
-    model.modifiedAfter
-    "]}}[Content]{{0}}[Column1],
-    QueryOptions = if Text.Length(model.accountNumberText) > 0 then [ model.accountNumberText = model.accountNumberText ] else [] & if Text.Length(model.companyName) > 0 then [ model.companyName = model.companyName ] else [] & if Text.Length(model.take) > 0 then [ model.take = model.take ] else [] & if Text.Length(model.modifiedAfter) > 0 then [ model.modifiedAfter = model.modifiedAfter ] else [],
+    model.accountNumberText = Excel.CurrentWorkbook(){{[Name="model.accountNumberText"]}}[Content]{{0}}[Column1],
+    model.companyName = Excel.CurrentWorkbook(){{[Name="model.companyName"]}}[Content]{{0}}[Column1],
+    model.take = Excel.CurrentWorkbook(){{[Name="model.take"]}}[Content]{{0}}[Column1],
+    model.modifiedAfter = Excel.CurrentWorkbook(){{[Name="model.modifiedAfter"]}}[Content]{{0}}[Column1],
+    q1 = if Text.Length(model.accountNumberText) > 0 then [ model.accountNumberText = model.accountNumberText ] else [],
+    q2 = if Text.Length(model.companyName) > 0 then [ model.companyName = model.companyName ] else [],
+    q3 = if Text.Length(model.take) > 0 then [ model.take = model.take ] else [],
+    q4 = if Text.Length(model.modifiedAfter) > 0 then [ model.modifiedAfter = model.modifiedAfter ] else [],
+    QueryOptions = Record.Combine({q1, q2, q3, q4}),
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/service/vendors",
     response = Web.Contents(
