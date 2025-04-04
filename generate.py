@@ -19,11 +19,9 @@ def generate_odc_file(ep):
     mashup_lines = []
     for param in ep['path_params'] + ep['query_params']:
         mashup_lines.append(
-            param +
-            ' = Excel.CurrentWorkbook(){{[Name="' +
-            param +
-            '"]}}[Content]{{0}}[Column1],'
-            )
+            f'{param} = Excel.CurrentWorkbook(){{'
+            f'[Name="{param}"]}}[Content]{{0}},'
+        )
 
     for param in ep['path_params']:
         pattern = re.compile(rf"\{{{param}\}}", re.IGNORECASE)

@@ -22,10 +22,10 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;Assets_GetAssetManagerList&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    model.filterType = Excel.CurrentWorkbook(){{[Name="model.filterType"]}}[Content]{{0}}[Column1],
-    model.searchString = Excel.CurrentWorkbook(){{[Name="model.searchString"]}}[Content]{{0}}[Column1],
-    model.page = Excel.CurrentWorkbook(){{[Name="model.page"]}}[Content]{{0}}[Column1],
-    model.pageSize = Excel.CurrentWorkbook(){{[Name="model.pageSize"]}}[Content]{{0}}[Column1],
+    model.filterType = Excel.CurrentWorkbook(){[Name="model.filterType"]}[Content]{0},
+    model.searchString = Excel.CurrentWorkbook(){[Name="model.searchString"]}[Content]{0},
+    model.page = Excel.CurrentWorkbook(){[Name="model.page"]}[Content]{0},
+    model.pageSize = Excel.CurrentWorkbook(){[Name="model.pageSize"]}[Content]{0},
     q1 = if Text.Length(model.filterType) > 0 then [ model.filterType = model.filterType ] else [],
     q2 = if Text.Length(model.searchString) > 0 then [ model.searchString = model.searchString ] else [],
     q3 = if Text.Length(model.page) > 0 then [ model.page = model.page ] else [],

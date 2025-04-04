@@ -22,11 +22,11 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ClientAssets_GetAssetManagerListByClientCompanyId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    clientCompanyId = Excel.CurrentWorkbook(){{[Name="clientCompanyId"]}}[Content]{{0}}[Column1],
-    query.filterType = Excel.CurrentWorkbook(){{[Name="query.filterType"]}}[Content]{{0}}[Column1],
-    query.searchString = Excel.CurrentWorkbook(){{[Name="query.searchString"]}}[Content]{{0}}[Column1],
-    query.page = Excel.CurrentWorkbook(){{[Name="query.page"]}}[Content]{{0}}[Column1],
-    query.pageSize = Excel.CurrentWorkbook(){{[Name="query.pageSize"]}}[Content]{{0}}[Column1],
+    clientCompanyId = Excel.CurrentWorkbook(){[Name="clientCompanyId"]}[Content]{0},
+    query.filterType = Excel.CurrentWorkbook(){[Name="query.filterType"]}[Content]{0},
+    query.searchString = Excel.CurrentWorkbook(){[Name="query.searchString"]}[Content]{0},
+    query.page = Excel.CurrentWorkbook(){[Name="query.page"]}[Content]{0},
+    query.pageSize = Excel.CurrentWorkbook(){[Name="query.pageSize"]}[Content]{0},
     q1 = if Text.Length(query.filterType) > 0 then [ query.filterType = query.filterType ] else [],
     q2 = if Text.Length(query.searchString) > 0 then [ query.searchString = query.searchString ] else [],
     q3 = if Text.Length(query.page) > 0 then [ query.page = query.page ] else [],

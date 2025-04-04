@@ -22,8 +22,8 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ServiceOrderItemDocuments_GetDocumentsByServiceOrderItemId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    serviceOrderItemId = Excel.CurrentWorkbook(){{[Name="serviceOrderItemId"]}}[Content]{{0}}[Column1],
-    model.fileName = Excel.CurrentWorkbook(){{[Name="model.fileName"]}}[Content]{{0}}[Column1],
+    serviceOrderItemId = Excel.CurrentWorkbook(){[Name="serviceOrderItemId"]}[Content]{0},
+    model.fileName = Excel.CurrentWorkbook(){[Name="model.fileName"]}[Content]{0},
     q1 = if Text.Length(model.fileName) > 0 then [ model.fileName = model.fileName ] else [],
     QueryOptions = Record.Combine({q1}),
     baseUrl = "https://jgiquality.qualer.com",

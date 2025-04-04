@@ -22,12 +22,12 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ServiceOrderItems_GetWorkItems&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    status = Excel.CurrentWorkbook(){{[Name="status"]}}[Content]{{0}}[Column1],
-    companyId = Excel.CurrentWorkbook(){{[Name="companyId"]}}[Content]{{0}}[Column1],
-    from = Excel.CurrentWorkbook(){{[Name="from"]}}[Content]{{0}}[Column1],
-    to = Excel.CurrentWorkbook(){{[Name="to"]}}[Content]{{0}}[Column1],
-    workItemNumber = Excel.CurrentWorkbook(){{[Name="workItemNumber"]}}[Content]{{0}}[Column1],
-    assetSearch = Excel.CurrentWorkbook(){{[Name="assetSearch"]}}[Content]{{0}}[Column1],
+    status = Excel.CurrentWorkbook(){[Name="status"]}[Content]{0},
+    companyId = Excel.CurrentWorkbook(){[Name="companyId"]}[Content]{0},
+    from = Excel.CurrentWorkbook(){[Name="from"]}[Content]{0},
+    to = Excel.CurrentWorkbook(){[Name="to"]}[Content]{0},
+    workItemNumber = Excel.CurrentWorkbook(){[Name="workItemNumber"]}[Content]{0},
+    assetSearch = Excel.CurrentWorkbook(){[Name="assetSearch"]}[Content]{0},
     q1 = if Text.Length(status) > 0 then [ status = status ] else [],
     q2 = if Text.Length(companyId) > 0 then [ companyId = companyId ] else [],
     q3 = if Text.Length(from) > 0 then [ from = from ] else [],
