@@ -44,6 +44,7 @@ OrderCertificate / ServiceOrderCertificate = 5<br />
 ### Response Schema
 
 #### OK
+
 +----------------+---------+
 | Field          | Type    |
 +================+=========+

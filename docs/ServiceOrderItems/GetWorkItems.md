@@ -35,6 +35,7 @@ GET /api/service/workitems?&amp;status=pending,delayed&amp;companyId=10&amp;from
 ### Response Schema
 
 #### OK
+
 +--------------------------------+---------+
 | Field                          | Type    |
 +================================+=========+

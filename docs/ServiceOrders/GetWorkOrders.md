@@ -37,6 +37,7 @@ GET /api/service/workorders?&amp;status=onsite,submitted&amp;companyId=10&amp;fr
 ### Response Schema
 
 #### OK
+
 +-------------------------------------------+---------+
 | Field                                     | Type    |
 +===========================================+=========+

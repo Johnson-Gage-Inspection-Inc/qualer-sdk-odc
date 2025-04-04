@@ -21,6 +21,7 @@ No description provided.
 ### Response Schema
 
 #### OK
+
 +--------------------+---------+
 | Field              | Type    |
 +====================+=========+

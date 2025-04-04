@@ -29,6 +29,7 @@ filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchas
 ### Response Schema
 
 #### OK
+
 +--------------------------+---------+
 | Field                    | Type    |
 +==========================+=========+

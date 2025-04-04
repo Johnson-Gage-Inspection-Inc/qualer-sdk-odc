@@ -34,6 +34,7 @@ OrderItemLockedWorkStatus = 15
 ### Response Schema
 
 #### OK
+
 +---------+-----------------+
 | Field   | Type            |
 +=========+=================+

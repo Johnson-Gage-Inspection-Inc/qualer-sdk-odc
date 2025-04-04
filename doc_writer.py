@@ -52,6 +52,7 @@ def generate_markdown_file(docs_path, ep, spec):
 ### Response Schema
 
 #### OK
+
 {response_schema_md}
 
 **Group (Tag):**

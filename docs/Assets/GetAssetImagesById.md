@@ -19,6 +19,7 @@ returns list of asset image urls
 ### Response Schema
 
 #### OK
+
 +---------+-----------------+
 | Field   | Type            |
 +=========+=================+
