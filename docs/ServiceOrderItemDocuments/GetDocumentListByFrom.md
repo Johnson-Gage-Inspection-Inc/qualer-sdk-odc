@@ -44,7 +44,6 @@ OrderCertificate / ServiceOrderCertificate = 5<br />
 ### Response Schema
 
 #### OK
-```json
 +--------------------+---------+
 | Field              | Type    |
 +====================+=========+
@@ -66,7 +65,6 @@ OrderCertificate / ServiceOrderCertificate = 5<br />
 +--------------------+---------+
 | DownloadUrl        | string  |
 +--------------------+---------+
-```
 
 **Group (Tag):**
 ServiceOrderItemDocuments

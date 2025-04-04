@@ -37,7 +37,6 @@ GET /api/service/workorders?&amp;status=onsite,submitted&amp;companyId=10&amp;fr
 ### Response Schema
 
 #### OK
-```json
 +-------------------------------------------+---------+
 | Field                                     | Type    |
 +===========================================+=========+
@@ -317,7 +316,6 @@ GET /api/service/workorders?&amp;status=onsite,submitted&amp;companyId=10&amp;fr
 +-------------------------------------------+---------+
 | ShippingAddress.StateProvinceAbbreviation | string  |
 +-------------------------------------------+---------+
-```
 
 **Group (Tag):**
 ServiceOrders

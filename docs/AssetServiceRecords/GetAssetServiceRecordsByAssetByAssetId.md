@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +---------------------------+---------+
 | Field                     | Type    |
 +===========================+=========+
@@ -99,7 +98,6 @@ No description provided.
 +---------------------------+---------+
 | ScheduleName              | string  |
 +---------------------------+---------+
-```
 
 **Group (Tag):**
 AssetServiceRecords

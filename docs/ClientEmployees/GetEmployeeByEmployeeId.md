@@ -21,7 +21,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +----------------------+---------+
 | Field                | Type    |
 +======================+=========+
@@ -63,7 +62,6 @@ No description provided.
 +----------------------+---------+
 | CultureUiName        | string  |
 +----------------------+---------+
-```
 
 **Group (Tag):**
 ClientEmployees

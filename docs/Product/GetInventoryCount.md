@@ -18,7 +18,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +----------------+---------+
 | Field          | Type    |
 +================+=========+
@@ -32,7 +31,6 @@ No description provided.
 +----------------+---------+
 | QuantityOnHand | integer |
 +----------------+---------+
-```
 
 **Group (Tag):**
 Product

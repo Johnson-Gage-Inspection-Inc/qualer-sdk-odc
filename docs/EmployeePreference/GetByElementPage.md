@@ -34,7 +34,6 @@ DocumentManager = 15
 ### Response Schema
 
 #### OK
-```json
 +-------------+-----------------+
 | Field       | Type            |
 +=============+=================+
@@ -48,7 +47,6 @@ DocumentManager = 15
 +-------------+-----------------+
 | IsPinned    | boolean         |
 +-------------+-----------------+
-```
 
 **Group (Tag):**
 EmployeePreference

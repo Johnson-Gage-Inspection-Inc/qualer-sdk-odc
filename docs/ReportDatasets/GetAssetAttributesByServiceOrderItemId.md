@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +----------------+---------+
 | Field          | Type    |
 +================+=========+
@@ -31,7 +30,6 @@ No description provided.
 +----------------+---------+
 | IsService      | boolean |
 +----------------+---------+
-```
 
 **Group (Tag):**
 ReportDatasets

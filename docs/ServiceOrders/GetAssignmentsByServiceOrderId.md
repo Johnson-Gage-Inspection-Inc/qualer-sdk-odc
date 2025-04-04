@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +-------------------+---------+
 | Field             | Type    |
 +===================+=========+
@@ -47,7 +46,6 @@ No description provided.
 +-------------------+---------+
 | LastSeenDateUtc   | string  |
 +-------------------+---------+
-```
 
 **Group (Tag):**
 ServiceOrders

@@ -21,7 +21,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +--------------------+---------+
 | Field              | Type    |
 +====================+=========+
@@ -45,7 +44,6 @@ No description provided.
 +--------------------+---------+
 | IsHourly           | boolean |
 +--------------------+---------+
-```
 
 **Group (Tag):**
 ServicePricing

@@ -18,13 +18,11 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +-------------+-----------------+
 | Field       | Type            |
 +=============+=================+
 | CultureList | array of string |
 +-------------+-----------------+
-```
 
 **Group (Tag):**
 Common

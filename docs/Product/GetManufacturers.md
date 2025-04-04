@@ -18,7 +18,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +------------------+---------+
 | Field            | Type    |
 +==================+=========+
@@ -26,7 +25,6 @@ No description provided.
 +------------------+---------+
 | ManufacturerName | string  |
 +------------------+---------+
-```
 
 **Group (Tag):**
 Product

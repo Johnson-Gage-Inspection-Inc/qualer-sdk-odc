@@ -23,9 +23,7 @@ GET api/service/workitems/1000/documents
 ### Response Schema
 
 #### OK
-```json
 
-```
 
 **Group (Tag):**
 ServiceOrderItemDocuments

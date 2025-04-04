@@ -21,7 +21,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +--------------------+---------+
 | Field              | Type    |
 +====================+=========+
@@ -83,7 +82,6 @@ No description provided.
 +--------------------+---------+
 | Z                  | string  |
 +--------------------+---------+
-```
 
 **Group (Tag):**
 ReportDatasets

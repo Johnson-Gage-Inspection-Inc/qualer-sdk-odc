@@ -33,7 +33,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +-------------------+---------+
 | Field             | Type    |
 +===================+=========+
@@ -61,7 +60,6 @@ No description provided.
 +-------------------+---------+
 | ReservedByName    | string  |
 +-------------------+---------+
-```
 
 **Group (Tag):**
 AssetReservation

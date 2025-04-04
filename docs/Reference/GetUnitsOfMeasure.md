@@ -18,7 +18,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +-----------------------+---------+
 | Field                 | Type    |
 +=======================+=========+
@@ -30,7 +29,6 @@ No description provided.
 +-----------------------+---------+
 | UnitOfMeasure         | string  |
 +-----------------------+---------+
-```
 
 **Group (Tag):**
 Reference

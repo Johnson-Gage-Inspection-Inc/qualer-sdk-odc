@@ -19,9 +19,7 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 
-```
 
 **Group (Tag):**
 ServiceOrderMetadata

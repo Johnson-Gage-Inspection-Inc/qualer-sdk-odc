@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +----------------------------+---------+
 | Field                      | Type    |
 +============================+=========+
@@ -85,7 +84,6 @@ No description provided.
 +----------------------------+---------+
 | DaysAfterDue               | integer |
 +----------------------------+---------+
-```
 
 **Group (Tag):**
 AssetServiceForecast

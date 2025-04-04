@@ -21,7 +21,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +------------------------+---------+
 | Field                  | Type    |
 +========================+=========+
@@ -73,7 +72,6 @@ No description provided.
 +------------------------+---------+
 | RequestToTime          | string  |
 +------------------------+---------+
-```
 
 **Group (Tag):**
 ServiceOrders

@@ -24,7 +24,6 @@ For example:
 ### Response Schema
 
 #### OK
-```json
 +--------------------+---------+
 | Field              | Type    |
 +====================+=========+
@@ -48,7 +47,6 @@ For example:
 +--------------------+---------+
 | IsHourly           | boolean |
 +--------------------+---------+
-```
 
 **Group (Tag):**
 ServiceOrderTasks

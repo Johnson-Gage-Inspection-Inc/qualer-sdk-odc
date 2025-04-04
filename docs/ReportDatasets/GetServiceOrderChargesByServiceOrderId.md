@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +--------------------+---------+
 | Field              | Type    |
 +====================+=========+
@@ -51,7 +50,6 @@ No description provided.
 +--------------------+---------+
 | ChargeDate         | string  |
 +--------------------+---------+
-```
 
 **Group (Tag):**
 ReportDatasets

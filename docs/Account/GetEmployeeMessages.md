@@ -21,7 +21,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +----------------+---------+
 | Field          | Type    |
 +================+=========+
@@ -35,7 +34,6 @@ No description provided.
 +----------------+---------+
 | EventTypeGroup | string  |
 +----------------+---------+
-```
 
 **Group (Tag):**
 Account

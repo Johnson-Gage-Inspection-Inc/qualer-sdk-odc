@@ -23,9 +23,7 @@ GET api/service/workorders/1000/documents
 ### Response Schema
 
 #### OK
-```json
 
-```
 
 **Group (Tag):**
 ServiceOrderDocuments

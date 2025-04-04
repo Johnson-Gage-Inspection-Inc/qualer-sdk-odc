@@ -19,13 +19,11 @@ returns list of asset image urls
 ### Response Schema
 
 #### OK
-```json
 +---------+-----------------+
 | Field   | Type            |
 +=========+=================+
 |         | array of string |
 +---------+-----------------+
-```
 
 **Group (Tag):**
 Assets

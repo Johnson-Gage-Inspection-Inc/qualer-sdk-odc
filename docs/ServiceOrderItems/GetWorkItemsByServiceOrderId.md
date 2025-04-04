@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +--------------------------------+---------+
 | Field                          | Type    |
 +================================+=========+
@@ -199,7 +198,6 @@ No description provided.
 +--------------------------------+---------+
 | AssetOwnership                 | string  |
 +--------------------------------+---------+
-```
 
 **Group (Tag):**
 ServiceOrderItems

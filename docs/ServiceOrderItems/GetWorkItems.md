@@ -35,7 +35,6 @@ GET /api/service/workitems?&amp;status=pending,delayed&amp;companyId=10&amp;from
 ### Response Schema
 
 #### OK
-```json
 +--------------------------------+---------+
 | Field                          | Type    |
 +================================+=========+
@@ -215,7 +214,6 @@ GET /api/service/workitems?&amp;status=pending,delayed&amp;companyId=10&amp;from
 +--------------------------------+---------+
 | AssetOwnership                 | string  |
 +--------------------------------+---------+
-```
 
 **Group (Tag):**
 ServiceOrderItems

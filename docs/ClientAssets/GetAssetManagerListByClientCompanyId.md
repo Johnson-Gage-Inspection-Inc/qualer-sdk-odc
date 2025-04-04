@@ -30,7 +30,6 @@ POST api/user/filters
 ### Response Schema
 
 #### OK
-```json
 +--------------------------+---------+
 | Field                    | Type    |
 +==========================+=========+
@@ -220,7 +219,6 @@ POST api/user/filters
 +--------------------------+---------+
 | Schedules                | string  |
 +--------------------------+---------+
-```
 
 **Group (Tag):**
 ClientAssets

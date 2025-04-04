@@ -19,13 +19,11 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +---------+--------+
 | Field   | Type   |
 +=========+========+
 | Value   | string |
 +---------+--------+
-```
 
 **Group (Tag):**
 Common

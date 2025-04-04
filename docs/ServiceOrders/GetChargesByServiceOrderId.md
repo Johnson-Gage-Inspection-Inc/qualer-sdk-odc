@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +--------------------------------------+---------+
 | Field                                | Type    |
 +======================================+=========+
@@ -117,7 +116,6 @@ No description provided.
 +--------------------------------------+---------+
 | WorkItems.VendorTag                  | string  |
 +--------------------------------------+---------+
-```
 
 **Group (Tag):**
 ServiceOrders

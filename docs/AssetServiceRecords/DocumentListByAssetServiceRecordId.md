@@ -21,13 +21,11 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +---------+-----------------+
 | Field   | Type            |
 +=========+=================+
 |         | array of string |
 +---------+-----------------+
-```
 
 **Group (Tag):**
 AssetServiceRecords

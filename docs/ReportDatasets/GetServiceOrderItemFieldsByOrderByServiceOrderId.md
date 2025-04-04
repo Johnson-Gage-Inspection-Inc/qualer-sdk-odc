@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +------------------------+---------+
 | Field                  | Type    |
 +========================+=========+
@@ -33,7 +32,6 @@ No description provided.
 +------------------------+---------+
 | ServiceOrderItemTaskId | integer |
 +------------------------+---------+
-```
 
 **Group (Tag):**
 ReportDatasets

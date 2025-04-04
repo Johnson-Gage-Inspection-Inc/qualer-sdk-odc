@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +--------------------------------------------+---------+
 | Field                                      | Type    |
 +============================================+=========+
@@ -1245,7 +1244,6 @@ No description provided.
 +--------------------------------------------+---------+
 | AsLeftMeasurementPointId                   | integer |
 +--------------------------------------------+---------+
-```
 
 **Group (Tag):**
 ReportDatasets

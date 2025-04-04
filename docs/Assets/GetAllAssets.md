@@ -18,7 +18,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +------------------------+---------+
 | Field                  | Type    |
 +========================+=========+
@@ -118,7 +117,6 @@ No description provided.
 +------------------------+---------+
 | CompositeChildCount    | integer |
 +------------------------+---------+
-```
 
 **Group (Tag):**
 Assets

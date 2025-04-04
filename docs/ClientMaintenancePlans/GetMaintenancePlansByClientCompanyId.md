@@ -19,7 +19,6 @@ No description provided.
 ### Response Schema
 
 #### OK
-```json
 +---------------------------------------------+---------+
 | Field                                       | Type    |
 +=============================================+=========+
@@ -83,7 +82,6 @@ No description provided.
 +---------------------------------------------+---------+
 | MaintenanceTasks.GenerateSeparate           | boolean |
 +---------------------------------------------+---------+
-```
 
 **Group (Tag):**
 ClientMaintenancePlans

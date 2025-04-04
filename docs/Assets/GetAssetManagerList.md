@@ -29,7 +29,6 @@ filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchas
 ### Response Schema
 
 #### OK
-```json
 +--------------------------+---------+
 | Field                    | Type    |
 +==========================+=========+
@@ -203,7 +202,6 @@ filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchas
 +--------------------------+---------+
 | WorkStatus               | string  |
 +--------------------------+---------+
-```
 
 **Group (Tag):**
 Assets
