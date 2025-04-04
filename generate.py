@@ -14,7 +14,7 @@ BASE_URL = "https://jgiquality.qualer.com"
 # === Template Generator ===
 def generate_odc_file(ep):
     name = ep["clean_name"]
-    (url,) = ep["url"],
+    url = ep["url"]
 
     mashup_lines = ["let"]
     for param in ep['path_params'] + ep['query_params']:
