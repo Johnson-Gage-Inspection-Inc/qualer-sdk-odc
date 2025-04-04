@@ -165,16 +165,15 @@ def generate_docs_index(docs_dir):
     docs_path = Path(docs_dir)
     index_file = docs_path / "README.md"
 
-    # Group docs by prefix (tag)
     groups = defaultdict(list)
-    markdown_files = docs_path.glob("*.md")
+    markdown_files = docs_path.rglob("*.md")
     for doc in sorted(p for p in markdown_files if p.name != "README.md"):
         parts = doc.stem.split("_", 1)
         if len(parts) == 2:
             tag, rest = parts
         else:
             tag, rest = "General", parts[0]
-        groups[tag].append((doc.name, rest.replace("_", " ")))
+        groups[tag].append((doc.relative_to(docs_path), rest.replace("_", " ")))
 
     with open(index_file, "w", encoding="utf-8") as f:
         f.write("# 📖 Qualer API Documentation Index\n\n")
@@ -182,6 +181,6 @@ def generate_docs_index(docs_dir):
 
         for tag in sorted(groups):
             f.write(f"## {tag}\n\n")
-            for filename, label in sorted(groups[tag]):
-                f.write(f"- [{label}](./{filename})\n")
+            for path, label in sorted(groups[tag]):
+                f.write(f"- [{label}]({path.as_posix()})\n")
             f.write("\n")
