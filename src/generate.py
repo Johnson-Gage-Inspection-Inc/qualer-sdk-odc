@@ -134,7 +134,7 @@ def generate_mashup_formula(ep):
         "    ]",
         "),",
         "json = Json.Document(response),",
-        "ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)"
+        "ConvertToTable = Table.FromRecords(json)"
     ]
 
     return ("let\n    " + "\n    ".join(lines) + "\nin\n    " + lines[-1].split(" = ")[0]).rstrip()

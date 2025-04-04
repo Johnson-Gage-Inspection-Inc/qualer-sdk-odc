@@ -22,6 +22,7 @@ def load_expected(filename):
 @pytest.mark.parametrize(
     "json_file, expected_m_file, expected_xml_file",
     [
+        ('GetWorkOrders.json','expected_GetWorkOrders.m','expected_GetWorkOrders.xml'),
         ("no_params.json", "expected_no_params.m", "expected_no_params.xml"),
         ("path_params.json", "expected_path_params.m", "expected_path_params.xml"),
         ("query_params.json", "expected_query_params.m", "expected_query_params.xml"),
