@@ -1,8 +1,8 @@
 let
-    VendorCompanyId = try Excel.CurrentWorkbook(){[Name="VendorCompanyId"]}[Content]{0} otherwise "",
+    VendorCompanyId = Excel.CurrentWorkbook(){[Name="VendorCompanyId"]}[Content]{0}[Column1],
     QueryOptions = [],
     baseUrl = "https://jgiquality.qualer.com",
-    relativeUrl = "api/service/vendors/" & Text.From(VendorCompanyId),
+    relativeUrl = "api/service/vendors/" & Text.From(VendorCompanyId) & "",
     response = Web.Contents(
         baseUrl,
         [
@@ -13,4 +13,5 @@ let
     ),
     json = Json.Document(response),
     ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
-in ConvertToTable
+in
+    ConvertToTable
