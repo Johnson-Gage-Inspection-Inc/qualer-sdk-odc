@@ -1,15 +1,13 @@
 # `Product_GetInventoryCount`
-
+> 
+    
 **URL Template:**
 `GET /api/products/inventorycount`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

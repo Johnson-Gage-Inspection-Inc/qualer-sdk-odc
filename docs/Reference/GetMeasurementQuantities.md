@@ -1,15 +1,13 @@
 # `Reference_GetMeasurementQuantities`
-
+> 
+    
 **URL Template:**
 `GET /api/reference/MeasurementQuantities`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

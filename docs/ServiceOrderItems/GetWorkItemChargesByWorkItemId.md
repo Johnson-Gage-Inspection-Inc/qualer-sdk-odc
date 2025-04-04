@@ -1,17 +1,16 @@
 # `ServiceOrderItems_GetWorkItemChargesByWorkItemId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/workitems/{workItemId}/charges`
 
-**Parameters:**
-- *`workItemId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `WorkItemId`
-
+| Excel Name     | Type    | In   |
+|:---------------|:--------|:-----|
+| **WorkItemId** | integer | path |
 
 **Description:**
 No description provided.

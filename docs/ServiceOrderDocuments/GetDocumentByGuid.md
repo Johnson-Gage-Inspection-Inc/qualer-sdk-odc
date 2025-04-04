@@ -1,17 +1,16 @@
 # `ServiceOrderDocuments_GetDocumentByGuid`
-
+> Retrieve work order document by Unique Id
+    
 **URL Template:**
 `GET /api/wd/{guid}`
 
-**Parameters:**
-- *`guid`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Guid`
-
+| Excel Name   | Type   | In   |
+|:-------------|:-------|:-----|
+| **Guid**     | string | path |
 
 **Description:**
 Sample request:

@@ -1,15 +1,13 @@
 # `Assets_GetAllAssets`
-
+> 
+    
 **URL Template:**
 `GET /api/assets`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

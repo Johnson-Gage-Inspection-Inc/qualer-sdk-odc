@@ -1,17 +1,16 @@
 # `Account_GetEmployeeMessageByMessageId`
-
+> 
+    
 **URL Template:**
 `GET /api/user/messages/{messageId}`
 
-**Parameters:**
-- *`messageId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `MessageId`
-
+| Excel Name    | Type    | In   |
+|:--------------|:--------|:-----|
+| **MessageId** | integer | path |
 
 **Description:**
 No description provided.

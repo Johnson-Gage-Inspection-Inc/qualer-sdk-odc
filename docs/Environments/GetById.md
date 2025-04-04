@@ -1,17 +1,16 @@
 # `Environments_GetById`
-
+> 
+    
 **URL Template:**
 `GET /api/Environments/{id}`
 
-**Parameters:**
-- *`id`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `IdID`
-
+| Excel Name   | Type   | In   |
+|:-------------|:-------|:-----|
+| **Id**       | string | path |
 
 **Description:**
 No description provided.

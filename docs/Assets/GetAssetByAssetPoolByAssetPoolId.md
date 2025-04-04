@@ -1,17 +1,16 @@
 # `Assets_GetAssetByAssetPoolByAssetPoolId`
-
+> 
+    
 **URL Template:**
 `GET /api/assets/byassetpool/{assetPoolId}`
 
-**Parameters:**
-- *`assetPoolId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `AssetPoolId`
-
+| Excel Name      | Type    | In   |
+|:----------------|:--------|:-----|
+| **AssetPoolId** | integer | path |
 
 **Description:**
 No description provided.

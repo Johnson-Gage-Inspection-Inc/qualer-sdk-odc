@@ -1,19 +1,17 @@
 # `ReportDatasets_GetExternalDataReportsByServiceOrderId`
-
+> 
+    
 **URL Template:**
 `GET /api/data/{serviceOrderId}/ExternalDataReports`
 
-**Parameters:**
-- *`serviceOrderId`: `integer`
-- *`serviceOrderItemIds`: `array`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ServiceOrderId`
-- `ServiceOrderItemIds`
-
+| Excel Name              | Type    | In    |
+|:------------------------|:--------|:------|
+| **ServiceOrderId**      | integer | path  |
+| **ServiceOrderItemIds** | array   | query |
 
 **Description:**
 No description provided.

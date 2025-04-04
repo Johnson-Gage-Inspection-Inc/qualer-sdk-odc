@@ -1,15 +1,13 @@
 # `AssetPools_GetAll`
-
+> 
+    
 **URL Template:**
 `GET /api/assetpools`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

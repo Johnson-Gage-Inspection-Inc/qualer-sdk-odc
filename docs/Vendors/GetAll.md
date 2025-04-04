@@ -1,23 +1,19 @@
 # `Vendors_GetAll`
-
+> 
+    
 **URL Template:**
 `GET /api/service/vendors`
 
-**Parameters:**
-- `model.accountNumberText`: `string`
-- `model.companyName`: `string`
-- `model.take`: `integer`
-- `model.modifiedAfter`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Model.accountNumberText`
-- `Model.companyName`
-- `Model.take`
-- `Model.modifiedAfter`
-
+| Excel Name              | Type    | In    |
+|:------------------------|:--------|:------|
+| Model.accountNumberText | string  | query |
+| Model.companyName       | string  | query |
+| Model.take              | integer | query |
+| Model.modifiedAfter     | string  | query |
 
 **Description:**
 No description provided.

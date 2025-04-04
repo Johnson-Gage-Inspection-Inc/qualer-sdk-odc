@@ -1,17 +1,16 @@
 # `Common_GetCompanySettingsBySettingKey`
-
+> 
+    
 **URL Template:**
 `GET /api/common/settings`
 
-**Parameters:**
-- *`settingKey`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `SettingKey`
-
+| Excel Name     | Type   | In    |
+|:---------------|:-------|:------|
+| **SettingKey** | string | query |
 
 **Description:**
 No description provided.

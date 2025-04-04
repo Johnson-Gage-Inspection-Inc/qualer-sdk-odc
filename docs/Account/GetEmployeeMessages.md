@@ -1,19 +1,17 @@
 # `Account_GetEmployeeMessages`
-
+> 
+    
 **URL Template:**
 `GET /api/user/messages`
 
-**Parameters:**
-- `model.period`: `integer`
-- `model.siteId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Model.period`
-- `Model.siteId`
-
+| Excel Name   | Type    | In    |
+|:-------------|:--------|:------|
+| Model.period | integer | query |
+| Model.siteId | integer | query |
 
 **Description:**
 No description provided.

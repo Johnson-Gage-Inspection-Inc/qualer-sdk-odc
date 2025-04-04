@@ -1,17 +1,16 @@
 # `Vendors_GetByVendorCompanyId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/vendors/{vendorCompanyId}`
 
-**Parameters:**
-- *`vendorCompanyId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `VendorCompanyId`
-
+| Excel Name          | Type    | In   |
+|:--------------------|:--------|:-----|
+| **VendorCompanyId** | integer | path |
 
 **Description:**
 No description provided.

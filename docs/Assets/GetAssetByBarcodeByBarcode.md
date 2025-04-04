@@ -1,17 +1,16 @@
 # `Assets_GetAssetByBarcodeByBarcode`
-
+> 
+    
 **URL Template:**
 `GET /api/assets/bybarcode/{barcode}`
 
-**Parameters:**
-- *`barcode`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Barcode`
-
+| Excel Name   | Type   | In   |
+|:-------------|:-------|:-----|
+| **Barcode**  | string | path |
 
 **Description:**
 No description provided.

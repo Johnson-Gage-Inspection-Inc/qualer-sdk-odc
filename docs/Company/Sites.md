@@ -1,15 +1,13 @@
 # `Company_Sites`
-
+> 
+    
 **URL Template:**
 `GET /api/company/sites`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

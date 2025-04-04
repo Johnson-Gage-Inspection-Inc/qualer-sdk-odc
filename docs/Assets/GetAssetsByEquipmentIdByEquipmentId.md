@@ -1,17 +1,16 @@
 # `Assets_GetAssetsByEquipmentIdByEquipmentId`
-
+> 
+    
 **URL Template:**
 `GET /api/assets/byequipmentid/{equipmentId}`
 
-**Parameters:**
-- *`equipmentId`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `EquipmentId`
-
+| Excel Name      | Type   | In   |
+|:----------------|:-------|:-----|
+| **EquipmentId** | string | path |
 
 **Description:**
 No description provided.

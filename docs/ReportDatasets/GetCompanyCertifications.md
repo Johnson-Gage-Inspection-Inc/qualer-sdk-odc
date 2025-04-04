@@ -1,15 +1,13 @@
 # `ReportDatasets_GetCompanyCertifications`
-
+> 
+    
 **URL Template:**
 `GET /api/data/CompanyCertifications`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

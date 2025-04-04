@@ -1,17 +1,16 @@
 # `AssetPools_GetById`
-
+> 
+    
 **URL Template:**
 `GET /api/assetpools/{id}`
 
-**Parameters:**
-- *`id`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `IdID`
-
+| Excel Name   | Type    | In   |
+|:-------------|:--------|:-----|
+| **Id**       | integer | path |
 
 **Description:**
 No description provided.

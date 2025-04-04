@@ -1,17 +1,16 @@
 # `Product_GetProductByProductId`
-
+> 
+    
 **URL Template:**
 `GET /api/products/{productId}`
 
-**Parameters:**
-- *`productId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ProductId`
-
+| Excel Name    | Type    | In   |
+|:--------------|:--------|:-----|
+| **ProductId** | integer | path |
 
 **Description:**
 No description provided.

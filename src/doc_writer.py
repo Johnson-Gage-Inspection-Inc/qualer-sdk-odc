@@ -3,22 +3,18 @@ from pathlib import Path
 import pandas as pd
 
 def generate_markdown_file(docs_path, ep, spec):
-    pram_doc = ""
-    for param in ep['params']:
-        param_name = param["name"]
-        param_type = param["type"]
-        param_format = param.get("format", "string")
-        pram_doc += '- *' if param['required'] else '- '
-        pram_doc += f"`{param_name}`: `{param_type}`\n"
+    # Combined parameter table with Excel names
+    param_rows = []
+    for param in ep["params"]:
+        ptype = param.get("type", "string")
+        location = param.get("in", "")
+        excel_name = ep["excel_path_params"][ep["path_params"].index(param["name"])] \
+            if param["in"] == "path" else ep["excel_query_params"][ep["query_params"].index(param["name"])]
+        excel_name = f"**{excel_name}**" if param.get("required") else excel_name
+        param_rows.append({"Excel Name": excel_name, "Type": ptype, "In": location})
 
-    # Format parameters list
-    param_doc = ""
-    for param in ep['params']:
-        prefix = "- *" if param.get('required') else "- "
-        param_doc += f"{prefix}`{param['name']}`: `{param['type']}`\n"
-
-    # Named ranges
-    range_doc = "\n".join([f"- `{r}`" for r in ep.get("param_names", [])]) or "None"
+    param_df = pd.DataFrame(param_rows)
+    param_table_md = param_df.to_markdown(index=False, tablefmt="pipe")
 
     # Description
     desc = ep["details"].get("description", "No description provided.").strip()
@@ -33,18 +29,16 @@ def generate_markdown_file(docs_path, ep, spec):
     response_schema_md = df.to_markdown(index=False, tablefmt="pipe")
 
     markdown = f"""# `{ep['clean_name']}`
-
+> {ep['details'].get('summary', '')}
+    
 **URL Template:**
 `GET {ep['path']}`
 
-**Parameters:**
-{pram_doc}
+**Parameters (Named Ranges):**
 
-> *Required parameters are marked with an asterisk (*).
+> *Required parameters are bolded.*
 
-**Excel Named Range(s):**
-{range_doc}
-
+{param_table_md}
 
 **Description:**
 {desc}

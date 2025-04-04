@@ -1,19 +1,17 @@
 # `ServiceOrderItems_GetWorkItemImageByWorkItemId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/workitems/{workItemId}/images/{imageName}`
 
-**Parameters:**
-- *`workItemId`: `integer`
-- *`imageName`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `WorkItemId`
-- `ImageName`
-
+| Excel Name     | Type    | In   |
+|:---------------|:--------|:-----|
+| **WorkItemId** | integer | path |
+| **ImageName**  | string  | path |
 
 **Description:**
 No description provided.

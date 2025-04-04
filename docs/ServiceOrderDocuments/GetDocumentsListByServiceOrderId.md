@@ -1,19 +1,17 @@
 # `ServiceOrderDocuments_GetDocumentsListByServiceOrderId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/documents/list`
 
-**Parameters:**
-- *`serviceOrderId`: `integer`
-- `model.reportType`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ServiceOrderId`
-- `Model.reportType`
-
+| Excel Name         | Type    | In    |
+|:-------------------|:--------|:------|
+| **ServiceOrderId** | integer | path  |
+| Model.reportType   | string  | query |
 
 **Description:**
 No description provided.

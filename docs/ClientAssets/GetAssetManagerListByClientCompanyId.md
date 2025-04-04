@@ -1,25 +1,20 @@
 # `ClientAssets_GetAssetManagerListByClientCompanyId`
-
+> GetAssetManagerList
+    
 **URL Template:**
 `GET /api/service/clients/{clientCompanyId}/assets/byfilter`
 
-**Parameters:**
-- *`clientCompanyId`: `integer`
-- `query.filterType`: `string`
-- `query.searchString`: `string`
-- `query.page`: `integer`
-- `query.pageSize`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ClientCompanyId`
-- `Query.filterType`
-- `Query.searchString`
-- `Query.page`
-- `Query.pageSize`
-
+| Excel Name          | Type    | In    |
+|:--------------------|:--------|:------|
+| **ClientCompanyId** | integer | path  |
+| Query.filterType    | string  | query |
+| Query.searchString  | string  | query |
+| Query.page          | integer | query |
+| Query.pageSize      | integer | query |
 
 **Description:**
 assetFilterType: ClientUnset, ClientAssetsCollected, ClientPastDue, ClientDueForService, ClientOutOfService, ClientWithoutSchedule

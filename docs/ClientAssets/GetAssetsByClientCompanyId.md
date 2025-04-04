@@ -1,27 +1,21 @@
 # `ClientAssets_GetAssetsByClientCompanyId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/clients/{clientCompanyId}/assets`
 
-**Parameters:**
-- *`clientCompanyId`: `integer`
-- `query.equipmentId`: `string`
-- `query.serialNumber`: `string`
-- `query.assetTag`: `string`
-- `query.barcode`: `string`
-- `query.legacyId`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ClientCompanyId`
-- `Query.equipmentId`
-- `Query.serialNumber`
-- `Query.assetTag`
-- `Query.barcode`
-- `Query.legacyId`
-
+| Excel Name          | Type    | In    |
+|:--------------------|:--------|:------|
+| **ClientCompanyId** | integer | path  |
+| Query.equipmentId   | string  | query |
+| Query.serialNumber  | string  | query |
+| Query.assetTag      | string  | query |
+| Query.barcode       | string  | query |
+| Query.legacyId      | string  | query |
 
 **Description:**
 No description provided.

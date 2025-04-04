@@ -1,19 +1,17 @@
 # `ClientEmployees_GetEmployeeByEmployeeId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/clients/employees/{EmployeeId}`
 
-**Parameters:**
-- *`employeeId`: `string`
-- `model.employeeId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `EmployeeId`
-- `Model.employeeId`
-
+| Excel Name       | Type    | In    |
+|:-----------------|:--------|:------|
+| **EmployeeId**   | string  | query |
+| Model.employeeId | integer | query |
 
 **Description:**
 No description provided.

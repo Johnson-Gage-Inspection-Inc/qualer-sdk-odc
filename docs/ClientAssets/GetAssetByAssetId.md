@@ -1,19 +1,17 @@
 # `ClientAssets_GetAssetByAssetId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/clients/assets/{AssetId}`
 
-**Parameters:**
-- *`assetId`: `string`
-- `model.assetId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `AssetId`
-- `Model.assetId`
-
+| Excel Name    | Type    | In    |
+|:--------------|:--------|:------|
+| **AssetId**   | string  | query |
+| Model.assetId | integer | query |
 
 **Description:**
 No description provided.

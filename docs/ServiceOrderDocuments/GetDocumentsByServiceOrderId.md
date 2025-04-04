@@ -1,19 +1,17 @@
 # `ServiceOrderDocuments_GetDocumentsByServiceOrderId`
-
+> Retrieve work order documents
+    
 **URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/documents`
 
-**Parameters:**
-- *`serviceOrderId`: `integer`
-- `model.fileName`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ServiceOrderId`
-- `Model.fileName`
-
+| Excel Name         | Type    | In    |
+|:-------------------|:--------|:------|
+| **ServiceOrderId** | integer | path  |
+| Model.fileName     | string  | query |
 
 **Description:**
 Sample request:

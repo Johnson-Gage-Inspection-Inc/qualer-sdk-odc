@@ -1,17 +1,16 @@
 # `ReportDatasets_GetMeasurementChartsByServiceOrderItemId`
-
+> 
+    
 **URL Template:**
 `GET /api/data/MeasurementChart/{serviceOrderItemId}`
 
-**Parameters:**
-- *`serviceOrderItemId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ServiceOrderItemId`
-
+| Excel Name             | Type    | In   |
+|:-----------------------|:--------|:-----|
+| **ServiceOrderItemId** | integer | path |
 
 **Description:**
 No description provided.

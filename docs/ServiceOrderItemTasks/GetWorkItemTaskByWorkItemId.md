@@ -1,19 +1,17 @@
 # `ServiceOrderItemTasks_GetWorkItemTaskByWorkItemId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/workitems/{workItemId}/tasks/{taskId}`
 
-**Parameters:**
-- *`workItemId`: `integer`
-- *`taskId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `WorkItemId`
-- `TaskId`
-
+| Excel Name     | Type    | In   |
+|:---------------|:--------|:-----|
+| **WorkItemId** | integer | path |
+| **TaskId**     | integer | path |
 
 **Description:**
 No description provided.

@@ -1,23 +1,19 @@
 # `Assets_GetAssetManagerList`
-
+> GetAssetManagerList
+    
 **URL Template:**
 `GET /api/assets/byfilter`
 
-**Parameters:**
-- `model.filterType`: `string`
-- `model.searchString`: `string`
-- `model.page`: `integer`
-- `model.pageSize`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Model.filterType`
-- `Model.searchString`
-- `Model.page`
-- `Model.pageSize`
-
+| Excel Name         | Type    | In    |
+|:-------------------|:--------|:------|
+| Model.filterType   | string  | query |
+| Model.searchString | string  | query |
+| Model.page         | integer | query |
+| Model.pageSize     | integer | query |
 
 **Description:**
 filterType: Unset, DueForService, RecentlyServiced, NotServiced, RecentlyPurchased,

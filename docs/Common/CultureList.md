@@ -1,15 +1,13 @@
 # `Common_CultureList`
-
+> 
+    
 **URL Template:**
 `GET /api/common/culturelist`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

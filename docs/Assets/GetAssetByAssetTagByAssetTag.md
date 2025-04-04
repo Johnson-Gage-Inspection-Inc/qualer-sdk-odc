@@ -1,17 +1,16 @@
 # `Assets_GetAssetByAssetTagByAssetTag`
-
+> 
+    
 **URL Template:**
 `GET /api/assets/byassettag/{assetTag}`
 
-**Parameters:**
-- *`assetTag`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `AssetTag`
-
+| Excel Name   | Type   | In   |
+|:-------------|:-------|:-----|
+| **AssetTag** | string | path |
 
 **Description:**
 No description provided.

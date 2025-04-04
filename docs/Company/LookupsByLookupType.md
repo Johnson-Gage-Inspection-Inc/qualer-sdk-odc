@@ -1,17 +1,16 @@
 # `Company_LookupsByLookupType`
-
+> 
+    
 **URL Template:**
 `GET /api/company/lookups`
 
-**Parameters:**
-- *`lookupType`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `LookupType`
-
+| Excel Name     | Type   | In    |
+|:---------------|:-------|:------|
+| **LookupType** | string | query |
 
 **Description:**
 lookupName:

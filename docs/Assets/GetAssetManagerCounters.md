@@ -1,17 +1,16 @@
 # `Assets_GetAssetManagerCounters`
-
+> GetAssetManagerCounters
+    
 **URL Template:**
 `GET /api/assets/counters`
 
-**Parameters:**
-- `model.searchString`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Model.searchString`
-
+| Excel Name         | Type   | In    |
+|:-------------------|:-------|:------|
+| Model.searchString | string | query |
 
 **Description:**
 No description provided.

@@ -1,17 +1,16 @@
 # `ServiceOrderPayments_GetWorkOrderPaymentByServiceOrderPaymentId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/workorders/payments/{serviceOrderPaymentId}`
 
-**Parameters:**
-- *`serviceOrderPaymentId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ServiceOrderPaymentId`
-
+| Excel Name                | Type    | In   |
+|:--------------------------|:--------|:-----|
+| **ServiceOrderPaymentId** | integer | path |
 
 **Description:**
 No description provided.

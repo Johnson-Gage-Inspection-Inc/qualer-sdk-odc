@@ -1,17 +1,16 @@
 # `Assets_GetAssetBySerialNumberBySerialNumber`
-
+> 
+    
 **URL Template:**
 `GET /api/assets/byserialnumber/{serialNumber}`
 
-**Parameters:**
-- *`serialNumber`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `SerialNumber`
-
+| Excel Name       | Type   | In   |
+|:-----------------|:-------|:-----|
+| **SerialNumber** | string | path |
 
 **Description:**
 No description provided.

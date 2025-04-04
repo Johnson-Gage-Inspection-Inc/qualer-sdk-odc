@@ -1,15 +1,13 @@
 # `EmployeeFilterPreference_GetEmployeeFilterPreferences`
-
+> GetEmployeeFilterPreferences
+    
 **URL Template:**
 `GET /api/user/filters`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

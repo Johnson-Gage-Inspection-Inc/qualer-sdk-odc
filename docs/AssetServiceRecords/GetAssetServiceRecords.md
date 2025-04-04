@@ -1,23 +1,19 @@
 # `AssetServiceRecords_GetAssetServiceRecords`
-
+> 
+    
 **URL Template:**
 `GET /api/assetservicerecords`
 
-**Parameters:**
-- `model.assetId`: `integer`
-- `model.serialNumber`: `string`
-- `model.from`: `string`
-- `model.to`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Model.assetId`
-- `Model.serialNumber`
-- `Model.from`
-- `Model.to`
-
+| Excel Name         | Type    | In    |
+|:-------------------|:--------|:------|
+| Model.assetId      | integer | query |
+| Model.serialNumber | string  | query |
+| Model.from         | string  | query |
+| Model.to           | string  | query |
 
 **Description:**
 No description provided.

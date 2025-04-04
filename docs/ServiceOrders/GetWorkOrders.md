@@ -1,29 +1,22 @@
 # `ServiceOrders_GetWorkOrders`
-
+> Retrieve work orders by filters
+    
 **URL Template:**
 `GET /api/service/workorders`
 
-**Parameters:**
-- `status`: `string`
-- `companyId`: `integer`
-- `from`: `string`
-- `to`: `string`
-- `modifiedAfter`: `string`
-- `workOrderNumber`: `string`
-- `assignedEmployees`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Status`
-- `CompanyId`
-- `From`
-- `To`
-- `ModifiedAfter`
-- `WorkOrderNumber`
-- `AssignedEmployees`
-
+| Excel Name        | Type    | In    |
+|:------------------|:--------|:------|
+| Status            | string  | query |
+| CompanyId         | integer | query |
+| From              | string  | query |
+| To                | string  | query |
+| ModifiedAfter     | string  | query |
+| WorkOrderNumber   | string  | query |
+| AssignedEmployees | string  | query |
 
 **Description:**
 Sample request:

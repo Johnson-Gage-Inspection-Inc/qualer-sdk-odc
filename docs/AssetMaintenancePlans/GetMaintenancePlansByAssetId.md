@@ -1,17 +1,16 @@
 # `AssetMaintenancePlans_GetMaintenancePlansByAssetId`
-
+> 
+    
 **URL Template:**
 `GET /api/assets/{assetId}/plans`
 
-**Parameters:**
-- *`assetId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `AssetId`
-
+| Excel Name   | Type    | In   |
+|:-------------|:--------|:-----|
+| **AssetId**  | integer | path |
 
 **Description:**
 No description provided.

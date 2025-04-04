@@ -1,19 +1,17 @@
 # `ServicePricing_GetByServicePricingId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/pricing`
 
-**Parameters:**
-- *`servicePricingId`: `integer`
-- `serviceGroupId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ServicePricingId`
-- `ServiceGroupId`
-
+| Excel Name           | Type    | In    |
+|:---------------------|:--------|:------|
+| **ServicePricingId** | integer | query |
+| ServiceGroupId       | integer | query |
 
 **Description:**
 No description provided.

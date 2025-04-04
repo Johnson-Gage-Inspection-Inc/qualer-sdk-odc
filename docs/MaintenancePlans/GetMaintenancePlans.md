@@ -1,15 +1,13 @@
 # `MaintenancePlans_GetMaintenancePlans`
-
+> 
+    
 **URL Template:**
 `GET /api/plans`
 
-**Parameters:**
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-None
 
 
 **Description:**

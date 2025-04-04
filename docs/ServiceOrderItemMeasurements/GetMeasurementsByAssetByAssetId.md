@@ -1,21 +1,18 @@
 # `ServiceOrderItemMeasurements_GetMeasurementsByAssetByAssetId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/assets/{assetId}/measurements`
 
-**Parameters:**
-- *`assetId`: `integer`
-- `from`: `string`
-- `to`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `AssetId`
-- `From`
-- `To`
-
+| Excel Name   | Type    | In    |
+|:-------------|:--------|:------|
+| **AssetId**  | integer | path  |
+| From         | string  | query |
+| To           | string  | query |
 
 **Description:**
 No description provided.

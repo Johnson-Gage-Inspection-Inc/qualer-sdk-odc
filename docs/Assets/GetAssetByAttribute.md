@@ -1,19 +1,17 @@
 # `Assets_GetAssetByAttribute`
-
+> 
+    
 **URL Template:**
 `GET /api/assets/byattribute`
 
-**Parameters:**
-- `model.name`: `string`
-- `model.value`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Model.name`
-- `Model.value`
-
+| Excel Name   | Type   | In    |
+|:-------------|:-------|:------|
+| Model.name   | string | query |
+| Model.value  | string | query |
 
 **Description:**
 No description provided.

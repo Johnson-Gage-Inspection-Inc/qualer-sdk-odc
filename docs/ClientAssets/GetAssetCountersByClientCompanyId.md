@@ -1,17 +1,16 @@
 # `ClientAssets_GetAssetCountersByClientCompanyId`
-
+> 
+    
 **URL Template:**
 `GET /api/service/clients/{clientCompanyId}/counters`
 
-**Parameters:**
-- *`clientCompanyId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ClientCompanyId`
-
+| Excel Name          | Type    | In   |
+|:--------------------|:--------|:-----|
+| **ClientCompanyId** | integer | path |
 
 **Description:**
 No description provided.

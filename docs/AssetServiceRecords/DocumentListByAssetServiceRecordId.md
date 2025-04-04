@@ -1,19 +1,17 @@
 # `AssetServiceRecords_DocumentListByAssetServiceRecordId`
-
+> 
+    
 **URL Template:**
 `GET /api/assetservicerecords/{AssetServiceRecordId}/documents/files`
 
-**Parameters:**
-- *`assetServiceRecordId`: `string`
-- `model.assetServiceRecordId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `AssetServiceRecordId`
-- `Model.assetServiceRecordId`
-
+| Excel Name                 | Type    | In    |
+|:---------------------------|:--------|:------|
+| **AssetServiceRecordId**   | string  | query |
+| Model.assetServiceRecordId | integer | query |
 
 **Description:**
 No description provided.

@@ -1,19 +1,17 @@
 # `ServiceOrders_GetWorkOrdersByEmployeeId`
-
+> 
+    
 **URL Template:**
 `GET /api/employee/{employeeId}/workorders`
 
-**Parameters:**
-- *`employeeId`: `integer`
-- `isInternal`: `boolean`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `EmployeeId`
-- `IsInternal`
-
+| Excel Name     | Type    | In    |
+|:---------------|:--------|:------|
+| **EmployeeId** | integer | path  |
+| IsInternal     | boolean | query |
 
 **Description:**
 No description provided.

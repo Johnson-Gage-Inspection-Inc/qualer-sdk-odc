@@ -1,17 +1,16 @@
 # `Employees_GetEmployeeByEmployeeId`
-
+> 
+    
 **URL Template:**
 `GET /api/employees/{employeeId}`
 
-**Parameters:**
-- *`employeeId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `EmployeeId`
-
+| Excel Name     | Type    | In   |
+|:---------------|:--------|:-----|
+| **EmployeeId** | integer | path |
 
 **Description:**
 No description provided.

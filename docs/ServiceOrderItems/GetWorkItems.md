@@ -1,27 +1,21 @@
 # `ServiceOrderItems_GetWorkItems`
-
+> Retrieve work items
+    
 **URL Template:**
 `GET /api/service/workitems`
 
-**Parameters:**
-- `status`: `string`
-- `companyId`: `integer`
-- `from`: `string`
-- `to`: `string`
-- `workItemNumber`: `string`
-- `assetSearch`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Status`
-- `CompanyId`
-- `From`
-- `To`
-- `WorkItemNumber`
-- `AssetSearch`
-
+| Excel Name     | Type    | In    |
+|:---------------|:--------|:------|
+| Status         | string  | query |
+| CompanyId      | integer | query |
+| From           | string  | query |
+| To             | string  | query |
+| WorkItemNumber | string  | query |
+| AssetSearch    | string  | query |
 
 **Description:**
 Sample request:

@@ -1,17 +1,16 @@
 # `EmployeePreference_GetByElementPage`
-
+> 
+    
 **URL Template:**
 `GET /api/user/preferences/{elementPage}`
 
-**Parameters:**
-- *`elementPage`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `ElementPage`
-
+| Excel Name      | Type   | In   |
+|:----------------|:-------|:-----|
+| **ElementPage** | string | path |
 
 **Description:**
 elementPage:

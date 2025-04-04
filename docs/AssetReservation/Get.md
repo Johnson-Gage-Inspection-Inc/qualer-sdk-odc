@@ -1,31 +1,23 @@
 # `AssetReservation_Get`
-
+> 
+    
 **URL Template:**
 `GET /api/assetsreservations`
 
-**Parameters:**
-- `model.from`: `string`
-- `model.to`: `string`
-- `model.assetId`: `integer`
-- `model.areaId`: `integer`
-- `model.productId`: `integer`
-- `model.serialNumber`: `string`
-- `model.assetTag`: `string`
-- `model.reservationId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Model.from`
-- `Model.to`
-- `Model.assetId`
-- `Model.areaId`
-- `Model.productId`
-- `Model.serialNumber`
-- `Model.assetTag`
-- `Model.reservationId`
-
+| Excel Name          | Type    | In    |
+|:--------------------|:--------|:------|
+| Model.from          | string  | query |
+| Model.to            | string  | query |
+| Model.assetId       | integer | query |
+| Model.areaId        | integer | query |
+| Model.productId     | integer | query |
+| Model.serialNumber  | string  | query |
+| Model.assetTag      | string  | query |
+| Model.reservationId | integer | query |
 
 **Description:**
 No description provided.

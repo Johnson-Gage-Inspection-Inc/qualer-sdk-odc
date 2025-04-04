@@ -1,23 +1,19 @@
 # `ServiceOrderItemDocuments_GetDocumentListByFrom`
-
+> Retrieve work order documents
+    
 **URL Template:**
 `GET /api/service/workitems/documents/list`
 
-**Parameters:**
-- *`from`: `string`
-- *`to`: `string`
-- `reportType`: `string`
-- `serviceOrderItemId`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `From`
-- `To`
-- `ReportType`
-- `ServiceOrderItemId`
-
+| Excel Name         | Type    | In    |
+|:-------------------|:--------|:------|
+| **From**           | string  | query |
+| **To**             | string  | query |
+| ReportType         | string  | query |
+| ServiceOrderItemId | integer | query |
 
 **Description:**
 Sample request:

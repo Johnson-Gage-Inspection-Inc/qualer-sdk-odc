@@ -1,25 +1,20 @@
 # `Clients_GetAll`
-
+> 
+    
 **URL Template:**
 `GET /api/service/clients`
 
-**Parameters:**
-- `model.legacyId`: `string`
-- `model.accountNumberText`: `string`
-- `model.companyName`: `string`
-- `model.take`: `integer`
-- `model.modifiedAfter`: `string`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `Model.legacyId`
-- `Model.accountNumberText`
-- `Model.companyName`
-- `Model.take`
-- `Model.modifiedAfter`
-
+| Excel Name              | Type    | In    |
+|:------------------------|:--------|:------|
+| Model.legacyId          | string  | query |
+| Model.accountNumberText | string  | query |
+| Model.companyName       | string  | query |
+| Model.take              | integer | query |
+| Model.modifiedAfter     | string  | query |
 
 **Description:**
 No description provided.

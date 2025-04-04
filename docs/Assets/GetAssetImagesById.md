@@ -1,17 +1,16 @@
 # `Assets_GetAssetImagesById`
-
+> GetAssetImages
+    
 **URL Template:**
 `GET /api/assets/{id}/images`
 
-**Parameters:**
-- *`id`: `integer`
+**Parameters (Named Ranges):**
 
+> *Required parameters are bolded.*
 
-> *Required parameters are marked with an asterisk (*).
-
-**Excel Named Range(s):**
-- `IdID`
-
+| Excel Name   | Type    | In   |
+|:-------------|:--------|:-----|
+| **Id**       | integer | path |
 
 **Description:**
 returns list of asset image urls
