@@ -5,12 +5,12 @@ xmlns="http://www.w3.org/TR/REC-html40">
 <meta http-equiv=Content-Type content="text/x-ms-odc; charset=utf-8">
 <meta name=ProgId content=ODC.Database>
 <meta name=SourceType content=OLEDB>
-<title>ServiceOrderDocuments_GetDocumentsByServiceOrderId</title>
+<title>Query - ServiceOrderDocuments_GetDocumentsByServiceOrderId</title>
 <xml id=docprops><o:DocumentProperties
   xmlns:o="urn:schemas-microsoft-com:office:office"
   xmlns="http://www.w3.org/TR/REC-html40">
   <o:Description>Connection to the 'ServiceOrderDocuments_GetDocumentsByServiceOrderId' query in the workbook.</o:Description>
-  <o:Name>ServiceOrderDocuments_GetDocumentsByServiceOrderId</o:Name>
+  <o:Name>Query - ServiceOrderDocuments_GetDocumentsByServiceOrderId</o:Name>
  </o:DocumentProperties>
 </xml><xml id=msodc><odc:OfficeDataConnection
   xmlns:odc="urn:schemas-microsoft-com:office:odc"
