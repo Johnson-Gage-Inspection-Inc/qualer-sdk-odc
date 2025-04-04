@@ -17,63 +17,18 @@ def normalize_name(n): return n.replace(".", "_")
 # === Template Generator ===
 def generate_odc_file(ep):
     name = ep["clean_name"]
-    url = ep["url"]
-
-    mashup_lines = []
-    for param in ep['path_params'] + ep['query_params']:
-        mashup_lines.append(
-            f'{param} = try Excel.CurrentWorkbook(){{'
-            f'[Name="{param}"]}}[Content]{{0}} otherwise "",'
-        )
-
-    for param in ep['path_params']:
-        pattern = re.compile(rf"\{{{param}\}}", re.IGNORECASE)
-        url = pattern.sub(f'" & Text.From({param}) & "', url)
-
-    query_option_lines = []
-    combine_names = []
-
-
-    if ep['query_params']:
-        names = [p["name"] for p in ep["params"] if p["in"] == "query"]
-        for i, p in enumerate(names):
-            varname = f"q{i+1}"
-            query_option_lines.append(
-                f'{varname} = if Text.Length({p}) > 0 then [ {p} = {p} ] else [],'
-            )
-            combine_names.append(varname)
-
-        query_option_lines.append(f'QueryOptions = Record.Combine({{{", ".join(combine_names)}}}),')
-    else:
-        query_option_lines.append('QueryOptions = [],')
-
-
-    mashup_lines += query_option_lines + [
-        f'baseUrl = "{BASE_URL}",',
-        f'relativeUrl = "{ep["relative_url"]}",',
-        "response = Web.Contents(",
-        "    baseUrl,",
-        "    [",
-        '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
-        '        Query = QueryOptions,',
-        f'        Headers = [ Authorization = "Api-Token {API_TOKEN}" ]',
-        "    ]",
-        "),",
-        "json = Json.Document(response),",
-        "ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)",
-        "in ConvertToTable",
-    ]
-
-    mashup_formula = "let\n    " + "\n    ".join(mashup_lines)
-
+    mashup_formula = generate_mashup_formula(ep)
     odc_xml = render_odc_xml(name, mashup_formula)
 
     folder = OUTPUT_DIR / ep["tag"]
     folder.mkdir(parents=True, exist_ok=True)
     path = folder / f"{name}.odc"
+
     with open(path, "w", encoding="utf-8") as f:
         f.write(odc_xml)
+
     return path
+
 
 def yield_get_endpoints(spec):
     for path, methods in spec["paths"].items():
@@ -126,30 +81,38 @@ def generate_mashup_formula(ep):
 
     lines = []
 
-    # Declare all Excel-named params
-    for _, excel in list(path_param_pairs) + list(query_param_pairs):
+    # === Declare Excel-named path parameters (REQUIRED)
+    for _, excel in path_param_pairs:
         safe_excel = normalize_name(excel)
         lines.append(
-            f'{safe_excel} = try Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}} otherwise "",'
+            f'{safe_excel} = Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1],'
         )
 
-    # Restore zip since it’s been consumed
-    path_param_pairs = zip(ep["path_params"], ep["excel_path_params"])
+    # === Declare Excel-named query parameters (OPTIONAL)
+    for _, excel in query_param_pairs:
+        safe_excel = normalize_name(excel)
+        lines.append(
+            f'{safe_excel} = try Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1] otherwise "",'
+        )
 
-    # Replace placeholders in URL
+    # === Rebuild zips (used up in loops)
+    path_param_pairs = zip(ep["path_params"], ep["excel_path_params"])
+    query_param_pairs = zip(ep["query_params"], ep["excel_query_params"])
+
+    # === Replace placeholders in relative URL
     url = ep["relative_url"]
-    for orig, excel in zip(ep["path_params"], ep["excel_path_params"]):
+    for orig, excel in path_param_pairs:
         safe_excel = normalize_name(excel)
         pattern = re.compile(rf"\{{{orig}\}}", re.IGNORECASE)
         url = pattern.sub(f'" & Text.From({safe_excel}) & "', url)
 
-    # Build query param handling
+    # === Build query param logic
     combine_names = []
-    for i, (orig, excel) in enumerate(zip(ep["query_params"], ep["excel_query_params"])):
+    for i, (orig, excel) in enumerate(query_param_pairs):
         safe_excel = normalize_name(excel)
         varname = f"q{i+1}"
         lines.append(
-            f'{varname} = if Text.Length({safe_excel}) > 0 then [ "{orig}" = {safe_excel} ] else [],'
+            f'{varname} = if Text.Length({safe_excel}) > 0 then [ {orig} = {safe_excel} ] else [],'
         )
         combine_names.append(varname)
 
@@ -158,7 +121,7 @@ def generate_mashup_formula(ep):
     else:
         lines.append('QueryOptions = [],')
 
-    # Core request logic
+    # === Final request logic
     lines += [
         f'baseUrl = "{BASE_URL}",',
         f'relativeUrl = "{url}",',
@@ -171,11 +134,10 @@ def generate_mashup_formula(ep):
         "    ]",
         "),",
         "json = Json.Document(response),",
-        "ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)",
+        "ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)"
     ]
 
-    return "let\n    " + "\n    ".join(lines) + "\nin " + lines[-1].split(" = ")[0]
-
+    return ("let\n    " + "\n    ".join(lines) + "\nin\n    " + lines[-1].split(" = ")[0]).rstrip()
 
 if __name__ == "__main__":
     docs_dir = "docs"
