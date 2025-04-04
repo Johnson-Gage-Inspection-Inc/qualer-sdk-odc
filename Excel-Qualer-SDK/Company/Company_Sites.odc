@@ -35,11 +35,11 @@ xmlns="http://www.w3.org/TR/REC-html40">
     ),
     json = Json.Document(response),
     ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
-    in ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
+in
+    ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
  </odc:PowerQueryMashupData>
  </odc:OfficeDataConnection>
 </xml>
-
 <style>
 <!--
     .ODCDataSource

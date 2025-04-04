@@ -22,14 +22,14 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;AssetServiceRecords_GetAssetServiceRecords&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    model.assetId = try Excel.CurrentWorkbook(){[Name="model.assetId"]}[Content]{0} otherwise "",
-    model.serialNumber = try Excel.CurrentWorkbook(){[Name="model.serialNumber"]}[Content]{0} otherwise "",
-    model.from = try Excel.CurrentWorkbook(){[Name="model.from"]}[Content]{0} otherwise "",
-    model.to = try Excel.CurrentWorkbook(){[Name="model.to"]}[Content]{0} otherwise "",
-    q1 = if Text.Length(model.assetId) > 0 then [ model.assetId = model.assetId ] else [],
-    q2 = if Text.Length(model.serialNumber) > 0 then [ model.serialNumber = model.serialNumber ] else [],
-    q3 = if Text.Length(model.from) > 0 then [ model.from = model.from ] else [],
-    q4 = if Text.Length(model.to) > 0 then [ model.to = model.to ] else [],
+    Model_assetId = try Excel.CurrentWorkbook(){[Name="Model.assetId"]}[Content]{0}[Column1] otherwise "",
+    Model_serialNumber = try Excel.CurrentWorkbook(){[Name="Model.serialNumber"]}[Content]{0}[Column1] otherwise "",
+    Model_from = try Excel.CurrentWorkbook(){[Name="Model.from"]}[Content]{0}[Column1] otherwise "",
+    Model_to = try Excel.CurrentWorkbook(){[Name="Model.to"]}[Content]{0}[Column1] otherwise "",
+    q1 = if Text.Length(Model_assetId) > 0 then [ model.assetId = Model_assetId ] else [],
+    q2 = if Text.Length(Model_serialNumber) > 0 then [ model.serialNumber = Model_serialNumber ] else [],
+    q3 = if Text.Length(Model_from) > 0 then [ model.from = Model_from ] else [],
+    q4 = if Text.Length(Model_to) > 0 then [ model.to = Model_to ] else [],
     QueryOptions = Record.Combine({q1, q2, q3, q4}),
     baseUrl = "https://jgiquality.qualer.com",
     relativeUrl = "api/assetservicerecords",
@@ -43,11 +43,11 @@ xmlns="http://www.w3.org/TR/REC-html40">
     ),
     json = Json.Document(response),
     ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
-    in ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
+in
+    ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
  </odc:PowerQueryMashupData>
  </odc:OfficeDataConnection>
 </xml>
-
 <style>
 <!--
     .ODCDataSource

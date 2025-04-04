@@ -22,10 +22,10 @@ xmlns="http://www.w3.org/TR/REC-html40">
   </odc:PowerQueryConnection>
   <odc:PowerQueryMashupData>
     &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;ClientAssets_GetAssetCountersByClientCompanyId&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let
-    clientCompanyId = try Excel.CurrentWorkbook(){[Name="clientCompanyId"]}[Content]{0} otherwise "",
+    ClientCompanyId = Excel.CurrentWorkbook(){[Name="ClientCompanyId"]}[Content]{0}[Column1],
     QueryOptions = [],
     baseUrl = "https://jgiquality.qualer.com",
-    relativeUrl = "api/service/clients/{clientCompanyId}/counters",
+    relativeUrl = "api/service/clients/" & Text.From(ClientCompanyId) & "/counters",
     response = Web.Contents(
         baseUrl,
         [
@@ -36,11 +36,11 @@ xmlns="http://www.w3.org/TR/REC-html40">
     ),
     json = Json.Document(response),
     ConvertToTable = Table.FromList(json, Splitter.SplitByNothing(), null, null, ExtraValues.Error)
-    in ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
+in
+    ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
  </odc:PowerQueryMashupData>
  </odc:OfficeDataConnection>
 </xml>
-
 <style>
 <!--
     .ODCDataSource
