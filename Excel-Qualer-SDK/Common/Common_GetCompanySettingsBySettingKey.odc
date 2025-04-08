@@ -1,0 +1,35 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/x-ms-odc; charset=utf-8">
+<meta name=ProgId content=ODC.Database>
+<meta name=SourceType content=OLEDB>
+<title>Query - Common_GetCompanySettingsBySettingKey</title>
+<xml id=docprops><o:DocumentProperties
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns="http://www.w3.org/TR/REC-html40">
+  <o:Description>Connection to the 'Common_GetCompanySettingsBySettingKey' query in the workbook.</o:Description>
+  <o:Name>Query - Common_GetCompanySettingsBySettingKey</o:Name>
+ </o:DocumentProperties>
+</xml><xml id=msodc><odc:OfficeDataConnection
+  xmlns:odc="urn:schemas-microsoft-com:office:odc"
+  xmlns="http://www.w3.org/TR/REC-html40">
+  <odc:PowerQueryConnection odc:Type="OLEDB">
+   <odc:ConnectionString>Provider=Microsoft.Mashup.OleDb.1;Data Source=$Workbook$;Location=Common_GetCompanySettingsBySettingKey;Extended Properties=&quot;&quot;</odc:ConnectionString>
+   <odc:CommandType>SQL</odc:CommandType>
+   <odc:CommandText>SELECT * FROM [Common_GetCompanySettingsBySettingKey]</odc:CommandText>
+  </odc:PowerQueryConnection>
+  <odc:PowerQueryMashupData>
+    &lt;Mashup xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.microsoft.com/DataMashup&quot;&gt;&lt;Client&gt;EXCEL&lt;/Client&gt;&lt;Version&gt;2.140.405.0&lt;/Version&gt;&lt;MinVersion&gt;2.21.0.0&lt;/MinVersion&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;SafeCombine&gt;true&lt;/SafeCombine&gt;&lt;Items&gt;&lt;Query Name=&quot;Common_GetCompanySettingsBySettingKey&quot;&gt;&lt;Formula&gt;&lt;![CDATA[let&#13;&#10;    SettingKey = try Excel.CurrentWorkbook(){[Name="SettingKey"]}[Content]{0}[Column1] otherwise "",&#13;&#10;    settingKey = if Text.Length(SettingKey) > 0 then [ settingKey = SettingKey ] else [],&#13;&#10;    QueryOptions = Record.Combine({settingKey}),&#13;&#10;    baseUrl = "https://jgiquality.qualer.com",&#13;&#10;    relativeUrl = "api/common/settings",&#13;&#10;    response = Web.Contents(&#13;&#10;        baseUrl,&#13;&#10;        [&#13;&#10;            RelativePath = Text.TrimStart(relativeUrl, "/"),&#13;&#10;            Query = QueryOptions,&#13;&#10;            Headers = [ Authorization = "Api-Token bf407589-f463-4046-ba2c-30642bd5d637" ]&#13;&#10;        ]&#13;&#10;    ),&#13;&#10;    json = Json.Document(response),&#13;&#10;    ConvertToTable = Table.FromRecords(json)&#13;&#10;in&#13;&#10;    ConvertToTable]]&gt;&lt;/Formula&gt;&lt;IsParameterQuery xsi:nil=&quot;true&quot; /&gt;&lt;IsDirectQuery xsi:nil=&quot;true&quot; /&gt;&lt;/Query&gt;&lt;/Items&gt;&lt;/Mashup&gt;
+ </odc:PowerQueryMashupData>
+ </odc:OfficeDataConnection>
+</xml>
+<style>
+<!--
+    .ODCDataSource
+    {
+    behavior: url(dataconn.htc);
+    }
+-->
+</style>

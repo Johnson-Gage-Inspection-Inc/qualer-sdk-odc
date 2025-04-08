@@ -1,0 +1,59 @@
+{
+    "tag": "Vendors",
+    "path": "/api/service/vendors/{vendorCompanyId}",
+    "method": "get",
+    "details": {
+        "tags": [
+            "Vendors"
+        ],
+        "operationId": "Vendors_Get",
+        "consumes": [],
+        "produces": [
+            "application/json",
+            "text/json",
+            "application/xml",
+            "text/xml"
+        ],
+        "parameters": [
+            {
+                "name": "vendorCompanyId",
+                "in": "path",
+                "required": true,
+                "type": "integer",
+                "format": "int32"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "OK",
+                "schema": {
+                    "$ref": "#/definitions/Qualer.Api.Models.Vendors.To.VendorCompanyResponseModel"
+                }
+            }
+        }
+    },
+    "clean_name": "Vendors_GetByVendorCompanyId",
+    "op_id": "Vendors_Get",
+    "params": [
+        {
+            "name": "vendorCompanyId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        }
+    ],
+    "param_names": [
+        "VendorCompanyId"
+    ],
+    "path_params": [
+        "vendorCompanyId"
+    ],
+    "query_params": [],
+    "excel_path_params": [
+        "VendorCompanyId"
+    ],
+    "excel_query_params": [],
+    "url": "https://jgiquality.qualer.com/api/service/vendors/{vendorCompanyId}",
+    "relative_url": "api/service/vendors/{vendorCompanyId}"
+}

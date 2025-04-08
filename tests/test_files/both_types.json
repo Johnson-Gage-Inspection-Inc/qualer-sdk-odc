@@ -1,0 +1,79 @@
+{
+    "tag": "ServiceOrders",
+    "path": "/api/employee/{employeeId}/workorders",
+    "method": "get",
+    "details": {
+        "tags": [
+            "ServiceOrders"
+        ],
+        "operationId": "ServiceOrders_GetWorkOrders",
+        "consumes": [],
+        "produces": [
+            "application/json",
+            "text/json",
+            "application/xml",
+            "text/xml"
+        ],
+        "parameters": [
+            {
+                "name": "employeeId",
+                "in": "path",
+                "required": true,
+                "type": "integer",
+                "format": "int32"
+            },
+            {
+                "name": "isInternal",
+                "in": "query",
+                "required": false,
+                "type": "boolean"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "OK",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Qualer.Api.Models.ServiceOrders.To.ProviderServiceOrderResponseModel"
+                    }
+                }
+            }
+        }
+    },
+    "clean_name": "ServiceOrders_GetWorkOrdersByEmployeeId",
+    "op_id": "ServiceOrders_GetWorkOrders",
+    "params": [
+        {
+            "name": "employeeId",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+        },
+        {
+            "name": "isInternal",
+            "in": "query",
+            "required": false,
+            "type": "boolean"
+        }
+    ],
+    "param_names": [
+        "EmployeeId",
+        "IsInternal"
+    ],
+    "path_params": [
+        "employeeId"
+    ],
+    "query_params": [
+        "isInternal"
+    ],
+    "excel_path_params": [
+        "EmployeeId"
+    ],
+    "excel_query_params": [
+        "IsInternal"
+    ],
+    "url": "https://jgiquality.qualer.com/api/employee/{employeeId}/workorders",
+    "relative_url": "api/employee/{employeeId}/workorders"
+}

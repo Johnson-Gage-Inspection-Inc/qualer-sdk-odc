@@ -1,0 +1,177 @@
+{
+    "tag": "ServiceOrders",
+    "path": "/api/service/workorders",
+    "method": "get",
+    "details": {
+        "tags": [
+            "ServiceOrders"
+        ],
+        "summary": "Retrieve work orders by filters",
+        "description": "Sample request:\r\n            \r\nGET /api/service/workorders\r\n            \r\nGET /api/service/workorders?status=submitted\r\n            \r\nGET /api/service/workorders?&amp;status=onsite,submitted&amp;companyId=10&amp;from=2010-11-15T10:11:12&amp;to=2011-11-15T10:11:12&amp;modifiedAfter=2010-12-15T10:11:12&amp;workOrderNumber=00567",
+        "operationId": "ServiceOrders_GetWorkOrders",
+        "consumes": [],
+        "produces": [
+            "application/json",
+            "text/json",
+            "application/xml",
+            "text/xml"
+        ],
+        "parameters": [
+            {
+                "name": "status",
+                "in": "query",
+                "description": "Comma separated list of statuses.\r\n             Order statuses: WaitingForApproval, Submitted, Processing, QualityControl, Cancelled, WaitingForClientSignOff, Completed, Denied, Delayed, Scheduling, Closed, WaitingForVendorSignOff, DelayedApproval.\r\n             Payment statuses: NotInvoiced, Invoiced, PartiallyPaid, PaidInFull, NoCharge, Overpaid.\r\n             Shipment statuses: Delivered, Shipped, PartialShipment, NotShipped, PickUp, OnSite.",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "companyId",
+                "in": "query",
+                "description": "Filter by Client Company ID",
+                "required": false,
+                "type": "integer",
+                "format": "int32"
+            },
+            {
+                "name": "from",
+                "in": "query",
+                "description": "Retrieve Work Orders where LastUpdatedOn greater than From parameter",
+                "required": false,
+                "type": "string",
+                "format": "date-time"
+            },
+            {
+                "name": "to",
+                "in": "query",
+                "description": "Retrieve Work Orders where LastUpdatedOn less than To parameter",
+                "required": false,
+                "type": "string",
+                "format": "date-time"
+            },
+            {
+                "name": "modifiedAfter",
+                "in": "query",
+                "description": "Retrieve Work Orders where LastUpdatedOn greater than ModifiedAfter parameter",
+                "required": false,
+                "type": "string",
+                "format": "date-time"
+            },
+            {
+                "name": "workOrderNumber",
+                "in": "query",
+                "description": "Filter by WorkOrderNumber",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "assignedEmployees",
+                "in": "query",
+                "description": "Comma separated list of assigned employees (using full name, alias or login email of the employee)",
+                "required": false,
+                "type": "string"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "OK",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Qualer.Api.Models.ServiceOrders.To.ClientOrderResponseModel"
+                    }
+                }
+            },
+            "400": {
+                "description": "- Missing status\r\n- Invalid status"
+            }
+        }
+    },
+    "clean_name": "ServiceOrders_GetWorkOrders",
+    "op_id": "ServiceOrders_GetWorkOrders",
+    "params": [
+        {
+            "name": "status",
+            "in": "query",
+            "description": "Comma separated list of statuses.\r\n             Order statuses: WaitingForApproval, Submitted, Processing, QualityControl, Cancelled, WaitingForClientSignOff, Completed, Denied, Delayed, Scheduling, Closed, WaitingForVendorSignOff, DelayedApproval.\r\n             Payment statuses: NotInvoiced, Invoiced, PartiallyPaid, PaidInFull, NoCharge, Overpaid.\r\n             Shipment statuses: Delivered, Shipped, PartialShipment, NotShipped, PickUp, OnSite.",
+            "required": false,
+            "type": "string"
+        },
+        {
+            "name": "companyId",
+            "in": "query",
+            "description": "Filter by Client Company ID",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        {
+            "name": "from",
+            "in": "query",
+            "description": "Retrieve Work Orders where LastUpdatedOn greater than From parameter",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        {
+            "name": "to",
+            "in": "query",
+            "description": "Retrieve Work Orders where LastUpdatedOn less than To parameter",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        {
+            "name": "modifiedAfter",
+            "in": "query",
+            "description": "Retrieve Work Orders where LastUpdatedOn greater than ModifiedAfter parameter",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        {
+            "name": "workOrderNumber",
+            "in": "query",
+            "description": "Filter by WorkOrderNumber",
+            "required": false,
+            "type": "string"
+        },
+        {
+            "name": "assignedEmployees",
+            "in": "query",
+            "description": "Comma separated list of assigned employees (using full name, alias or login email of the employee)",
+            "required": false,
+            "type": "string"
+        }
+    ],
+    "param_names": [
+        "Status",
+        "CompanyId",
+        "From",
+        "To",
+        "ModifiedAfter",
+        "WorkOrderNumber",
+        "AssignedEmployees"
+    ],
+    "path_params": [],
+    "query_params": [
+        "status",
+        "companyId",
+        "from",
+        "to",
+        "modifiedAfter",
+        "workOrderNumber",
+        "assignedEmployees"
+    ],
+    "excel_path_params": [],
+    "excel_query_params": [
+        "Status",
+        "CompanyId",
+        "From",
+        "To",
+        "ModifiedAfter",
+        "WorkOrderNumber",
+        "AssignedEmployees"
+    ],
+    "url": "https://jgiquality.qualer.com/api/service/workorders",
+    "relative_url": "api/service/workorders"
+}

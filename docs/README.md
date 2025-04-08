@@ -1,253 +1,255 @@
 # 📖 Qualer API Documentation Index
 
-This index lists all documented `GET` endpoints, grouped by tag.
+This index lists all `GET` endpoints, grouped by tag.
 
 ## Account
 
-- [GetEmployeeMessage](./Account_GetEmployeeMessage.md)
-- [GetEmployeeMessages](./Account_GetEmployeeMessages.md)
+- [GetEmployeeMessageByMessageId](Account/GetEmployeeMessageByMessageId.md)
+- [GetEmployeeMessages](Account/GetEmployeeMessages.md)
 
 ## AssetAttributes
 
-- [GetAssetAttributes](./AssetAttributes_GetAssetAttributes.md)
+- [GetAssetAttributesByAssetId](AssetAttributes/GetAssetAttributesByAssetId.md)
 
 ## AssetMaintenancePlans
 
-- [GetMaintenancePlan](./AssetMaintenancePlans_GetMaintenancePlan.md)
-- [GetMaintenancePlans](./AssetMaintenancePlans_GetMaintenancePlans.md)
+- [GetMaintenancePlanByAssetId](AssetMaintenancePlans/GetMaintenancePlanByAssetId.md)
+- [GetMaintenancePlansByAssetId](AssetMaintenancePlans/GetMaintenancePlansByAssetId.md)
 
 ## AssetMeasurements
 
-- [GetMeasurementsByAsset](./AssetMeasurements_GetMeasurementsByAsset.md)
+- [GetMeasurementsByAssetByAssetId](AssetMeasurements/GetMeasurementsByAssetByAssetId.md)
 
 ## AssetPools
 
-- [Get](./AssetPools_Get.md)
-- [GetAll](./AssetPools_GetAll.md)
+- [GetAll](AssetPools/GetAll.md)
+- [GetById](AssetPools/GetById.md)
 
 ## AssetReservation
 
-- [Get](./AssetReservation_Get.md)
+- [Get](AssetReservation/Get.md)
 
 ## AssetServiceForecast
 
-- [GetAssetForecastList](./AssetServiceForecast_GetAssetForecastList.md)
-- [GetClientAssetForecastList](./AssetServiceForecast_GetClientAssetForecastList.md)
+- [GetAssetForecastList](AssetServiceForecast/GetAssetForecastList.md)
+- [GetClientAssetForecastListByClientCompanyId](AssetServiceForecast/GetClientAssetForecastListByClientCompanyId.md)
 
 ## AssetServiceRecords
 
-- [DocumentList](./AssetServiceRecords_DocumentList.md)
-- [DownloadDocument](./AssetServiceRecords_DownloadDocument.md)
-- [DownloadDocuments](./AssetServiceRecords_DownloadDocuments.md)
-- [GetAssetServiceRecord](./AssetServiceRecords_GetAssetServiceRecord.md)
-- [GetAssetServiceRecords](./AssetServiceRecords_GetAssetServiceRecords.md)
-- [GetAssetServiceRecordsByAsset](./AssetServiceRecords_GetAssetServiceRecordsByAsset.md)
+- [DocumentListByAssetServiceRecordId](AssetServiceRecords/DocumentListByAssetServiceRecordId.md)
+- [DownloadDocumentByAssetServiceRecordId](AssetServiceRecords/DownloadDocumentByAssetServiceRecordId.md)
+- [DownloadDocumentsByAssetServiceRecordId](AssetServiceRecords/DownloadDocumentsByAssetServiceRecordId.md)
+- [GetAssetServiceRecordByAssetServiceRecordId](AssetServiceRecords/GetAssetServiceRecordByAssetServiceRecordId.md)
+- [GetAssetServiceRecords](AssetServiceRecords/GetAssetServiceRecords.md)
+- [GetAssetServiceRecordsByAssetByAssetId](AssetServiceRecords/GetAssetServiceRecordsByAssetByAssetId.md)
 
 ## Assets
 
-- [GetAllAssets](./Assets_GetAllAssets.md)
-- [GetAsset](./Assets_GetAsset.md)
-- [GetAssetByAssetPool](./Assets_GetAssetByAssetPool.md)
-- [GetAssetByAssetTag](./Assets_GetAssetByAssetTag.md)
-- [GetAssetByAttribute](./Assets_GetAssetByAttribute.md)
-- [GetAssetByBarcode](./Assets_GetAssetByBarcode.md)
-- [GetAssetBySerialNumber](./Assets_GetAssetBySerialNumber.md)
-- [GetAssetImages](./Assets_GetAssetImages.md)
-- [GetAssetManagerCounters](./Assets_GetAssetManagerCounters.md)
-- [GetAssetManagerList](./Assets_GetAssetManagerList.md)
-- [GetAssetsByEquipmentId](./Assets_GetAssetsByEquipmentId.md)
+- [GetAllAssets](Assets/GetAllAssets.md)
+- [GetAssetByAssetPoolByAssetPoolId](Assets/GetAssetByAssetPoolByAssetPoolId.md)
+- [GetAssetByAssetTagByAssetTag](Assets/GetAssetByAssetTagByAssetTag.md)
+- [GetAssetByAttribute](Assets/GetAssetByAttribute.md)
+- [GetAssetByBarcodeByBarcode](Assets/GetAssetByBarcodeByBarcode.md)
+- [GetAssetById](Assets/GetAssetById.md)
+- [GetAssetBySerialNumberBySerialNumber](Assets/GetAssetBySerialNumberBySerialNumber.md)
+- [GetAssetImagesById](Assets/GetAssetImagesById.md)
+- [GetAssetManagerCounters](Assets/GetAssetManagerCounters.md)
+- [GetAssetManagerList](Assets/GetAssetManagerList.md)
+- [GetAssetsByEquipmentIdByEquipmentId](Assets/GetAssetsByEquipmentIdByEquipmentId.md)
 
 ## ClientAssetAttributes
 
-- [GetAssetAttributes](./ClientAssetAttributes_GetAssetAttributes.md)
+- [GetAssetAttributesByAssetId](ClientAssetAttributes/GetAssetAttributesByAssetId.md)
 
 ## ClientAssetServiceRecords
 
-- [GetAssetServiceRecordsByAsset](./ClientAssetServiceRecords_GetAssetServiceRecordsByAsset.md)
+- [GetAssetServiceRecordsByAssetByAssetId](ClientAssetServiceRecords/GetAssetServiceRecordsByAssetByAssetId.md)
 
 ## ClientAssets
 
-- [GetAllAssets](./ClientAssets_GetAllAssets.md)
-- [GetAsset](./ClientAssets_GetAsset.md)
-- [GetAssetCounters](./ClientAssets_GetAssetCounters.md)
-- [GetAssetManagerList](./ClientAssets_GetAssetManagerList.md)
-- [GetAssets](./ClientAssets_GetAssets.md)
+- [GetAllAssets](ClientAssets/GetAllAssets.md)
+- [GetAssetByAssetId](ClientAssets/GetAssetByAssetId.md)
+- [GetAssetCountersByClientCompanyId](ClientAssets/GetAssetCountersByClientCompanyId.md)
+- [GetAssetManagerListByClientCompanyId](ClientAssets/GetAssetManagerListByClientCompanyId.md)
+- [GetAssetsByClientCompanyId](ClientAssets/GetAssetsByClientCompanyId.md)
 
 ## ClientAttribute
 
-- [GetClientAttributes](./ClientAttribute_GetClientAttributes.md)
+- [GetClientAttributesByClientCompanyId](ClientAttribute/GetClientAttributesByClientCompanyId.md)
 
 ## ClientEmployees
 
-- [GetEmployee](./ClientEmployees_GetEmployee.md)
-- [GetEmployees](./ClientEmployees_GetEmployees.md)
+- [GetEmployeeByEmployeeId](ClientEmployees/GetEmployeeByEmployeeId.md)
+- [GetEmployeesByClientCompanyId](ClientEmployees/GetEmployeesByClientCompanyId.md)
 
 ## ClientMaintenancePlans
 
-- [GetMaintenancePlanAssets](./ClientMaintenancePlans_GetMaintenancePlanAssets.md)
-- [GetMaintenancePlans](./ClientMaintenancePlans_GetMaintenancePlans.md)
+- [GetMaintenancePlanAssetsByMaintenancePlanId](ClientMaintenancePlans/GetMaintenancePlanAssetsByMaintenancePlanId.md)
+- [GetMaintenancePlansByClientCompanyId](ClientMaintenancePlans/GetMaintenancePlansByClientCompanyId.md)
 
 ## ClientSite
 
-- [GetClientSites](./ClientSite_GetClientSites.md)
+- [GetClientSitesByClientCompanyId](ClientSite/GetClientSitesByClientCompanyId.md)
 
 ## Clients
 
-- [Get](./Clients_Get.md)
-- [GetAll](./Clients_GetAll.md)
+- [GetAll](Clients/GetAll.md)
+- [GetByClientCompanyId](Clients/GetByClientCompanyId.md)
 
 ## Common
 
-- [CultureList](./Common_CultureList.md)
-- [CultureUiList](./Common_CultureUiList.md)
-- [GetCompanySettings](./Common_GetCompanySettings.md)
+- [CultureList](Common/CultureList.md)
+- [CultureUiList](Common/CultureUiList.md)
+- [GetCompanySettingsBySettingKey](Common/GetCompanySettingsBySettingKey.md)
 
 ## Company
 
-- [Departments](./Company_Departments.md)
-- [Lookups](./Company_Lookups.md)
-- [SiteRooms](./Company_SiteRooms.md)
-- [Sites](./Company_Sites.md)
+- [Departments](Company/Departments.md)
+- [LookupsByLookupType](Company/LookupsByLookupType.md)
+- [SiteRoomsById](Company/SiteRoomsById.md)
+- [Sites](Company/Sites.md)
 
 ## EmployeeFilterPreference
 
-- [GetEmployeeFilterPreferences](./EmployeeFilterPreference_GetEmployeeFilterPreferences.md)
+- [GetEmployeeFilterPreferences](EmployeeFilterPreference/GetEmployeeFilterPreferences.md)
 
 ## EmployeePreference
 
-- [Get](./EmployeePreference_Get.md)
+- [GetByElementPage](EmployeePreference/GetByElementPage.md)
 
 ## Employees
 
-- [GetEmployee](./Employees_GetEmployee.md)
-- [GetEmployees](./Employees_GetEmployees.md)
+- [GetEmployeeByEmployeeId](Employees/GetEmployeeByEmployeeId.md)
+- [GetEmployees](Employees/GetEmployees.md)
 
 ## Environments
 
-- [Get](./Environments_Get.md)
+- [GetById](Environments/GetById.md)
 
 ## MaintenancePlans
 
-- [GetMaintenancePlanAssets](./MaintenancePlans_GetMaintenancePlanAssets.md)
-- [GetMaintenancePlans](./MaintenancePlans_GetMaintenancePlans.md)
+- [GetMaintenancePlanAssetsByMaintenancePlanId](MaintenancePlans/GetMaintenancePlanAssetsByMaintenancePlanId.md)
+- [GetMaintenancePlans](MaintenancePlans/GetMaintenancePlans.md)
 
 ## Product
 
-- [GetInventoryCount](./Product_GetInventoryCount.md)
-- [GetManufacturers](./Product_GetManufacturers.md)
-- [GetProduct](./Product_GetProduct.md)
+- [GetInventoryCount](Product/GetInventoryCount.md)
+- [GetManufacturers](Product/GetManufacturers.md)
+- [GetProductByProductId](Product/GetProductByProductId.md)
 
 ## Reference
 
-- [GetMeasurementQuantities](./Reference_GetMeasurementQuantities.md)
-- [GetUnitsOfMeasure](./Reference_GetUnitsOfMeasure.md)
+- [GetMeasurementQuantities](Reference/GetMeasurementQuantities.md)
+- [GetUnitsOfMeasure](Reference/GetUnitsOfMeasure.md)
 
 ## ReportDatasets
 
-- [ChannelUniformityByOrder](./ReportDatasets_ChannelUniformityByOrder.md)
-- [GetAllMeasurements](./ReportDatasets_GetAllMeasurements.md)
-- [GetAllMeasurementsByOrder](./ReportDatasets_GetAllMeasurementsByOrder.md)
-- [GetAsFoundMeasurements](./ReportDatasets_GetAsFoundMeasurements.md)
-- [GetAsFoundMeasurementsByOrder](./ReportDatasets_GetAsFoundMeasurementsByOrder.md)
-- [GetAsLeftMeasurements](./ReportDatasets_GetAsLeftMeasurements.md)
-- [GetAsLeftMeasurementsByOrder](./ReportDatasets_GetAsLeftMeasurementsByOrder.md)
-- [GetAssetAttributes](./ReportDatasets_GetAssetAttributes.md)
-- [GetAssetServiceRecords](./ReportDatasets_GetAssetServiceRecords.md)
-- [GetChannelResults](./ReportDatasets_GetChannelResults.md)
-- [GetChannelResultsByOrder](./ReportDatasets_GetChannelResultsByOrder.md)
-- [GetChannelUniformity](./ReportDatasets_GetChannelUniformity.md)
-- [GetClientAttributes](./ReportDatasets_GetClientAttributes.md)
-- [GetCompanyCertifications](./ReportDatasets_GetCompanyCertifications.md)
-- [GetExternalDataReports](./ReportDatasets_GetExternalDataReports.md)
-- [GetMeasurementCharts](./ReportDatasets_GetMeasurementCharts.md)
-- [GetMeasurementFields](./ReportDatasets_GetMeasurementFields.md)
-- [GetMeasurementFieldsByOrder](./ReportDatasets_GetMeasurementFieldsByOrder.md)
-- [GetOrderItemDocuments](./ReportDatasets_GetOrderItemDocuments.md)
-- [GetOrderItemImages](./ReportDatasets_GetOrderItemImages.md)
-- [GetReferenceStandards](./ReportDatasets_GetReferenceStandards.md)
-- [GetReferenceStandardsByOrder](./ReportDatasets_GetReferenceStandardsByOrder.md)
-- [GetServiceOrderAssignees](./ReportDatasets_GetServiceOrderAssignees.md)
-- [GetServiceOrderCharges](./ReportDatasets_GetServiceOrderCharges.md)
-- [GetServiceOrderItemComponents](./ReportDatasets_GetServiceOrderItemComponents.md)
-- [GetServiceOrderItemComponentsByOrder](./ReportDatasets_GetServiceOrderItemComponentsByOrder.md)
-- [GetServiceOrderItemFieldsByOrder](./ReportDatasets_GetServiceOrderItemFieldsByOrder.md)
-- [GetServiceOrderItemOptions](./ReportDatasets_GetServiceOrderItemOptions.md)
-- [GetServiceOrderItemStatusHistoryAsync](./ReportDatasets_GetServiceOrderItemStatusHistoryAsync.md)
-- [GetServiceOrderItemTasksByOrder](./ReportDatasets_GetServiceOrderItemTasksByOrder.md)
-- [GetServiceOrderItemTasksByOrderItems](./ReportDatasets_GetServiceOrderItemTasksByOrderItems.md)
-- [GetServiceOrderItems](./ReportDatasets_GetServiceOrderItems.md)
-- [GetServiceOrderItemsByOrder](./ReportDatasets_GetServiceOrderItemsByOrder.md)
-- [GetServiceOrderTasks](./ReportDatasets_GetServiceOrderTasks.md)
-- [GetServiceOrders](./ReportDatasets_GetServiceOrders.md)
-- [GetToolAttributes](./ReportDatasets_GetToolAttributes.md)
-- [GetToolRangeAttributes](./ReportDatasets_GetToolRangeAttributes.md)
+- [ChannelUniformityByOrderByServiceOrderId](ReportDatasets/ChannelUniformityByOrderByServiceOrderId.md)
+- [GetAllMeasurementsByOrderByServiceOrderId](ReportDatasets/GetAllMeasurementsByOrderByServiceOrderId.md)
+- [GetAllMeasurementsByServiceOrderItemId](ReportDatasets/GetAllMeasurementsByServiceOrderItemId.md)
+- [GetAsFoundMeasurementsByOrderByServiceOrderId](ReportDatasets/GetAsFoundMeasurementsByOrderByServiceOrderId.md)
+- [GetAsFoundMeasurementsByServiceOrderItemId](ReportDatasets/GetAsFoundMeasurementsByServiceOrderItemId.md)
+- [GetAsLeftMeasurementsByOrderByServiceOrderId](ReportDatasets/GetAsLeftMeasurementsByOrderByServiceOrderId.md)
+- [GetAsLeftMeasurementsByServiceOrderItemId](ReportDatasets/GetAsLeftMeasurementsByServiceOrderItemId.md)
+- [GetAssetAttributesByServiceOrderItemId](ReportDatasets/GetAssetAttributesByServiceOrderItemId.md)
+- [GetAssetServiceRecordsByServiceOrderItemId](ReportDatasets/GetAssetServiceRecordsByServiceOrderItemId.md)
+- [GetChannelResultsByOrderByServiceOrderId](ReportDatasets/GetChannelResultsByOrderByServiceOrderId.md)
+- [GetChannelResultsByServiceOrderItemId](ReportDatasets/GetChannelResultsByServiceOrderItemId.md)
+- [GetChannelUniformityByServiceOrderItemId](ReportDatasets/GetChannelUniformityByServiceOrderItemId.md)
+- [GetClientAttributesByServiceOrderId](ReportDatasets/GetClientAttributesByServiceOrderId.md)
+- [GetCompanyCertifications](ReportDatasets/GetCompanyCertifications.md)
+- [GetExternalDataReportsByServiceOrderId](ReportDatasets/GetExternalDataReportsByServiceOrderId.md)
+- [GetMeasurementChartsByServiceOrderItemId](ReportDatasets/GetMeasurementChartsByServiceOrderItemId.md)
+- [GetMeasurementFieldsByOrderByServiceOrderId](ReportDatasets/GetMeasurementFieldsByOrderByServiceOrderId.md)
+- [GetMeasurementFieldsByServiceOrderItemId](ReportDatasets/GetMeasurementFieldsByServiceOrderItemId.md)
+- [GetOrderItemDocumentsByServiceOrderItemId](ReportDatasets/GetOrderItemDocumentsByServiceOrderItemId.md)
+- [GetOrderItemImagesByServiceOrderItemId](ReportDatasets/GetOrderItemImagesByServiceOrderItemId.md)
+- [GetReferenceStandardsByOrderByServiceOrderId](ReportDatasets/GetReferenceStandardsByOrderByServiceOrderId.md)
+- [GetReferenceStandardsByServiceOrderItemId](ReportDatasets/GetReferenceStandardsByServiceOrderItemId.md)
+- [GetServiceOrderAssigneesByServiceOrderId](ReportDatasets/GetServiceOrderAssigneesByServiceOrderId.md)
+- [GetServiceOrderChargesByServiceOrderId](ReportDatasets/GetServiceOrderChargesByServiceOrderId.md)
+- [GetServiceOrderItemComponentsByOrderByServiceOrderId](ReportDatasets/GetServiceOrderItemComponentsByOrderByServiceOrderId.md)
+- [GetServiceOrderItemComponentsByServiceOrderItemId](ReportDatasets/GetServiceOrderItemComponentsByServiceOrderItemId.md)
+- [GetServiceOrderItemFieldsByOrderByServiceOrderId](ReportDatasets/GetServiceOrderItemFieldsByOrderByServiceOrderId.md)
+- [GetServiceOrderItemOptionsByServiceOrderItemId](ReportDatasets/GetServiceOrderItemOptionsByServiceOrderItemId.md)
+- [GetServiceOrderItemsByOrderByServiceOrderId](ReportDatasets/GetServiceOrderItemsByOrderByServiceOrderId.md)
+- [GetServiceOrderItemsByServiceOrderItemId](ReportDatasets/GetServiceOrderItemsByServiceOrderItemId.md)
+- [GetServiceOrderItemStatusHistoryAsyncByServiceOrderItemId](ReportDatasets/GetServiceOrderItemStatusHistoryAsyncByServiceOrderItemId.md)
+- [GetServiceOrderItemTasksByOrderByServiceOrderId](ReportDatasets/GetServiceOrderItemTasksByOrderByServiceOrderId.md)
+- [GetServiceOrderItemTasksByOrderItemsByServiceOrderItemId](ReportDatasets/GetServiceOrderItemTasksByOrderItemsByServiceOrderItemId.md)
+- [GetServiceOrdersByServiceOrderId](ReportDatasets/GetServiceOrdersByServiceOrderId.md)
+- [GetServiceOrderTasksByServiceOrderId](ReportDatasets/GetServiceOrderTasksByServiceOrderId.md)
+- [GetToolAttributesByServiceOrderItemId](ReportDatasets/GetToolAttributesByServiceOrderItemId.md)
+- [GetToolRangeAttributesByServiceOrderItemId](ReportDatasets/GetToolRangeAttributesByServiceOrderItemId.md)
 
 ## ServiceOrderDocuments
 
-- [GetDocument](./ServiceOrderDocuments_GetDocument.md)
-- [GetDocumentList](./ServiceOrderDocuments_GetDocumentList.md)
-- [GetDocuments](./ServiceOrderDocuments_GetDocuments.md)
-- [GetDocumentsList](./ServiceOrderDocuments_GetDocumentsList.md)
+- [GetDocumentByGuid](ServiceOrderDocuments/GetDocumentByGuid.md)
+- [GetDocumentListByFrom](ServiceOrderDocuments/GetDocumentListByFrom.md)
+- [GetDocumentsByServiceOrderId](ServiceOrderDocuments/GetDocumentsByServiceOrderId.md)
+- [GetDocumentsListByServiceOrderId](ServiceOrderDocuments/GetDocumentsListByServiceOrderId.md)
 
 ## ServiceOrderItemDocuments
 
-- [GetDocumentList](./ServiceOrderItemDocuments_GetDocumentList.md)
-- [GetDocuments](./ServiceOrderItemDocuments_GetDocuments.md)
-- [GetDocumentsList](./ServiceOrderItemDocuments_GetDocumentsList.md)
+- [GetDocumentListByFrom](ServiceOrderItemDocuments/GetDocumentListByFrom.md)
+- [GetDocumentsByServiceOrderItemId](ServiceOrderItemDocuments/GetDocumentsByServiceOrderItemId.md)
+- [GetDocumentsListByServiceOrderItemId](ServiceOrderItemDocuments/GetDocumentsListByServiceOrderItemId.md)
 
 ## ServiceOrderItemMeasurements
 
-- [GetMeasurementForm](./ServiceOrderItemMeasurements_GetMeasurementForm.md)
-- [GetMeasurementsByAsset](./ServiceOrderItemMeasurements_GetMeasurementsByAsset.md)
+- [GetMeasurementFormByWorkItemId](ServiceOrderItemMeasurements/GetMeasurementFormByWorkItemId.md)
+- [GetMeasurementsByAssetByAssetId](ServiceOrderItemMeasurements/GetMeasurementsByAssetByAssetId.md)
 
 ## ServiceOrderItemParts
 
-- [GetWorkItemParts](./ServiceOrderItemParts_GetWorkItemParts.md)
+- [GetWorkItemPartsByWorkItemId](ServiceOrderItemParts/GetWorkItemPartsByWorkItemId.md)
 
 ## ServiceOrderItemTasks
 
-- [GetWorkItemTask](./ServiceOrderItemTasks_GetWorkItemTask.md)
-- [GetWorkItemTasks](./ServiceOrderItemTasks_GetWorkItemTasks.md)
+- [GetWorkItemTaskByWorkItemId](ServiceOrderItemTasks/GetWorkItemTaskByWorkItemId.md)
+- [GetWorkItemTasksByWorkItemId](ServiceOrderItemTasks/GetWorkItemTasksByWorkItemId.md)
 
 ## ServiceOrderItems
 
-- [GetWorkItem](./ServiceOrderItems_GetWorkItem.md)
-- [GetWorkItemCharges](./ServiceOrderItems_GetWorkItemCharges.md)
-- [GetWorkItemImage](./ServiceOrderItems_GetWorkItemImage.md)
-- [GetWorkItemImages](./ServiceOrderItems_GetWorkItemImages.md)
-- [GetWorkItems](./ServiceOrderItems_GetWorkItems.md)
+- [GetWorkItemByWorkItemId](ServiceOrderItems/GetWorkItemByWorkItemId.md)
+- [GetWorkItemChargesByWorkItemId](ServiceOrderItems/GetWorkItemChargesByWorkItemId.md)
+- [GetWorkItemImageByWorkItemId](ServiceOrderItems/GetWorkItemImageByWorkItemId.md)
+- [GetWorkItemImagesByWorkItemId](ServiceOrderItems/GetWorkItemImagesByWorkItemId.md)
+- [GetWorkItems](ServiceOrderItems/GetWorkItems.md)
+- [GetWorkItemsByServiceOrderId](ServiceOrderItems/GetWorkItemsByServiceOrderId.md)
 
 ## ServiceOrderMetadata
 
-- [Get](./ServiceOrderMetadata_Get.md)
+- [GetByServiceOrderId](ServiceOrderMetadata/GetByServiceOrderId.md)
 
 ## ServiceOrderParts
 
-- [GetWorkOrderParts](./ServiceOrderParts_GetWorkOrderParts.md)
+- [GetWorkOrderPartsByServiceOrderId](ServiceOrderParts/GetWorkOrderPartsByServiceOrderId.md)
 
 ## ServiceOrderPayments
 
-- [GetAllWorkOrderPayments](./ServiceOrderPayments_GetAllWorkOrderPayments.md)
-- [GetWorkOrderPayment](./ServiceOrderPayments_GetWorkOrderPayment.md)
+- [GetAllWorkOrderPaymentsByServiceOrderId](ServiceOrderPayments/GetAllWorkOrderPaymentsByServiceOrderId.md)
+- [GetWorkOrderPaymentByServiceOrderPaymentId](ServiceOrderPayments/GetWorkOrderPaymentByServiceOrderPaymentId.md)
 
 ## ServiceOrderTasks
 
-- [GetWorkOrderTasks](./ServiceOrderTasks_GetWorkOrderTasks.md)
+- [GetWorkOrderTasksByServiceOrderId](ServiceOrderTasks/GetWorkOrderTasksByServiceOrderId.md)
 
 ## ServiceOrders
 
-- [GetAssignments](./ServiceOrders_GetAssignments.md)
-- [GetCharges](./ServiceOrders_GetCharges.md)
-- [GetOrderStatus](./ServiceOrders_GetOrderStatus.md)
-- [GetWorkOrder](./ServiceOrders_GetWorkOrder.md)
-- [GetWorkOrders](./ServiceOrders_GetWorkOrders.md)
+- [GetAssignmentsByServiceOrderId](ServiceOrders/GetAssignmentsByServiceOrderId.md)
+- [GetChargesByServiceOrderId](ServiceOrders/GetChargesByServiceOrderId.md)
+- [GetOrderStatusByServiceOrderId](ServiceOrders/GetOrderStatusByServiceOrderId.md)
+- [GetWorkOrderByServiceOrderId](ServiceOrders/GetWorkOrderByServiceOrderId.md)
+- [GetWorkOrders](ServiceOrders/GetWorkOrders.md)
+- [GetWorkOrdersByEmployeeId](ServiceOrders/GetWorkOrdersByEmployeeId.md)
 
 ## ServicePricing
 
-- [Get](./ServicePricing_Get.md)
+- [GetByServicePricingId](ServicePricing/GetByServicePricingId.md)
 
 ## Vendors
 
-- [Get](./Vendors_Get.md)
-- [GetAll](./Vendors_GetAll.md)
+- [GetAll](Vendors/GetAll.md)
+- [GetByVendorCompanyId](Vendors/GetByVendorCompanyId.md)
 
