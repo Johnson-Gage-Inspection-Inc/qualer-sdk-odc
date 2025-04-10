@@ -1,0 +1,109 @@
+{
+    "tag": "Vendors",
+    "path": "/api/service/vendors",
+    "method": "get",
+    "details": {
+        "tags": [
+            "Vendors"
+        ],
+        "operationId": "Vendors_GetAll",
+        "consumes": [],
+        "produces": [
+            "application/json",
+            "text/json",
+            "application/xml",
+            "text/xml"
+        ],
+        "parameters": [
+            {
+                "name": "model.accountNumberText",
+                "in": "query",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "model.companyName",
+                "in": "query",
+                "required": false,
+                "type": "string"
+            },
+            {
+                "name": "model.take",
+                "in": "query",
+                "required": false,
+                "type": "integer",
+                "format": "int32"
+            },
+            {
+                "name": "model.modifiedAfter",
+                "in": "query",
+                "required": false,
+                "type": "string",
+                "format": "date-time"
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "OK",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Qualer.Api.Models.Vendors.To.VendorCompanyResponseModel"
+                    }
+                }
+            }
+        }
+    },
+    "clean_name": "Vendors_GetAll",
+    "op_id": "Vendors_GetAll",
+    "params": [
+        {
+            "name": "model.accountNumberText",
+            "in": "query",
+            "required": false,
+            "type": "string"
+        },
+        {
+            "name": "model.companyName",
+            "in": "query",
+            "required": false,
+            "type": "string"
+        },
+        {
+            "name": "model.take",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        {
+            "name": "model.modifiedAfter",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        }
+    ],
+    "param_names": [
+        "Model.accountNumberText",
+        "Model.companyName",
+        "Model.take",
+        "Model.modifiedAfter"
+    ],
+    "path_params": [],
+    "query_params": [
+        "model.accountNumberText",
+        "model.companyName",
+        "model.take",
+        "model.modifiedAfter"
+    ],
+    "excel_path_params": [],
+    "excel_query_params": [
+        "Model.accountNumberText",
+        "Model.companyName",
+        "Model.take",
+        "Model.modifiedAfter"
+    ],
+    "url": "https://jgiquality.qualer.com/api/service/vendors",
+    "relative_url": "api/service/vendors"
+}
