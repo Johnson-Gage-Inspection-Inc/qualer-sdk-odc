@@ -100,13 +100,13 @@ def generate_mashup_formula(ep):
     # Path parameters: no try/otherwise
     for _, excel, safe_excel in required_path_params:
         lines.append(
-            f'{safe_excel} = Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1],'
+            f'{safe_excel} = Text.From(Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1]),'
         )
 
     # Query parameters: always wrapped in try
     for _, excel, safe_excel in required_query_params + optional_query_params:
         lines.append(
-            f'{safe_excel} = try Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1] otherwise "",'
+            f'{safe_excel} = try Text.From(Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1]) otherwise "",'
         )
 
 
@@ -123,7 +123,7 @@ def generate_mashup_formula(ep):
     url = ep["relative_url"]
     for orig, excel, safe_excel in required_path_params:
         pattern = re.compile(rf"\{{{orig}\}}", re.IGNORECASE)
-        url = pattern.sub(f'" & Text.From({safe_excel}) & "', url)
+        url = pattern.sub(f'" & {safe_excel} & "', url)
 
 
     if combine_names:
