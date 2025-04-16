@@ -1,6 +1,6 @@
 # `Company_Departments`
 > 
-    
+
 **URL Template:**
 `GET /api/company/departments`
 

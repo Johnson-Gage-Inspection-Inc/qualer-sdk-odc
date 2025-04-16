@@ -1,6 +1,6 @@
 # `Clients_GetByClientCompanyId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/clients/{clientCompanyId}`
 

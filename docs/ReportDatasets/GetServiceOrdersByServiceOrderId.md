@@ -1,6 +1,6 @@
 # `ReportDatasets_GetServiceOrdersByServiceOrderId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/ServiceOrders/{serviceOrderId}`
 

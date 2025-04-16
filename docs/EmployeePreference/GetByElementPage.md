@@ -1,6 +1,6 @@
 # `EmployeePreference_GetByElementPage`
 > 
-    
+
 **URL Template:**
 `GET /api/user/preferences/{elementPage}`
 

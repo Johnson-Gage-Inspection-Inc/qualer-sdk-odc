@@ -1,6 +1,6 @@
 # `AssetServiceRecords_DownloadDocumentByAssetServiceRecordId`
 > 
-    
+
 **URL Template:**
 `GET /api/assetservicerecords/{AssetServiceRecordId}/documents/{FileName}`
 

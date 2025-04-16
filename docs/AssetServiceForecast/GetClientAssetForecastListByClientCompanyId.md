@@ -1,6 +1,6 @@
 # `AssetServiceForecast_GetClientAssetForecastListByClientCompanyId`
 > 
-    
+
 **URL Template:**
 `GET /api/assetserviceforecast/client/{clientCompanyId}`
 

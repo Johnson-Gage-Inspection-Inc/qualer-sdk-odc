@@ -1,6 +1,6 @@
 # `AssetMaintenancePlans_GetMaintenancePlanByAssetId`
 > 
-    
+
 **URL Template:**
 `GET /api/assets/{assetId}/plans/{maintenancePlanId}`
 

@@ -1,6 +1,6 @@
 # `Assets_GetAssetById`
 > 
-    
+
 **URL Template:**
 `GET /api/assets/{id}`
 

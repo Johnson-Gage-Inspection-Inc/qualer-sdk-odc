@@ -1,6 +1,6 @@
 # `Product_GetProductByProductId`
 > 
-    
+
 **URL Template:**
 `GET /api/products/{productId}`
 

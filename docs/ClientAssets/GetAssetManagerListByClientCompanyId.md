@@ -1,6 +1,6 @@
 # `ClientAssets_GetAssetManagerListByClientCompanyId`
 > GetAssetManagerList
-    
+
 **URL Template:**
 `GET /api/service/clients/{clientCompanyId}/assets/byfilter`
 

@@ -1,6 +1,6 @@
 # `Company_LookupsByLookupType`
 > 
-    
+
 **URL Template:**
 `GET /api/company/lookups`
 

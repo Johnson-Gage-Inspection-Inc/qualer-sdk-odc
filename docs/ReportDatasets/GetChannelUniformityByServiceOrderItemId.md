@@ -1,6 +1,6 @@
 # `ReportDatasets_GetChannelUniformityByServiceOrderItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/ChannelUniformity/{serviceOrderItemId}`
 

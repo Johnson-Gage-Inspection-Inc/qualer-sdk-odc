@@ -1,6 +1,6 @@
 # `ServiceOrderMetadata_GetByServiceOrderId`
 > Get list of metadata
-    
+
 **URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/metadata`
 

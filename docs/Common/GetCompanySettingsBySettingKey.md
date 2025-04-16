@@ -1,6 +1,6 @@
 # `Common_GetCompanySettingsBySettingKey`
 > 
-    
+
 **URL Template:**
 `GET /api/common/settings`
 

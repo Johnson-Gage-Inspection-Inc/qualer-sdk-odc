@@ -1,6 +1,6 @@
 # `Assets_GetAssetBySerialNumberBySerialNumber`
 > 
-    
+
 **URL Template:**
 `GET /api/assets/byserialnumber/{serialNumber}`
 

@@ -1,6 +1,6 @@
 # `ClientSite_GetClientSitesByClientCompanyId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/clients/{clientCompanyId}/sites`
 

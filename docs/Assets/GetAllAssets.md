@@ -1,6 +1,6 @@
 # `Assets_GetAllAssets`
 > 
-    
+
 **URL Template:**
 `GET /api/assets`
 

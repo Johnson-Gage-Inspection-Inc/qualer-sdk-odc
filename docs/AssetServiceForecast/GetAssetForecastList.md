@@ -1,6 +1,6 @@
 # `AssetServiceForecast_GetAssetForecastList`
 > 
-    
+
 **URL Template:**
 `GET /api/assetserviceforecast`
 

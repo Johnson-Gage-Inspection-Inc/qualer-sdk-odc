@@ -1,6 +1,6 @@
 # `ServiceOrderPayments_GetWorkOrderPaymentByServiceOrderPaymentId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/workorders/payments/{serviceOrderPaymentId}`
 

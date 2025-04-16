@@ -1,6 +1,6 @@
 # `Common_CultureUiList`
 > 
-    
+
 **URL Template:**
 `GET /api/common/cultureuilist`
 

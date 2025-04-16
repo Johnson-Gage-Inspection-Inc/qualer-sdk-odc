@@ -1,6 +1,6 @@
 # `ReportDatasets_GetAsFoundMeasurementsByServiceOrderItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/MeasurementsAsFound/{serviceOrderItemId}`
 

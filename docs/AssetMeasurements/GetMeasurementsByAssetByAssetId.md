@@ -1,6 +1,6 @@
 # `AssetMeasurements_GetMeasurementsByAssetByAssetId`
 > 
-    
+
 **URL Template:**
 `GET /api/assets/{assetId}/measurements`
 

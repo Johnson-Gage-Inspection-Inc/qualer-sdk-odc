@@ -1,6 +1,6 @@
 # `Assets_GetAssetManagerList`
 > GetAssetManagerList
-    
+
 **URL Template:**
 `GET /api/assets/byfilter`
 

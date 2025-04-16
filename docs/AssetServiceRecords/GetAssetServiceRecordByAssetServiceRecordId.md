@@ -1,6 +1,6 @@
 # `AssetServiceRecords_GetAssetServiceRecordByAssetServiceRecordId`
 > 
-    
+
 **URL Template:**
 `GET /api/assetservicerecords/{AssetServiceRecordId}`
 

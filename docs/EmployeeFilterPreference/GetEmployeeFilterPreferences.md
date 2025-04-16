@@ -1,6 +1,6 @@
 # `EmployeeFilterPreference_GetEmployeeFilterPreferences`
 > GetEmployeeFilterPreferences
-    
+
 **URL Template:**
 `GET /api/user/filters`
 

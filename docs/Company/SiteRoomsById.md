@@ -1,6 +1,6 @@
 # `Company_SiteRoomsById`
 > 
-    
+
 **URL Template:**
 `GET /api/company/sites/{id}/rooms`
 

@@ -1,6 +1,6 @@
 # `Account_GetEmployeeMessages`
 > 
-    
+
 **URL Template:**
 `GET /api/user/messages`
 

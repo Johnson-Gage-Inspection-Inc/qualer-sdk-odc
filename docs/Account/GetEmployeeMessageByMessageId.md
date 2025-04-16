@@ -1,6 +1,6 @@
 # `Account_GetEmployeeMessageByMessageId`
 > 
-    
+
 **URL Template:**
 `GET /api/user/messages/{messageId}`
 

@@ -1,6 +1,6 @@
 # `ReportDatasets_GetCompanyCertifications`
 > 
-    
+
 **URL Template:**
 `GET /api/data/CompanyCertifications`
 

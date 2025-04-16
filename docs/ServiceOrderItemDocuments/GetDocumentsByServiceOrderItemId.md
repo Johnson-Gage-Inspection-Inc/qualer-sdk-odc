@@ -1,6 +1,6 @@
 # `ServiceOrderItemDocuments_GetDocumentsByServiceOrderItemId`
 > Retrieve work order documents
-    
+
 **URL Template:**
 `GET /api/service/workitems/{serviceOrderItemId}/documents`
 

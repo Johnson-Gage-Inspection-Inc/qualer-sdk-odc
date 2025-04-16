@@ -1,6 +1,6 @@
 # `ServiceOrders_GetWorkOrdersByEmployeeId`
 > 
-    
+
 **URL Template:**
 `GET /api/employee/{employeeId}/workorders`
 

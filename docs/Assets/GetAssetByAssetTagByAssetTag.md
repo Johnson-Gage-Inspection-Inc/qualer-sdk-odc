@@ -1,6 +1,6 @@
 # `Assets_GetAssetByAssetTagByAssetTag`
 > 
-    
+
 **URL Template:**
 `GET /api/assets/byassettag/{assetTag}`
 

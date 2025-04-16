@@ -1,6 +1,6 @@
 # `Assets_GetAssetManagerCounters`
 > GetAssetManagerCounters
-    
+
 **URL Template:**
 `GET /api/assets/counters`
 

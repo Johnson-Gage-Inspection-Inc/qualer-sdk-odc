@@ -1,6 +1,6 @@
 # `ServiceOrderItemMeasurements_GetMeasurementsByAssetByAssetId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/assets/{assetId}/measurements`
 

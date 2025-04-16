@@ -1,6 +1,6 @@
 # `ServiceOrderParts_GetWorkOrderPartsByServiceOrderId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/parts`
 

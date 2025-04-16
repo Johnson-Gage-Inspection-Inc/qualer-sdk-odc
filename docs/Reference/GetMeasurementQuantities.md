@@ -1,6 +1,6 @@
 # `Reference_GetMeasurementQuantities`
 > 
-    
+
 **URL Template:**
 `GET /api/reference/MeasurementQuantities`
 

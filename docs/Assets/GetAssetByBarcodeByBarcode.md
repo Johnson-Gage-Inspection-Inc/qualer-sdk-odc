@@ -1,6 +1,6 @@
 # `Assets_GetAssetByBarcodeByBarcode`
 > 
-    
+
 **URL Template:**
 `GET /api/assets/bybarcode/{barcode}`
 

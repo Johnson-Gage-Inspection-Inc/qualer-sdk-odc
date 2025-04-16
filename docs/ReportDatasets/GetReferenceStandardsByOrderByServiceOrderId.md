@@ -1,6 +1,6 @@
 # `ReportDatasets_GetReferenceStandardsByOrderByServiceOrderId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/orders/{serviceOrderId}/ReferenceStandards`
 

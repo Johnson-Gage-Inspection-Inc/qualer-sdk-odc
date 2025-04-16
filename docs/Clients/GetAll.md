@@ -1,6 +1,6 @@
 # `Clients_GetAll`
 > 
-    
+
 **URL Template:**
 `GET /api/service/clients`
 

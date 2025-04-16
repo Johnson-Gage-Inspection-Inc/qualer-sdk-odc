@@ -1,6 +1,6 @@
 # `MaintenancePlans_GetMaintenancePlans`
 > 
-    
+
 **URL Template:**
 `GET /api/plans`
 

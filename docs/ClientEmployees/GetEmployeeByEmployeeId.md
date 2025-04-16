@@ -1,6 +1,6 @@
 # `ClientEmployees_GetEmployeeByEmployeeId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/clients/employees/{EmployeeId}`
 

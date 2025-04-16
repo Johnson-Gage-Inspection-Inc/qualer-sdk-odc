@@ -1,6 +1,6 @@
 # `AssetPools_GetAll`
 > 
-    
+
 **URL Template:**
 `GET /api/assetpools`
 

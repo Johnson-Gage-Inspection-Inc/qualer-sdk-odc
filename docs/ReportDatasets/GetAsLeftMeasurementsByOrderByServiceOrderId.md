@@ -1,6 +1,6 @@
 # `ReportDatasets_GetAsLeftMeasurementsByOrderByServiceOrderId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/orders/{serviceOrderId}/MeasurementsAsLeft`
 

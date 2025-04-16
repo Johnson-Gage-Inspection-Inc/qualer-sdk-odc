@@ -1,6 +1,6 @@
 # `ReportDatasets_GetServiceOrderItemStatusHistoryAsyncByServiceOrderItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/ServiceOrderItemStatusHistory/{serviceOrderItemId}`
 

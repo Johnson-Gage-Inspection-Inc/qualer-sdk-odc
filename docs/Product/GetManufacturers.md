@@ -1,6 +1,6 @@
 # `Product_GetManufacturers`
 > 
-    
+
 **URL Template:**
 `GET /api/manufacturers`
 

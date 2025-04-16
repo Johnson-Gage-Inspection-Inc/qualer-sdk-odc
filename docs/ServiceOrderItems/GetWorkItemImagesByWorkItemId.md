@@ -1,6 +1,6 @@
 # `ServiceOrderItems_GetWorkItemImagesByWorkItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/workitems/{workItemId}/images`
 

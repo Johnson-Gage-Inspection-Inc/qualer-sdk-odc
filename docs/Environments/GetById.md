@@ -1,6 +1,6 @@
 # `Environments_GetById`
 > 
-    
+
 **URL Template:**
 `GET /api/Environments/{id}`
 

@@ -1,6 +1,6 @@
 # `Product_GetInventoryCount`
 > 
-    
+
 **URL Template:**
 `GET /api/products/inventorycount`
 

@@ -1,6 +1,6 @@
 # `ServiceOrderItems_GetWorkItemChargesByWorkItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/workitems/{workItemId}/charges`
 

@@ -1,6 +1,6 @@
 # `Vendors_GetByVendorCompanyId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/vendors/{vendorCompanyId}`
 

@@ -1,6 +1,6 @@
 # `Vendors_GetAll`
 > 
-    
+
 **URL Template:**
 `GET /api/service/vendors`
 

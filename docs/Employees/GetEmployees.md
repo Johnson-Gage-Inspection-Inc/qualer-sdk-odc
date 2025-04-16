@@ -1,6 +1,6 @@
 # `Employees_GetEmployees`
 > 
-    
+
 **URL Template:**
 `GET /api/employees`
 

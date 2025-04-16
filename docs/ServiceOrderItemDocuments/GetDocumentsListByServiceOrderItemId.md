@@ -1,6 +1,6 @@
 # `ServiceOrderItemDocuments_GetDocumentsListByServiceOrderItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/workitems/{serviceOrderItemId}/documents/list`
 

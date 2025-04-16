@@ -1,6 +1,6 @@
 # `ClientAssets_GetAssetByAssetId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/clients/assets/{AssetId}`
 

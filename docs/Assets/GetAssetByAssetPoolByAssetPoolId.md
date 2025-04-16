@@ -1,6 +1,6 @@
 # `Assets_GetAssetByAssetPoolByAssetPoolId`
 > 
-    
+
 **URL Template:**
 `GET /api/assets/byassetpool/{assetPoolId}`
 

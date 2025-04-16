@@ -1,6 +1,6 @@
 # `ServiceOrderItems_GetWorkItems`
 > Retrieve work items
-    
+
 **URL Template:**
 `GET /api/service/workitems`
 

@@ -1,6 +1,6 @@
 # `ClientAssets_GetAllAssets`
 > 
-    
+
 **URL Template:**
 `GET /api/service/clients/assets`
 

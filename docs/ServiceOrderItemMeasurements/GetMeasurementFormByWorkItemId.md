@@ -1,6 +1,6 @@
 # `ServiceOrderItemMeasurements_GetMeasurementFormByWorkItemId`
 > Get Measurement Form.
-    
+
 **URL Template:**
 `GET /api/service/workitems/{workItemId}/form`
 

@@ -1,6 +1,6 @@
 # `ReportDatasets_GetClientAttributesByServiceOrderId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/ClientAttributes/{serviceOrderId}`
 

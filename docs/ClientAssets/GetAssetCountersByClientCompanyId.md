@@ -1,6 +1,6 @@
 # `ClientAssets_GetAssetCountersByClientCompanyId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/clients/{clientCompanyId}/counters`
 

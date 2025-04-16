@@ -1,6 +1,6 @@
 # `ServiceOrders_GetOrderStatusByServiceOrderId`
 > Gets current status and next status according to the workflow
-    
+
 **URL Template:**
 `GET /api/service/workorders/{serviceOrderId}/status`
 

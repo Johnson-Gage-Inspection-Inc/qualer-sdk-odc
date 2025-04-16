@@ -1,6 +1,6 @@
 # `ReportDatasets_GetMeasurementChartsByServiceOrderItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/MeasurementChart/{serviceOrderItemId}`
 

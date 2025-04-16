@@ -1,6 +1,6 @@
 # `Reference_GetUnitsOfMeasure`
 > 
-    
+
 **URL Template:**
 `GET /api/reference/UnitsOfMeasure`
 

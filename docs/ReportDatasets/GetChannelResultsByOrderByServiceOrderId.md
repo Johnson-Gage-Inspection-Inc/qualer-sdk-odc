@@ -1,6 +1,6 @@
 # `ReportDatasets_GetChannelResultsByOrderByServiceOrderId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/orders/{serviceOrderId}/ChannelResults`
 

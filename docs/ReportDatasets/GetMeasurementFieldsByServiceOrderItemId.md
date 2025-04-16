@@ -1,6 +1,6 @@
 # `ReportDatasets_GetMeasurementFieldsByServiceOrderItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/MeasurementFields/{serviceOrderItemId}`
 

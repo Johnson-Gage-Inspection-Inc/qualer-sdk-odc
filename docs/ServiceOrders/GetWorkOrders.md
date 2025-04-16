@@ -1,6 +1,6 @@
 # `ServiceOrders_GetWorkOrders`
 > Retrieve work orders by filters
-    
+
 **URL Template:**
 `GET /api/service/workorders`
 

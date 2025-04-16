@@ -1,6 +1,6 @@
 # `ReportDatasets_GetExternalDataReportsByServiceOrderId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/{serviceOrderId}/ExternalDataReports`
 

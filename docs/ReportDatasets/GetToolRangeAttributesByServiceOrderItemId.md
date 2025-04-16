@@ -1,6 +1,6 @@
 # `ReportDatasets_GetToolRangeAttributesByServiceOrderItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/ToolRangeAttributes/{serviceOrderItemId}`
 

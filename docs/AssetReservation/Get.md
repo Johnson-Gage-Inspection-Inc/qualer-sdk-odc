@@ -1,6 +1,6 @@
 # `AssetReservation_Get`
 > 
-    
+
 **URL Template:**
 `GET /api/assetsreservations`
 

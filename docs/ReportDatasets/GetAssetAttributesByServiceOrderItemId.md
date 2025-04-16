@@ -1,6 +1,6 @@
 # `ReportDatasets_GetAssetAttributesByServiceOrderItemId`
 > 
-    
+
 **URL Template:**
 `GET /api/data/AssetAttributes/{serviceOrderItemId}`
 

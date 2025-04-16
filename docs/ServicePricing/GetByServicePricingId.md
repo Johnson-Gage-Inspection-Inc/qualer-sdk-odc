@@ -1,6 +1,6 @@
 # `ServicePricing_GetByServicePricingId`
 > 
-    
+
 **URL Template:**
 `GET /api/service/pricing`
 
