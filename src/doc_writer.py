@@ -1,6 +1,7 @@
 from collections import defaultdict
 from pathlib import Path
 import pandas as pd
+import re
 
 
 def generate_markdown_file(docs_path, ep, spec):
@@ -16,6 +17,10 @@ def generate_markdown_file(docs_path, ep, spec):
         param_rows.append({k.capitalize(): v for k, v in param.items()})
 
     param_df = pd.DataFrame(param_rows)
+    # Prevent multi-line description(s) from breaking the table
+    if param_df.get("Description") is not None:
+        param_df["Description"] = param_df["Description"].apply(lambda text: re.sub(r"\r?\n", "<br>", str(text).strip()))
+
     param_table_md = param_df.to_markdown(index=False, tablefmt="pipe")
     print(param_table_md)
     # Description
