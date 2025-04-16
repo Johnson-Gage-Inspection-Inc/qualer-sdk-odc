@@ -3254,7 +3254,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Site id\r\nGET /api/company/sites",
+            "description": "Site id",
             "required": true,
             "type": "integer",
             "format": "int32"

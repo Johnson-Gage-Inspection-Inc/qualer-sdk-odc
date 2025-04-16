@@ -8,10 +8,9 @@
 
 > *Required parameters are bolded.*
 
-| Name   | Description            | Type    | Format   |
-|:-------|:-----------------------|:--------|:---------|
-| **Id** | Site id                | integer | int32    |
-|        | GET /api/company/sites |         |          |
+| Name   | Description   | Type    | Format   |
+|:-------|:--------------|:--------|:---------|
+| **Id** | Site id       | integer | int32    |
 
 **Description:**
 No description provided.
