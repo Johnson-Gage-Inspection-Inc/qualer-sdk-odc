@@ -2,6 +2,7 @@ from collections import defaultdict
 from pathlib import Path
 import pandas as pd
 
+
 def generate_markdown_file(docs_path, ep, spec):
     # Combined parameter table with Excel names
     param_rows = []
@@ -28,10 +29,10 @@ def generate_markdown_file(docs_path, ep, spec):
         for k, v in flat_fields.items()
     ])
     response_schema_md = df.to_markdown(index=False, tablefmt="pipe")
-    
+
     markdown = f"""# `{ep['clean_name']}`
 > {ep['details'].get('summary', '')}
-    
+
 **URL Template:**
 `GET {ep['path']}`
 
@@ -87,6 +88,7 @@ If there are any parameters listed near the top of this file, create a named ran
     file_path = folder / f"{doc_name}.md"
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(markdown)
+
 
 def resolve_schema(schema, spec):
     """

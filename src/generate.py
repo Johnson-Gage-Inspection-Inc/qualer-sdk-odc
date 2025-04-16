@@ -1,4 +1,3 @@
-# flake8: noqa: E501
 from pathlib import Path
 from src.doc_writer import generate_markdown_file, generate_docs_index
 from src.odc_writer import render_odc_xml
@@ -10,8 +9,6 @@ SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
 API_TOKEN = 'bf407589-f463-4046-ba2c-30642bd5d637'
 OUTPUT_DIR = Path("Excel-Qualer-SDK")
 BASE_URL = "https://jgiquality.qualer.com"
-
-def normalize_name(n): return n.replace(".", "_")
 
 
 # === Template Generator ===
@@ -41,7 +38,7 @@ def yield_get_endpoints(spec):
 
             clean_name = re.sub(r'\\W+', '_', op_id)
             params = details.get("parameters", [])
-            if required_params:= [p for p in params if p.get("required")]:
+            if required_params := [p for p in params if p.get("required")]:
                 p = required_params[0]["name"]
                 clean_name += f"By{p[0].upper() + p[1:]}"
             param_names = [p["name"] for p in params]
@@ -73,8 +70,10 @@ def yield_get_endpoints(spec):
                 "relative_url": relative_url,
             }
 
+
 def generate_mashup_formula(ep):
-    def normalize_name(n): return n.replace(".", "_")
+    def normalize_name(n):
+        return n.replace(".", "_")
 
     # === Gather parameters with metadata
     required_path_params = []
@@ -94,7 +93,6 @@ def generate_mashup_formula(ep):
             else:
                 optional_query_params.append((pname, excel, safe_excel))
 
-
     lines = []
 
     # Path parameters: no try/otherwise
@@ -109,7 +107,6 @@ def generate_mashup_formula(ep):
             f'{safe_excel} = try Text.From(Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1]) otherwise "",'
         )
 
-
     combine_names = []
     for orig, excel, safe_excel in required_query_params + optional_query_params:
         varname = orig  # use actual parameter name
@@ -118,13 +115,11 @@ def generate_mashup_formula(ep):
         )
         combine_names.append(varname)
 
-
     # === Replace path placeholders in URL
     url = ep["relative_url"]
     for orig, excel, safe_excel in required_path_params:
         pattern = re.compile(rf"\{{{orig}\}}", re.IGNORECASE)
         url = pattern.sub(f'" & {safe_excel} & "', url)
-
 
     if combine_names:
         lines.append(f'QueryOptions = Record.Combine({{{", ".join(combine_names)}}}),')
@@ -147,13 +142,11 @@ def generate_mashup_formula(ep):
         "ConvertToTable = Table.FromRecords(json)",
     ]
 
-    # === Final string with XML-safe line breaks
-    return (
-        "let&#13;&#10;    "
-        + "&#13;&#10;    ".join(lines)
-        + "&#13;&#10;in&#13;&#10;    "
-        + lines[-1].split(" = ")[0]
-    ).rstrip()
+    # === Final string
+    br = '&#13;&#10;'  # XML-safe line break
+    joined_lines = f"{br}    ".join(lines)
+    resulting_table = lines[-1].split(" = ")[0]
+    return (f"let{br}    {joined_lines}{br}in{br}    {resulting_table}").rstrip()
 
 
 if __name__ == "__main__":
