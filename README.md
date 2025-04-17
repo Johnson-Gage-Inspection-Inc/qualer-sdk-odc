@@ -65,7 +65,7 @@ All endpoint-specific documentation is in the [`docs/`](./docs/README.md) folder
 
 1. You'll probably see a list of "Records" or something else other than the data you want
 2. To fix this, go to **Data → Queries and Connections**
-3. Edit the query that needs fixed
+3. Edit the query that needs fixed (You can also just double click on the query to do the same as what's pictured).
 4. Click the expand button ![image](https://github.com/user-attachments/assets/265f49b9-9679-425d-a1c8-02d387a67871) next to the column header (if available).
 5. ❗ If it's missing, delete the last step, ![❌ ConvertToTable](https://github.com/user-attachments/assets/14282043-48e2-4ded-96bc-56c30c189180) and try again.
 6. From here, you should be able to shape and filter the data according to your particular use-case. For transformation tips, check out [Power Query in Excel (Microsoft Docs)](https://learn.microsoft.com/en-us/power-query/) or explore [M code reference](https://learn.microsoft.com/powerquery-m/) for advanced customization.
