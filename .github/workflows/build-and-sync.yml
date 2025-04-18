@@ -29,8 +29,9 @@ jobs:
       - name: Run generator
         run: |
           python -m src.generate
-          - name: Install jq
-          run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
       
       - name: Authenticate with SharePoint
         env:
