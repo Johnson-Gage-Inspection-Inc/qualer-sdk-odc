@@ -71,7 +71,7 @@ jobs:
           ACCESS_TOKEN: ${{ env.ACCESS_TOKEN }}
         run: |
           DRIVE_ID="b!CbtYWrofwUGBJWnaJkNwoNrBLp_kC3RKklSXPwrdeP3yH8_qmH9xT5Y6RODPNfYI"
-          FOLDER_PATH="/General/Excel-Qualer-SDK"
+          FOLDER_PATH="General/Excel-Qualer-SDK"
           RESPONSE=$(curl -s -o response.json -w "%{http_code}" -X DELETE \
             "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:$FOLDER_PATH" \
             -H "Authorization: Bearer $ACCESS_TOKEN")
