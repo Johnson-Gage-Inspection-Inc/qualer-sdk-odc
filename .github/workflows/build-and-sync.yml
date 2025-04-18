@@ -174,7 +174,7 @@ jobs:
           export -f encode_path_segments
           export -f upload_file
           export DRIVE_ID ACCESS_TOKEN LOCAL_DIR REMOTE_DIR
-          find "$LOCAL_DIR" -type f -print0 | xargs -0 -n1 bash -c 'upload_file "$0"'
+          find "$LOCAL_DIR" -type f -print0 | xargs -0 -n1 -P 8 bash -c 'upload_file "$0"'
       
           if [ "$failed" -ne 0 ]; then
             echo "❌ One or more uploads failed. Exiting with error."
