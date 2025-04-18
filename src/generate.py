@@ -98,13 +98,13 @@ def generate_mashup_formula(ep):
     # Path parameters: no try/otherwise
     for _, excel, safe_excel in required_path_params:
         lines.append(
-            f'{safe_excel} = Text.From(Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1]),'
+            f'{safe_excel} = Text.From(Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content][Column1]{{0}}),'
         )
 
     # Query parameters: always wrapped in try
     for _, excel, safe_excel in required_query_params + optional_query_params:
         lines.append(
-            f'{safe_excel} = try Text.From(Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content]{{0}}[Column1]) otherwise "",'
+            f'{safe_excel} = try Text.From(Excel.CurrentWorkbook(){{[Name="{excel}"]}}[Content][Column1]{{0}}) otherwise "",'
         )
 
     combine_names = []
