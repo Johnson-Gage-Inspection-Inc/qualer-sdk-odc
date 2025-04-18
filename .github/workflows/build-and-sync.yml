@@ -29,25 +29,38 @@ jobs:
       - name: Run generator
         run: |
           python -m src.generate
-
+          - name: Install jq
+          run: sudo apt-get update && sudo apt-get install -y jq
+      
       - name: Authenticate with SharePoint
         env:
           SHAREPOINT_CLIENT_ID: ${{ secrets.SHAREPOINT_CLIENT_ID }}
           SHAREPOINT_CLIENT_SECRET: ${{ secrets.SHAREPOINT_CLIENT_SECRET }}
           SHAREPOINT_TENANT_ID: ${{ secrets.SHAREPOINT_TENANT_ID }}
         run: |
+          if [ -z "$SHAREPOINT_CLIENT_ID" ] || [ -z "$SHAREPOINT_CLIENT_SECRET" ] || [ -z "$SHAREPOINT_TENANT_ID" ]; then
+            echo "❌ One or more SharePoint secrets are missing. Aborting."
+            exit 1
+          fi
+      
+          echo "🔐 Requesting access token from Microsoft Graph..."
           TOKEN_RESPONSE=$(curl -s -X POST \
             -d "grant_type=client_credentials" \
             -d "client_id=${SHAREPOINT_CLIENT_ID}" \
             -d "client_secret=${SHAREPOINT_CLIENT_SECRET}" \
             -d "scope=https://graph.microsoft.com/.default" \
             "https://login.microsoftonline.com/${SHAREPOINT_TENANT_ID}/oauth2/v2.0/token")
-
+      
           ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
-          if [ -z "$ACCESS_TOKEN" ] || [ "$ACCESS_TOKEN" = "null" ]; then
-            echo "Token response: $TOKEN_RESPONSE"
+      
+          if [ "$ACCESS_TOKEN" == "null" ] || [ -z "$ACCESS_TOKEN" ]; then
+            echo "❌ Failed to retrieve access token."
+            echo "Token response was:"
+            echo "$TOKEN_RESPONSE"
             exit 1
           fi
+      
+          echo "✅ Access token acquired."
           echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> $GITHUB_ENV
 
       - name: Delete old SharePoint folder
