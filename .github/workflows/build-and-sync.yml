@@ -53,10 +53,12 @@ jobs:
             "https://login.microsoftonline.com/${SHAREPOINT_TENANT_ID}/oauth2/v2.0/token")
       
           ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
-      
+          ERROR_MESSAGE=$(echo "$TOKEN_RESPONSE" | jq -r '.error.message')
+
           if [ "$ACCESS_TOKEN" == "null" ] || [ -z "$ACCESS_TOKEN" ]; then
             echo "❌ Failed to retrieve access token."
-            echo "Token response was:"
+            echo "Error message: $ERROR_MESSAGE"
+            echo "Full token response:"
             echo "$TOKEN_RESPONSE"
             exit 1
           fi
@@ -70,8 +72,18 @@ jobs:
         run: |
           DRIVE_ID="b!CbtYWrofwUGBJWnaJkNwoNrBLp_kC3RKklSXPwrdeP3yH8_qmH9xT5Y6RODPNfYI"
           FOLDER_PATH="/General/Excel-Qualer-SDK"
-          curl -X DELETE "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:$FOLDER_PATH" \
-            -H "Authorization: Bearer $ACCESS_TOKEN"
+          RESPONSE=$(curl -s -o response.json -w "%{http_code}" -X DELETE \
+            "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:$FOLDER_PATH" \
+            -H "Authorization: Bearer $ACCESS_TOKEN")
+
+          if [ "$RESPONSE" -ne 204 ]; then
+            echo "❌ Failed to delete folder. HTTP status: $RESPONSE"
+            echo "Response body:"
+            cat response.json
+            exit 1
+          fi
+
+          echo "✅ Folder deleted successfully."
 
       - name: Upload new Excel-Qualer-SDK
         env:
@@ -87,8 +99,17 @@ jobs:
             TARGET_URL="https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:$REMOTE_DIR/$ESCAPED_PATH:/content"
 
             echo "Uploading $FILE → $REMOTE_DIR/$ESCAPED_PATH"
-            curl -X PUT "$TARGET_URL" \
+            RESPONSE=$(curl -s -o response.json -w "%{http_code}" -X PUT "$TARGET_URL" \
               -H "Authorization: Bearer $ACCESS_TOKEN" \
               -H "Content-Type: application/octet-stream" \
-              --data-binary @"$FILE"
+              --data-binary @"$FILE")
+
+            if [ "$RESPONSE" -ne 201 ]; then
+              echo "❌ Failed to upload $FILE. HTTP status: $RESPONSE"
+              echo "Response body:"
+              cat response.json
+              exit 1
+            fi
+
+            echo "✅ Uploaded $FILE successfully."
           done
