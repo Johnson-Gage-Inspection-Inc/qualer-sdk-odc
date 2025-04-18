@@ -131,8 +131,7 @@ jobs:
               if [ "$FOLDER_CREATE_STATUS" -ne 201 ] && [ "$FOLDER_CREATE_STATUS" -ne 200 ]; then
                 echo "❌ Failed to create folder $REMOTE_DIR/$DIRNAME. HTTP $FOLDER_CREATE_STATUS"
                 cat folder_create.json
-                failed=1
-                return
+                exit 1
               fi
 
             FULL_PATH="$REMOTE_DIR/$RELATIVE_PATH"
