@@ -70,7 +70,7 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ env.ACCESS_TOKEN }}
         run: |
-          DRIVE_ID="b!CbtYWrofwUGBJWnaJkNwoNrBLp_kC3RKklSXPwrdeP3yH8_qmH9xT5Y6RODPNfYI"
+          DRIVE_ID="	b!34PQK-JF0EmH57ieExSqveCp2B5j30NMsNTGcMEXae_5x8SnfJhdR6JqUh5dD03F"
           FOLDER_PATH="General/Excel-Qualer-SDK"
       
           # Check if folder exists
@@ -103,14 +103,9 @@ jobs:
         run: |
           set -euo pipefail
       
-          DRIVE_ID="b!CbtYWrofwUGBJWnaJkNwoNrBLp_kC3RKklSXPwrdeP3yH8_qmH9xT5Y6RODPNfYI"
+          DRIVE_ID="b!34PQK-JF0EmH57ieExSqveCp2B5j30NMsNTGcMEXae_5x8SnfJhdR6JqUh5dD03F"
           LOCAL_DIR="Excel-Qualer-SDK"
           REMOTE_DIR="General/Excel-Qualer-SDK"
-      
-          if [ "$DRIVE_ID" = "YOUR_DRIVE_ID" ]; then
-            echo "❌ DRIVE_ID is still a placeholder. Aborting."
-            exit 1
-          fi
       
           failed=0
       
