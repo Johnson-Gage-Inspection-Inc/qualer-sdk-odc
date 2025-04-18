@@ -120,16 +120,13 @@ jobs:
             DIRNAME=$(dirname "$RELATIVE_PATH")
             BASENAME=$(basename "$RELATIVE_PATH")
             ENCODED_FILE=$(echo "$BASENAME" | jq -sRr @uri)
-            ENCODED_DIR=$(echo "$DIRNAME" | jq -sRr @uri)
-      
-            # Create folder if needed
-            if [ "$DIRNAME" != "." ]; then
-              echo "📁 Ensuring folder exists: $REMOTE_DIR/$DIRNAME"
-              FOLDER_CREATE_STATUS=$(curl -s -o folder_create.json -w "%{http_code}" -X PUT \
-                "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$REMOTE_DIR/$ENCODED_DIR" \
-                -H "Authorization: Bearer $ACCESS_TOKEN" \
-                -H "Content-Type: application/json" \
-                --data-raw '{ "folder": {}, "@microsoft.graph.conflictBehavior": "replace" }')
+            FOLDER_PATH="$REMOTE_DIR/$DIRNAME"
+            ENCODED_FOLDER_PATH=$(echo "$FOLDER_PATH" | jq -sRr @uri)
+            FOLDER_CREATE_STATUS=$(curl -s -o folder_create.json -w "%{http_code}" -X PUT \
+              "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$ENCODED_FOLDER_PATH" \
+              -H "Authorization: Bearer $ACCESS_TOKEN" \
+              -H "Content-Type: application/json" \
+              --data-raw '{ "folder": {}, "@microsoft.graph.conflictBehavior": "replace" }')
       
               if [ "$FOLDER_CREATE_STATUS" -ne 201 ] && [ "$FOLDER_CREATE_STATUS" -ne 200 ]; then
                 echo "❌ Failed to create folder $REMOTE_DIR/$DIRNAME. HTTP $FOLDER_CREATE_STATUS"
@@ -137,9 +134,10 @@ jobs:
                 failed=1
                 return
               fi
-            fi
-      
-            TARGET_URL="https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$REMOTE_DIR/$ENCODED_DIR/$ENCODED_FILE:/content"
+
+            FULL_PATH="$REMOTE_DIR/$RELATIVE_PATH"
+            ENCODED_PATH=$(echo "$FULL_PATH" | jq -sRr @uri)
+            TARGET_URL="https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$ENCODED_PATH:/content"
       
             echo "⬆️  Uploading $FILE → $TARGET_URL"
             UPLOAD_STATUS=$(curl -s -o upload_response.json -w "%{http_code}" -X PUT "$TARGET_URL" \
