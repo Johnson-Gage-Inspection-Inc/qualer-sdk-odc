@@ -112,14 +112,14 @@ jobs:
       - name: Upload new Excel-Qualer-SDK
         run: |
           set -euo pipefail
-
+      
           ACCESS_TOKEN="${{ steps.auth.outputs.access_token }}"
           DRIVE_ID="b!34PQK-JF0EmH57ieExSqveCp2B5j30NMsNTGcMEXae_5x8SnfJhdR6JqUh5dD03F"
           LOCAL_DIR="Excel-Qualer-SDK"
           REMOTE_DIR="General/Excel-Qualer-SDK"
-
+      
           failed=0
-
+      
           encode_path_segments() {
             local input="$1"
             local result=""
@@ -130,37 +130,38 @@ jobs:
             done
             echo "${result#/}"
           }
-
+      
           upload_file() {
             local FILE="$1"
             RELATIVE_PATH="${FILE#$LOCAL_DIR/}"
             DIRNAME=$(dirname "$RELATIVE_PATH")
             BASENAME=$(basename "$RELATIVE_PATH")
-            ENCODED_FILE=$(echo "$BASENAME" | jq -sRr @uri)
+            ENCODED_FILE=$(encode_path_segments "$BASENAME")
             FOLDER_PATH="$REMOTE_DIR/$DIRNAME"
             ENCODED_FOLDER_PATH=$(encode_path_segments "$FOLDER_PATH")
+      
             FOLDER_CREATE_STATUS=$(curl -s -o folder_create.json -w "%{http_code}" -X PUT \
               "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$ENCODED_FOLDER_PATH" \
               -H "Authorization: Bearer $ACCESS_TOKEN" \
               -H "Content-Type: application/json" \
               --data-raw '{ "folder": {}, "@microsoft.graph.conflictBehavior": "replace" }')
-
-              if [ "$FOLDER_CREATE_STATUS" -ne 201 ] && [ "$FOLDER_CREATE_STATUS" -ne 200 ]; then
-                echo "❌ Failed to create folder $REMOTE_DIR/$DIRNAME. HTTP $FOLDER_CREATE_STATUS"
-                cat folder_create.json
-                exit 1
-              fi
-
+      
+            if [ "$FOLDER_CREATE_STATUS" -ne 201 ] && [ "$FOLDER_CREATE_STATUS" -ne 200 ]; then
+              echo "❌ Failed to create folder $REMOTE_DIR/$DIRNAME. HTTP $FOLDER_CREATE_STATUS"
+              cat folder_create.json
+              exit 1
+            fi
+      
             FULL_PATH="$REMOTE_DIR/$RELATIVE_PATH"
-            ENCODED_PATH=$(echo "$FULL_PATH" | jq -sRr @uri)
+            ENCODED_PATH=$(encode_path_segments "$FULL_PATH")
             TARGET_URL="https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$ENCODED_PATH:/content"
-
+      
             echo "⬆️  Uploading $FILE → $TARGET_URL"
             UPLOAD_STATUS=$(curl -s -o upload_response.json -w "%{http_code}" -X PUT "$TARGET_URL" \
               -H "Authorization: Bearer $ACCESS_TOKEN" \
               -H "Content-Type: application/octet-stream" \
               --data-binary @"$FILE")
-
+      
             if [ "$UPLOAD_STATUS" -ne 201 ] && [ "$UPLOAD_STATUS" -ne 200 ]; then
               echo "❌ Upload failed for $FILE — HTTP $UPLOAD_STATUS"
               cat upload_response.json
@@ -169,11 +170,12 @@ jobs:
               echo "✅ Uploaded $FILE"
             fi
           }
-
+      
+          export -f encode_path_segments
           export -f upload_file
           export DRIVE_ID ACCESS_TOKEN LOCAL_DIR REMOTE_DIR
           find "$LOCAL_DIR" -type f -print0 | xargs -0 -n1 bash -c 'upload_file "$0"'
-
+      
           if [ "$failed" -ne 0 ]; then
             echo "❌ One or more uploads failed. Exiting with error."
             exit 1
