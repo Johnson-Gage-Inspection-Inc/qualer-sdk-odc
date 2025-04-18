@@ -79,8 +79,8 @@ jobs:
             -H "Authorization: Bearer $ACCESS_TOKEN")
       
           if [ "$CHECK_RESPONSE" -ne 200 ]; then
-            echo "⚠️ Folder doesn't exist. Skipping delete operation."
-            exit 0
+            echo "❌ Folder doesn't exist. Path may be incorrect."
+            exit 1
           fi
       
           # Proceed to delete folder
