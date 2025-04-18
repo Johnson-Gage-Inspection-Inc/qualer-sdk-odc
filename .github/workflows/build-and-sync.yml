@@ -32,8 +32,9 @@ jobs:
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
-      
+
       - name: Authenticate with SharePoint
+        id: auth
         env:
           SHAREPOINT_CLIENT_ID: ${{ secrets.SHAREPOINT_CLIENT_ID }}
           SHAREPOINT_CLIENT_SECRET: ${{ secrets.SHAREPOINT_CLIENT_SECRET }}
@@ -43,7 +44,7 @@ jobs:
             echo "❌ One or more SharePoint secrets are missing. Aborting."
             exit 1
           fi
-      
+
           echo "🔐 Requesting access token from Microsoft Graph..."
           TOKEN_RESPONSE=$(curl -s -X POST \
             -d "grant_type=client_credentials" \
@@ -51,7 +52,7 @@ jobs:
             -d "client_secret=${SHAREPOINT_CLIENT_SECRET}" \
             -d "scope=https://graph.microsoft.com/.default" \
             "https://login.microsoftonline.com/${SHAREPOINT_TENANT_ID}/oauth2/v2.0/token")
-      
+
           ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
           ERROR_MESSAGE=$(echo "$TOKEN_RESPONSE" | jq -r '.error.message')
 
@@ -62,14 +63,13 @@ jobs:
             echo "$TOKEN_RESPONSE"
             exit 1
           fi
-      
+
           echo "✅ Access token acquired."
-          echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> $GITHUB_ENV
+          echo "access_token=$ACCESS_TOKEN" >> $GITHUB_OUTPUT
 
       - name: Delete old SharePoint folder
-        env:
-          ACCESS_TOKEN: ${{ env.ACCESS_TOKEN }}
         run: |
+          ACCESS_TOKEN="${{ steps.auth.outputs.access_token }}"
           DRIVE_ID="b!34PQK-JF0EmH57ieExSqveCp2B5j30NMsNTGcMEXae_5x8SnfJhdR6JqUh5dD03F"
           FOLDER_PATH="General/Excel-Qualer-SDK"
 
@@ -84,43 +84,42 @@ jobs:
             cat drive_response.json
             exit 1
           fi
-      
+
           # Check if folder exists
           CHECK_RESPONSE=$(curl -s -o check_response.json -w "%{http_code}" -X GET \
             "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$FOLDER_PATH" \
             -H "Authorization: Bearer $ACCESS_TOKEN")
-      
+
           if [ "$CHECK_RESPONSE" -ne 200 ]; then
             echo "❌ Folder doesn't exist. Path may be incorrect."
             exit 1
           fi
-      
+
           # Proceed to delete folder
           DELETE_RESPONSE=$(curl -s -o response.json -w "%{http_code}" -X DELETE \
             "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$FOLDER_PATH" \
             -H "Authorization: Bearer $ACCESS_TOKEN")
-      
+
           if [ "$DELETE_RESPONSE" -ne 204 ]; then
             echo "❌ Failed to delete folder. HTTP status: $DELETE_RESPONSE"
             echo "Response body:"
             cat response.json
             exit 1
           fi
-      
+
           echo "✅ Folder deleted successfully."
 
       - name: Upload new Excel-Qualer-SDK
-        env:
-          ACCESS_TOKEN: ${{ env.ACCESS_TOKEN }}
         run: |
           set -euo pipefail
-      
+
+          ACCESS_TOKEN="${{ steps.auth.outputs.access_token }}"
           DRIVE_ID="b!34PQK-JF0EmH57ieExSqveCp2B5j30NMsNTGcMEXae_5x8SnfJhdR6JqUh5dD03F"
           LOCAL_DIR="Excel-Qualer-SDK"
           REMOTE_DIR="General/Excel-Qualer-SDK"
-      
+
           failed=0
-      
+
           upload_file() {
             local FILE="$1"
             RELATIVE_PATH="${FILE#$LOCAL_DIR/}"
@@ -134,7 +133,7 @@ jobs:
               -H "Authorization: Bearer $ACCESS_TOKEN" \
               -H "Content-Type: application/json" \
               --data-raw '{ "folder": {}, "@microsoft.graph.conflictBehavior": "replace" }')
-      
+
               if [ "$FOLDER_CREATE_STATUS" -ne 201 ] && [ "$FOLDER_CREATE_STATUS" -ne 200 ]; then
                 echo "❌ Failed to create folder $REMOTE_DIR/$DIRNAME. HTTP $FOLDER_CREATE_STATUS"
                 cat folder_create.json
@@ -144,13 +143,13 @@ jobs:
             FULL_PATH="$REMOTE_DIR/$RELATIVE_PATH"
             ENCODED_PATH=$(echo "$FULL_PATH" | jq -sRr @uri)
             TARGET_URL="https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:/$ENCODED_PATH:/content"
-      
+
             echo "⬆️  Uploading $FILE → $TARGET_URL"
             UPLOAD_STATUS=$(curl -s -o upload_response.json -w "%{http_code}" -X PUT "$TARGET_URL" \
               -H "Authorization: Bearer $ACCESS_TOKEN" \
               -H "Content-Type: application/octet-stream" \
               --data-binary @"$FILE")
-      
+
             if [ "$UPLOAD_STATUS" -ne 201 ] && [ "$UPLOAD_STATUS" -ne 200 ]; then
               echo "❌ Upload failed for $FILE — HTTP $UPLOAD_STATUS"
               cat upload_response.json
@@ -159,13 +158,12 @@ jobs:
               echo "✅ Uploaded $FILE"
             fi
           }
-      
+
           export -f upload_file
           export DRIVE_ID ACCESS_TOKEN LOCAL_DIR REMOTE_DIR
           find "$LOCAL_DIR" -type f -print0 | xargs -0 -n1 bash -c 'upload_file "$0"'
-      
+
           if [ "$failed" -ne 0 ]; then
             echo "❌ One or more uploads failed. Exiting with error."
             exit 1
           fi
-      
