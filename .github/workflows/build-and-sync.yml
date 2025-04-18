@@ -1,0 +1,80 @@
+name: Generate ODC + Sync to SharePoint
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/generate.py'
+      - 'src/odc_writer.py'
+
+  workflow_dispatch:
+
+jobs:
+  generate-and-upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run generator
+        run: |
+          python -m src.generate
+
+      - name: Authenticate with SharePoint
+        env:
+          SHAREPOINT_CLIENT_ID: ${{ secrets.SHAREPOINT_CLIENT_ID }}
+          SHAREPOINT_CLIENT_SECRET: ${{ secrets.SHAREPOINT_CLIENT_SECRET }}
+          SHAREPOINT_TENANT_ID: ${{ secrets.SHAREPOINT_TENANT_ID }}
+        run: |
+          TOKEN_RESPONSE=$(curl -s -X POST \
+            -d "grant_type=client_credentials" \
+            -d "client_id=${SHAREPOINT_CLIENT_ID}" \
+            -d "client_secret=${SHAREPOINT_CLIENT_SECRET}" \
+            -d "scope=https://graph.microsoft.com/.default" \
+            "https://login.microsoftonline.com/${SHAREPOINT_TENANT_ID}/oauth2/v2.0/token")
+
+          ACCESS_TOKEN=$(echo "$TOKEN_RESPONSE" | jq -r '.access_token')
+          if [ -z "$ACCESS_TOKEN" ] || [ "$ACCESS_TOKEN" = "null" ]; then
+            echo "Token response: $TOKEN_RESPONSE"
+            exit 1
+          fi
+          echo "ACCESS_TOKEN=$ACCESS_TOKEN" >> $GITHUB_ENV
+
+      - name: Delete old SharePoint folder
+        env:
+          ACCESS_TOKEN: ${{ env.ACCESS_TOKEN }}
+        run: |
+          DRIVE_ID="YOUR_DRIVE_ID"
+          FOLDER_PATH="/General/Excel-Qualer-SDK"
+          curl -X DELETE "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:$FOLDER_PATH" \
+            -H "Authorization: Bearer $ACCESS_TOKEN"
+
+      - name: Upload new Excel-Qualer-SDK
+        env:
+          ACCESS_TOKEN: ${{ env.ACCESS_TOKEN }}
+        run: |
+          DRIVE_ID="YOUR_DRIVE_ID"
+          LOCAL_DIR="Excel-Qualer-SDK"
+          REMOTE_DIR="/General/Excel-Qualer-SDK"
+
+          find "$LOCAL_DIR" -type f | while read FILE; do
+            RELATIVE_PATH="${FILE#$LOCAL_DIR/}"
+            ESCAPED_PATH=$(echo "$RELATIVE_PATH" | sed 's/ /%20/g')
+            TARGET_URL="https://graph.microsoft.com/v1.0/drives/$DRIVE_ID/root:$REMOTE_DIR/$ESCAPED_PATH:/content"
+
+            echo "Uploading $FILE → $REMOTE_DIR/$ESCAPED_PATH"
+            curl -X PUT "$TARGET_URL" \
+              -H "Authorization: Bearer $ACCESS_TOKEN" \
+              -H "Content-Type: application/octet-stream" \
+              --data-binary @"$FILE"
+          done
