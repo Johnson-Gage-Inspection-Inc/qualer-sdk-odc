@@ -72,6 +72,18 @@ jobs:
         run: |
           DRIVE_ID="b!34PQK-JF0EmH57ieExSqveCp2B5j30NMsNTGcMEXae_5x8SnfJhdR6JqUh5dD03F"
           FOLDER_PATH="General/Excel-Qualer-SDK"
+
+          # Check if the drive ID is valid
+          DRIVE_RESPONSE=$(curl -s -o drive_response.json -w "%{http_code}" -X GET \
+            "https://graph.microsoft.com/v1.0/drives/$DRIVE_ID" \
+            -H "Authorization: Bearer $ACCESS_TOKEN")
+
+          if [ "$DRIVE_RESPONSE" -ne 200 ]; then
+            echo "❌ Invalid drive ID. HTTP status: $DRIVE_RESPONSE"
+            echo "Response body:"
+            cat drive_response.json
+            exit 1
+          fi
       
           # Check if folder exists
           CHECK_RESPONSE=$(curl -s -o check_response.json -w "%{http_code}" -X GET \
