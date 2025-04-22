@@ -139,7 +139,7 @@ def generate_mashup_formula(ep):
         "    ]",
         "),",
         "json = Json.Document(response),",
-        "ConvertToTable = Table.FromRecords(json)",
+        'ConvertToTable = if Value.Is(json, type list) then Table.FromRecords(json) else Record.ToTable(json)',
     ]
 
     # === Final string
