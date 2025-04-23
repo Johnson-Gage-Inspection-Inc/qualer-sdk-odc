@@ -127,20 +127,20 @@ def generate_mashup_formula(ep):
 
     # === Mashup logic
     lines += [
-        f'baseUrl = "{BASE_URL}",',
-        f'relativeUrl = "{url}",',
+        f'baseUrl = &quot;{BASE_URL}&quot;,',
+        f'relativeUrl = &quot;{url}&quot;,',
         'TokenText = Text.Trim(Text.FromBinary(',
-        '    Web.Contents("https://jgiquality.sharepoint.com/sites/JGI/Shared%20Documents/General/apikey.txt")',
+        '    Web.Contents(&quot;https://jgiquality.sharepoint.com/sites/JGI/Shared%20Documents/General/apikey.txt&quot;)',
         ')),',
-        "response = Web.Contents(",
-        "    baseUrl,",
-        "    [",
-        '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
-        "        Query = QueryOptions,",
+        'response = Web.Contents(',
+        '    baseUrl,',
+        '    [',
+        '        RelativePath = Text.TrimStart(relativeUrl, &quot;/&quot;),',
+        '        Query = QueryOptions,',
         '        Headers = [ Authorization = TokenText ]',
-        "    ]",
-        "),",
-        "json = Json.Document(response),",
+        '    ]',
+        '),',
+        'json = Json.Document(response),',
         'ConvertToTable = if Value.Is(json, type list) then Table.FromRecords(json) else Record.ToTable(json)',
     ]
 

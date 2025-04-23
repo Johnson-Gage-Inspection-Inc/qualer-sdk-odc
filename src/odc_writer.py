@@ -31,4 +31,6 @@ xmlns="http://www.w3.org/TR/REC-html40">
     behavior: url(dataconn.htc);
     }
 -->
-</style>"""
+</style>
+</head>
+</html>"""
