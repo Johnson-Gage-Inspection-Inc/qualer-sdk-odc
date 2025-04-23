@@ -138,7 +138,7 @@ def generate_mashup_formula(ep):
         "    [",
         '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
         "        Query = QueryOptions,",
-        f'        Headers = [ Authorization = "Api-Token {API_TOKEN}" ]',
+        '        Headers = [ Authorization = TokenText ]',
         "    ]",
         "),",
         "json = Json.Document(response),",
