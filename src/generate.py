@@ -130,6 +130,9 @@ def generate_mashup_formula(ep):
     lines += [
         f'baseUrl = "{BASE_URL}",',
         f'relativeUrl = "{url}",',
+        'TokenText = Text.Trim(Text.FromBinary(',
+        '    Web.Contents("https://jgiquality.sharepoint.com/sites/JGI/Shared%20Documents/General/apikey.txt")',
+        ')),',
         "response = Web.Contents(",
         "    baseUrl,",
         "    [",
