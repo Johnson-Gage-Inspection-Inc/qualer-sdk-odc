@@ -1,7 +1,7 @@
 # Qualer Excel SDK
 
 [![Last Commit](https://img.shields.io/github/last-commit/Johnson-Gage-Inspection-Inc/qualer-sdk-odc)](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/commits/main)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Generate ODC + Sync to SharePoint](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/actions/workflows/build-and-sync.yml/badge.svg)](https://github.com/Johnson-Gage-Inspection-Inc/qualer-sdk-odc/actions/workflows/build-and-sync.yml)
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Uses ODC & PowerQuery](https://img.shields.io/badge/Excel-.odc%20%2B%20PowerQuery-brightgreen)](#)
 [![Qualer API](https://img.shields.io/badge/Qualer%20API-v1-orange)](https://jgiquality.qualer.com/swagger/ui/index)
