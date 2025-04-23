@@ -6,7 +6,6 @@ import re
 
 # === Config ===
 SWAGGER_URL = "https://jgiquality.qualer.com/swagger/docs/v1"
-API_TOKEN = 'bf407589-f463-4046-ba2c-30642bd5d637'
 OUTPUT_DIR = Path("Excel-Qualer-SDK")
 BASE_URL = "https://jgiquality.qualer.com"
 
@@ -138,7 +137,7 @@ def generate_mashup_formula(ep):
         "    [",
         '        RelativePath = Text.TrimStart(relativeUrl, "/"),',
         "        Query = QueryOptions,",
-        f'        Headers = [ Authorization = "Api-Token {API_TOKEN}" ]',
+        '        Headers = [ Authorization = TokenText ]',
         "    ]",
         "),",
         "json = Json.Document(response),",
